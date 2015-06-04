@@ -44,37 +44,55 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-// External modules
-var express = require('express'),
-    cors = require('cors'),
-    bodyParser = require('body-parser'),
-    config = require('./config.json'),
-    documentsdbRouter = require('./documentsdb/router.js'),
-    xmlRouter = require('./xml/router.js');
 
-var app = express();
+var cluster = require('cluster');
 
-// Enable Access-Control-Allow-Origin
-app.use(cors());
+if (cluster.isMaster) {
+    cluster.fork();
+    cluster.on('disconnect', function () {
+        console.info('Restarting service.');
+        cluster.fork();
+    });
+} else {
+    var express = require('express'),
+        corsMiddleware = require('cors'),
+        domainMiddleware = require('express-domain-middleware'),
+        bodyParserMiddleware = require('body-parser'),
+        
+        config = require('./config.json'),
+        documentsdbRouter = require('./documentsdb/router.js'),
+        xmlRouter = require('./xml/router.js');
+    var app = express();
 
-// Use body-parser middleware to parse the input stream.
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({ extended: true }));
+    // console.log('domainMiddleware', domainMiddleware);
+    app.use(domainMiddleware);
+    app.use(corsMiddleware());
+    app.use(bodyParserMiddleware.json({limit: '50mb'}));
+    app.use(bodyParserMiddleware.urlencoded({ extended: true }));
 
-app.use('/xml', xmlRouter);
-app.use('/documentsdb', documentsdbRouter);
+    app.use('/xml', xmlRouter);
+    app.use('/documentsdb', documentsdbRouter);
 
-var server = app.listen(config.port, function() {
-    console.log('Listening on port %d', server.address().port);
-});
+    app.use(function (err, req, res, next) {
+        console.error(err.stack);
+        try {
+            var killtimer = setTimeout(function() {
+                process.exit(1);
+            }, 5000);
+            killtimer.unref();
+            server.close();
+            cluster.worker.disconnect();
 
-server.on('error', function(err, req, res) {
-    if (err.code == 'ECONNRESET') {
-        console.warn(err);
-        res.status(500).end();
-    } else {
-        console.warn('Unknown error:');
-        console.log(err);
-        throw err;
-    }
-});
+            res.statusCode = 500;
+            res.setHeader('content-type', 'text/plain');
+            res.end('Internal server error.\n');
+        } catch (er2) {
+            console.error('Error sending 500!', er2.stack);
+        }
+    });
+
+    var server = app.listen(config.port, function() {
+        console.log('Listening on port %d', server.address().port);
+    });    
+}
+
