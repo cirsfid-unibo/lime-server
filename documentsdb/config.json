@@ -1,0 +1,20 @@
+{
+    "port": "9006",
+    "mongodb": {
+        "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb"
+    },
+    "filesystem": {
+        "documents": "../data/documents/"
+    },
+    "existdb": {
+        "host": "sinatra.cirsfid.unibo.it",
+        "port": 8080,
+        "rest": "/exist/rest",
+        "baseCollection": "/documentsdb",
+        "auth": "admin:exist"
+    },
+    "abiword": {
+        "path": "/usr/bin/abiword",
+        "pathWin": "C:\\Users\\matteo.nardi7\\Applicazioni\\AbiWord\\bin\\AbiWord.exe"
+    }
+}

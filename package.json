@@ -1,0 +1,21 @@
+{
+  "name": "aknservices",
+  "description": "AkomaNtoso WebServices",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://dev@sinatra.cirsfid.unibo.it/home/git/aknservices.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "cors": "^2.6.1",
+    "express": "4.x",
+    "libxmljs": "^0.14.1",
+    "verror": "^1.6.0",
+    "xmldom": "^0.1.19"
+  },
+  "scripts": {
+    "test": "node.exe node_modules\\mocha\\bin\\mocha"
+  }
+}
