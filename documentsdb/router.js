@@ -44,28 +44,14 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    cors = require('cors'),
-    errorhandler = require('errorhandler'),
-    router = require('./router.js');
+var express = require('express');
 
-var config = require('./config.json')
+var Users = require('./services/Users.js'),
+    Documents = require('./services/Documents.js');
 
-var app = express();
+var router = express.Router();
 
-// Enable Access-Control-Allow-Origin
-app.use(cors());
+router.use('/Users', Users.router);
+router.use('/Documents', Documents.router);
 
-
-// Use body-parser middleware to parse the input stream.
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use('/', router);
-
-app.use(errorhandler());
-
-var server = app.listen(config.port, function() {
-    console.log('Listening on port %d', server.address().port);
-});
+module.exports = router;

@@ -44,28 +44,37 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// External modules
 var express = require('express'),
-    bodyParser = require('body-parser'),
     cors = require('cors'),
-    errorhandler = require('errorhandler'),
-    router = require('./router.js');
-
-var config = require('./config.json')
+    bodyParser = require('body-parser'),
+    config = require('./config.json'),
+    documentsdbRouter = require('./documentsdb/router.js'),
+    xmlRouter = require('./xml/router.js');
 
 var app = express();
 
 // Enable Access-Control-Allow-Origin
 app.use(cors());
 
-
 // Use body-parser middleware to parse the input stream.
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', router);
-
-app.use(errorhandler());
+app.use('/xml', xmlRouter);
+app.use('/documentsdb', documentsdbRouter);
 
 var server = app.listen(config.port, function() {
     console.log('Listening on port %d', server.address().port);
+});
+
+server.on('error', function(err, req, res) {
+    if (err.code == 'ECONNRESET') {
+        console.warn(err);
+        res.status(500).end();
+    } else {
+        console.warn('Unknown error:');
+        console.log(err);
+        throw err;
+    }
 });
