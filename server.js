@@ -47,52 +47,66 @@
 
 var cluster = require('cluster');
 
+// We use cluster and domains for error management:
+// on unhandled exception the child process is restarted.
 if (cluster.isMaster) {
+    startParentProcess();
+} else {
+    startChildProcess();
+}
+
+function startParentProcess () {
     cluster.fork();
     cluster.on('disconnect', function () {
         console.info('Restarting service.');
         cluster.fork();
     });
-} else {
-    var express = require('express'),
-        corsMiddleware = require('cors'),
-        domainMiddleware = require('express-domain-middleware'),
-        bodyParserMiddleware = require('body-parser'),
-        
-        config = require('./config.json'),
-        documentsdbRouter = require('./documentsdb/router.js'),
-        xmlRouter = require('./xml/router.js');
-    var app = express();
-
-    // console.log('domainMiddleware', domainMiddleware);
-    app.use(domainMiddleware);
-    app.use(corsMiddleware());
-    app.use(bodyParserMiddleware.json({limit: '50mb'}));
-    app.use(bodyParserMiddleware.urlencoded({ extended: true }));
-
-    app.use('/xml', xmlRouter);
-    app.use('/documentsdb', documentsdbRouter);
-
-    app.use(function (err, req, res, next) {
-        console.error(err.stack);
-        try {
-            var killtimer = setTimeout(function() {
-                process.exit(1);
-            }, 5000);
-            killtimer.unref();
-            server.close();
-            cluster.worker.disconnect();
-
-            res.statusCode = 500;
-            res.setHeader('content-type', 'text/plain');
-            res.end('Internal server error.\n');
-        } catch (er2) {
-            console.error('Error sending 500!', er2.stack);
-        }
-    });
-
-    var server = app.listen(config.port, function() {
-        console.log('Listening on port %d', server.address().port);
-    });    
 }
 
+function startChildProcess () {
+    var app = require('express')();
+
+    // Middleware
+    app.use(require('express-domain-middleware'));
+    app.use(require('cors')());
+    app.use(require('body-parser').json({limit: '50mb'}));
+    app.use(require('body-parser').urlencoded({ extended: true }));
+
+    // Endpoints
+    app.use('/xml', require('./xml/router.js'));
+    app.use('/documentsdb', require('./documentsdb/router.js'));
+
+    // Error Handling
+    app.use(clientSideErrorsHandler);
+    app.use(serverSideErrorsHandler);
+
+    // Start server
+    module.server = app.listen(require('./config.json').port, function() {
+        console.log('Listening on port %d', module.server.address().port);
+    });
+}
+
+// Catch and ignore client side erros: errors with status set.
+// BodyParser uses this.
+function clientSideErrorsHandler (err, req, res, next) {
+    if (err.status) {
+        console.log('Err', err);
+        res.status(err.status).end(err.message);
+    } else next(err);
+}
+
+// On unhandled exception, restart server.
+function serverSideErrorsHandler (err, req, res, next) {
+    console.error(err.stack);
+    try {
+        var killtimer = setTimeout(function() {
+            process.exit(1);
+        }, 5000);
+        killtimer.unref();
+        module.server.close();
+        cluster.worker.disconnect();
+        res.status(500).end('Internal server error.');
+    } catch (er2) {
+        console.error('Error sending 500!', er2.stack);
+    }
+}

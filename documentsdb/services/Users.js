@@ -45,11 +45,11 @@
  */
 
 // Todo:
-// - Don't store passwords directly
 // - Do not allow users to set their own folders
 
 var express = require('express'),
     auth = require('basic-auth'),
+    bcrypt = require('bcryptjs'),
     db = require('../utils/mongodb.js'),
     VError = require('verror');
 
@@ -65,6 +65,7 @@ var router = express.Router();
 router.post('/', function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
+
     var preferences = req.body.preferences || {};
     preferences.folders = ['/' + req.body.username + '/'];
 
@@ -76,7 +77,7 @@ router.post('/', function (req, res, next) {
     }, {
         $setOnInsert: { 
             username: username,
-            password: password,
+            password: bcrypt.hashSync(password),
             preferences: preferences,
         }
     }, { 
@@ -106,7 +107,8 @@ router.param('user', function (req, res, next) {
         if (!user)
             return error(res, 'User does not exist');
         req.user = user;
-        if (req.user.password != password)
+        var hash = user.password;
+        if (!bcrypt.compareSync(password, hash))
             return error(res, 'Wrong password');
         next();
     });
@@ -132,14 +134,14 @@ router.get('/:user', function (req, res, next) {
 //    preferences: generic object
 // }
 router.put('/:user', function (req, res, next) {
-    db.users.updateOne({
-        username: req.user.username
-    }, {
+    var query = { username: req.user.username };
+    var operation = {
         $set: {
             preferences: req.body.preferences || req.user.preferences,
-            password: req.body.password || req.user.password,
+            password: (req.body.password ? bcrypt.hashSync(req.body.password) : req.user.password)
         } 
-    }, function (err, result) {
+    }
+    db.users.updateOne(query, operation, function (err, result) {
         if (err)
             next(new VError(err, 'Error updating user'));
         else
@@ -166,7 +168,7 @@ exports.middleware = function (req, res, next) {
                 next(new VError(err, 'Error searching for user'));
             else if (!user)
                 req.user = new Error('User not found');
-            else if (user && user.password != authInfo.pass)
+            else if (user && !bcrypt.compareSync(authInfo.pass, user.password))
                 req.user = new Error('Wrong password');
             else 
                 req.user = user;
