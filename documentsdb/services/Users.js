@@ -50,6 +50,8 @@
 var express = require('express'),
     auth = require('basic-auth'),
     bcrypt = require('bcryptjs'),
+    passport = require('passport'),
+    Boom = require('boom'),
     db = require('../utils/mongodb.js'),
     VError = require('verror');
 
@@ -69,8 +71,8 @@ router.post('/', function (req, res, next) {
     var preferences = req.body.preferences || {};
     preferences.folders = ['/' + req.body.username + '/'];
 
-    if (!username) return error(res, 'Missing username parameter');
-    if (!password) return error(res, 'Missing password parameter');
+    if (!username) return next(Boom.badRequest('Missing username parameter'));
+    if (!password) return next(Boom.badRequest('Missing password parameter'));
 
     db.users.updateOne({
         username: username
@@ -86,7 +88,7 @@ router.post('/', function (req, res, next) {
         if (err)
             next(new VError(err, 'Error registering user'));
         else if (r.upsertedCount == 0)
-            error(res, 'User already exists');
+            next(Boom.badRequest('User already exists');
         else
             res.send('User created').end();
     });
@@ -96,8 +98,8 @@ router.post('/', function (req, res, next) {
 router.param('user', function (req, res, next) {
     var password = (auth(req) || {}).pass;
 
-    if (!req.params.user) return error(res, 'Missing username');
-    if (!password) return error(res, 'Missing password');
+    if (!req.params.user) return next(Boom.badRequest('Missing username'));
+    if (!password) return next(Boom.badRequest('Missing password'));
 
     db.users.findOne({
         username: req.params.user
@@ -105,11 +107,11 @@ router.param('user', function (req, res, next) {
         if (err)
             next(new VError(err, 'Error retriving user'));
         if (!user)
-            return error(res, 'User does not exist');
+            return next(Boom.notFound('User does not exist'));
         req.user = user;
         var hash = user.password;
         if (!bcrypt.compareSync(password, hash))
-            return error(res, 'Wrong password');
+            return next(Boom.unauthorized('Wrong password'));
         next();
     });
 });
@@ -123,7 +125,10 @@ router.param('user', function (req, res, next) {
 //    preferences: generic object  
 // }
 router.get('/:user', function (req, res, next) {
-    res.json(req.user).end();
+    res.json({
+        username: req.user.username,
+        preferences: req.user.preferences
+    }).end();
 });
 
 // Update user informations.
@@ -149,32 +154,17 @@ router.put('/:user', function (req, res, next) {
     });
 });
 
-function error(res, msg) {
-    res.status(400).send(msg).end();
-}
 
-// User authentication middleware: parses Basic Auth headers and
-// sets req.user to user object or Error.
-exports.middleware = function (req, res, next) {
-    var authInfo = auth(req);
-    if (!authInfo) {
-        req.user = new Error ('Missing authentication');
-        next();
-    } else {
-        db.users.findOne({
-            username: authInfo.name
-        }, function(err, user) {
-            if (err)
-                next(new VError(err, 'Error searching for user'));
-            else if (!user)
-                req.user = new Error('User not found');
-            else if (user && !bcrypt.compareSync(authInfo.pass, user.password))
-                req.user = new Error('Wrong password');
-            else 
-                req.user = user;
-            next();
-        });
-    }
-}
+passport.use(new BasicStrategy(function (username, password, next) {
+    db.users.findOne({
+        username: username
+    }, function(err, user) {
+        if (err) 
+            next(new VError(err, 'Error searching for user'));
+        else if (!user || !bcrypt.compareSync(password, user.password))
+            next(undefined, false)
+        else next(undefined, user);
+    });
+}));
 
 exports.router = router;

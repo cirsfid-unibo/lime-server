@@ -46,7 +46,10 @@
 
 var express = require('express'),
     path = require('path'),
-    PassThrough = require('stream').PassThrough;
+    PassThrough = require('stream').PassThrough,
+    passport = require('passport'),
+    Boom = require('boom'),
+    LocalStrategy = require('passport-local').Strategy;
 
 var db = require('../utils/mongodb.js'),
     Users = require('./Users.js'),
@@ -57,6 +60,7 @@ var db = require('../utils/mongodb.js'),
 var router = express.Router();
 
 router.use(Users.middleware);
+passport.authenticate('basic', { session: false }),
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {

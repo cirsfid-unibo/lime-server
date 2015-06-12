@@ -45,7 +45,8 @@
  */
 
 
-var cluster = require('cluster');
+var cluster = require('cluster'),
+    Boom = require('boom');
 
 // We use cluster and domains for error management:
 // on unhandled exception the child process is restarted.
@@ -77,8 +78,7 @@ function startChildProcess () {
     app.use('/documentsdb', require('./documentsdb/router.js'));
 
     // Error Handling
-    app.use(clientSideErrorsHandler);
-    app.use(serverSideErrorsHandler);
+    app.use(errorHandler);
 
     // Start server
     module.server = app.listen(require('./config.json').port, function() {
@@ -86,27 +86,23 @@ function startChildProcess () {
     });
 }
 
-// Catch and ignore client side erros: errors with status set.
-// BodyParser uses this.
-function clientSideErrorsHandler (err, req, res, next) {
-    if (err.status) {
-        console.log('Err', err);
-        res.status(err.status).end(err.message);
-    } else next(err);
-}
+function errorHandler (err, req, res, next) {
+    err = Boom.wrap(err, err.status);
 
-// On unhandled exception, restart server.
-function serverSideErrorsHandler (err, req, res, next) {
-    console.error(err.stack);
-    try {
-        var killtimer = setTimeout(function() {
-            process.exit(1);
-        }, 5000);
-        killtimer.unref();
-        module.server.close();
-        cluster.worker.disconnect();
-        res.status(500).end('Internal server error.');
-    } catch (er2) {
-        console.error('Error sending 500!', er2.stack);
+    // On server error, force restart. 
+    if (err.isServer) {
+        console.error(err.stack);
+        try {
+            var killtimer = setTimeout(function() {
+                process.exit(1);
+            }, 5000);
+            killtimer.unref();
+            module.server.close();
+            cluster.worker.disconnect();
+        } catch (er2) {
+            console.error('Error sending 500!', er2.stack);
+        }
     }
+
+    res.status(err.output.statusCode).end(err.output.message);
 }
