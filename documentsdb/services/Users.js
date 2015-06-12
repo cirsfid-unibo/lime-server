@@ -48,9 +48,9 @@
 // - Do not allow users to set their own folders
 
 var express = require('express'),
-    auth = require('basic-auth'),
     bcrypt = require('bcryptjs'),
     passport = require('passport'),
+    BasicStrategy = require('passport-http').BasicStrategy,
     Boom = require('boom'),
     db = require('../utils/mongodb.js'),
     VError = require('verror');
@@ -88,32 +88,34 @@ router.post('/', function (req, res, next) {
         if (err)
             next(new VError(err, 'Error registering user'));
         else if (r.upsertedCount == 0)
-            next(Boom.badRequest('User already exists');
+            next(Boom.badRequest('User already exists'));
         else
             res.send('User created').end();
     });
 });
 
-// Authentication middleware
-router.param('user', function (req, res, next) {
-    var password = (auth(req) || {}).pass;
-
-    if (!req.params.user) return next(Boom.badRequest('Missing username'));
-    if (!password) return next(Boom.badRequest('Missing password'));
-
+// Passport middleware authentication strategy 
+passport.use(new BasicStrategy(function (username, password, next) {
     db.users.findOne({
-        username: req.params.user
+        username: username
     }, function(err, user) {
-        if (err)
-            next(new VError(err, 'Error retriving user'));
-        if (!user)
-            return next(Boom.notFound('User does not exist'));
-        req.user = user;
-        var hash = user.password;
-        if (!bcrypt.compareSync(password, hash))
-            return next(Boom.unauthorized('Wrong password'));
-        next();
+        if (err) 
+            next(new VError(err, 'Error searching for user'));
+        else if (!user || !bcrypt.compareSync(password, user.password))
+            next(undefined, false)
+        else next(undefined, user);
     });
+}));
+
+router.use(passport.initialize());
+router.use(passport.authenticate('basic', { session: false }));
+
+router.param('user', function (req, res, next, username) {
+    if (!req.user)
+        next(Boom.unauthorized('Basic auth failed'));
+    else if (req.user.username != username)
+        next(Boom.unauthorized('You can only access your user'));
+    else next();
 });
 
 // Get user informations.
@@ -153,18 +155,5 @@ router.put('/:user', function (req, res, next) {
             res.send('Ok').end();
     });
 });
-
-
-passport.use(new BasicStrategy(function (username, password, next) {
-    db.users.findOne({
-        username: username
-    }, function(err, user) {
-        if (err) 
-            next(new VError(err, 'Error searching for user'));
-        else if (!user || !bcrypt.compareSync(password, user.password))
-            next(undefined, false)
-        else next(undefined, user);
-    });
-}));
 
 exports.router = router;

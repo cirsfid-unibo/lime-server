@@ -104,5 +104,5 @@ function errorHandler (err, req, res, next) {
         }
     }
 
-    res.status(err.output.statusCode).end(err.output.message);
+    res.status(err.output.statusCode).end(err.output.payload.message);
 }
