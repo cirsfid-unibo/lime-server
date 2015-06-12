@@ -46,7 +46,8 @@
 
 MongoClient = require('mongodb').MongoClient;
 
-var mongoUrl = require('../config.json').mongodb.url;
+var config = require('../config.json').mongodb,
+    mongoUrl = config.url;
 
 MongoClient.connect(mongoUrl, function(err, db) {
     if (err) {
@@ -55,7 +56,11 @@ MongoClient.connect(mongoUrl, function(err, db) {
         process.exit(1);
     }
     console.log('Connected to MongoDb server ', mongoUrl);
-    exports.users = db.collection('users');
+
+    Object.keys(config.collections).forEach(function (key) {
+        exports[key] = db.collection(config.collections[key]);
+    });
+
     exports.users.ensureIndex({ username: 1  }, {
         unique: true, dropDups: true
     });
