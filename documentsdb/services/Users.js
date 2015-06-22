@@ -181,6 +181,7 @@ exports.router = router;
 
 // Private hash functions
 // We use caching to improve performance.
+var hashCache = {};
 function checkPassword(password, passwordHash) {
     return hash(password) == passwordHash;
 }
