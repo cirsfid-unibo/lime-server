@@ -89,7 +89,7 @@ router.post('/', function (req, res, next) {
     }, {
         $setOnInsert: { 
             username: username,
-            password: hash(password),
+            password: bcrypt.hashSync(password),
             preferences: preferences
         }
     }, { 
@@ -165,7 +165,7 @@ router.put('/:user', function (req, res, next) {
     var operation = {
         $set: {
             preferences: req.body.preferences || req.user.preferences,
-            password: (req.body.password ? hash(req.body.password) : req.user.password)
+            password: (req.body.password ? bcrypt.hashSync(req.body.password) : req.user.password)
         }
     }
     db.users.updateOne(query, operation, function (err, result) {
@@ -182,15 +182,12 @@ exports.router = router;
 // Private hash functions
 // We use caching to improve performance.
 var hashCache = {};
-function checkPassword(password, passwordHash) {
-    return hash(password) == passwordHash;
-}
-
-function hash (password) {
-    if (!hashCache[password]) {
+function checkPassword (password, passwordHash) {
+    var concat = password + ':' + passwordHash;
+    if (!hashCache[concat]) {
         if (Object.keys(hashCache).length > 10000)
             hashCache = {};
-        hashCache[password] = bcrypt.hashSync(password);
+        hashCache[concat] = bcrypt.compareSync(password, passwordHash);
     }
-    return hashCache[password];
+    return hashCache[concat];
 }
