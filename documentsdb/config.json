@@ -1,13 +1,12 @@
 {
-    "port": "9006",
     "mongodb": {
-        "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb",
+        "url": "mongodb://localhost:42000/documentsdb",
         "collections": {
             "users": "dev_users"
         }
     },
     "filesystem": {
-        "documents": "../data/documents/"
+        "documents": "/home/node/data/documents/dev/"
     },
     "existdb": {
         "host": "sinatra.cirsfid.unibo.it",
@@ -17,7 +16,6 @@
         "auth": "admin:exist"
     },
     "abiword": {
-        "path": "/usr/bin/abiword",
-        "pathWin": "C:\\Users\\matteo.nardi7\\Applicazioni\\AbiWord\\bin\\AbiWord.exe"
+        "path": "/usr/bin/abiword"
     }
 }
