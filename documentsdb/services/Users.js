@@ -89,7 +89,7 @@ router.post('/', function (req, res, next) {
     }, {
         $setOnInsert: { 
             username: username,
-            password: bcrypt.hashSync(password),
+            password: hash(password),
             preferences: preferences
         }
     }, { 
@@ -111,7 +111,7 @@ passport.use(new BasicStrategy(function (username, password, next) {
     }, function(err, user) {
         if (err) 
             next(new VError(err, 'Error searching for user'));
-        else if (!user || !bcrypt.compareSync(password, user.password))
+        else if (!user || !checkPassword(password, user.password))
             next(undefined, false)
         else {
             user.properties = {
@@ -121,6 +121,9 @@ passport.use(new BasicStrategy(function (username, password, next) {
         }
     });
 }));
+
+
+
 
 router.use(passport.initialize());
 router.use(passport.authenticate('basic', { session: false }));
@@ -162,7 +165,7 @@ router.put('/:user', function (req, res, next) {
     var operation = {
         $set: {
             preferences: req.body.preferences || req.user.preferences,
-            password: (req.body.password ? bcrypt.hashSync(req.body.password) : req.user.password)
+            password: (req.body.password ? hash(req.body.password) : req.user.password)
         }
     }
     db.users.updateOne(query, operation, function (err, result) {
@@ -174,3 +177,19 @@ router.put('/:user', function (req, res, next) {
 });
 
 exports.router = router;
+
+
+// Private hash functions
+// We use caching to improve performance.
+function checkPassword(password, passwordHash) {
+    return hash(password) == passwordHash;
+}
+
+function hash (password) {
+    if (!hashCache[password]) {
+        if (Object.keys(hashCache).length > 10000)
+            hashCache = {};
+        hashCache[password] = bcrypt.hashSync(password);
+    }
+    return hashCache[password];
+}
