@@ -84,7 +84,7 @@ router.use(function (req, res, next) {
 function isAllowed(user, path) {
     if (!user) return false;
     if (user instanceof Error) return false;
-    var allowedPaths = user.preferences.folders || [];
+    var allowedPaths = user.properties.folders;
     return allowedPaths.filter(function (allowedPath) {
         return path.indexOf(allowedPath) == 0;
     }).length > 0;

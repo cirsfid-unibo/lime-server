@@ -44,32 +44,42 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-// Todo:
-// - Do not allow users to set their own folders
-
 var express = require('express'),
     bcrypt = require('bcryptjs'),
     passport = require('passport'),
     BasicStrategy = require('passport-http').BasicStrategy,
     Boom = require('boom'),
+    VError = require('verror'),
     db = require('../utils/mongodb.js'),
-    VError = require('verror');
+    config = require('../config.json').users;
 
 var router = express.Router();
+
+// User object:
+// { 
+//     username: string,            Username/Email
+//     password: string,            Password hash
+//     properties: {                Read only configuration
+//        folders: [ string... ]    Folders the user can read/write
+//     },
+//     preferences: {               User defined writable configuration
+//        ...
+//     }
+// }
+
 
 // Register a new user.
 // POST /Users
 // {
-//    username: string   
-//    password: string   
-//    preferences: generic object  
+//    username: string
+//    password: string
+//    preferences: generic object
 // }
 router.post('/', function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
 
     var preferences = req.body.preferences || {};
-    preferences.folders = ['/' + req.body.username + '/'];
 
     if (!username) return next(Boom.badRequest('Missing username parameter'));
     if (!password) return next(Boom.badRequest('Missing password parameter'));
@@ -80,7 +90,7 @@ router.post('/', function (req, res, next) {
         $setOnInsert: { 
             username: username,
             password: bcrypt.hashSync(password),
-            preferences: preferences,
+            preferences: preferences
         }
     }, { 
         upsert: true
@@ -103,7 +113,12 @@ passport.use(new BasicStrategy(function (username, password, next) {
             next(new VError(err, 'Error searching for user'));
         else if (!user || !bcrypt.compareSync(password, user.password))
             next(undefined, false)
-        else next(undefined, user);
+        else {
+            user.properties = {
+                folders: ['/' + user.username + '/'].concat(config.shared_folders)
+            }
+            next(undefined, user);
+        }
     });
 }));
 
@@ -122,13 +137,15 @@ router.param('user', function (req, res, next, username) {
 // GET /Users/marco@gmail.com
 // Basic access authentication required (Http Authorization header)
 // -> { 
-//    username: string   
-//    password: string   
-//    preferences: generic object  
+//    username: string
+//    password: string
+//    preferences: generic object
+//    properties: generic object
 // }
 router.get('/:user', function (req, res, next) {
     res.json({
         username: req.user.username,
+        properties: req.user.properties,
         preferences: req.user.preferences
     }).end();
 });
@@ -146,7 +163,7 @@ router.put('/:user', function (req, res, next) {
         $set: {
             preferences: req.body.preferences || req.user.preferences,
             password: (req.body.password ? bcrypt.hashSync(req.body.password) : req.user.password)
-        } 
+        }
     }
     db.users.updateOne(query, operation, function (err, result) {
         if (err)
