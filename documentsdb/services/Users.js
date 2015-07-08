@@ -55,6 +55,10 @@ var express = require('express'),
 
 var router = express.Router();
 
+// Most browsers (Chrome, IE, Safari) show the auth dialog when
+// a server responds with a 401 with a "www-authenticate: basic" header,
+// even if it was an Ajax request.
+// This is an hack to disable that header.
 BasicStrategy.prototype._challenge = function() { return '...'; }
 
 // User object:
