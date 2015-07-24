@@ -95,7 +95,7 @@ function isAllowed(user, path) {
 router.get('*', function (req, res, next) {
     if (!req.file) return next();
 
-    if (req.file.match(/.doc[x]$/) && req.headers.accept == 'text/html') {
+    if (req.file.match(/.docx?$/) && req.headers.accept == 'text/html') {
         var doc2xml = new DocToXml();
         backend_fs.getFile(doc2xml, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();
