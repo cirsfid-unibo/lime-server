@@ -63,12 +63,13 @@ router.use(passport.authenticate('basic', { session: false }));
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {
-    if (req.path[req.path.length-1] == ('/')) {
-        req.dir = req.path;
+    var reqPath = req.path.replace(/%20/g, ' ');
+    if (reqPath[reqPath.length-1] == ('/')) {
+        req.dir = reqPath;
         console.log('DIR', req.method, req.dir);
     } else {
-        req.dir = path.dirname(req.path);
-        req.file = path.basename(req.path);
+        req.dir = path.dirname(reqPath);
+        req.file = path.basename(reqPath);
         console.log('FILE', req.method, req.dir, req.file);
     }
     next();
