@@ -44,101 +44,91 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+
+// This endpoint is used to export documents, this is useful for sharing them
+// and avoid authentication problems.
+
+// Example usage:
+// POST, with auth localhost:9006/documentsdb/Export?document=aasd@gmail.com/2015/new/new
+// -> { url: 'localhost:9006/documentsdb/Export/hmprs5rk9' }
+// GET localhost:9006/documentsdb/Export/hmprs5rk9
+// -> <xml>...</xml>
+
 var express = require('express'),
     path = require('path'),
-    PassThrough = require('stream').PassThrough,
     passport = require('passport'),
-    Boom = require('boom');
-
-var db = require('../utils/mongodb.js'),
-    backend_exist = require('../utils/backend_exist'),
+    PassThrough = require('stream').PassThrough,
+    Boom = require('boom'),
     backend_fs = require('../utils/backend_fs'),
-    DocToXml = require('../converters/DocToXml');
+    isAllowed = require('./Documents').isAllowed;
 
 var router = express.Router();
 
 router.use(passport.initialize());
-router.use(passport.authenticate('basic', { session: false }));
 
-// Parse path and file parameters.
-router.use(function (req, res, next) {
-    if (req.path[req.path.length-1] == ('/')) {
-        req.dir = req.path;
-        console.log('DIR', req.method, req.dir);
-    } else {
-        req.dir = path.dirname(req.path);
-        req.file = path.basename(req.path);
-        console.log('FILE', req.method, req.dir, req.file);
-    }
-    next();
-});
 
-// Check permissions
-router.use(function (req, res, next) {
-    if (!isAllowed(req.user, req.path))
-        return res.status(401).end();
-    else next();
-});
+function getTime() { return (new Date()).getTime(); }
+function minutes(n) { return 1000 * 60 * n; }
 
-function isAllowed(user, path) {
-    if (!user) return false;
-    if (user instanceof Error) return false;
-    var allowedPaths = user.properties.folders;
-    return allowedPaths.filter(function (allowedPath) {
-        return path.indexOf(allowedPath) === 0;
-    }).length > 0;
+// Export documents for a maximum of 30 minutes;
+var exportedDocuments = {},
+    maxMemorizationTime = minutes(30);
+// Regularly check for documents to delete
+setInterval(function () {
+    Object.keys(exportedDocuments).forEach(function (key) {
+        if (exportedDocuments[key].time + maxMemorizationTime > getTime() )
+            delete exportedDocuments[key];
+    });
+}, minutes(10));
+
+function addDocument(url, text) {
+    exportedDocuments[url] = {
+        time: getTime(),
+        text: text
+    };
 }
 
-// Get file
-// Es. GET /Documents/pippo@gmail.com/examples/it/doc/file.akn
-router.get('*', function (req, res, next) {
-    if (!req.file) return next();
+function getDocument(url) {
+    if (url in exportedDocuments)
+        return exportedDocuments[url].text;
+    else return null;
+}
 
-    if (req.file.match(/.docx?$/) && req.headers.accept == 'text/html') {
-        var doc2xml = new DocToXml();
-        backend_fs.getFile(doc2xml, req.dir, req.file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
+router.post('/',
+            passport.authenticate('basic', { session: false }),
+            function (req, res, next) {
+    if (!req.query.url)
+        return next(Boom.badRequest('Required parameter `url` is missing'));
+    if (!isAllowed(req.user, req.query.url))
+        return next(Boom.unauthorized());
+    var dir = path.dirname(req.query.url);
+        file = path.basename(req.query.url);
+
+    var stream = new PassThrough();
+    backend_fs.getFile(stream, dir, file, function (err) {
+        if (err == 404)
+            next(Boom.badRequest('File does not exist'));
+        else if (err) next(err);
+    });
+    var data = [];
+    var name = Math.random().toString(36).substring(7);
+    stream.setEncoding('utf8');
+    stream.on('data', function(d) { data.push(d); });
+    stream.on('end', function() {
+        var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+        var toReplace = req.url.substring(1);
+        var newUrl = fullUrl.replace(toReplace, '/' + name);
+        addDocument(name, data.join(''));
+        res.json({
+            url: newUrl
         });
-        doc2xml.pipe(res);
-    } else {
-        backend_fs.getFile(res, req.dir, req.file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
-    }
+    });
 });
 
-// List directory
-// Es. GET /Documents/pippo@gmail.com/examples/it/doc/
-router.get('*', function (req, res, next) {
-    backend_fs.getDir(req.dir, function (err, files) {
-        if (err) next(err);
-        else res.json(files).end();
-    });
-});
-
-// Update/create a file
-// Es. PUT /Documents/pippo@gmail.com/examples/it/doc/file.akn
-router.put('*', function (req, res, next) {
-    // Thank you Node for your streams, and sorry for killing your performance
-    // with our requirements.
-    var stream1 = new PassThrough(),
-        stream2 = new PassThrough();
-
-    backend_fs.putFile(stream1, req.dir, req.file, function (err) {
-        if (err) next(err);
-        res.end();
-    });
-
-    backend_exist.putFile(stream2, req.dir, req.file, function (err) {
-        // Ehm.. Who cares about Exist?
-        if (err) console.warn(err);
-    });
-
-    req.pipe(stream1);
-    req.pipe(stream2);
+router.get('/:file', function (req, res, next) {
+    var file = getDocument(req.params.file);
+    if (file) res.send(file);
+    else next(Boom.notFound());
 });
 
 exports.router = router;
-exports.isAllowed = isAllowed;
