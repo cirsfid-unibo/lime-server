@@ -63,7 +63,8 @@ router.use(passport.authenticate('basic', { session: false }));
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {
-    var reqPath = req.path.replace(/%20/g, ' ');
+    var reqPath = req.path.replace(/%20/g, ' ')
+                          .replace(/:/g, '%3A');
     if (reqPath[reqPath.length-1] == ('/')) {
         req.dir = reqPath;
         console.log('DIR', req.method, req.dir);
@@ -115,8 +116,9 @@ router.get('*', function (req, res, next) {
 // Es. GET /Documents/pippo@gmail.com/examples/it/doc/
 router.get('*', function (req, res, next) {
     backend_fs.getDir(req.dir, function (err, files) {
-        if (err) next(err);
-        else res.json(files).end();
+        if (err) return next(err);
+        files = files.map(function (file) { return file.replace(/%3A/g, ':')});
+        res.json(files).end();
     });
 });
 

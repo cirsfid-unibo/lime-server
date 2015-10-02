@@ -47,6 +47,7 @@
 
 var VError = require('verror'),
     fs = require('fs'),
+    joinUrl = require('url').resolve,
     joinPath = require('path').join,
     mkdirp = require('mkdirp');
 
@@ -56,7 +57,6 @@ var documentsPath = require('../config.json').filesystem.documents;
 // Call callback with err or list of files inside dir.
 exports.getDir = function (path, callback) {
     var dirPath = joinPath(documentsPath, path);
-
     fs.readdir(dirPath, function (err, filenames) {
         if (err && err.code == 'ENOENT')
             return callback(undefined, []);
@@ -67,7 +67,6 @@ exports.getDir = function (path, callback) {
         var dirs = [], files = [];
         function onStatResult (entity, err, stat) {
             if (err) return callback(new VError(err, 'Error checking if file is directory'));
-
             if (stat.isDirectory()) dirs.push(entity + '/');
             else files.push(entity);
 
@@ -77,7 +76,9 @@ exports.getDir = function (path, callback) {
 
         for (var i = 0; i < filenames.length; i++) {
             var entity = joinPath(path, filenames[i]);
-            fs.lstat(joinPath(documentsPath, entity), onStatResult.bind(this, entity));
+            fs.lstat(joinPath(documentsPath, entity), onStatResult.bind(this,
+                joinUrl(path, filenames[i]).replace(/%20/g, ' '))
+            );
         }
     });
 };
