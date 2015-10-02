@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2014 - Copyright holders CIRSFID and Department of
  * Computer Science and Engineering of the University of Bologna
@@ -51,7 +52,6 @@ var express = require('express'),
     Boom = require('boom');
 
 var db = require('../utils/mongodb.js'),
-    Users = require('./Users.js'),
     backend_exist = require('../utils/backend_exist'),
     backend_fs = require('../utils/backend_fs'),
     DocToXml = require('../converters/DocToXml');
@@ -143,3 +143,4 @@ router.put('*', function (req, res, next) {
 });
 
 exports.router = router;
+exports.isAllowed = isAllowed;
