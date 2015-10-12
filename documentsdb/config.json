@@ -2,15 +2,16 @@
     "mongodb": {
         "url": "mongodb://localhost:42000/documentsdb",
         "collections": {
-            "users": "dev_users"
+            "users": "cassazione_users"
         }
     },
     "filesystem": {
-        "documents": "/home/node/data/documents/dev/"
+        "documents": "/home/node/data/documents/cassazione/"
     },
     "users": {        
         "shared_folders": [
-            "/shared/"
+            "/acquisizione/",
+            "/spedizione/"
         ]
     },
     "existdb": {
