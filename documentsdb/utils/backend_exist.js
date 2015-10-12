@@ -1,40 +1,40 @@
 /*
  * Copyright (c) 2014 - Copyright holders CIRSFID and Department of
  * Computer Science and Engineering of the University of Bologna
- * 
- * Authors: 
+ *
+ * Authors:
  * Monica Palmirani – CIRSFID of the University of Bologna
  * Fabio Vitali – Department of Computer Science and Engineering of the University of Bologna
  * Luca Cervone – CIRSFID of the University of Bologna
- * 
+ *
  * Permission is hereby granted to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the
  * rights to use, copy, modify, merge, publish, distribute, sublicense,
  * and/or sell copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following conditions:
- * 
+ *
  * The Software can be used by anyone for purposes without commercial gain,
  * including scientific, individual, and charity purposes. If it is used
  * for purposes having commercial gains, an agreement with the copyright
  * holders is required. The above copyright notice and this permission
  * notice shall be included in all copies or substantial portions of the
  * Software.
- * 
+ *
  * Except as contained in this notice, the name(s) of the above copyright
  * holders and authors shall not be used in advertising or otherwise to
  * promote the sale, use or other dealings in this Software without prior
  * written authorization.
- * 
+ *
  * The end-user documentation included with the redistribution, if any,
  * must include the following acknowledgment: "This product includes
  * software developed by University of Bologna (CIRSFID and Department of
- * Computer Science and Engineering) and its authors (Monica Palmirani, 
+ * Computer Science and Engineering) and its authors (Monica Palmirani,
  * Fabio Vitali, Luca Cervone)", in the same place and form as other
  * third-party acknowledgments. Alternatively, this acknowledgment may
  * appear in the software itself, in the same form and location as other
  * such third-party acknowledgments.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -63,9 +63,12 @@ exports.getDir = function (path, callback) {
         // Convert Exist format to an array of file/dir names.
         var saxStream = sax.createStream(false, {}),
             fileList = [];
-        saxStream.on("attribute", function (attr) {
-            if(attr.name == 'NAME')
-                fileList.push(basename(attr.value));
+        saxStream.on("opentag", function (tag) {
+            var name = tag.attributes.NAME,
+                isDir = (tag.name == 'EXIST:COLLECTION'),
+                isFile = (tag.name == 'EXIST:RESOURCE');
+            if(isDir || isFile)
+                fileList.push(path + basename(name) + (isDir ? '/' : ''));
         });
         saxStream.on('error', function (err) {
             res.unpipe(output);
@@ -74,7 +77,7 @@ exports.getDir = function (path, callback) {
         saxStream.on('end', function () {
             fileList.shift(); // Remove our collection name
             if (res.statusCode != 200)
-                callback(new Error('Exist GET DIR request has status code', res.statusCode));
+                callback(new Error('Exist GET DIR request has status code ' + res.statusCode));
             else callback(undefined, fileList);
         });
         res.pipe(saxStream);
@@ -104,7 +107,7 @@ exports.getFile = function (output, path, file, callback) {
     });
 };
 
-// Save input stream to file in path, creating directory 
+// Save input stream to file in path, creating directory
 // if it does not exist. Call callback on success or error.
 exports.putFile = function (input, path, file, callback) {
     var resource = config.rest + config.baseCollection + path + '/' + file;

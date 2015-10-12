@@ -28,6 +28,6 @@
     "xmldom": "^0.1.19"
   },
   "scripts": {
-    "test": "node.exe node_modules\\mocha\\bin\\mocha"
+    "start": "NODE_ENV=development node server"
   }
 }

@@ -106,6 +106,9 @@ function main () {
                     }
                     
                     setTimeout(function () {
+                        // saveToFile(file, aknXml);
+                        // iterate();
+
                         validate(file, aknXml, iterate);
                     }, 0);
                 })
