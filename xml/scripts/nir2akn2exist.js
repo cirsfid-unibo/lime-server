@@ -8,6 +8,7 @@ const existUrl = 'http://sinatra.cirsfid.unibo.it:8080/exist/rest/julyportal_cas
 const auth = 'Basic ' + new Buffer('admin:exist').toString('base64');
 
 var files = glob.sync(path + '**/!(alle)*.xml');
+var files = glob.sync(path + '2000/**/S2006746.xml');
 console.log(files.length);
 
 var documents = files.map(file => ({
@@ -22,12 +23,13 @@ function next () {
     var doc = documents.pop();
     nir2akn(doc.nir, (err, akn) => {
         if (err) console.log('ERROR', err);
-        var res = request("PUT", existUrl + doc.filename, {
-            body: akn,
-            headers: { 'Authorization': auth }
-        });
-        console.log(doc.filename, res.statusCode);
-        next();
+        console.log('akn', akn.substring(0, 1400));
+        // var res = request("PUT", existUrl + doc.filename, {
+        //     body: akn,
+        //     headers: { 'Authorization': auth }
+        // });
+        // console.log(doc.filename, res.statusCode);
+        // next();
     });
 }
 next ();

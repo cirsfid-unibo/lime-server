@@ -11,6 +11,14 @@ describe('NIR Urn -> Uri conversion', function () {
         });
     });
 
+    it('urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07', done => {
+        convert('stato_legge_2000-09-29;300@2001-08-06.xml', akn => {
+            var uri = expressionUri(akn);
+            expect(uri).toEqual('/akn/it/act/legge/stato/2000-09-29/300/ita@2001-08-07/main');
+            done();
+        });
+    });
+
     beforeAll(function () {
         var nir2akn = require('../../xml/xml/nir').nir2akn,
             xmldom = require('xmldom'),
