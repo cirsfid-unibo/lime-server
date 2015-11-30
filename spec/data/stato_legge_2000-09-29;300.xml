@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../../DTD2/norma.xsl"?>
+<!DOCTYPE NIR SYSTEM "../../../../DTD2/nirloose.dtd">
+<!--Documento NIR-->
+<NIR tipo="originale" xmlns="http://www.normeinrete.it/nir/2.2/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h="http://www.w3.org/HTML/1998/html4" xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/" xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/">
+  <Legge id="S2006746">
+    <meta>
+      <descrittori>
+        <pubblicazione tipo="GU" num="250 Suppl.Ord." norm="20001025" />
+        <entratainvigore norm="20001026" />
+        <redazione id="rd1" norm="20151125" nome="Cassazione" url="http://www.italgiure.giustizia.it" contributo="redazione" />
+        <redazione id="rd2" norm="20151125" nome="Norma-Editor v2.7" url="http://www.cirsfid.unibo.it" contributo="editor" />
+        <urn valore="urn:nir:stato:legge:2000-09-29;300" />
+        <materie vocabolario="mat">
+          <materia valore="COMUNITA' EUROPEE" />
+          <materia valore="TRATTATI" />
+          <materia valore="CONVENZIONI" />
+          <materia valore="ATTI INTERNAZIONALI" />
+        </materie>
+      </descrittori>
+      <inquadramento>
+        <infodoc natura="legge" normativa="si" funzione="regolativa" fonte="primario" />
+        <infomancanti>
+          <mTipodoc valore="legge" />
+          <mEmanante valore="stato" />
+        </infomancanti>
+      </inquadramento>
+      <ciclodivita>
+        <eventi>
+          <evento id="e1" data="20001026" fonte="#ro1" tipo="originale" />
+        </eventi>
+        <relazioni>
+          <originale id="ro1" xlink:href="urn:nir:stato:legge:2000-09-29;300" />
+          <attiva id="ra1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" />
+          <attiva id="ra2" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico" />
+          <attiva id="ra3" xlink:href="urn:nir:stato:legge:1986-12-23;898" />
+          <haallegato id="ran1" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee" tipo="attoallegato" />
+          <haallegato id="ran2" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione" tipo="attoallegato" />
+          <haallegato id="ran3" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese" tipo="attoallegato" />
+          <haallegato id="ran4" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso" tipo="allegatointegrante" />
+        </relazioni>
+      </ciclodivita>
+      <lavoripreparatori><h:p>LAVORI PREPARATORI<h:br/><h:br/>Camera dei deputati (atto n. 5491):<h:br/><h:br/>Presentato dal Ministro degli affari esteri (Dini) e dal Ministro della giustizia (Diliberto) il 4 dicembre 1998.<h:br/><h:br/>Assegnato alle commissioni riunite II (Giustizia) e III (Affari esteri), in sede referente, il 22 gennaio 1999 con pareti delle commissioni I, V, VI, XIII.<h:br/><h:br/>Esaminato dalle commissioni riunite II e III il 4, 25 febbraio 1999; il 3, 17, 18 marzo 1999.<h:br/><h:br/>Relazione scritta presentata il 19 marzo 1999 (atto n. 5491/A - relatore on. Leccese).<h:br/><h:br/>Esaminato in aula il 19 marzo 1999 ed approvato il 24 marzo 1999.<h:br/><h:br/>Senato della Repubblica (atto n. 3915):<h:br/><h:br/>Assegnato alle commissioni riunite 2^ (Giustizia) e 3^ (Affari esteri), in sede referente, il 7 aprile 1999 con pareri delle commissioni 1^, 5^, 6^, 9^, e della giunta per gli affari delle Comunità europee.<h:br/><h:br/>Esaminato dalle commissioni riunite 2^ e 3^ il 24, 30 novembre 1999; il 16 dicembre 1999; l'11 gennaio 2000; il 17, 24 febbraio 2000; il 7, 9 marzo 2000.<h:br/><h:br/>Relazione scritta presentata il 28 marzo 2000 (atto n. 3915/A - relatore sen. Pettinato).<h:br/><h:br/>Esaminato in aula e approvato, con modificazioni, il 10 maggio 2000.<h:br/><h:br/>Camera dei deputati (atto n. 5491-B):<h:br/><h:br/>Assegnato alle commissioni riunite II (Giustizia) e III (Esteri) in sede referente, il 19 maggio 2000 con pareri delle Commissioni I, V, VI, VIII, XI, XIII, XIV.<h:br/><h:br/>Esaminato dalle commissioni riunite II e III il 25, 30, 31 maggio 2000; il 1o giugno 2000.<h:br/><h:br/>Esaminato in aula il 5, 6 giugno 2000 ed approvato, con modificazioni il 7 giugno 2000.<h:br/><h:br/>Senato della Repubblica (atto n. 3915-B);<h:br/><h:br/>Assegnato alla 2^ commissione (Giustizia), in sede referente, il 15 giugno 2000 con i pareri delle commissioni 1^, 3^, 5^.<h:br/><h:br/>Esaminato dalla 2^ commissione il 20, 27 giugno 2000.<h:br/><h:br/>Esaminato in aula ed approvato, con modificazioni, il 28 giugno 2000.<h:br/><h:br/>Camera dei deputati (atto n. 5491-D):<h:br/><h:br/>Assegnato alle commissioni riunite II (Giustizia) e III (Esteri), in sede referente, il 4 luglio 2000 con pareri delle commissioni I, V, VII, VIII, XI, XII, XIII, XIV.<h:br/><h:br/>Esaminato dalle commissioni riunite II e III il 18, 19, 20, 25 luglio 2000.<h:br/><h:br/>Esaminato in aula il 26 luglio ed approvato, con modificazioni, il 27 luglio 2000.<h:br/><h:br/>Senato della Repubblica (atto n. 3915-D);<h:br/><h:br/>Assegnato alla 2^ commissione (Giustizia) in sede referente, l'8 settembre 2000, con pareri delle commissioni 1^ e 5^.<h:br/><h:br/>Esaminato dalla 2^ commissione il 12 e 13 settembre 2000.<h:br/><h:br/>Esaminato in aula ed approvato il 19 settembre 2000.</h:p></lavoripreparatori>
+      <proprietario soggetto="TITOLO"><titoloA9>LEGGE 29 settembre 2000, n. 300 - Ratifica ed esecuzione dei seguenti Atti internazionali elaborati in base all'articolo K. 3 del Trattato dell'Unione europea: Convenzione sulla tutela degli interessi finanziari delle Comunità europee, fatta a Bruxelles il 26 luglio 1995, del suo primo Protocollo fatto a Dublino il 27 settembre 1996, del Protocollo concernente l'interpretazione in via pregiudiziale, da parte della Corte di Giustizia delle Comunità europee, di detta Convenzione, con annessa dichiarazione, fatto a Bruxelles il 29 novembre 1996, nonchè della Convenzione relativa alla lotta contro la corruzione nella quale sono coinvolti funzionari delle Comunità europee o degli Stati membri dell'Unione europea, fatta a Bruxelles il 26 maggio 1997 e della Convenzione OCSE sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, con annesso, fatta a Parigi il 17 dicembre 1997. Delega al Governo per la disciplina della responsabilità amministrativa delle persone giuridiche e degli enti privi di personalità giuridica.</titoloA9></proprietario>
+    </meta>
+    <intestazione><h:br/><tipoDoc>LEGGE</tipoDoc> <dataDoc norm="20000929">29 settembre 2000</dataDoc>, n. <numDoc>300</numDoc> <h:br/><h:br/><titoloDoc id="titolo">Ratifica ed esecuzione dei seguenti Atti internazionali elaborati in base all'<rif id="rif1" xlink:href="urn:nir:stato:legge:1992-11-03;454:trattato.maastricht#art0.3">articolo K. 3 del Trattato dell'Unione europea</rif>: <rif id="rif124" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Convenzione sulla tutela degli interessi finanziari delle Comunità europee, fatta a Bruxelles il 26 luglio 1995</rif>, del suo primo <rif id="rif125" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">Protocollo fatto a Dublino il 27 settembre 1996</rif>, del <rif id="rif126" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:protocollo.interpretazione.pregiudiziale">Protocollo</rif> concernente l'interpretazione in via pregiudiziale, da parte della Corte di Giustizia delle Comunità europee, di detta Convenzione, con annessa <rif id="rif127" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:dichiarazione">dichiarazione</rif>, fatto a Bruxelles il 29 novembre 1996, nonchè della Convenzione <rif id="rif128" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione">relativa alla lotta contro la corruzione nella quale sono coinvolti funzionari delle Comunità europee o degli Stati membri dell'Unione europea, fatta a Bruxelles il 26 maggio 1997</rif> e della <rif id="rif129" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese">Convenzione OCSE</rif> sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, con <rif id="rif130" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso">annesso</rif>, fatta a Parigi il 17 dicembre 1997. Delega al Governo per la disciplina della responsabilità amministrativa delle persone giuridiche e degli enti privi di personalità giuridica.</titoloDoc></intestazione>
+    <formulainiziale>La Camera dei deputati ed il Senato della Repubblica hanno approvato; <h:br/><h:br/>IL PRESIDENTE DELLA REPUBBLICA <h:br/><h:br/>PROMULGA <h:br/><h:br/>la seguente legge:</formulainiziale>
+    <articolato>
+      <articolo id="art1">
+        <num>Art. 1.</num>
+        <rubrica>(Ratifica di Atti internazionali)</rubrica>
+        <comma id="art1-com1">
+          <num>1.</num>
+          <corpo> Il Presidente della Repubblica è autorizzato a ratificare i seguenti Atti internazionali elaborati in base all'<rif id="rif3" xlink:href="urn:nir:stato:legge:1992-11-03;454:trattato.maastricht#art0.3">articolo K.3 del Trattato sull'Unione europea</rif>: <rif id="rif131" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Convenzione sulla tutela degli interessi finanziari delle Comunità europee, fatta a Bruxelles il 26 luglio 1995</rif>; suo primo <rif id="rif132" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">Protocollo fatto a Dublino il 27 settembre 1996</rif>; <rif id="rif133" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">Protocollo</rif> concernente l'interpretazione in via pregiudiziale, da parte della Corte di Giustizia delle Comunità europee, di detta Convenzione, con annessa <rif id="rif134" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:dichiarazione">dichiarazione</rif>, fatto a Bruxelles il 29 novembre 1996; nonchè <rif id="rif135" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione">Convenzione</rif> relativa alla lotta contro la corruzione nella quale sono coinvolti funzionari delle Comunità europee o degli Stati membri dell'Unione europea, fatta a Bruxelles il 26 maggio 1997 e <rif id="rif136" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese">Convenzione OCSE</rif> sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, con <rif id="rif137" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso">annesso</rif>, fatta a Parigi il 17 dicembre 1997.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art2">
+        <num>Art. 2.</num>
+        <rubrica>(Entrata in vigore sul piano internazionale)</rubrica>
+        <comma id="art2-com1">
+          <num>1.</num>
+          <corpo> <rif id="rif140" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Piena</rif> ed <rif id="rif141" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">intera</rif> <rif id="rif142" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:protocollo.interpretazione.pregiudiziale">esecuzione</rif> è <rif id="rif143" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:dichiarazione">data</rif> <rif id="rif144" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione">agli</rif> <rif id="rif138" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese">Atti</rif> <rif id="rif139" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso">internazionali</rif> indicati nell'<rif id="rif4" xlink:href="#art1">articolo 1</rif> a decorrere dalla data della loro entrata in vigore, in conformità a quanto rispettivamente disposto da ciascuno di essi.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art3">
+        <inlinemeta><disposizioni><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art3-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif5" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod13-vir1" /></dsp:novella></dsp:integrazione><dsp:estensione><dsp:pos xlink:href="#art3-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif6" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art314" /><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316" /><cirsfid:isub><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art317" /><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art320" /></cirsfid:isub><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com3" /><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com4" /><dsp:dominio><dsp:testo valore="Le disposizioni degli articoli 314, 316, da 317 a 320 e 322, terzo e quarto comma, si applicano anche:     1) ai membri della Commissione delle Comunità europee, del Parlamento europeo, della Corte di Giustizia e della Corte dei conti delle Comunità europee;     2) ai funzionari e agli agenti assunti per contratto a norma dello statuto dei funzionari delle Comunità europee o del regime applicabile agli agenti delle Comunità europee;     3) alle persone comandate dagli Stati membri o da qualsiasi ente pubblico o privato presso le Comunità europee, che esercitino funzioni corrispondenti a quelle dei funzionari o agenti delle Comunità europee;     4) ai membri e agli addetti a enti costituiti sulla base dei Trattati che istituiscono le Comunità europee;     5) a coloro che, nell'ambito di altri Stati membri dell'Unione europea, svolgono funzioni o attività corrispondenti a quelle dei pubblici ufficiali e degli incaricati di un pubblico servizio.   " /></dsp:dominio></dsp:subarg></dsp:norma></dsp:estensione><dsp:integrazione><dsp:pos xlink:href="#art3-com2" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif19" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640ter" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod3-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 3.</num>
+        <rubrica>(Peculato, concussione, corruzione e istigazione alla corruzione di membri degli organi delle Comunità europee e di funzionari delle Comunità europee e di Stati esteri)</rubrica>
+        <comma id="art3-com1">
+          <num>1.</num>
+          <corpo> Dopo l'<mod id="mod13"><rif id="rif5" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322">articolo 322 del codice penale</rif> sono inseriti i seguenti: <h:br/><h:br/><virgolette tipo="struttura" id="mod13-vir1">"<articolo id="mod13-vir1-art322bis"><num>Art. 322-bis.</num><rubrica>- (Peculato, concussione, corruzione e istigazione alla corruzione di membri degli organi delle Comunità europee e di funzionari delle Comunità europee e di Stati esteri). -</rubrica><comma id="mod13-vir1-art322bis-com1"><num /><alinea> Le disposizioni degli <mod id="mod14"><mrif id="rif6">articoli <rif id="rif6-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art314">314</rif>, <rif id="rif6-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316">316</rif>, da 317 a 320 e 322, <rif id="rif6-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com3">terzo</rif> e <rif id="rif6-4" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com4">quarto</rif> comma</mrif></mod>, si applicano anche: </alinea><el id="mod13-vir1-art322bis-com1-let1"><num>1)</num><corpo> ai membri della Commissione delle Comunità europee, del Parlamento europeo, della Corte di Giustizia e della Corte dei conti delle Comunità europee;</corpo></el><el id="mod13-vir1-art322bis-com1-let2"><num>2)</num><corpo> ai funzionari e agli agenti assunti per contratto a norma dello statuto dei funzionari delle Comunità europee o del regime applicabile agli agenti delle Comunità europee;</corpo></el><el id="mod13-vir1-art322bis-com1-let3"><num>3)</num><corpo> alle persone comandate dagli Stati membri o da qualsiasi ente pubblico o privato presso le Comunità europee, che esercitino funzioni corrispondenti a quelle dei funzionari o agenti delle Comunità europee;</corpo></el><el id="mod13-vir1-art322bis-com1-let4"><num>4)</num><corpo> ai membri e agli addetti a enti costituiti sulla base dei Trattati che istituiscono le Comunità europee;</corpo></el><el id="mod13-vir1-art322bis-com1-let5"><num>5)</num><corpo> a coloro che, nell'ambito di altri Stati membri dell'Unione europea, svolgono funzioni o attività corrispondenti a quelle dei pubblici ufficiali e degli incaricati di un pubblico servizio.</corpo></el></comma><comma id="mod13-vir1-art322bis-com2"><num /><alinea>Le disposizioni degli <mrif id="rif8">articoli <rif id="rif8-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art321">321</rif> e 322, <rif id="rif8-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com1">primo</rif> e <rif id="rif8-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322-com2">secondo</rif> comma</mrif>, si applicano anche se il denaro o altra utilità è dato, offerto o promesso: </alinea><el id="mod13-vir1-art322bis-com2-let1"><num>1)</num><corpo> alle persone indicate nel <rif id="rif10" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis-com1">primo comma del presente articolo</rif>;</corpo></el><el id="mod13-vir1-art322bis-com2-let2"><num>2)</num><corpo> a persone che esercitano funzioni o attività corrispondenti a quelle dei pubblici ufficiali e degli incaricati di un pubblico servizio nell'ambito di altri Stati esteri o organizzazioni pubbliche internazionali, qualora il fatto sia commesso per procurare a sè o ad altri un indebito vantaggio in operazioni economiche internazionali.</corpo></el></comma><comma id="mod13-vir1-art322bis-com3"><num /><corpo>Le persone indicate nel <rif id="rif11" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis-com1">primo comma</rif> sono assimilate ai pubblici ufficiali, qualora esercitino funzioni corrispondenti, e agli incaricati di un pubblico servizio negli altri casi.</corpo></comma></articolo><articolo id="mod13-vir1-art322ter"><num>Art. 322-ter.</num><rubrica>- (Confisca). -</rubrica><comma id="mod13-vir1-art322ter-com1"><num /><corpo>Nel caso di condanna, o di applicazione della pena su richiesta delle parti a norma dell'<rif id="rif12" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art444">articolo 444 del codice di procedura penale</rif>, per uno dei delitti previsti dagli <rif id="rif99" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">articoli da 314 a 320</rif>, anche se commessi dai soggetti indicati nell'<rif id="rif13" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis-com1">articolo 322-bis, primo comma</rif>, è sempre ordinata la confisca dei beni che ne costituiscono il profitto o il prezzo, salvo che appartengano a persona estranea al reato, ovvero, quando essa non è possibile, la confisca di beni, di cui il reo ha la disponibilità, per un valore corrispondente a tale prezzo.</corpo></comma><comma id="mod13-vir1-art322ter-com2"><num /><corpo>Nel caso di condanna, o di applicazione della pena a norma dell'<rif id="rif14" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art444">articolo 444 del codice di procedura penale</rif>, per il delitto previsto dall'<rif id="rif15" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art321">articolo 321</rif>, anche se commesso ai sensi dell'<rif id="rif16" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis-com2">articolo 322-bis, secondo comma</rif>, è sempre ordinata la confisca dei beni che ne costituiscono il profitto salvo che appartengano a persona estranea al reato, ovvero, quando essa non è possibile, la confisca di beni, di cui il reo ha la disponibilità, per un valore corrispondente a quello di detto profitto e, comunque, non inferiore a quello del denaro o delle altre utilità date o promesse al pubblico ufficiale o all'incaricato di pubblico servizio o agli altri soggetti indicati nell'<rif id="rif17" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis-com2">articolo 322-bis, secondo comma</rif>.</corpo></comma><comma id="mod13-vir1-art322ter-com3"><num /><corpo>Nei casi di cui ai <rif id="rif18" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322ter-com1">commi primo</rif> e secondo, il giudice, con la sentenza di condanna, determina le somme di denaro o individua i beni assoggettati a confisca in quanto costituenti il profitto o il prezzo del reato ovvero in quanto di valore corrispondente al profitto o al prezzo del reato</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+        </comma>
+        <comma id="art3-com2">
+          <num>2.</num>
+          <corpo> Dopo l'<mod id="mod3"><rif id="rif19" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640ter">articolo 640-ter del codice penale</rif> è inserito il seguente: <h:br/><h:br/><virgolette tipo="struttura" id="mod3-vir1">"<articolo id="mod3-vir1-art640quater"><num>Art. 640-quater.</num><rubrica>- (Applicabilità dell'<rif id="rif100" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322ter">articolo 322-ter</rif>). -</rubrica><comma id="mod3-vir1-art640quater-com1"><num /><corpo>Nei casi di cui agli <mrif id="rif20">articoli 640, secondo comma, numero <rif id="rif20-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640-com2-let1">1</rif>, <rif id="rif20-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640bis">640-bis</rif> e 640-ter, <rif id="rif20-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640ter-com2">secondo</rif> comma</mrif>, con esclusione dell'ipotesi in cui il fatto è commesso con abuso della qualità di operatore del sistema, si osservano, in quanto applicabili, le disposizioni contenute nell'<rif id="rif21" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322ter">articolo 322-ter</rif></corpo></comma></articolo>"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art4">
+        <inlinemeta><disposizioni><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art4-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif22" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316bis" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod4-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 4.</num>
+        <rubrica>(Indebita percezione di erogazioni a danno dello Stato)</rubrica>
+        <comma id="art4-com1">
+          <num>1.</num>
+          <corpo> Dopo l'<mod id="mod4"><rif id="rif22" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316bis">articolo 316-bis del codice penale</rif> è inserito il seguente: <h:br/><h:br/><virgolette tipo="struttura" id="mod4-vir1">"<articolo id="mod4-vir1-art316ter"><num>Art. 316-ter.</num><rubrica>- (Indebita percezione di erogazioni a danno dello Stato). -</rubrica><comma id="mod4-vir1-art316ter-com1"><num /><corpo>Salvo che il fatto costituisca il reato previsto dall'<rif id="rif23" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640bis">articolo 640-bis</rif>, chiunque mediante l'utilizzo o la presentazione di dichiarazioni o di documenti falsi o attestanti cose non vere, ovvero mediante l'omissione di informazioni dovute, consegue indebitamente, per sè o per altri, contributi, finanziamenti, mutui agevolati o altre erogazioni dello stesso tipo, comunque denominate, concessi o erogati dallo Stato, da altri enti pubblici o dalle Comunità europee è punito con la reclusione da sei mesi a tre anni.</corpo></comma><comma id="mod4-vir1-art316ter-com2"><num /><corpo>Quando la somma indebitamente percepita è pari o inferiore a lire sette milioni settecentoquarantacinquemila si applica soltanto la sanzione amministrativa del pagamento di una somma di denaro da dieci a cinquanta milioni di lire. Tale sanzione non può comunque superare il triplo del beneficio conseguito</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art5">
+        <inlinemeta><disposizioni><modificheattive><dsp:sostituzione completa="no"><dsp:pos xlink:href="#art5-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif25" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art9-com3" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod5-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod5-vir1" /></dsp:novellando></dsp:sostituzione><dsp:sostituzione completa="no"><dsp:pos xlink:href="#art5-com2" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif26" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art10-com2" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod6-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod6-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 5.</num>
+        <rubrica>(Modifiche agli <mrif id="rif24">articoli <rif id="rif24-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art9">9</rif> e <rif id="rif24-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art10">10</rif> del codice penale</mrif>)</rubrica>
+        <comma id="art5-com1">
+          <num>1.</num>
+          <corpo> All'<mod id="mod5"><rif id="rif25" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art9-com3">articolo 9, terzo comma, del codice penale</rif>, le parole: <virgolette tipo="parola" id="mod5-vir1">"a danno di uno Stato estero"</virgolette>, sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod5-vir2">"a danno delle Comunità europee, di uno Stato estero"</virgolette></mod>.</corpo>
+        </comma>
+        <comma id="art5-com2">
+          <num>2.</num>
+          <corpo> All'<mod id="mod6"><rif id="rif26" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art10-com2">articolo 10, secondo comma, del codice penale</rif>, le parole: <virgolette tipo="parola" id="mod6-vir1">"a danno di uno Stato estero"</virgolette>, sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod6-vir2">"a danno delle Comunità europee, di uno Stato estero"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art6">
+        <inlinemeta><disposizioni><modificheattive><dsp:integrazione completa="no"><dsp:pos xlink:href="#art6-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif28" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater" /></dsp:subarg></dsp:norma><dsp:posizione><dsp:pos xlink:href="#mod7-vir1" dove="dopo" /></dsp:posizione><dsp:novella><dsp:pos xlink:href="#mod7-vir2" /></dsp:novella></dsp:integrazione><dsp:integrazione completa="no"><dsp:pos xlink:href="#art6-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif103" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater" /></dsp:subarg></dsp:norma><dsp:posizione><dsp:pos xlink:href="#mod1-vir1" dove="dopo" /></dsp:posizione><dsp:novella><dsp:pos xlink:href="#mod1-vir2" /></dsp:novella></dsp:integrazione><dsp:integrazione completa="no"><dsp:pos xlink:href="#art6-com2" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif29" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater" /></dsp:subarg></dsp:norma><dsp:posizione><dsp:pos xlink:href="#mod8-vir1" dove="dopo" /></dsp:posizione><dsp:novella><dsp:pos xlink:href="#mod8-vir2" /></dsp:novella></dsp:integrazione><dsp:integrazione completa="no"><dsp:pos xlink:href="#art6-com2" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif108" /><dsp:subarg /></dsp:norma><dsp:posizione><dsp:pos xlink:href="#mod2-vir1" dove="dopo" /></dsp:posizione><dsp:novella><dsp:pos xlink:href="#mod2-vir2" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 6.</num>
+        <rubrica>(Modifiche agli <mrif id="rif27">articoli <rif id="rif27-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater">32-quater</rif> e <rif id="rif27-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art323bis">323-bis</rif> del codice penale</mrif>)</rubrica>
+        <comma id="art6-com1">
+          <num>1.</num>
+          <corpo> All'<mod id="mod7"><rif id="rif28" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater">articolo 32-quarer del codice penale</rif>, dopo la parola: <virgolette tipo="parola" id="mod7-vir1">"<rif id="rif101" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">316-bis</rif>"</virgolette> è inserita la seguente: <virgolette tipo="parola" id="mod7-vir2">", <rif id="rif102" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">316-ter</rif>"</virgolette></mod>, e dopo la <mod id="mod1"><rif id="rif103" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater">parola</rif>: <virgolette tipo="parola" id="mod1-vir1">"<rif id="rif104" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322">322</rif>"</virgolette> è inserita la seguente: <virgolette tipo="parola" id="mod1-vir2">", <rif id="rif105" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis">322-bis</rif>"</virgolette></mod>.</corpo>
+        </comma>
+        <comma id="art6-com2">
+          <num>2.</num>
+          <corpo> All'<mod id="mod8"><rif id="rif29" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art32quater">articolo 323-bis del codice penale</rif>, dopo la parola: <virgolette tipo="parola" id="mod8-vir1">"<rif id="rif106" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316bis">316-bis</rif>"</virgolette> è inserita la seguente: <virgolette tipo="parola" id="mod8-vir2">", <rif id="rif107" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316ter">316-ter</rif>"</virgolette></mod>, e dopo la <mod id="mod2"><rif id="rif108" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">parola</rif>: <virgolette tipo="parola" id="mod2-vir1">"<rif id="rif109" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322">322</rif>"</virgolette> è inserita la seguente: <virgolette tipo="parola" id="mod2-vir2">", <rif id="rif110" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis">322-bis</rif>"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art7">
+        <inlinemeta><disposizioni><modificheattive><dsp:integrazione completa="no"><dsp:pos xlink:href="#art7-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico"><dsp:pos xlink:href="#rif32" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295-com2" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod9-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 7.</num>
+        <rubrica>(Modifica all'<rif id="rif30" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295">articolo 295 del testo unico approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>, in materia di reati doganali)</rubrica>
+        <comma id="art7-com1">
+          <num>1.</num>
+          <corpo> Dopo il <mod id="mod9"><rif id="rif32" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295-com2">secondo comma dell'articolo 295 del testo unico delle disposizioni legislative in materia doganale, approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>, è aggiunto il seguente:<h:br/><h:br/><virgolette tipo="parola" id="mod9-vir1">"Per gli stessi delitti, alla multa è aggiunta la reclusione fino a tre anni quando l'ammontare dei diritti di confine dovuti è maggiore di lire novantasei milioni e ottocentomila"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art8">
+        <inlinemeta><disposizioni><modificheattive><dsp:sostituzione completa="no"><dsp:pos xlink:href="#art8-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico"><dsp:pos xlink:href="#rif36" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295bis-com4" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod10-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod10-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 8.</num>
+        <rubrica>(Modifiche all'<rif id="rif34" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295bis">articolo 295-bis del testo unico approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>)</rubrica>
+        <comma id="art8-com1">
+          <num>1.</num>
+          <corpo> Al primo e al <mod id="mod10"><rif id="rif36" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art295bis-com4">quarto comma dell'articolo 295-bis del testo unico delle disposizioni legislative in materia doganale, approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>, e successive modificazioni, le parole: <virgolette tipo="parola" id="mod10-vir1">"lire sette milioni"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod10-vir2">"lire sette milioni settecentoquarantacinquemila"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art9">
+        <inlinemeta><disposizioni><modificheattive><dsp:sostituzione completa="no"><dsp:pos xlink:href="#art9-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico"><dsp:pos xlink:href="#rif40" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art297" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod11-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod11-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 9.</num>
+        <rubrica>(Modifica all'<rif id="rif38" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art297">articolo 297 del testo unico approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>)</rubrica>
+        <comma id="art9-com1">
+          <num>1.</num>
+          <corpo> All'<mod id="mod11"><rif id="rif40" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico#art297">articolo 297 del testo unico delle disposizioni legislative in materia doganale, approvato con decreto del Presidente della Repubblica 23 gennaio 1973, n. 43</rif>, e successive modificazioni, le parole: <virgolette tipo="parola" id="mod11-vir1">"lire ventuno milioni"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod11-vir2">"lire ventitrè milioni duecentotrentacinquemila"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art10">
+        <inlinemeta><disposizioni><modificheattive><dsp:sostituzione completa="no"><dsp:pos xlink:href="#art10-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1986-12-23;898"><dsp:pos xlink:href="#rif43" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:legge:1986-12-23;898#art2-com1" /></dsp:subarg></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod12-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod12-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 10.</num>
+        <rubrica>(Modifica all'<rif id="rif42" xlink:href="urn:nir:stato:legge:1986-12-23;898#art2">articolo 2 della legge 23 dicembre 1986, n. 898</rif>, in materia di frodi ai danni del Fondo europeo agricolo di orientamento e garanzia)</rubrica>
+        <comma id="art10-com1">
+          <num>1.</num>
+          <corpo> Nel secondo periodo del <mod id="mod12"><rif id="rif43" xlink:href="urn:nir:stato:legge:1986-12-23;898#art2-com1">comma 1 dell'articolo 2 della legge 23 dicembre 1986, n. 898</rif>, come sostituito dall'<rif id="rif44" xlink:href="urn:nir:stato:legge:1992-02-19;142#art73">articolo 73 della legge 19 febbraio 1992, n. 142</rif>, le parole: <virgolette tipo="parola" id="mod12-vir1">"venti milioni"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod12-vir2">"sette milioni settecentoquarantacinquemila"</virgolette></mod>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art11">
+        <num>Art. 11.</num>
+        <rubrica>(Delega al Governo per la disciplina della responsabilità amministrativa delle persone giuridiche e degli enti privi di personalità giuridica)</rubrica>
+        <comma id="art11-com1">
+          <num>1.</num>
+          <alinea> Il Governo della Repubblica è delegato ad emanare, entro otto mesi dalla data di entrata in vigore della presente legge, un decreto legislativo avente ad oggetto la disciplina della responsabilità amministrativa delle persone giuridiche e delle società, associazioni od enti privi di personalità giuridica che non svolgono funzioni di rilievo costituzionale, con l'osservanza dei seguenti principi e criteri direttivi: </alinea>
+          <el id="art11-com1-leta">
+            <num>a)</num>
+            <corpo> prevedere la responsabilità in relazione alla commissione dei reati di cui agli <mrif id="rif45">articoli <rif id="rif45-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316bis">316-bis</rif>, <rif id="rif45-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art316ter">316-ter</rif>, <rif id="rif45-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art317">317</rif>, <rif id="rif45-4" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art318">318</rif>, <rif id="rif45-5" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art319">319</rif>, <rif id="rif45-6" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art319bis">319-bis</rif>, <rif id="rif45-7" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art319ter">319-ter</rif>, <rif id="rif45-8" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art320">320</rif>, <rif id="rif45-9" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art321">321</rif>, <rif id="rif45-10" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322">322</rif>, <rif id="rif45-11" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322bis">322-bis</rif>, 640, secondo comma, numero <rif id="rif45-13" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640-com2-let1">1</rif>, <rif id="rif45-14" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640bis">640-bis</rif> e 640-ter, <rif id="rif45-15" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art640ter-com2">secondo</rif> comma</mrif>, con esclusione dell'ipotesi in cui il fatto è commesso con abuso della qualità di operatore del sistema, del <rif id="rif46" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">codice penale</rif>;</corpo>
+          </el>
+          <el id="art11-com1-letb">
+            <num>b)</num>
+            <corpo> prevedere la responsabilità in relazione alla commissione dei reati relativi alla tutela dell'incolumità pubblica previsti dal <rif id="rif47" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#lib2-tit6">titolo sesto del libro secondo del codice penale</rif>;</corpo>
+          </el>
+          <el id="art11-com1-letc">
+            <num>c)</num>
+            <corpo> prevedere la responsabilità in relazione alla commissione dei reati previsti dagli <mrif id="rif48">articoli <rif id="rif48-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art589">589</rif> e <rif id="rif48-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art590">590</rif> del codice penale</mrif> che siano stati commessi con violazione delle norme per la prevenzione degli infortuni sul lavoro o relative alla tutela dell'igiene e della salute sul lavoro;</corpo>
+          </el>
+          <el id="art11-com1-letd">
+            <num>d)</num>
+            <corpo> prevedere la responsabilità in relazione alla commissione dei reati in materia di tutela dell'ambiente e del territorio, che siano punibili con pena detentiva non inferiore nel massimo ad un anno anche se alternativa alla pena pecuniaria, previsti dalla <rif id="rif111" xlink:href="urn:nir:stato:legge:1962-12-31;1860">legge 31 dicembre 1962, n. 1860</rif>, dalla <rif id="rif112" xlink:href="urn:nir:stato:legge:1965-07-14;963">legge 14 luglio 1965, n. 963</rif>, dalla <rif id="rif113" xlink:href="urn:nir:stato:legge:1982-12-31;979">legge 31 dicembre 1982, n. 979</rif>, dalla <rif id="rif114" xlink:href="urn:nir:stato:legge:1985-02-28;47">legge 28 febbraio 1985, n. 47</rif>, e successive modificazioni, dal <rif id="rif50" xlink:href="urn:nir:stato:decreto.legge:1985-06-27;312">decreto-legge 27 giugno 1985, n. 312</rif>, convertito, con modificazioni, dalla <rif id="rif51" xlink:href="urn:nir:stato:legge:1985-08-08;431">legge 8 agosto 1985, n. 431</rif>, dal <rif id="rif115" xlink:href="urn:nir:presidente.repubblica:decreto:1988-05-24;203">decreto del Presidente della Repubblica 24 maggio 1988, n. 203</rif>, dalla <rif id="rif116" xlink:href="urn:nir:stato:legge:1991-12-06;394">legge 6 dicembre 1991, n. 394</rif>, dal <rif id="rif53" xlink:href="urn:nir:stato:decreto.legislativo:1992-01-27;95">decreto legislativo 27 gennaio 1992, n. 95</rif>, dal <rif id="rif54" xlink:href="urn:nir:stato:decreto.legislativo:1992-01-27;99">decreto legislativo 27 gennaio 1992, n. 99</rif>, dal <rif id="rif55" xlink:href="urn:nir:stato:decreto.legislativo:1995-03-17;230">decreto legislativo 17 marzo 1995, n. 230</rif>, dal <rif id="rif56" xlink:href="urn:nir:stato:decreto.legislativo:1997-02-05;22">decreto legislativo 5 febbraio 1997, n. 22</rif>, e successive modificazioni, dal <rif id="rif57" xlink:href="urn:nir:stato:decreto.legislativo:1999-05-11;152">decreto legislativo 11 maggio 1999, n. 152</rif>, dal <rif id="rif58" xlink:href="urn:nir:stato:decreto.legislativo:1999-08-17;334">decreto legislativo 17 agosto 1999, n. 334</rif>, dal <rif id="rif59" xlink:href="urn:nir:stato:decreto.legislativo:1999-08-04;372">decreto legislativo 4 agosto 1999, n. 372</rif>, e dal <rif id="rif60" xlink:href="urn:nir:stato:decreto.legislativo:1999-10-29;490:testo.unico">testo unico delle disposizioni legislative in materia di beni culturali e ambientali, approvato con decreto legislativo 29 ottobre 1999, n. 490</rif>;</corpo>
+          </el>
+          <el id="art11-com1-lete">
+            <num>e)</num>
+            <corpo> prevedere che i soggetti di cui all'alinea del presente comma sono responsabili in relazione ai reati commessi, a loro vantaggio o nel loro interesse, da chi svolge funzioni di rappresentanza o di amministrazione o di direzione, ovvero da chi esercita, anche di fatto, poteri di gestione e di controllo ovvero ancora da chi è sottoposto alla direzione o alla vigilanza delle persone fisiche menzionate, quando la commissione del reato è stata resa possibile dall'inosservanza degli obblighi connessi a tali funzioni; prevedere l'esclusione della responsabilità dei soggetti di cui all'alinea del presente comma nei casi in cui l'autore abbia commesso il reato nell'esclusivo interesse proprio o di terzi;</corpo>
+          </el>
+          <el id="art11-com1-letf">
+            <num>f)</num>
+            <corpo> prevedere sanzioni amministrative-effettive, proporzionate e dissuasive nei confronti dei soggetti indicati nell'alinea del presente comma;</corpo>
+          </el>
+          <el id="art11-com1-letg">
+            <num>g)</num>
+            <corpo> prevedere una sanzione amministrativa pecuniaria non inferiore a Lire cinquanta milioni e non superiore a lire tre miliardi stabilendo che, ai fini della determinazione in concreto della sanzione, si tenga conto anche dell'ammontare dei proventi del reato e delle condizioni economiche e patrimoniali dell'ente, prevedendo altresì che, nei casi di particolare tenuità del fatto, la sanzione da applicare non sia inferiore a lire venti milioni e non sia superiore a lire duecento milioni; prevedere inoltre l'esclusione del pagamento in misura ridotta;</corpo>
+          </el>
+          <el id="art11-com1-leth">
+            <num>h)</num>
+            <corpo> prevedere che gli enti rispondono del pagamento della sanzione pecuniaria entro i limiti del fondo comune o del patrimonio sociale;</corpo>
+          </el>
+          <el id="art11-com1-leti">
+            <num>i)</num>
+            <corpo> prevedere la confisca del profitto o del prezzo del reato, anche nella forma per equivalente;</corpo>
+          </el>
+          <el id="art11-com1-letl">
+            <num>l)</num>
+            <alinea> prevedere, nei casi di particolare gravità, l'applicazione di una o più delle seguenti sanzioni in aggiunta alle sanzioni pecuniarie: </alinea>
+            <en id="art11-com1-letl-num1">
+              <num>1)</num>
+              <corpo> chiusura anche temporanea dello stabilimento o della sede commerciale;</corpo>
+            </en>
+            <en id="art11-com1-letl-num2">
+              <num>2)</num>
+              <corpo> sospensione o revoca delle autorizzazioni, licenze o concessioni funzionali alla commissione dell'illecito;</corpo>
+            </en>
+            <en id="art11-com1-letl-num3">
+              <num>3)</num>
+              <corpo> interdizione anche temporanea dall'esercizio dell'attività ed eventuale nomina di altro soggetto per l'esercizio vicario della medesima quando la prosecuzione dell'attività è necessaria per evitare pregiudizi ai terzi;</corpo>
+            </en>
+            <en id="art11-com1-letl-num4">
+              <num>4)</num>
+              <corpo> divieto anche temporaneo di contrattare con la pubblica amministrazione;</corpo>
+            </en>
+            <en id="art11-com1-letl-num5">
+              <num>5)</num>
+              <corpo> esclusione temporanea da agevolazioni, finanziamenti, contributi o sussidi, ed eventuale revoca di quelli già concessi;</corpo>
+            </en>
+            <en id="art11-com1-letl-num6">
+              <num>6)</num>
+              <corpo> divieto anche temporaneo di pubblicizzare beni e servizi;</corpo>
+            </en>
+            <en id="art11-com1-letl-num7">
+              <num>7)</num>
+              <corpo> pubblicazione della sentenza;</corpo>
+            </en>
+          </el>
+          <el id="art11-com1-letm">
+            <num>m)</num>
+            <corpo> prevedere che le sanzioni amministrative di cui alle <mrif id="rif64">lettere <rif id="rif64-1" xlink:href="#art11-com1-letg">g</rif>), <rif id="rif64-2" xlink:href="#art11-com1-leti">i</rif>) e <rif id="rif64-3" xlink:href="#art11-com1-letl">l</rif>)</mrif> si applicano soltanto nei casi e per i tempi espressamente considerati e in relazione ai reati di cui alle <mrif id="rif65">lettere <rif id="rif65-1" xlink:href="#art11-com1-leta">a</rif>), <rif id="rif65-2" xlink:href="#art11-com1-letb">b</rif>), <rif id="rif65-3" xlink:href="#art11-com1-letc">c</rif>) e <rif id="rif65-4" xlink:href="#art11-com1-letd">d</rif>)</mrif> commessi successivamente alla data di entrata in vigore del decreto legislativo previsto dal presente articolo;</corpo>
+          </el>
+          <el id="art11-com1-letn">
+            <num>n)</num>
+            <corpo> prevedere che la sanzione amministrativa pecuniaria di cui alla <rif id="rif67" xlink:href="#art11-com1-letg">lettera g)</rif> è diminuita da un terzo alla metà ed escludere l'applicabilità di una o più delle sanzioni di cui alla <rif id="rif68" xlink:href="#art11-com1-letl">lettera l)</rif> in conseguenza dell'adozione da parte dei soggetti di cui all'alinea del presente comma di comportamenti idonei ad assicurare un'efficace riparazione o reintegrazione rispetto all'offesa realizzata;</corpo>
+          </el>
+          <el id="art11-com1-leto">
+            <num>o)</num>
+            <corpo> prevedere che le sanzioni di cui alla <rif id="rif70" xlink:href="#art11-com1-letl">lettera l)</rif> sono applicabili anche in sede cautelare, con adeguata tipizzazione dei requisiti richiesti;</corpo>
+          </el>
+          <el id="art11-com1-letp">
+            <num>p)</num>
+            <corpo> prevedere, nel caso di violazione degli obblighi e dei divieti inerenti alle sanzioni di cui alla <rif id="rif71" xlink:href="#art11-com1-letl">lettera l)</rif>, la pena della reclusione da sei mesi a tre anni nei confronti della persona fisica responsabile della violazione, e prevedere inoltre l'applicazione delle sanzioni di cui alle <mrif id="rif72">lettere <rif id="rif72-1" xlink:href="#art11-com1-letg">g</rif>) e <rif id="rif72-2" xlink:href="#art11-com1-leti">i</rif>)</mrif> e, nei casi più gravi, l'applicazione di una o più delle sanzioni di cui alla <rif id="rif73" xlink:href="#art11-com1-letl">lettera l)</rif> diverse da quelle già irrogate, nei confronti dell'ente nell'interesse o a vantaggio del quale è stata commessa la violazione; prevedere altresì che le disposizioni di cui alla presente lettera si applicano anche nell'ipotesi in cui le sanzioni di cui alla <rif id="rif75" xlink:href="#art11-com1-letl">lettera l)</rif> sono state applicate in sede cautelare ai sensi della <rif id="rif76" xlink:href="#art11-com1-leto">lettera o)</rif>;</corpo>
+          </el>
+          <el id="art11-com1-letq">
+            <num>q)</num>
+            <corpo> prevedere, che le sanzioni amministrative a carico degli enti sono applicate dal giudice competente a conoscere del reato e che per il procedimento di accertamento della responsabilità si applicano, in quanto compatibili, le disposizioni del <rif id="rif77" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale">codice di procedura penale</rif>, assicurando l'effettiva partecipazione e difesa degli enti nelle diverse fasi del procedimento penale;</corpo>
+          </el>
+          <el id="art11-com1-letr">
+            <num>r)</num>
+            <corpo> prevedere che le sanzioni amministrative di cui alle <mrif id="rif78">lettere <rif id="rif78-1" xlink:href="#art11-com1-letg">g</rif>), <rif id="rif78-2" xlink:href="#art11-com1-leti">i</rif>) e <rif id="rif78-3" xlink:href="#art11-com1-letl">l</rif>)</mrif> si prescrivono decorsi cinque anni dalla consumazione dei reati indicati nelle <mrif id="rif79">lettere <rif id="rif79-1" xlink:href="#art11-com1-leta">a</rif>), <rif id="rif79-2" xlink:href="#art11-com1-letb">b</rif>), <rif id="rif79-3" xlink:href="#art11-com1-letc">c</rif>) e <rif id="rif79-4" xlink:href="#art11-com1-letd">d</rif>)</mrif> e che l'interruzione della prescrizione è regolata dalle norme del <rif id="rif80" xlink:href="urn:nir:stato:regio.decreto:1942-03-16;262:codice.civile">codice civile</rif>;</corpo>
+          </el>
+          <el id="art11-com1-lets">
+            <num>s)</num>
+            <corpo> prevedere l'istituzione, senza nuovi o maggiori oneri a carico del bilancio dello Stato, di un'Anagrafe nazionale delle sanzioni amministrative irrogate nei confronti dei soggetti di cui all'alinea del presente comma;</corpo>
+          </el>
+          <el id="art11-com1-lett">
+            <num>t)</num>
+            <corpo> prevedere, salvo che gli stessi siano stati consenzienti ovvero abbiano svolto, anche indirettamente o di fatto, funzioni di gestione, di controllo o di amministrazione, che sia assicurato il diritto dell'azionista, del socio o dell'associato ai soggetti di cui all'alinea del presente comma, nei confronti dei quali sia accertata la responsabilità amministrativa con riferimento a quanto previsto nelle <rif id="rif117" xlink:href="#art11-com1-leta">lettere da a) a q)</rif>, di recedere dalla società o dall'associazione o dall'ente, con particolari modalità di liquidazione della quota posseduta, ferma restando l'azione di risarcimento di cui alle <mrif id="rif83">lettere <rif id="rif83-1" xlink:href="#art11-com1-letv">v</rif>) e <rif id="rif83-2" xlink:href="#art11-com1-letz">z</rif>)</mrif>; disciplinare i termini e le forme con cui tale diritto può essere esercitato e prevedere che la liquidazione della quota sia fatta in base al suo valore al momento del recesso determinato a norma degli <mrif id="rif84">articoli <rif id="rif84-1" xlink:href="urn:nir:stato:regio.decreto:1942-03-16;262:codice.civile#art2289-com2">2289</rif>, secondo comma, e <rif id="rif84-2" xlink:href="urn:nir:stato:regio.decreto:1942-03-16;262:codice.civile#art2437">2437</rif> del codice civile</mrif>; prevedere altresì che la liquidazione della quota possa aver luogo anche con onere a carico dei predetti soggetti, e prevedere che in tal caso il recedente, ove non ricorra l'ipotesi prevista dalla <rif id="rif86" xlink:href="#art11-com1-letl-num3">lettera l), numero 3)</rif>, debba richiedere al Presidente del tribunale del luogo in cui i soggetti hanno la sede legale la nomina di un curatore speciale cui devono essere delegati tutti i poteri gestionali comunque inerenti alle attività necessarie per la liquidazione della quota, compresa la capacità di stare in giudizio; agli oneri per la finanza pubblica derivanti dall'attuazione della presente lettera si provvede mediante gli ordinari stanziamenti di bilancio per liti ed arbitraggi previsti nello stato di previsione dei Ministero della giustizia;</corpo>
+          </el>
+          <el id="art11-com1-letu">
+            <num>u)</num>
+            <corpo> prevedere che l'azione sociale di responsabilità nei confronti degli amministratori delle persone giuridiche e delle società, di cui sia stata accertata la responsabilità amministrativa con riferimento a quanto previsto nelle lettere da a) a q), sia deliberata dall'assemblea con voto favorevole di almeno un ventesimo del capitale sociale nel caso in cui questo sia inferiore a lire cinquecento milioni e di almeno un quarantesimo negli altri casi; disciplinare coerentemente le ipotesi di rinuncia o di transazione dell'azione sociale di responsabilità;</corpo>
+          </el>
+          <el id="art11-com1-letv">
+            <num>v)</num>
+            <corpo> prevedere che il riconoscimento del danno a seguito dell'azione di risarcimento spettante al singolo socio o al terzo nei confronti degli amministratori dei soggetti di cui all'alinea del presente comma, di cui sia stata accertata la responsabilità amministrativa con riferimento a quanto previsto nelle <rif id="rif118" xlink:href="#art11-com1-leta">lettere da a) a q)</rif>, non sia vincolato dalla dimostrazione della sussistenza di nesso di causalità diretto tra il fatto che ha determinato l'accertamento della responsabilità del soggetto ed il danno subito, prevedere che la disposizione non operi nel caso in cui il reato è stato commesso da chi è sottoposto alla direzione o alla vigilanza di chi svolge funzioni di rappresentanza o di amministrazione o di direzione, ovvero esercita, anche di fatto, poteri di gestione e di controllo, quando la commissione del reato è stata resa possibile dall'inosservanza degli obblighi connessi a tali funzioni;</corpo>
+          </el>
+          <el id="art11-com1-letz">
+            <num>z)</num>
+            <corpo> prevedere che le disposizioni di cui alla <rif id="rif89" xlink:href="#art11-com1-letv">lettera v)</rif>,si applicano anche nell'ipotesi in cui l'azione di risarcimento del danno è proposta contro l'azionista, il socio o l'associato ai soggetti di cui all'alinea del presente comma che sia stato consenziente o abbia svolto, anche indirettamente o di fatto, funzioni di gestione, di controllo o di amministrazione, anteriormente alla commissione del fatto che ha determinato l'accertamento della responsabilità dell'ente.</corpo>
+          </el>
+        </comma>
+        <comma id="art11-com2">
+          <num>2.</num>
+          <corpo> Ai fini del <rif id="rif91" xlink:href="#art11-com1">comma 1</rif>, per "persone giuridiche" si intendono gli enti forniti di personalità giuridica, eccettuati lo Stato e gli altri enti pubblici che esercitano pubblici poteri.</corpo>
+        </comma>
+        <comma id="art11-com3">
+          <num>3.</num>
+          <corpo> Il Governo è altresì delegato ad emanare, con il decreto legislativo di cui al <rif id="rif92" xlink:href="#art11-com1">comma 1</rif>, le norme di coordinamento con tutte le altre leggi dello Stato, nonchè le norme di carattere transitorio</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art12">
+        <num>Art. 12.</num>
+        <rubrica>(Delega al Governo in materia di interpretazione, in via pregiudiziale, da parte della Corte di giustizia delle Comunità europee della <rif id="rif119" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Convenzione</rif> sulla tutela degli interessi finanziari delle Comunità europee)</rubrica>
+        <comma id="art12-com1">
+          <num>1.</num>
+          <alinea> Il Governo è delegato ad emanare, entro otto mesi dalla data di entrata in vigore della presente legge, un decreto legislativo per disciplinare le modalità con cui gli organi giurisdizionali nazionali possono richiedere che la Corte di giustizia delle Comunità europee si pronunci in via pregiudiziale sull'interpretazione della <rif id="rif120" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Convenzione</rif> sulla tutela degli interessi finanziari delle Comunità europee e del suo primo <rif id="rif121" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">Protocollo</rif> di cui all'<rif id="rif93" xlink:href="#art1">articolo 1</rif> della presente legge, con l'osservanza dei seguenti principi e criteri direttivi: </alinea>
+          <el id="art12-com1-leta">
+            <num>a)</num>
+            <corpo> prevedere che ogni organo giurisdizionale possa richiedere che la Corte di giustizia si pronunci in via pregiudiziale su una questione sollevata in un giudizio pendente dinanzi ad esso e relativa all'interpretazione della citata <rif id="rif122" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee">Convenzione</rif> e del suo primo <rif id="rif123" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee:primo.protocollo">Protocollo</rif>, qualora tale organo giurisdizionale reputi necessaria una decisione su questo punto per pronunciare sentenza;</corpo>
+          </el>
+          <el id="art12-com1-letb">
+            <num>b)</num>
+            <corpo> adottare le ulteriori norme di attuazione e quelle di coordinamento eventualmente necessarie.</corpo>
+          </el>
+        </comma>
+      </articolo>
+      <articolo id="art13">
+        <num>Art. 13.</num>
+        <rubrica>(Autorità responsabile)</rubrica>
+        <comma id="art13-com1">
+          <num>1.</num>
+          <corpo> Il Ministero della giustizia - Direzione generale degli affari penali è designato quale autorità responsabile per le finalità di cui all'<rif id="rif94" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese">articolo 11 della Convenzione OCSE sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, fatta a Parigi il 17 dicembre 1997</rif>.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art14">
+        <num>Art. 14.</num>
+        <rubrica>(Esercizio delle deleghe)</rubrica>
+        <comma id="art14-com1">
+          <num>1.</num>
+          <corpo> Gli schemi dei decreti legislativi di cui agli <mrif id="rif95">articoli <rif id="rif95-1" xlink:href="#art11">11</rif> e <rif id="rif95-2" xlink:href="#art12">12</rif></mrif> sono trasmessi alla Camera dei deputati ed al Senato della Repubblica almeno novanta giorni prima della scadenza prevista per l'esercizio delle deleghe. Le Commissioni parlamentari competenti per materia esprimono il loro parete entro sessanta giorni dalla data di trasmissione degli schemi medesimi. Decorso tale termine, i decreti legislativi possono essere adottati anche in mancanza del parere.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art15">
+        <inlinemeta><disposizioni><modificheattive><dsp:deroga><dsp:pos xlink:href="#art15-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif96" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322ter" /><dsp:dominio><dsp:testo valore="Le disposizioni di cui all'articolo 322-ter del codice penale, introdotto dal comma 1 dell'articolo 3 della presente legge, non si applicano ai reati ivi previsti, nonchè a quelli indicati nel comma 2 del medesimo articolo 3, commessi anteriormente alla data di entrata in vigore della presente legge." /></dsp:dominio></dsp:subarg></dsp:norma></dsp:deroga></modificheattive></disposizioni></inlinemeta>
+        <num>Art. 15.</num>
+        <rubrica>(Norma transitoria)</rubrica>
+        <comma id="art15-com1">
+          <num>1.</num>
+          <corpo> Le disposizioni di cui all'<mod id="mod15"><rif id="rif96" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art322ter">articolo 322-ter del codice penale</rif></mod>, introdotto dal <rif id="rif97" xlink:href="#art3-com1">comma 1 dell'articolo 3</rif> della presente legge, non si applicano ai reati ivi previsti, nonchè a quelli indicati nel <rif id="rif98" xlink:href="#art3-com2">comma 2 del medesimo articolo 3</rif>, commessi anteriormente alla data di entrata in vigore della presente legge.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art16">
+        <num>Art. 16.</num>
+        <rubrica>(Entrata in vigore)</rubrica>
+        <comma id="art16-com1">
+          <num>1.</num>
+          <corpo> La presente legge entra in vigore il giorno successivo a quello della sua pubblicazione nella Gazzetta Ufficiale.</corpo>
+        </comma>
+      </articolo>
+    </articolato>
+    <formulafinale>La presente legge, munita del sigillo dello Stato, sarà inserita nella Raccolta ufficiale degli atti normativi della Repubblica italiana. È fatto obbligo a chiunque spetti di osservarla e di farla osservare come legge dello Stato.</formulafinale>
+    <conclusione><dataeluogo norm="20000929" codice="roma">Data a Roma, addì 29 settembre 2000</dataeluogo><h:br/><h:br/><h:br/><firma tipo="sottoscrizione">CIAMPI</firma><h:br/><h:br/><firma tipo="sottoscrizione">Amato, Presidente del Consiglio dei Ministri</firma><h:br/><firma tipo="sottoscrizione">Dini, Ministro degli affari esteri</firma><h:br/><h:br/><firma tipo="visto">Visto, il Guardasigilli: Fassino</firma></conclusione>
+    <annessi>
+      <elencoAnnessi>
+        <h:div>CONVENZIONE</h:div>
+        <h:div>CONVENZIONE SULLA BASE DELL'ARTICOLO K.3,  PARAGRAFO 2, LETTERA C)  DEL TRATTATO SULL'UNIONE EUROPEA  RELATIVA ALLA LOTTA CONTRO LA CORRUZIONE  NELLA QUALE SONO COINVOLTI FUNZIONARI DELLE COMUNITÀ EUROPEE  O DEGLI STATI MEMBRI DELL'UNIONE EUROPEA</h:div>
+        <h:div>Convention sur la lutte contre la corruption d'agents publics etrangers dans les transactions commerciales internationales</h:div>
+        <h:div>ANNESSO   DAFFE/IME/BR(97)18/FINAL   STATISTICHE DELLE ESPORTAZIONI DELL'OCSE</h:div>
+      </elencoAnnessi>
+      <annesso id="ann1-S2006746">
+        <testata>
+          <denAnnesso>CONVENZIONE</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee" />
+      </annesso>
+      <annesso id="ann2-S2006746">
+        <testata>
+          <denAnnesso>CONVENZIONE SULLA BASE DELL'ARTICOLO K.3,  PARAGRAFO 2, LETTERA C)  DEL TRATTATO SULL'UNIONE EUROPEA  RELATIVA ALLA LOTTA CONTRO LA CORRUZIONE  NELLA QUALE SONO COINVOLTI FUNZIONARI DELLE COMUNITÀ EUROPEE  O DEGLI STATI MEMBRI DELL'UNIONE EUROPEA</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione" />
+      </annesso>
+      <annesso id="ann3-S2006746">
+        <testata>
+          <denAnnesso>Convention sur la lutte contre la corruption d'agents publics etrangers dans les transactions commerciales internationales</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese" />
+      </annesso>
+      <annesso id="ann4-S2006746">
+        <testata>
+          <denAnnesso>ANNESSO   DAFFE/IME/BR(97)18/FINAL   STATISTICHE DELLE ESPORTAZIONI DELL'OCSE</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso" />
+      </annesso>
+    </annessi>
+  </Legge>
+</NIR>

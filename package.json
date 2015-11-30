@@ -25,9 +25,15 @@
     "sax": "^1.1.0",
     "tmp": "0.0.26",
     "verror": "^1.6.0",
-    "xmldom": "^0.1.19"
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2",
+    "jasmine-es6": "0.0.18"
   },
   "scripts": {
-    "start": "NODE_ENV=development node server"
+    "start": "NODE_ENV=development node server",
+    "test": "jasmine"
   }
 }
