@@ -55,7 +55,7 @@
     <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/>
     <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
     <xsl:variable name="urn_expression_date"
-        select="replace($urn_documento, '.*?\d\d\d\d-\d\d-\d\d.*?(\d\d\d\d-\d\d-\d\d)?.*', '$1')"/>
+        select="replace($urn_documento, '.*?(\d{4}-\d{2}-\d{2})(.*?(\d{4}-\d{2}-\d{2}).*|.*)', '$3')"/>
     <xsl:variable name="uri_work">
         <xsl:call-template name="convertiURN">
             <xsl:with-param name="urn" select="//nir:urn/@valore"/>
