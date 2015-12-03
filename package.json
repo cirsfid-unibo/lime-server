@@ -29,8 +29,10 @@
     "xpath": "0.0.9"
   },
   "devDependencies": {
+    "glob": "^6.0.1",
     "jasmine": "^2.3.2",
-    "jasmine-es6": "0.0.18"
+    "jasmine-es6": "0.0.18",
+    "sync-request": "^2.1.0"
   },
   "scripts": {
     "start": "NODE_ENV=development node server",

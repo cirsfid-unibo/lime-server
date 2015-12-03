@@ -47,6 +47,7 @@
 // External modules
 var path = require('path'),
     xmldom = require('xmldom'),
+    entities = require('entities'),
     xmlParser = new xmldom.DOMParser({
         errorHandler: function(level, msg) { throw new Error(msg); }
     }),
@@ -66,7 +67,7 @@ exports.nir2akn = function (nirXml, callback) {
     try {
         nirXml = fixNir(nirXml);
     } catch (e) {
-        console.log(nirXml)
+        // console.log(e);
         return callback(e);
     }
 
@@ -89,6 +90,9 @@ exports.nir2akn = function (nirXml, callback) {
 };
 
 function fixNir (nirXml) {
+    // Remove html entities
+    var nirXml = removeHtmlEntities(nirXml);
+    require('fs').writeFile('message.txt', nirXml, 'utf8');
     var doc = xmlParser.parseFromString(nirXml, 'text/xml');
 
     for (var child = doc.firstChild; child; child = child.nextSibling) {
@@ -105,6 +109,17 @@ function fixNir (nirXml) {
             child.setAttribute('xmlns', NIR22_NAMESPACE)
     }
     return xmlSerializer.serializeToString(doc);
+}
+
+function removeHtmlEntities (xml) {
+    return xml
+        .replace(/&deg;/g, '°')
+        .replace(/&agrave;/g, 'à')
+        .replace(/&egrave;/g, 'è')
+        .replace(/&Egrave;/g, 'È')
+        .replace(/&ograve;/g, 'ò')
+        .replace(/&ugrave;/g, 'ù')
+    ;
 }
 
 // Convert content with XSLT in xsltPath if it has the given namespace.
