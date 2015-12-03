@@ -5,7 +5,7 @@
     Developers: Monica Palmirani, Luca Cervone, Matteo Nardi
     Contacts: monica.palmirani@unibo.it
  -->
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
     xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:nir="http://www.normeinrete.it/nir/2.2/"
@@ -13,7 +13,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:h="http://www.w3.org/HTML/1998/html4"
     xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/"
-    exclude-result-prefixes="xsl nir dsp xlink h">
+    xmlns:u="http://www.sinatra.cirsfid.unibo.it/nir2akn/#conversioneUrn"
+    exclude-result-prefixes="xsl nir dsp xlink h u">
     <xsl:output indent="yes"/>
     <xsl:strip-space elements="*"/>
 
@@ -53,14 +54,15 @@
     <xsl:variable name="urn_documento" select="substring-after(//nir:urn/@valore, 'urn:nir:')"/>
     <xsl:variable name="urn_emanante" select="substring-before($urn_documento, ':')"/>
     <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/>
+    <xsl:variable name="urn_expression_date" select="$urn_date"/>
     <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
-    <xsl:variable name="urn_expression_date"
-        select="replace($urn_documento, '.*?(\d{4}-\d{2}-\d{2})(.*?(\d{4}-\d{2}-\d{2}).*|.*)', '$3')"/>
-    <xsl:variable name="uri_work">
-        <xsl:call-template name="convertiURN">
+    <!-- <xsl:variable name="urn_expression_date"
+        select="replace($urn_documento, '.*?(\d{4}-\d{2}-\d{2})(.*?(\d{4}-\d{2}-\d{2}).*|.*)', '$3')"/> -->
+    <xsl:variable name="uri_work" select="u:convertiUrn(//nir:urn/@valore)"/>
+        <!-- <xsl:call-template name="convertiURN">
             <xsl:with-param name="urn" select="//nir:urn/@valore"/>
         </xsl:call-template>
-    </xsl:variable>
+    </xsl:variable> -->
     <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_expression_date)"/>
     <xsl:variable name="uri_manifestation" select="concat($uri_expression, '/main.xml')"/>
 
@@ -1582,11 +1584,66 @@
         </xsl:if>
     </xsl:template>
 
+    <xsl:function name="u:convertiUrn">
+        <xsl:param name="urn"/>
+        <!-- urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07 -->
+        <!-- /akn/it/doc/entrata_vigore/stato/2001-08-07/legge_2000-09-29_300 -->
+
+        <!-- Macroparti -->
+        <xsl:variable name="principale" select="u:primoMacroblocco($urn)"/>
+        <xsl:variable name="comunicato" select="u:cercaMacroblocco($urn, '*')"/>
+
+        <xsl:choose>
+            <xsl:when test="$comunicato!=''">
+                <xsl:value-of select="u:convertiComunicato($urn)"/>
+            </xsl:when>
+
+            <xsl:otherwise>
+                <xsl:variable name="type" select="'act'"/>
+                <xsl:variable name="subtype" select="tokenize($principale, ':')[4]"/>
+                <xsl:variable name="author" select="tokenize($principale, ':')[3]"/>
+                <xsl:variable name="date" select="substring-before(tokenize($principale, ':')[5], ';')"/>
+                <xsl:variable name="num" select="substring-after(tokenize($principale, ':')[5], ';')"/>
+
+                <xsl:value-of select="string-join(('/akn', 'it', $type, $subtype, $author, $date, $num), '/')"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <!-- Estrai un blocco da un urn (Separatori ammessi: *, @, $, !, ~)
+         cercaMacroblocco("<...>*<comunicato>@<versione>", "*") -> "<comunicato>" -->
+    <xsl:function name="u:cercaMacroblocco">
+        <xsl:param name="input"/>
+        <xsl:param name="separatore"/>
+        <xsl:variable name="dopoSeparatore" select="substring-after($input, $separatore)"/>
+        <xsl:value-of select="u:primoMacroblocco($dopoSeparatore)"/>
+    </xsl:function>
+
+    <xsl:function name="u:primoMacroblocco">
+        <xsl:param name="input"/>
+        <xsl:variable name="macroSeparatori" select="'[\*@!~]'"/>
+        <xsl:value-of select="tokenize($input, $macroSeparatori)[1]"/>
+    </xsl:function>
+
+    <xsl:function name="u:convertiComunicato">
+        <!-- urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07 -->
+        <!-- /akn/it/doc/entrata_vigore/stato/2001-08-07/legge_2000-09-29_300 -->
+        <xsl:param name="urn"/>
+        <xsl:variable name="principale" select="u:primoMacroblocco($urn)"/>
+        <xsl:variable name="comunicato" select="u:cercaMacroblocco($urn, '*')"/>
+        <xsl:variable name="subtype" select="replace(substring-before($comunicato, ';'), '\.', '_')"/>
+        <xsl:variable name="author" select="tokenize($principale, ':')[3]"/>
+        <xsl:variable name="date" select="substring-after($comunicato, ';')"/>
+        <xsl:variable name="referencedSubtype" select="tokenize($principale, ':')[4]"/>
+        <xsl:variable name="referencedDate" select="substring-before(tokenize($principale, ':')[5], ';')"/>
+        <xsl:variable name="referencedNum" select="substring-after(tokenize($principale, ':')[5], ';')"/>
+        <xsl:variable name="num" select="string-join(($referencedSubtype, $referencedDate, $referencedNum), '_')"/>
+        <xsl:value-of select="string-join(('/akn', 'it', 'doc', $subtype, $author, $date, $num), '/')"/>
+    </xsl:function>
+
     <xsl:template match="node()|@*" mode="copyEverything">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="copyEverything"/>
         </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>
-
-<!-- TODO: sottoscrizioni/sottoscrivente -->
