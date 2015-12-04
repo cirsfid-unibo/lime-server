@@ -53,12 +53,13 @@
     <!-- Parsing URN -->
     <xsl:variable name="urn_documento" select="substring-after(//nir:urn/@valore, 'urn:nir:')"/>
     <xsl:variable name="urn_emanante" select="substring-before($urn_documento, ':')"/>
-    <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/>
-    <xsl:variable name="urn_expression_date" select="$urn_date"/>
+    <!-- <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/> -->
     <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
     <!-- <xsl:variable name="urn_expression_date"
         select="replace($urn_documento, '.*?(\d{4}-\d{2}-\d{2})(.*?(\d{4}-\d{2}-\d{2}).*|.*)', '$3')"/> -->
     <xsl:variable name="uri_work" select="u:convertiUrn(//nir:urn/@valore)"/>
+    <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
+    <xsl:variable name="urn_expression_date" select="$urn_date"/>
         <!-- <xsl:call-template name="convertiURN">
             <xsl:with-param name="urn" select="//nir:urn/@valore"/>
         </xsl:call-template>
