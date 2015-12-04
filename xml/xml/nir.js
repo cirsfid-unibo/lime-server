@@ -119,6 +119,9 @@ function removeHtmlEntities (xml) {
         .replace(/&Egrave;/g, 'È')
         .replace(/&ograve;/g, 'ò')
         .replace(/&ugrave;/g, 'ù')
+        .replace(/&igrave;/g, 'ì')
+        .replace(/&Agrave;/g, 'À')
+        .replace(/&eacute;/g, 'é')
     ;
 }
 

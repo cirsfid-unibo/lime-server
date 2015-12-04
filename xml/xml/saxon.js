@@ -73,8 +73,8 @@ exports.transform = function (content, xsltPath, params, cb) {
         command += ' ' + key + '=' + params[key];
     }
     var options = {
-        timeout: 10000,
-        maxBuffer: 2000*1024,
+        timeout: 20000,
+        maxBuffer: 15000*1024,
     }
     var child = exec(command, options, function (err, result) {
         if (err)
