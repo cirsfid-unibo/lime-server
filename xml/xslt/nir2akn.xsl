@@ -1170,7 +1170,15 @@
         <!-- <xsl:choose> -->
             <!-- <xsl:when test="@tipo = 'struttura'"> -->
                 <quotedStructure>
-                    <xsl:variable name="children" select="node()[position()!=1]"/>
+                    <xsl:variable name="startQuote" select="node()[position()=1 and string-length(normalize-space(.)) &lt; 4]"/>
+                    <xsl:if test="$startQuote">
+                        <xsl:attribute name="startQuote"><xsl:value-of select="normalize-space($startQuote)"/></xsl:attribute>
+                    </xsl:if>
+                    <xsl:variable name="endQuote" select="node()[position()=last() and string-length(normalize-space(.)) &lt; 4]"/>
+                    <xsl:if test="$endQuote">
+                        <xsl:attribute name="endQuote"><xsl:value-of select="normalize-space($endQuote)"/></xsl:attribute>
+                    </xsl:if>
+                    <xsl:variable name="children" select="node()[.!=$startQuote and .!=$endQuote]"/>
                     <xsl:variable name="content">
                         <nir:virgolette><xsl:copy-of select="$children"/></nir:virgolette>
                     </xsl:variable>
@@ -1188,9 +1196,6 @@
     </xsl:template>
 
     <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5][position() = 1]">
-        <xsl:attribute name="startQuote">
-            <xsl:value-of select="."/>
-        </xsl:attribute>
         <xsl:attribute name="endQuote">
             <xsl:value-of select="following-sibling::text()[last()]"/>
         </xsl:attribute>

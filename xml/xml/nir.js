@@ -47,7 +47,6 @@
 // External modules
 var path = require('path'),
     xmldom = require('xmldom'),
-    entities = require('entities'),
     xmlParser = new xmldom.DOMParser({
         errorHandler: function(level, msg) { throw new Error(msg); }
     }),
@@ -91,8 +90,7 @@ exports.nir2akn = function (nirXml, callback) {
 
 function fixNir (nirXml) {
     // Remove html entities
-    var nirXml = removeHtmlEntities(nirXml);
-    require('fs').writeFile('message.txt', nirXml, 'utf8');
+    nirXml = removeHtmlEntities(nirXml);
     var doc = xmlParser.parseFromString(nirXml, 'text/xml');
 
     for (var child = doc.firstChild; child; child = child.nextSibling) {
