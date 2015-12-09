@@ -1178,7 +1178,7 @@
                     <xsl:if test="$endQuote">
                         <xsl:attribute name="endQuote"><xsl:value-of select="normalize-space($endQuote)"/></xsl:attribute>
                     </xsl:if>
-                    <xsl:variable name="children" select="node()[.!=$startQuote and .!=$endQuote]"/>
+                    <xsl:variable name="children" select="node()[not(.=$startQuote) and not(.=$endQuote)]"/>
                     <xsl:variable name="content">
                         <nir:virgolette><xsl:copy-of select="$children"/></nir:virgolette>
                     </xsl:variable>
