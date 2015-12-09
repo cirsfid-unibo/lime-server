@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../../DTD/norma.xsl"?>
+<!DOCTYPE NIR SYSTEM "../../../../DTD/nirloose.dtd">
+<!--Documento NIR-->
+<NIR tipo="originale" xmlns="http://www.normeinrete.it/nir/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h="http://www.w3.org/HTML/1998/html4">
+  <DecretoLegge id="S9921769">
+    <meta>
+      <descrittori>
+        <pubblicazione tipo="GU" num="133" norm="19920608" />
+        <entratainvigore norm="19920609" />
+        <redazione id="rd1" norm="20081107" nome="CIRSFID" url="http://www.cirsfid.unibo.it" />
+        <urn>urn:nir:stato:decreto.legge:1992-06-08;306</urn>
+      </descrittori>
+      <inquadramento>
+        <infodoc natura="decreto legge" normativa="si" funzione="regolativa" fonte="primario" />
+        <infomancanti>
+          <mTipodoc>decreto legge</mTipodoc>
+          <mEmanante>stato</mEmanante>
+        </infomancanti>
+      </inquadramento>
+      <ciclodivita>
+        <eventi>
+          <evento id="e1" data="19920609" fonte="ro1" tipo="originale" />
+          <evento id="e2" data="19920624" fonte="ro1" />
+        </eventi>
+        <relazioni>
+          <originale id="ro1" xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306" />
+          <attiva id="ra1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale" />
+          <attiva id="ra2" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271" />
+          <attiva id="ra3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" />
+          <attiva id="ra4" xlink:href="urn:nir:stato:legge:1975-04-18;110" />
+          <attiva id="ra5" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico" />
+          <attiva id="ra6" xlink:href="urn:nir:stato:legge:1992-02-11;157" />
+          <attiva id="ra7" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8" />
+          <attiva id="ra8" xlink:href="urn:nir:stato:legge:1975-07-26;354" />
+          <attiva id="ra9" xlink:href="urn:nir:presidente.repubblica:decreto:1976-04-29;431:regolamento" />
+          <attiva id="ra10" xlink:href="urn:nir:stato:decreto.legge:1982-09-06;629" />
+          <attiva id="ra11" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.a" />
+          <attiva id="ra12" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b" />
+          <attiva id="ra13" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.c" />
+          <attiva id="ra14" xlink:href="urn:nir:stato:regio.decreto:1941-01-30;12:ordinamento.giudiziario" />
+          <attiva id="ra15" xlink:href="urn:nir:stato:legge:1965-05-31;575" />
+          <attiva id="ra16" xlink:href="urn:nir:stato:legge:1956-12-27;1423" />
+          <attiva id="ra17" xlink:href="urn:nir:presidente.repubblica:decreto:1972-06-30;748:tabella.iv" />
+          <haallegato id="ran1" xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.a" tipo="allegatointegrante" />
+          <haallegato id="ran2" xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.b" tipo="allegatointegrante" />
+        </relazioni>
+      </ciclodivita>
+      <proprietario soggetto="TITOLO"><titoloA9>DECRETO-LEGGE 8 giugno 1992, n. 306 - Modifiche urgenti al nuovo codice di procedura penale e provvedimenti di contrasto alla criminalità mafiosa.</titoloA9></proprietario>
+    </meta>
+    <intestazione><tipoDoc>DECRETO-LEGGE</tipoDoc> <dataDoc norm="19920608">8 giugno 1992</dataDoc>, n. <numDoc>306</numDoc> <h:br/>
+<titoloDoc id="titolo">Modifiche urgenti al <rif id="rif276" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale">nuovo codice di procedura penale</rif> e provvedimenti di contrasto alla criminalità mafiosa.</titoloDoc></intestazione>
+    <formulainiziale>IL PRESIDENTE DELLA REPUBBLICA<h:br/>
+<preambolo id="preambolo">Visti gli <mrif id="rif2">articoli <rif id="rif2-1" xlink:href="urn:nir:stato:costituzione:1947-12-27;nir-s9473953#art77">77</rif> e <rif id="rif2-2" xlink:href="urn:nir:stato:costituzione:1947-12-27;nir-s9473953#art87">87</rif> della Costituzione</mrif>;<h:br/><h:br/>
+Ritenuta la straordinaria necessità ed urgenza di rafforzare gli strumenti processuali, di prevenzione e di repressione nei confronti della criminalità organizzata, intervenendo in materia di processo penale, procedimenti di prevenzione, regime penitenziario, protezione di coloro che collaborano e reati contro l'amministrazione della giustizia;<h:br/><h:br/>
+Vista la deliberazione del Consiglio dei Ministri, adottata nella riunione dell'8 giugno 1992;<h:br/><h:br/>
+Sulla proposta del Presidente del Consiglio dei Ministri e dei Ministri di grazia e giustizia e dell'interno;</preambolo><h:br/>
+EMANA<h:br/>
+il seguente decreto-legge:</formulainiziale>
+    <articolato>
+      <titolo id="tit1">
+        <num>TITOLO I</num>
+        <rubrica>MODIFICHE AL CODICE DI PROCEDURA <h:br/>
+PENALE E ALLE NORME AD ESSO COLLEGATE</rubrica>
+        <capo id="tit1-cap1">
+          <num>Capo I</num>
+          <rubrica>P R O V E</rubrica>
+          <articolo id="art1">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art1-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif4" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art195-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod53-vir1" /></dsp:novella></dsp:integrazione><dsp:abrogazione><dsp:pos xlink:href="#art1-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif5" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art207-com2" /></dsp:norma></dsp:abrogazione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 1.</num>
+            <rubrica>Testimonianza indiretta. Falso testimone</rubrica>
+            <comma id="art1-com1">
+              <num>1.</num>
+              <corpo> In fine al <mod id="mod53"><rif id="rif4" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art195-com1">comma 1 dell'articolo 195 del codice di procedura penale</rif> è inserito il seguente periodo: <virgolette tipo="parola" id="mod53-vir1">"Tuttavia, se le persone risiedono all'estero, il giudice dispone che esse siano chiamate a deporre solo se ritiene assolutamente necessario il loro esame."</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art1-com2">
+              <num>2.</num>
+              <corpo> Il <mod id="mod58"><rif id="rif5" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art207-com2">comma 2 dell'articolo 207 del codice di procedura penale</rif></mod> è soppresso.</corpo>
+            </comma>
+          </articolo>
+          <articolo id="art2">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art2-com1-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif7" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod68-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art2-com1-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif8" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210-com5" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod73-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod73-vir1" /></dsp:novellando></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art2-com2-let1" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif275" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod36-vir1" /></dsp:novella></dsp:sostituzione><dsp:abrogazione><dsp:pos xlink:href="#art2-com2-let2" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif12" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com1" /></dsp:norma></dsp:abrogazione><dsp:integrazione><dsp:pos xlink:href="#art2-com2-let3" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif13" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com2" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod13-vir2" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art2-com2-let4" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif15" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com3-let4" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod16-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 2.</num>
+            <rubrica>Esame di persona imputata in un procedimento connesso</rubrica>
+            <comma id="art2-com1">
+              <num>1.</num>
+              <alinea> L'<rif id="rif6" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210">articolo 210 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art2-com1-let1">
+                <num>a)</num>
+                <corpo> il <mod id="mod68"><rif id="rif7" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210-com2">comma 2</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod68-vir1">"<comma id="mod68-vir1-com2"><num>2.</num><corpo> Esse hanno obbligo di presentarsi al giudice, il quale, ove occorra, ne ordina l'accompagnamento coattivo. Si osservano le norme sulla citazione dei testimoni.</corpo></comma>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art2-com1-let2">
+                <num>b)</num>
+                <corpo> nel <mod id="mod73"><rif id="rif8" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210-com5">comma 5</rif>, le parole <virgolette tipo="parola" id="mod73-vir1">"dagli <mrif id="rif9">articoli <rif id="rif9-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art194">194</rif>, <rif id="rif9-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art195">195</rif> e <rif id="rif9-3" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art499">499</rif></mrif>"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod73-vir2">"dagli <mrif id="rif10">articoli <rif id="rif10-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art194">194</rif>, <rif id="rif10-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art195">195</rif>, <rif id="rif10-3" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art499">499</rif> e <rif id="rif10-4" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art503">503</rif></mrif>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art2-com2">
+              <num>2.</num>
+              <alinea> L'<rif id="rif11" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142">articolo 142 del decreto legislativo 28 luglio 1989, n. 271</rif>, è così modificato:</alinea>
+              <el id="art2-com2-let1">
+                <num>a)</num>
+                <corpo> la <mod id="mod36"><rif id="rif275" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142">rubrica</rif> è sostituita dalla seguente: <virgolette tipo="parola" id="mod36-vir1">"Citazione di testimoni, periti, interpreti, consulenti tecnici e imputati di un procedimento connesso"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art2-com2-let2">
+                <num>b)</num>
+                <corpo> il <mod id="mod8"><rif id="rif12" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com1">comma 1</rif></mod> è soppresso;</corpo>
+              </el>
+              <el id="art2-com2-let3">
+                <num>c)</num>
+                <corpo> nel <mod id="mod13"><rif id="rif13" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com2">comma 2</rif>, dopo le parole <virgolette tipo="parola" id="mod13-vir1">"Quando per la notificazione"</virgolette>, sono inserite le seguenti: <virgolette tipo="parola" id="mod13-vir2">"dei testimoni, dei periti, degli interpreti, dei consulenti tecnici e delle persone indicate nell'<rif id="rif14" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210">articolo 210 del codice</rif>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art2-com2-let4">
+                <num>d)</num>
+                <corpo> la <mod id="mod16"><rif id="rif15" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art142-com3-let4">lettera d) del comma 3</rif> è sostituita dalla seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod16-vir1">"<el id="mod16-vir1-let4"><num>d)</num><corpo> l'indicazione degli obblighi e delle facoltà previsti dagli <mrif id="rif16">articoli <rif id="rif16-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art198">198</rif>, <rif id="rif16-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210">210</rif> e <rif id="rif16-3" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art226">226</rif> del codice</mrif>;</corpo></el>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+          </articolo>
+          <articolo id="art3">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art3-com1-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif18" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod20-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art3-com1-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif19" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com3" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod24-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod24-vir1" /></dsp:novellando></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art3-com1-let3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif20" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com4" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod26-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod26-vir1" /></dsp:novellando></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art3-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif22" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod31-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art3-com3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif25" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art190" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod35-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art3-com4" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif28" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art495-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod38-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod38-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 3.</num>
+            <rubrica>Verbali di prova di altri procedimenti e acquisizione di documenti</rubrica>
+            <comma id="art3-com1">
+              <num>1.</num>
+              <alinea> L'<rif id="rif17" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238">articolo 238 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art3-com1-let1">
+                <num>a)</num>
+                <corpo> il <mod id="mod20"><rif id="rif18" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com1">comma 1</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod20-vir1">"<comma id="mod20-vir1-com1"><num>1.</num><corpo> È consentita l'acquisizione di verbali di prove di altro procedimento penale, se si tratta di prove assunte nell'incidente probatorio o nel giudizio ovvero di verbali di cui è stata data lettura nello stesso.</corpo></comma>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art3-com1-let2">
+                <num>b)</num>
+                <corpo> nel <mod id="mod24"><rif id="rif19" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com3">comma 3</rif>, le parole <virgolette tipo="parola" id="mod24-vir1">"di atti che non sono ripetibili"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod24-vir2">"di atti che anche per cause sopravvenute non sono ripetibili"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art3-com1-let3">
+                <num>c)</num>
+                <corpo> nel <mod id="mod26"><rif id="rif20" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com4">comma 4</rif>, le parole <virgolette tipo="parola" id="mod26-vir1">"a norma dei commi precedenti"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod26-vir2">"a norma del <rif id="rif21" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238-com2">comma 2</rif>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art3-com2">
+              <num>2.</num>
+              <corpo> Dopo l'<mod id="mod31"><rif id="rif22" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238">articolo 238 del codice di procedura penale</rif> è aggiunto il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod31-vir1">"<articolo id="mod31-vir1-art238bis"><num>Art. 238-bis</num><rubrica>(Sentenze irrevocabili). </rubrica><comma id="mod31-vir1-art238bis-com1"><num>1.</num><corpo> Fermo quanto previsto dall'<rif id="rif23" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art236">articolo 236</rif>, le sentenze divenute irrevocabili possono in ogni caso essere acquisite e sono liberamente valutate ai fini stabiliti dall'<rif id="rif24" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art187">articolo 187</rif>.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art3-com3">
+              <num>3.</num>
+              <corpo> Dopo l'<mod id="mod35"><rif id="rif25" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art190">articolo 190 del codice di procedura penale</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod35-vir1">"<articolo id="mod35-vir1-art190bis"><num>Art. 190-bis</num><rubrica>(Requisiti della prova in casi particolari). </rubrica><comma id="mod35-vir1-art190bis-com1"><num>1.</num><corpo> Quando è richiesto l'esame di un testimone o di una delle persone indicate nell'<rif id="rif26" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210">articolo 210</rif> e queste hanno già reso dichiarazioni in sede di incidente probatorio ovvero dichiarazioni i cui verbali sono stati acquisiti a norma dell'<rif id="rif27" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art238">articolo 238</rif>, l'esame è ammesso solo se il giudice lo ritiene assolutamente necessario.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art3-com4">
+              <num>4.</num>
+              <corpo> Nel <mod id="mod38"><rif id="rif28" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art495-com1">comma 1 dell'articolo 495 del codice di procedura penale</rif>, le parole <virgolette tipo="parola" id="mod38-vir1">"dell'<rif id="rif29" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art190-com1">articolo 190 comma 1</rif>"</virgolette> sono sostituite dalle seguenti:<h:br/><h:br/>
+<virgolette tipo="parola" id="mod38-vir2">"degli <rif id="rif30" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art190-com1">articoli 190 comma 1 e 190- bis</rif>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+        </capo>
+        <capo id="titIRR1-cap2">
+          <num>Capo II</num>
+          <rubrica>POTENZIAMENTO DELL'ATTIVITÀ DI INDAGINE</rubrica>
+          <articolo id="art4">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art4-com1-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif32" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod48-vir1" /></dsp:novella></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art4-com1-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif33" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod49-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art4-com1-let3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif34" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com3" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod50-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art4-com2-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif37" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art348-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod51-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art4-com2-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif39" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art348-com3" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod52-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod52-vir1" /></dsp:novellando></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art4-com3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif40" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art350-com7" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod54-vir1" /></dsp:novella></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art4-com4-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif43" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod55-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art4-com4-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif45" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod56-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art4-com5" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif47" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art357-com2-let3" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod57-vir1" /></dsp:novella></dsp:sostituzione><dsp:abrogazione><dsp:pos xlink:href="#art4-com6-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif50" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art357-com2-let12" /><dsp:incompleta /></dsp:norma></dsp:abrogazione><dsp:integrazione><dsp:pos xlink:href="#art4-com6-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif52" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art380-com2-let12" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod60-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art4-com7" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif54" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art108" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod61-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art4-com8" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif57" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art112" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod62-vir1" /></dsp:novella></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art4-com9" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif60" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art117-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod63-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art4-com10-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif63" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod64-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod64-vir1" /></dsp:novellando></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art4-com10-let2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif64" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod65-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 4.</num>
+            <rubrica>Attività a iniziativa della polizia giudiziaria</rubrica>
+            <comma id="art4-com1">
+              <num>1.</num>
+              <alinea> L'<rif id="rif31" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347">articolo 347 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art4-com1-let1">
+                <num>a)</num>
+                <corpo> il <mod id="mod48"><rif id="rif32" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com1">comma 1</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod48-vir1">"<comma id="mod48-vir1-com1"><num>1.</num><corpo> Acquisita la notizia di reato, la polizia giudiziaria, senza ritardo, riferisce al pubblico ministero, per iscritto, gli elementi essenziali del fatto e gli altri elementi sino ad allora raccolti, indicando le fonti di prova e le attività compiute, delle quali trasmette la relativa documentazione.</corpo></comma>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art4-com1-let2">
+                <num>b)</num>
+                <corpo> dopo il <mod id="mod49"><rif id="rif33" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com2">comma 2</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod49-vir1">"<comma id="mod49-vir1-com2bis"><num>2-bis.</num><corpo> Qualora siano stati compiuti atti per i quali è prevista l'assistenza del difensore della persona nei cui confronti vengono svolte le indagini, la comunicazione della notizia di reato è trasmessa al più tardi entro quarantotto ore dal compimento dell'atto, salve le disposizioni di legge che prevedono termini particolari.</corpo></comma>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art4-com1-let3">
+                <num>c)</num>
+                <corpo> il <mod id="mod50"><rif id="rif34" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com3">primo periodo del comma 3</rif> è sostituito dal seguente: <virgolette tipo="parola" id="mod50-vir1">"Se si tratta di taluno dei delitti indicati nell'<rif id="rif35" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art275-com3">articolo 275 comma 3</rif> e, in ogni caso, quando sussistono ragioni di urgenza, la comunicazione della notizia di reato è data immediatamente anche in forma orale."</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art4-com2">
+              <num>2.</num>
+              <alinea> L'<rif id="rif36" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art348">articolo 348 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art4-com2-let1">
+                <num>a)</num>
+                <corpo> il <mod id="mod51"><rif id="rif37" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art348-com1">comma 1</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod51-vir1">"<comma id="mod51-vir1-com1"><num>1.</num><corpo> Anche successivamente alla comunicazione della notizia di reato, la polizia giudiziaria continua a svolgere le funzioni indicate nell'<rif id="rif38" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art55">articolo 55</rif> raccogliendo in specie ogni elemento utile alla ricostruzione del fatto e alla individuazione del colpevole.</corpo></comma>"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art4-com2-let2">
+                <num>b)</num>
+                <corpo> nel <mod id="mod52"><rif id="rif39" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art348-com3">comma 3</rif>, le parole <virgolette tipo="parola" id="mod52-vir1">"nell'ambito delle direttive impartite"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod52-vir2">"anche nell'ambito delle direttive impartite"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art4-com3">
+              <num>3.</num>
+              <corpo> Il <mod id="mod54"><rif id="rif40" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art350-com7">comma 7 dell'articolo 350 del codice di procedura penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod54-vir1">"<comma id="mod54-vir1-com7"><num>7.</num><corpo> La polizia giudiziaria può altresì ricevere dichiarazioni spontanee dalla persona nei cui confronti vengono svolte le indagini, ma di esse non è consentita la utilizzazione nel dibattimento, salvo quanto previsto dall'<rif id="rif41" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art503-com3">articolo 503 comma 3</rif>.</corpo></comma>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art4-com4">
+              <num>4.</num>
+              <alinea> L'<rif id="rif42" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351">articolo 351 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art4-com4-let1">
+                <num>a)</num>
+                <corpo> in fine al <mod id="mod55"><rif id="rif43" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351-com1">comma 1</rif>, è inserito il seguente periodo: <virgolette tipo="parola" id="mod55-vir1">"Si applica la disposizione del <rif id="rif277" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art362">secondo periodo dell'articolo 362</rif>."</virgolette></mod>;</corpo>
+              </el>
+              <el id="art4-com4-let2">
+                <num>b)</num>
+                <corpo> dopo il <mod id="mod56"><rif id="rif45" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351-com1">comma 1</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod56-vir1">"<comma id="mod56-vir1-com1bis"><num>1-bis.</num><corpo> All'assunzione di informazioni da persona imputata in un procedimento connesso ovvero da persona imputata di un reato collegato a quello per cui si procede nel caso previsto dall'<rif id="rif46" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art371-com2-let2">articolo 371 comma 2 lettera b)</rif>, procede un ufficiale di polizia giudiziaria.<h:br/><h:br/><h:br/>
+La persona predetta, se priva del difensore, è avvisata che è assistita da un difensore di ufficio, ma che può nominarne uno di fiducia. Il difensore deve essere tempestivamente avvisato e ha diritto di assistere all'atto.</corpo></comma>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art4-com5">
+              <num>5.</num>
+              <corpo> La <mod id="mod57"><rif id="rif47" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art357-com2-let3">lettera c) del comma 2 dell'articolo 357 del codice di procedura penale</rif> è sostituita dalla seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod57-vir1">"<el id="mod57-vir1-let3"><num>c)</num><corpo> informazioni assunte a norma dell'<rif id="rif48" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art351">articolo 351</rif>;</corpo></el>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art4-com6">
+              <num>6.</num>
+              <alinea> L'<rif id="rif49" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art380">articolo 380 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art4-com6-let1">
+                <num>a)</num>
+                <corpo> nella <mod id="mod59"><rif id="rif50" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art357-com2-let12">lettera l) del comma 2</rif></mod>, sono soppresse le parole "della associazione di tipo mafioso prevista dall'<rif id="rif51" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416-com2">articolo 416- bis comma 2 del codice penale</rif>" nonchè la virgola dopo esse;</corpo>
+              </el>
+              <el id="art4-com6-let2">
+                <num>b)</num>
+                <corpo> dopo la
+                    <mod id="mod60"><rif id="rif52" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art380-com2-let12">
+                        lettera l) del comma 2</rif> è inserita la seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod60-vir1">"
+    <el id="mod60-vir1-let12bis">
+        <num>l-bis).</num>
+        <corpo> delitti di partecipazione, promozione, direzione e organizzazione della associazione di tipo mafioso prevista dall'
+            <rif id="rif53" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416bis">articolo 416-bis del codice penale</rif>;
+        </corpo>
+</el>"
+</virgolette>
+</mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art4-com7">
+              <num>7.</num>
+              <corpo> Dopo l'<mod id="mod61"><rif id="rif54" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art108">articolo 108 del decreto legislativo 28 luglio 1989, n. 271</rif>, è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod61-vir1">"<articolo id="mod61-vir1-art108bis"><num>Art. 108-bis</num><rubrica>(Modalità particolari di trasmissione della notizia di reato). -</rubrica><comma id="mod61-vir1-art108bis-com1"><num>1.</num><corpo> Tiene luogo della comunicazione scritta la comunicazione della notizia di reato consegnata su supporto magnetico o trasmessa per via telematica. Nei casi di urgenza, le indicazioni e la documentazione previste dall'<mrif id="rif55">articolo 347 commi <rif id="rif55-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com1">1</rif> e <rif id="rif55-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art347-com2">2</rif> del codice</mrif> sono trasmesse senza ritardo.</corpo></comma><comma id="mod61-vir1-art108bis-com2"><num>2.</num><corpo> Quando la comunicazione è eseguita nelle forme previste dal <rif id="rif56" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art108bis-com1">comma 1</rif>, la polizia giudiziaria indica altresì la data di consegna e di trasmissione.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art4-com8">
+              <num>8.</num>
+              <corpo> Il primo periodo dell'<mod id="mod62"><rif id="rif57" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art112">articolo 112 del decreto legislativo 28 luglio 1989, n. 271</rif>, è sostituito dai seguenti: <virgolette tipo="parola" id="mod62-vir1">"La polizia giudiziaria riferisce senza ritardo al pubblico ministero l'attività di indagine prevista dall'<rif id="rif58" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art346">articolo 346 del codice</rif>. Se sussistono ragioni di urgenza o si tratta di taluno dei delitti indicati nell'<rif id="rif278" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art275-com3">articolo 275 comma 3</rif>, la comunicazione è data immediatamente anche in forma orale."</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art4-com9">
+              <num>9.</num>
+              <corpo> Dopo il <mod id="mod63"><rif id="rif60" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art117-com2">comma 2 dell'articolo 117 del codice di procedura penale</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="parola" id="mod63-vir1">"2-bis. Il procuratore nazionale antimafia, nell'ambito delle funzioni previste dall'<rif id="rif61" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art371bis">articolo 371-bis</rif>, accede al registro delle notizie di reato e alle banche dati istituite appositamente presso le e direzioni distrettuali antimafia realizzando se del caso collegamenti reciproci."</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art4-com10">
+              <num>10.</num>
+              <alinea> L'<rif id="rif62" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118">articolo 118 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art4-com10-let1">
+                <num>a)</num>
+                <corpo> nel <mod id="mod64"><rif id="rif63" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118-com1">comma 1</rif>, dopo le parole <virgolette tipo="parola" id="mod64-vir1">"ufficiale di polizia giudiziaria"</virgolette>, sono inserite le seguenti: <virgolette tipo="parola" id="mod64-vir2">"o del personale della Direzione investigativa antimafia"</virgolette></mod>;</corpo>
+              </el>
+              <el id="art4-com10-let2">
+                <num>b)</num>
+                <corpo> dopo il <mod id="mod65"><rif id="rif64" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118-com1">comma 1</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod65-vir1">"<comma id="mod65-vir1-com1bis"><num>1-bis.</num><corpo> Ai medesimi fini l'autorità giudiziaria può autorizzare i soggetti indicati nel <rif id="rif65" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art118-com1">comma 1</rif> all'accesso diretto al registro previsto dall'<rif id="rif66" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art335">articolo 335</rif>, anche se tenuto in forma automatizzata.</corpo></comma>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art4-com11">
+              <num>11.</num>
+              <corpo> Con regolamento del Ministro di grazia e giustizia di concerto col Ministro dell'interno sono disciplinate le modalità di consegna dei supporti magnetici mobili e della comunicazione via cavo da parte degli organi di polizia giudiziaria.</corpo>
+            </comma>
+            <comma id="art4-com12">
+              <num>12.</num>
+              <corpo> Con regolamento del Ministro di grazia e giustizia sono disciplinate le procedure dell'inserimento delle comunicazioni redatte su supporto magnetico o trasmesse via cavo, in apposita sezione del registro previsto dall'<rif id="rif67" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art335">articolo 335 del codice di procedura penale</rif> e per la conseguente formale registrazione delle notizie stesse disposta dal pubblico ministero.</corpo>
+            </comma>
+          </articolo>
+          <articolo id="art5">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art5-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif68" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art360-com5" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod66-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod66-vir1" /></dsp:novellando></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art5-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif69" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art362" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod67-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art5-com3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif71" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art370-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod69-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art5-com4" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif72" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art373-com1-let4" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod70-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 5.</num>
+            <rubrica>Attività del pubblico ministero</rubrica>
+            <comma id="art5-com1">
+              <num>1.</num>
+              <corpo> Nel <mod id="mod66"><rif id="rif68" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art360-com5">comma 5 dell'articolo 360 del codice di procedura penale</rif>, le parole <virgolette tipo="parola" id="mod66-vir1">"agli effetti del giudizio"</virgolette> sono sostituite dalle seguenti: <h:br/><h:br/>
+<virgolette tipo="parola" id="mod66-vir2">"nel dibattimento"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art5-com2">
+              <num>2.</num>
+              <corpo> Il <mod id="mod67"><rif id="rif69" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art362">secondo periodo dell'articolo 362 del codice di procedura penale</rif> è sostituito dal seguente: <virgolette tipo="parola" id="mod67-vir1">"Si applicano le disposizioni degli <mrif id="rif70">articoli <rif id="rif70-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art197">197</rif>, <rif id="rif70-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art198">198</rif>, <rif id="rif70-3" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art199">199</rif>, <rif id="rif70-4" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art200">200</rif>, <rif id="rif70-5" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art201">201</rif>, <rif id="rif70-6" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art202">202</rif> e <rif id="rif70-7" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art203">203</rif></mrif>."</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art5-com3">
+              <num>3.</num>
+              <corpo> Il <mod id="mod69"><rif id="rif71" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art370-com1">comma 1 dell'articolo 370 del codice di procedura penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod69-vir1">"<comma id="mod69-vir1-com1"><num>1.</num><corpo> Il pubblico ministero compie personalmente ogni attività di indagine. Può avvalersi della polizia giudiziaria per il compimento di attività di indagine e di atti specificamente delegati.</corpo></comma>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art5-com4">
+              <num>4.</num>
+              <corpo> La <mod id="mod70"><rif id="rif72" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art373-com1-let4">lettera d) del comma 1 dell'articolo 373 del codice di procedura penale</rif> è sostituita dalle seguenti:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod70-vir1">"<el id="mod70-vir1-let4"><num>d)</num><alinea> delle sommarie informazioni assunte a norma dell'<rif id="rif73" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art362">articolo 362</rif>;</alinea><en id="mod70-vir1-let4-num500bis"><num>d-bis)</num><corpo> dell'interrogatorio assunto a norma dell'<rif id="rif74" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art363">articolo 363</rif>;</corpo></en></el>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+          <articolo id="art6">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art6-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif75" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art405-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod71-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art6-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif77" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art406" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod72-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art6-com3" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif85" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art407-com2-let1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod74-vir1" /></dsp:novella></dsp:sostituzione><dsp:variazione><dsp:pos xlink:href="#art6-com4" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif88" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art431-com1-let4" /></dsp:norma><dsp:dominio>' d) i verbali degli atti assunti nell'incidente probatorio e di quelli assunti all'estero a seguito di rogatoria;'.</dsp:dominio></dsp:variazione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 6.</num>
+            <rubrica>Chiusura delle indagini preliminari. Fascicolo per il dibattimento</rubrica>
+            <comma id="art6-com1">
+              <num>1.</num>
+              <corpo> In fine al <mod id="mod71"><rif id="rif75" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art405-com2">comma 2 dell'articolo 405 del codice di procedura penale</rif> è inserito il seguente periodo: <virgolette tipo="parola" id="mod71-vir1">"Il termine è di un anno se si procede per taluno dei delitti indicati nell'<rif id="rif76" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art407-com2-let1">articolo 407 comma 2 lettera a)</rif>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art6-com2">
+              <num>2.</num>
+              <corpo> L'<mod id="mod72"><rif id="rif77" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art406">articolo 406 del codice di procedura penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod72-vir1">"<articolo id="mod72-vir1-art406"><num>Art. 406</num><rubrica>(Proroga del termine). -</rubrica><comma id="mod72-vir1-art406-com1"><num>1.</num><corpo> Il pubblico ministero, prima della scadenza, può richiedere al giudice, per giusta causa, la proroga del termine previsto dall'<rif id="rif78" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art405">articolo 405</rif>. La richiesta contiene l'indicazione della notizia di reato e l'esposizione dei motivi che la giustificano.</corpo></comma><comma id="mod72-vir1-art406-com2"><num>2.</num><corpo> Ulteriori proroghe possono essere richieste dal pubblico ministero nei casi di particolare complessità delle indagini ovvero di oggettiva impossibilità di concluderle entro il termine  prorogato.</corpo></comma><comma id="mod72-vir1-art406-com2bis"><num>2-bis.</num><corpo> Ciascuna proroga può essere autorizzata dal giudice per un tempo non superiore a sei mesi.</corpo></comma><comma id="mod72-vir1-art406-com3"><num>3.</num><corpo> La richiesta di proroga è notificata, a cura del giudice, con l'avviso della facoltà di presentare memorie entro cinque giorni dalla notificazione, alla persona sottoposta alle indagini nonchè alla persona offesa dal reato che, nella notizia di reato o successivamente alla sua presentazione, abbia dichiarato di volere esserne informata. Il giudice provvede entro dieci giorni dalla scadenza del termine per la presentazione delle memorie.</corpo></comma><comma id="mod72-vir1-art406-com4"><num>4.</num><corpo> Il giudice autorizza la proroga del termine con ordinanza emessa in camera di consiglio senza intervento del pubblico ministero e dei difensori.</corpo></comma><comma id="mod72-vir1-art406-com5"><num>5.</num><corpo> Qualora ritenga che allo stato degli atti non si debba concedere la proroga, il giudice, entro il termine previsto dal <rif id="rif79" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art406-com3">comma 3</rif> secondo periodo, fissa la data dell'udienza in camera di consiglio e ne fa notificare avviso al pubblico ministero, alla persona sottoposta alle indagini nonchè, nella ipotesi prevista dal comma 3, alla persona offesa dal reato. Il procedimento si svolge nelle forme previste dall'<rif id="rif81" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art127">articolo 127</rif>.</corpo></comma><comma id="mod72-vir1-art406-com5bis"><num>5-bis.</num><corpo> Le disposizioni dei <rif id="rif82" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art406-com3">commi 3, 4 e 5</rif> non si applicano se si procede per taluno dei delitti indicati nell'<rif id="rif83" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art51-com3bis">articolo 51 comma 3-bis</rif>. In tali casi, il giudice provvede con ordinanza entro dieci giorni dalla presentazione della richiesta, dandone comunicazione al pubblico ministero.</corpo></comma><comma id="mod72-vir1-art406-com6"><num>6.</num><corpo> Se non ritiene di respingere la richiesta di proroga, il giudice autorizza con ordinanza il pubblico ministero a proseguire le indagini.</corpo></comma><comma id="mod72-vir1-art406-com7"><num>7.</num><corpo> Con l'ordinanza che respinge la richiesta di proroga, il giudice, se il termine per le indagini preliminari è già scaduto, fissa un termine non superiore a dieci giorni per la formulazione delle richieste del pubblico ministero a norma dell'<rif id="rif84" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art405">articolo 405</rif>.</corpo></comma><comma id="mod72-vir1-art406-com8"><num>8.</num><corpo> Gli atti di indagine compiuti dopo la presentazione della richiesta di proroga e prima della comunicazione del provvedimento del giudice sono comunque utilizzabili.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art6-com3">
+              <num>3.</num>
+              <corpo> La <mod id="mod74"><rif id="rif85" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art407-com2-let1">lettera a) del comma 2 dell'articolo 407 del codice di procedura penale</rif> è sostituita dalla seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod74-vir1">"<el id="mod74-vir1-let1"><num>a)</num><corpo> i delitti indicati nell'<rif id="rif86" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art275-com3">articolo 275 comma 3</rif> nonchè il delitto previsto dall'<rif id="rif87" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416">articolo 416 del codice penale</rif> nei casi in cui è obbligatorio l'arresto in flagranza;</corpo></el>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art6-com4">
+              <num>4.</num>
+              <corpo> La <mod id="mod75"><rif id="rif88" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art431-com1-let4">lettera d) del comma 1 dell'articolo 431 del codice di procedura penale</rif></mod> è così modificata:<h:br/>
+" d) i verbali degli atti assunti nell'incidente probatorio e di quelli assunti all'estero a seguito di rogatoria;".</corpo>
+            </comma>
+          </articolo>
+        </capo>
+        <capo id="titIRR2-cap3">
+          <num>Capo III</num>
+          <rubrica>G I U D I Z I O</rubrica>
+          <articolo id="art7">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art7-com1-let1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif90" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art468-com4" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod76-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art7-com2" /><dsp:norma xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271"><dsp:pos xlink:href="#rif93" /><dsp:sub xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art147" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod77-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 7.</num>
+            <rubrica>Norme relative alle citazioni e all'esame dibattimentale</rubrica>
+            <comma id="art7-com1">
+              <num>1.</num>
+              <alinea> L'<rif id="rif89" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art468">articolo 468 del codice di procedura penale</rif> è così modificato:</alinea>
+              <el id="art7-com1-let1">
+                <num>a)</num>
+                <corpo> dopo il <mod id="mod76"><rif id="rif90" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art468-com4">comma 4</rif> sono inseriti i seguenti:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod76-vir1">"<comma id="mod76-vir1-com4bis"><num>4-bis.</num><corpo> La parte che intende chiedere l'acquisizione di verbali di prova di altro procedimento penale deve farne espressa menzione scritta unitamente al deposito delle liste. Se si tratta di verbali di dichiarazioni di persone delle quali si chiede altresì la citazione, la parte deve indicare a pena di inammissibilità le ragioni per le quali l'esame è assolutamente necessario. La stessa indicazione deve essere fatta, a pena di inammissibilità, anche quando è richiesta la citazione di una persona esaminata in sede di incidente probatorio. In tali casi, la citazione di dette persone è autorizzata dal presidente solo dopo che in dibattimento il giudice ha ammesso l'esame a norma dell'<rif id="rif91" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art495">articolo 495</rif>.</corpo></comma><comma id="mod76-vir1-com4ter"><num>4-ter.</num><corpo> Le disposizioni dei commi precedenti si applicano anche per la citazione delle persone indicate nell'<rif id="rif92" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art210">articolo 210</rif>.</corpo></comma>"</virgolette></mod>.</corpo>
+              </el>
+            </comma>
+            <comma id="art7-com2">
+              <num>2.</num>
+              <corpo> Dopo l'<mod id="mod77"><rif id="rif93" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;271#art147">articolo 147 del decreto legislativo 28 luglio 1989, n. 271</rif>, è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod77-vir1">"<articolo id="mod77-vir1-art147bis"><num>Art. 147- bis</num><rubrica>(Esame delle persone che collaborano con la giustizia). -</rubrica><comma id="mod77-vir1-art147bis-com1"><num>1.</num><corpo> Nei confronti delle persone ammesse, in base alla legge, a programmi o misure di protezione, il presidente, anche di ufficio, può disporre che l'esame in dibattimento si svolga con le necessarie cautele volte alla tutela della persona sottoposta all'esame. Ove siano disponibili adeguati mezzi tecnici, l'esame può svolgersi a distanza. In tal caso, un ausiliario del giudice o altro pubblico ufficiale autorizzato è presente nel luogo dove si trova la persona sottoposta all'esame e attesta l'identità di essa dando atto delle cautele adottate per assicurare la genuinità dell'esame.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+          <articolo id="art8">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art8-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif94" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art503-com5" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod78-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art8-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif96" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art512" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod79-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod79-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 8</num>
+            <rubrica>Contestazioni nell'esame delle parti. Atti di cui è divenuta impossibile la ripetizione</rubrica>
+            <comma id="art8-com1">
+              <num>1.</num>
+              <corpo> Il <mod id="mod78"><rif id="rif94" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art503-com5">comma 5 dell'articolo 503 del codice di procedura penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod78-vir1">"<comma id="mod78-vir1-com5"><num>5.</num><corpo> Le dichiarazioni alle quali il difensore aveva diritto di assistere assunte dal pubblico ministero o dalla polizia giudiziaria su delega del pubblico ministero sono acquisite nel fascicolo per il dibattimento, se sono state utilizzate per le contestazioni previste dal <rif id="rif95" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art503-com3">comma 3</rif>.</corpo></comma>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art8-com2">
+              <num>2.</num>
+              <corpo> Nell'<mod id="mod79"><rif id="rif96" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art512">articolo 512 del codice di procedura penale</rif>, le parole <virgolette tipo="parola" id="mod79-vir1">"degli atti assunti dal pubblico ministero e dal giudice nel corso dell'udienza preliminare"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod79-vir2">"degli atti contenuti nel fascicolo del pubblico ministero"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+        </capo>
+        <capo id="titIRR3-cap4">
+          <num>Capo IV</num>
+          <rubrica>MISURE CAUTELARI</rubrica>
+          <articolo id="art9">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art9-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif97" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art281-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod80-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 9.</num>
+            <rubrica>Divieto di espatrio</rubrica>
+            <comma id="art9-com1">
+              <num>1.</num>
+              <corpo> Dopo il <mod id="mod80"><rif id="rif97" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art281-com2">comma 2 dell'articolo 281 del codice di procedura penale</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod80-vir1">"<comma id="mod80-vir1-com2bis"><num>2-bis.</num><corpo> Con l'ordinanza che applica una delle altre misure coercitive previste dal presente capo, il giudice dispone in ogni caso il divieto di espatrio.</corpo></comma>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+          <articolo id="art10">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art10-com1" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale"><dsp:pos xlink:href="#rif99" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art722" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod81-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 10.</num>
+            <rubrica>Computo della custodia cautelare all'estero</rubrica>
+            <comma id="art10-com1">
+              <num>1.</num>
+              <corpo> L'<mod id="mod81"><rif id="rif99" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art722">articolo 722 del codice di procedura penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod81-vir1">"<articolo id="mod81-vir1-art722"><num>Art. 722</num><rubrica>(Custodia cautelare all'estero) . </rubrica><comma id="mod81-vir1-art722-com1"><num>1.</num><corpo> La custodia cautelare all'estero in conseguenza di una domanda di estradizione presentata dallo Stato è computata ai soli effetti della durata complessiva stabilita dall'<rif id="rif100" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art303-com4">articolo 303 comma 4</rif>, fermo quanto previsto dall'<rif id="rif101" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art304-com4">articolo 304 comma 4</rif>.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+        </capo>
+      </titolo>
+      <titolo id="tit2">
+        <num>TITOLO II</num>
+        <rubrica>MODIFICHE AL CODICE PENALE E DISPOSIZIONI IN MATERIA DI ARMI E <h:br/>
+STUPEFACENTI</rubrica>
+        <capo id="tit2-cap1">
+          <num>Capo I</num>
+          <rubrica>MODIFICHE AL CODICE PENALE</rubrica>
+          <articolo id="art11">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art11-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif104" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod1-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art11-com2" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif105" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod2-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod2-vir1" /></dsp:novellando></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art11-com3" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif106" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art374" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod3-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art11-com4" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif107" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art375" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod4-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art11-com5" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif109" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art376-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod5-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art11-com7" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale"><dsp:pos xlink:href="#rif113" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art384" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod6-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 11.</num>
+            <rubrica>Reati contro l'amministrazione della giustizia</rubrica>
+            <comma id="art11-com1">
+              <num>1.</num>
+              <corpo> Dopo l'<mod id="mod1"><rif id="rif104" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371">articolo 371 del codice penale</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod1-vir1">"<articolo id="mod1-vir1-art371bis"><num>Art. 371-bis</num><comma id="mod1-vir1-art371bis-com1"><num /><corpo>Chiunque, nel corso di un procedimento penale, richiesto dal pubblico ministero o dalla polizia giudiziaria di fornire informazioni ai fini delle indagini, rende dichiarazioni false ovvero tace, in tutto o in parte, ciò che sa intorno ai fatti sui quali viene sentito, è punito con la reclusione da uno a cinque anni.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art11-com2">
+              <num>2.</num>
+              <corpo> Nell'<mod id="mod2"><rif id="rif105" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">articolo 372 del codice penale</rif>, le parole <virgolette tipo="parola" id="mod2-vir1">"da sei mesi a tre anni"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod2-vir2">"da due a sei anni"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art11-com3">
+              <num>3.</num>
+              <corpo> Dopo l'<mod id="mod3"><rif id="rif106" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art374">articolo 374 del codice penale</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod3-vir1">"<articolo id="mod3-vir1-art374bis"><num>Art. 374-bis</num><rubrica>(False dichiarazioni o attestazioni in atti destinati all'autorità giudiziaria). </rubrica><comma id="mod3-vir1-art374bis-com1"><num /><corpo>Salvo che il fatto costituisca più grave reato, è punito con la reclusione da uno a cinque anni chiunque dichiara o attesta falsamente in certificati o atti destinati a essere prodotti all'autorità giudiziaria condizioni, qualità personali, trattamenti terapeutici, rapporti di lavoro in essere o da instaurare, relativi all'imputato, al condannato o alla persona sottoposta a procedimento di prevenzione.</corpo></comma><comma id="mod3-vir1-art374bis-com2"><num /><corpo>Si applica la pena della reclusione da due a sei anni se il fatto è commesso da un pubblico ufficiale, da un incaricato di un pubblico servizio o da un esercente la professione sanitaria.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art11-com4">
+              <num>4.</num>
+              <corpo> L'<mod id="mod4"><rif id="rif107" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art375">articolo 375 del codice penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod4-vir1">"<articolo id="mod4-vir1-art375"><num>Art. 375</num><rubrica>(Circostanze aggravanti). -</rubrica><comma id="mod4-vir1-art375-com1"><num /><corpo>Nei casi previsti dagli <mrif id="rif108">articoli <rif id="rif108-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371bis">371-bis</rif>, <rif id="rif108-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">372</rif>, <rif id="rif108-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art373">373</rif> e <rif id="rif108-4" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art374">374</rif></mrif>, la pena è della reclusione da tre a otto anni se dal fatto deriva una condanna alla reclusione non superiore a cinque anni; è della reclusione da quattro a dodici anni, se dal fatto deriva una condanna superiore a cinque anni; ed è della reclusione da sei a venti anni se dal fatto deriva una condanna all'ergastolo.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art11-com5">
+              <num>5.</num>
+              <corpo> Il <mod id="mod5"><rif id="rif109" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art376-com1">primo comma dell'articolo 376 del codice penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod5-vir1">"<comma id="mod5-vir1-com1"><num /><corpo>Nei casi previsti dagli <mrif id="rif110">articoli <rif id="rif110-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371bis">371-bis</rif>, <rif id="rif110-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">372</rif> e <rif id="rif110-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art373">373</rif></mrif>, il colpevole non è punibile se, nel procedimento penale in cui ha prestato il suo ufficio o reso le sue dichiarazioni, ritratta il falso e manifesta il vero non oltre la chiusura del dibattimento.</corpo></comma>"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art11-com6">
+              <num>6.</num>
+              <corpo> Il <rif id="rif111" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art377-com1">primo comma dell'articolo 377 del codice penale</rif> è sostituito dal seguente:<h:br/>
+"Chiunque offre o promette denaro o altra utilità alla persona chiamata a rendere dichiarazioni davanti all'autorità giudiziaria ovvero a svolgere attività di perito, consulente tecnico o interprete, per indurlo a commettere i reati previsti dagli <mrif id="rif112">articoli <rif id="rif112-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371bis">371-bis</rif>, <rif id="rif112-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">372</rif> e <rif id="rif112-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art373">373</rif></mrif>, soggiace, qualora l'offerta o la promessa non sia accettata, alle pene stabilite negli articoli medesimi ridotte di un terzo.".</corpo>
+            </comma>
+            <comma id="art11-com7">
+              <num>7.</num>
+              <corpo> L'<mod id="mod6"><rif id="rif113" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art384">articolo 384 del codice penale</rif> è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod6-vir1">"<articolo id="mod6-vir1-art384"><num>Art. 384</num><rubrica>(Casi di non punibilità). </rubrica><comma id="mod6-vir1-art384-com1"><num /><corpo>Nei casi previsti dagli <mrif id="rif114">articoli <rif id="rif114-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art361">361</rif>, <rif id="rif114-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art362">362</rif>, <rif id="rif114-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art363">363</rif>, <rif id="rif114-4" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art364">364</rif>, <rif id="rif114-5" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art365">365</rif>, <rif id="rif114-6" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art366">366</rif>, <rif id="rif114-7" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art369">369</rif>, <rif id="rif114-8" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371bis">371-bis</rif>, <rif id="rif114-9" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">372</rif>, <rif id="rif114-10" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art373">373</rif>, <rif id="rif114-11" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art374">374</rif> e <rif id="rif114-12" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art378">378</rif></mrif>, non è punibile chi ha commesso il fatto per esservi stato costretto dalla necessità di salvare se medesimo o un prossimo congiunto da un grave e inevitabile nocumento nella libertà o nell'onore.</corpo></comma><comma id="mod6-vir1-art384-com2"><num /><corpo>Nei casi previsti dagli <mrif id="rif115">articoli <rif id="rif115-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art371bis">371-bis</rif>, <rif id="rif115-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art372">372</rif> e <rif id="rif115-3" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art373">373</rif></mrif>, la punibilità è esclusa se il fatto è commesso da chi per legge non avrebbe dovuto essere richiesto di fornire informazioni ai fini delle indagini o assunto come testimonio, perito, consulente tecnico o interprete ovvero avrebbe dovuto essere avvertito della facoltà di astenersi dal rendere informazioni, testimonianza, perizia, consulenza o interpretazione.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+            </comma>
+          </articolo>
+        </capo>
+        <capo id="titIIRR4-cap2">
+          <num>Capo II</num>
+          <rubrica>DISPOSIZIONI IN MATERIA DI ARMI E STUPEFACENTI</rubrica>
+          <articolo id="art12">
+            <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art12-com3" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-04-18;110"><dsp:pos xlink:href="#rif119" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-04-18;110#art2-com4" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod7-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod7-vir1" /></dsp:novellando></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art12-com4" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico"><dsp:pos xlink:href="#rif120" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art35-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod9-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art12-com5" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico"><dsp:pos xlink:href="#rif122" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art35-com2" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod10-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art12-com6" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico"><dsp:pos xlink:href="#rif124" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art55-com1" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod11-vir1" /></dsp:novella></dsp:integrazione><dsp:abrogazione><dsp:pos xlink:href="#art12-com7" /><dsp:norma xlink:href="urn:nir:stato:legge:1992-02-11;157"><dsp:pos xlink:href="#rif279" /><dsp:sub xlink:href="urn:nir:stato:legge:1992-02-11;157#art37-com2" /></dsp:norma></dsp:abrogazione><dsp:sostituzione><dsp:pos xlink:href="#art12-com8" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-04-18;110"><dsp:pos xlink:href="#rif127" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-04-18;110#art10-com6" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod12-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+            <num>Art. 12.</num>
+            <rubrica>Disposizioni in materia di armi</rubrica>
+            <comma id="art12-com1">
+              <num>1.</num>
+              <corpo> Nel permesso di porto d'armi e nel nulla osta all'acquisto di cui all'<rif id="rif116" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art55-com3">articolo 55, terzo comma, del testo unico</rif> delle leggi di pubblica sicurezza approvato con <rif id="rif117" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773">regio decreto 18 giugno 1931, n. 773</rif>, è indicato il numero massimo di munizioni di cui è consentito l'acquisto nel periodo di validità del titolo.</corpo>
+            </comma>
+            <comma id="art12-com2">
+              <num>2.</num>
+              <corpo> Con decreto del Ministro dell'interno, sono determinate le modalità per l'attuazione della <rif id="rif118" xlink:href="#art12-com1">disposizione del comma 1</rif>.</corpo>
+            </comma>
+            <comma id="art12-com3">
+              <num>3.</num>
+              <corpo> Al <mod id="mod7"><rif id="rif119" xlink:href="urn:nir:stato:legge:1975-04-18;110#art2-com4">quarto comma dell'articolo 2 della legge 18 aprile 1975, n. 110</rif>, le parole <virgolette tipo="parola" id="mod7-vir1">"a carica esplosiva, autopropellenti"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod7-vir2">"a carica esplosiva, ad espansione, autopropellenti"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art12-com4">
+              <num>4.</num>
+              <corpo> Al <mod id="mod9"><rif id="rif120" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art35-com1">primo comma dell'articolo 35 del testo unico</rif> delle leggi di pubblica sicurezza, approvato con <rif id="rif121" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773">regio decreto 18 giugno 1931, n. 773</rif>, è aggiunto il seguente periodo: <virgolette tipo="parola" id="mod9-vir1">"I commercianti di armi devono, altresì, comunicare giornalmente all'autorità di pubblica sicurezza le generalità delle persone e delle ditte che hanno acquistato o venduto loro le armi, la specie e la quantità delle armi vendute o acquistate e gli estremi dei titoli abilitativi all'acquisto esibiti dagli interessati"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art12-com5">
+              <num>5.</num>
+              <corpo> Al <mod id="mod10"><rif id="rif122" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art35-com2">secondo comma dell'articolo 35 del testo unico</rif> delle leggi di pubblica sicurezza, approvato con <rif id="rif123" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773">regio decreto 18 giugno 1931, n. 773</rif>, è aggiunto il seguente periodo: <virgolette tipo="parola" id="mod10-vir1">"e deve essere conservato per un periodo di cinque anni anche dopo la cessazione dell'attività"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art12-com6">
+              <num>6.</num>
+              <corpo> Al <mod id="mod11"><rif id="rif124" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art55-com1">primo comma dell'articolo 55 del testo unico</rif> delle leggi di pubblica sicurezza, approvato con <rif id="rif125" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773">regio decreto 18 giugno 1931, n. 773</rif>, è aggiunto il seguente periodo: <virgolette tipo="parola" id="mod11-vir1">"I rivenditori di materie esplodenti devono altresì comunicare giornalmente all'autorità di pubblica sicurezza le generalità delle persone e delle ditte che hanno acquistato munizioni, la specie, i contrassegni e le quantità delle munizioni vendute e gli estremi dei titoli abilitativi all'acquisto esibiti dagli interessati"</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art12-com7">
+              <num>7.</num>
+              <corpo> Il <mod id="mod37"><rif id="rif279" xlink:href="urn:nir:stato:legge:1992-02-11;157#art37-com2">comma 2 dell'articolo 37 della legge 11 febbraio 1992, n. 157</rif></mod>, è abrogato.</corpo>
+            </comma>
+            <comma id="art12-com8">
+              <num>8.</num>
+              <corpo> Il <mod id="mod12"><rif id="rif127" xlink:href="urn:nir:stato:legge:1975-04-18;110#art10-com6">primo periodo del sesto comma dell'articolo 10 della legge 18 aprile 1975, n. 110</rif>, è sostituito dal seguente: <virgolette tipo="parola" id="mod12-vir1">"La detenzione di armi comuni da sparo per fini diversi da quelli previsti dall'<rif id="rif128" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773:testo.unico#art31">articolo 31 del testo unico</rif> delle leggi di pubblica sicurezza, approvato con <rif id="rif129" xlink:href="urn:nir:stato:regio.decreto:1931-06-18;773">regio decreto 18 giugno 1931, n. 773</rif>, è consentita nel numero di tre per le armi comuni da sparo, di otto per le armi da caccia di cui all'<mrif id="rif130">articolo 13, commi <rif id="rif130-1" xlink:href="urn:nir:stato:legge:1992-02-11;157#art13-com1">1</rif> e <rif id="rif130-2" xlink:href="urn:nir:stato:legge:1992-02-11;157#art13-com2">2</rif>, della legge 11 febbraio 1992, n. 157</mrif>, e di sei per le armi per uso sportivo."</virgolette></mod>.</corpo>
+            </comma>
+            <comma id="art12-com9">
+              <num>9.</num>
+              <corpo> Coloro che detengono legittimamente armi da caccia in numero superiore a quello consentito ai sensi dell'<rif id="rif131" xlink:href="urn:nir:stato:legge:1975-04-18;110#art10-com6">articolo 10, sesto comma, della legge 18 aprile 1975, n. 110</rif>, per averle acquistate a norma del <rif id="rif132" xlink:href="urn:nir:stato:legge:1992-02-11;157#art37-com2">comma 2 dell'articolo 37 della legge 11 febbraio 1992, n. 157</rif>, prima della data di entrata in vigore del presente decreto, sono tenuti a cedere le armi in eccesso a soggetti legittimati ad acquistarle, ovvero a consegnarle all'ufficio di pubblica sicurezza o alla stazione dei carabinieri competente per territorio nel termine di 90 giorni dalla data di entrata in vigore della legge di conversione del presente decreto, salvi i casi in cui venga rilasciata apposita licenza di collezione.</corpo>
+            </comma>
+            <comma id="art12-com10">
+              <num>10.</num>
+              <corpo> Chiunque non osserva le disposizioni del <rif id="rif133" xlink:href="#art12-com9">comma 9</rif> è punito con le sanzioni previste dall'<rif id="rif134" xlink:href="urn:nir:stato:legge:1975-04-18;110#art10-com11">ultimo comma dell'articolo 10 della legge 18 aprile 1975, n. 110</rif>.</corpo>
+            </comma>
+            <comma id="art12-com11">
+              <num>11.</num>
+              <corpo> Le disposizioni dei <rif id="rif135" xlink:href="#art12-com4">commi 4 e 6</rif> hanno effetto a decorrere dal quindicesimo giorno successivo alla data di entrata in vigore del presente decreto.</corpo>
+            </comma>
+          </articolo>
+        </capo>
+      </titolo>
+      <titolo id="tit3">
+        <num>TITOLO III</num>
+        <rubrica>NUOVE MISURE PER LA PROTEZIONE DI COLORO CHE COLLABORANO CON LA <h:br/>
+GIUSTIZIA.</rubrica>
+        <articolo id="art13">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art13-com1" /><dsp:norma xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8"><dsp:pos xlink:href="#rif136" /><dsp:sub xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod14-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art13-com2" /><dsp:norma xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8"><dsp:pos xlink:href="#rif141" /><dsp:sub xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13bis" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod15-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art13-com3" /><dsp:norma xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8"><dsp:pos xlink:href="#rif282" /><dsp:sub xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art12-com2-let3" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod39-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art13-com4" /><dsp:norma xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8"><dsp:pos xlink:href="#rif150" /><dsp:sub xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art12-com2" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod17-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 13.</num>
+          <rubrica>Disposizioni sulla custodia di coloro<h:br/>
+che collaborano con la giustizia</rubrica>
+          <comma id="art13-com1">
+            <num>1.</num>
+            <corpo> Dopo l'<mod id="mod14"><rif id="rif136" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13">articolo 13 del decreto-legge 15 gennaio 1991, n. 8</rif>, convertito, con modificazioni, nella <rif id="rif137" xlink:href="urn:nir:stato:legge:1991-03-15;82">legge 15 marzo 1991, n. 82</rif>, è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod14-vir1">"<articolo id="mod14-vir1-art13bis.1"><num>Art. 13-bis.</num><rubrica>-bis. </rubrica><comma id="mod14-vir1-art13bis.1-com1"><num>1.</num><corpo> Per gravi e urgenti motivi di sicurezza, il procuratore generale della Repubblica presso la corte di appello nel cui distretto ha sede l'istituto penitenziario, può autorizzare, su richiesta del Capo della polizia, che ne informa il Ministro dell'interno, che le persone detenute per espiazione della pena o internate per l'esecuzione di una misura di sicurezza siano custodite in luoghi diversi dagli istituti penitenziari, per il tempo strettamente necessario alla definizione dello speciale programma di protezione. Negli stessi casi, il procuratore generale nel cui distretto la persona è ristretta ovvero ha la residenza o il domicilio può autorizzare specifiche modalità esecutive delle misure alternative alla detenzione diverse dalla liberazione anticipata.</corpo></comma><comma id="mod14-vir1-art13bis.1-com2"><num>2.</num><corpo> Le autorizzazioni previste dal <rif id="rif138" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13bis-com1">comma 1</rif> possono essere date anche prima dell'inizio della esecuzione della pena o della misura di sicurezza, dal procuratore generale della Repubblica presso la corte di appello nel cui distretto la persona da ammettere allo speciale programma di protezione ha la residenza o il domicilio.</corpo></comma><comma id="mod14-vir1-art13bis.1-com3"><num>3.</num><corpo> Quando si tratta di persone detenute o internate per taluno dei reati indicati nell'<rif id="rif139" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art51-com3">articolo 51 comma 3- bis del codice di procedura penale</rif>, i provvedimenti previsti dai <rif id="rif140" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13bis-com1">commi 1 e 2</rif> sono adottati dal procuratore generale d'intesa con il procuratore nazionale antimafia.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+          </comma>
+          <comma id="art13-com2">
+            <num>2.</num>
+            <corpo> Dopo l'<mod id="mod15"><rif id="rif141" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13bis">articolo 13- bis del decreto-legge 15 gennaio 1991, n. 8</rif>, convertito, con modificazioni, nella <rif id="rif142" xlink:href="urn:nir:stato:legge:1991-03-15;82">legge 15 marzo 1991, n. 82</rif>, è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod15-vir1">"<articolo id="mod15-vir1-art13ter.1"><num>Art. 13-ter.</num><rubrica>-ter. </rubrica><comma id="mod15-vir1-art13ter.1-com1"><num>1.</num><corpo> Nei confronti delle persone ammesse a speciale programma di protezione l'assegnazione al lavoro all'esterno, la concessione dei permessi premio e l'ammissione alle misure alternative alla detenzione previste dal <rif id="rif143" xlink:href="urn:nir:stato:legge:1975-07-26;354#cap6">capo VI della legge 26 luglio 1975, n. 354</rif>, sono disposte sentita l'autorità che ha deliberato il programma, la quale provvede ad acquisire informazioni dal pubblico ministero presso il giudice competente per i reati in ordine ai quali è stata prestata la collaborazione.</corpo></comma><comma id="mod15-vir1-art13ter.1-com2"><num>2.</num><corpo> Nei casi di cui al <rif id="rif144" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13ter-com1">comma 1</rif>, il provvedimento può essere adottato anche in deroga alle vigenti disposizioni, ivi comprese quelle relative ai limiti di pena di cui agli <mrif id="rif280">articoli <rif id="rif280-1" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art21">21</rif>, <rif id="rif280-2" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art30ter">30-ter</rif>, <rif id="rif280-3" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art47">47</rif>, <rif id="rif280-4" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art47ter">47-ter</rif> e <rif id="rif280-5" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art50">50</rif></mrif>. Il provvedimento è specificamente motivato nei casi in cui l'autorità indicata nel <rif id="rif146" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13ter-com1">comma 1</rif> ha espresso avviso sfavorevole.</corpo></comma><comma id="mod15-vir1-art13ter.1-com3"><num>3.</num><corpo> Per i provvedimenti di cui ai <rif id="rif147" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13ter-com1">commi 1 e 2</rif>, la competenza appartiene al tribunale o al magistrato di sorveglianza del luogo in cui la persona ammessa allo speciale programma di protezione ha il domicilio.</corpo></comma><comma id="mod15-vir1-art13ter.1-com4"><num>4.</num><corpo> Con decreto del Ministro di grazia e giustizia, di concerto con il Ministro dell'interno, sono stabilite le modalità attuative delle disposizioni dell'ordinamento penitenziario applicabili alle persone ammesse o da ammettere allo speciale programma di protezione.</corpo></comma></articolo>"</virgolette></mod>.</corpo>
+          </comma>
+          <comma id="art13-com3">
+            <num>3.</num>
+            <corpo> Nel <rif id="rif148" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art12-com2">comma 2 dell'articolo 12 del decreto-legge 15 gennaio 1991, n. 8</rif>, convertito, con modificazioni, nella <rif id="rif281" xlink:href="urn:nir:stato:legge:1991-03-15;82">legge 15 marzo 1991, n. 82</rif>, <mod id="mod39"><rif id="rif282" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art12-com2-let3">dopo la lettera c)</rif> è inserita la seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod39-vir1">"<el id="mod39-vir1-let4"><num>d)</num><corpo> non rilasciare a soggetti diversi dalla autorità giudiziaria o dalle forze di polizia dichiarazioni concernenti fatti comunque di interesse per i procedimenti in relazione ai quali hanno prestato o prestano la loro collaborazione.".</corpo></el></virgolette></mod></corpo>
+          </comma>
+          <comma id="art13-com4">
+            <num>4.</num>
+            <corpo> Dopo il <mod id="mod17"><rif id="rif150" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art12-com2">comma 2 dell'articolo 12 del decreto-legge 15 gennaio 1991, n. 8</rif>, convertito, con modificazioni, nella <rif id="rif151" xlink:href="urn:nir:stato:legge:1991-03-15;82">legge 15 marzo 1991, n. 82</rif>, è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod17-vir1">"<comma id="mod17-vir1-com3"><num>3.</num><corpo> All'atto della sottoscrizione del programma, l'interessato elegge il proprio domicilio nel luogo in cui ha sede la commissione di cui all'<rif id="rif152" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art10">articolo 10</rif>.</corpo></comma></virgolette></mod></corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit4">
+        <num>TITOLO IV</num>
+        <rubrica>NORME IN MATERIA PENITENZIARIA</rubrica>
+        <articolo id="art14">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art14-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif153" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art58quater-com4" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod18-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 14.</num>
+          <rubrica>Divieti conseguenti a reati commessi<h:br/>
+durante l'espiazione della pena</rubrica>
+          <comma id="art14-com1">
+            <num>1.</num>
+            <corpo> All'<mod id="mod18"><rif id="rif153" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58quater-com4">articolo 58-quater della legge 26 luglio 1975, n. 354, dopo il comma 4</rif> sono inseriti i seguenti:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod18-vir1">"<comma id="mod18-vir1-com5"><num>5.</num><corpo> Oltre a quanto previsto dai <rif id="rif154" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58quater-com1">commi 1 e 3</rif>, l'assegnazione al lavoro all'esterno, i permessi premio e le misure alternative alla detenzione previste dal <rif id="rif155" xlink:href="urn:nir:stato:legge:1975-07-26;354#cap6">capo VI</rif> non possono essere concessi, o se già concessi sono revocati, ai condannati per taluni dei delitti indicati nel <rif id="rif156" xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis-com1">comma 1 dell'articolo 4-bis</rif>, nei cui confronti si procede o è pronunciata condanna per un delitto doloso punito con la pena della reclusione non inferiore nel massimo a tre anni, commesso da chi ha posto in essere una condotta punibile a norma dell'<rif id="rif157" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art385">articolo 385 del codice penale</rif> ovvero durante il lavoro all'esterno o la fruizione di un permesso premio o di una misura alternativa alla detenzione.</corpo></comma><comma id="mod18-vir1-com6"><num>6.</num><corpo> Ai fini dell'applicazione della disposizione di cui al <rif id="rif158" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58quater-com5">comma 5</rif>, l'autorità che procede per il nuovo delitto ne dà comunicazione al magistrato di sorveglianza del luogo di ultima detenzione dell'imputato.</corpo></comma><comma id="mod18-vir1-com7"><num>7.</num><corpo> Il divieto di concessione dei benefici di cui al <rif id="rif159" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58quater-com5">comma 5</rif> opera per un periodo di cinque anni dal momento in cui è ripresa l'esecuzione della custodia o della pena o è stato emesso il provvedimento di revoca della misura.</corpo></comma></virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art15">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art15-com1-let1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif284" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod40-vir1" /></dsp:novella></dsp:sostituzione><dsp:integrazione><dsp:pos xlink:href="#art15-com1-let2" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif175" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis-com3" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod19-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 15.</num>
+          <rubrica>Divieto di concessione di benefici<h:br/>
+per gli appartenenti alla criminalità organizzata</rubrica>
+          <comma id="art15-com1">
+            <num>1.</num>
+            <alinea> L'<rif id="rif160" xlink:href="urn:nir:stato:legge:1975-07-26;354">articolo 4-bis della legge 26 luglio 1975, n. 354</rif>, è così modificato:</alinea>
+            <el id="art15-com1-let1">
+              <num>a)</num>
+              <corpo> la <mod id="mod40"><rif id="rif284" xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis">rubrica e il comma 1</rif> sono sostituiti dai seguenti:<h:br/><h:br/>
+<virgolette tipo="parola" id="mod40-vir1">"(Divieto di concessione dei benefici e accertamento della pericolosità sociale dei condannati per taluni delitti). <h:br/><h:br/><h:br/>
+1. Fermo quanto stabilito dall'<rif id="rif285" xlink:href="urn:nir:stato:decreto.legge:1991-01-15;8#art13ter">articolo 13-ter del decreto-legge 15 gennaio 1991, n. 8</rif>, convertito, con modificazioni, nella <rif id="rif163" xlink:href="urn:nir:stato:legge:1991-03-15;82">legge 15 marzo 1991, n. 82</rif>, l'assegnazione al lavoro all'esterno, i permessi premio, e le misure alternative alla detenzione previste dal <rif id="rif164" xlink:href="urn:nir:stato:legge:1975-07-26;354#cap6">capo VI della legge 26 luglio 1975, n. 354</rif>, possono essere concessi ai detenuti e internati per delitti commessi avvalendosi delle condizioni previste dall'<rif id="rif286" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416bis">articolo 416-bis del codice penale</rif> ovvero al fine di agevolare l'attività delle associazioni previste dallo stesso articolo nonchè per i delitti di cui agli <rif id="rif167" xlink:href="urn:nir:stato:legge:1975-07-26;354#art416">articoli 416- bis</rif> e <rif id="rif168" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art630">630 del codice penale</rif> e all'<rif id="rif169" xlink:href="urn:nir:presidente.repubblica:decreto:1990-10-09;309#art74">articolo 74 del decreto del Presidente della Repubblica 9 ottobre 1990, n. 309</rif>, solo nei casi in cui tali detenuti e internati collaborano con la giustizia a norma dell'<rif id="rif170" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58ter">articolo 58-ter</rif>. Quando si tratta di detenuti o internati per delitti commessi per finalità di terrorismo o di eversione dell'ordinamento costituzionale ovvero di detenuti o internati per i delitti di cui agli <mrif id="rif171">articoli <rif id="rif171-1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art575-com2">575</rif>, <rif id="rif171-2" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art628-com2">628</rif> terzo comma, 629 secondo comma del codice penale</mrif> e all'<rif id="rif172" xlink:href="urn:nir:stato:legge:1975-07-26;354#art73">articolo 73</rif>, limitatamente alle ipotesi aggravate ai sensi dell'<rif id="rif173" xlink:href="urn:nir:presidente.repubblica:decreto:1990-10-09;309#art80-com2">articolo 80 comma 2</rif>, del predetto testo unico approvato con <rif id="rif174" xlink:href="urn:nir:presidente.repubblica:decreto:1990-10-09;309">decreto del Presidente della Repubblica n. 309 del 1990</rif>, i benefici suddetti possono essere concessi solo se non vi sono elementi tali da far ritenere la sussistenza di collegamenti con la criminalità organizzata o eversiva.";</virgolette></mod></corpo>
+            </el>
+            <el id="art15-com1-let2">
+              <num>b)</num>
+              <corpo> dopo il <mod id="mod19"><rif id="rif175" xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis-com3">comma 3</rif> è inserito il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod19-vir1">"<comma id="mod19-vir1-com3bis"><num>3-bis.</num><corpo> L'assegnazione al lavoro all'esterno, i permessi premio e le misure alternative alla detenzione previste dal <rif id="rif176" xlink:href="urn:nir:stato:legge:1975-07-26;354#cap6">capo VI</rif>, non possono essere concessi ai detenuti ed internati per delitti dolosi quando il Procuratore nazionale antimafia o il procuratore distrettuale comuni ca, d'iniziativa o su segnalazione del comitato provinciale per l'ordine e la sicurezza pubblica competente in relazione al luogo di detenzione o internamento, l'attualità di collegamenti con la criminalità organizzata. In tal caso si prescinde dalle procedure previste dai <rif id="rif177" xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis-com2">commi 2 e 3</rif>.</corpo></comma></virgolette></mod></corpo>
+            </el>
+          </comma>
+          <comma id="art15-com2">
+            <num>2.</num>
+            <corpo> Nei confronti delle persone detenute o internate per taluno dei delitti indicati nel primo periodo del <rif id="rif178" xlink:href="#art14-com1">comma 1</rif> che fruiscano, alla data di entrata in vigore del presente decreto, delle misure alternative alla detenzione o di permessi premio, o siano assegnate al lavoro all'esterno, l'autorità di polizia, ove lo ritenga, comunica al giudice di sorveglianza competente che le persone medesime non si trovano nella condizione per l'applicazione dell'<rif id="rif179" xlink:href="urn:nir:stato:legge:1975-07-26;354#art58">articolo 58- ter della legge 26 luglio 1975, n. 354</rif>. In tal caso il tribunale o il magistrato di sorveglianza dispone la revoca della misura alternativa alla detenzione o del permesso premio. Analogo provvedimento è adottato dalla competente autorità in riferimento all'assegnazione al lavoro all'esterno.</corpo>
+          </comma>
+        </articolo>
+        <articolo id="art16">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:abrogazione><dsp:pos xlink:href="#art16-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif180" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art67-com2" /><dsp:incompleta /></dsp:norma></dsp:abrogazione><dsp:integrazione><dsp:pos xlink:href="#art16-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif287" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art67-com2" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod41-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art16-com2" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif182" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art18-com8" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod22-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art16-com3" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif184" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art18" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod23-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art16-com5" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1976-04-29;431:regolamento"><dsp:pos xlink:href="#rif198" /><dsp:sub xlink:href="urn:nir:presidente.repubblica:decreto:1976-04-29;431:regolamento#art35-com13" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod25-vir1" /></dsp:novella></dsp:integrazione><dsp:sostituzione><dsp:pos xlink:href="#art16-com6" /><dsp:norma xlink:href="urn:nir:stato:decreto.legge:1982-09-06;629"><dsp:pos xlink:href="#rif200" /><dsp:sub xlink:href="urn:nir:stato:decreto.legge:1982-09-06;629#art1quinquies-com6" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod27-vir2" /></dsp:novella><dsp:novellando><dsp:pos xlink:href="#mod27-vir1" /></dsp:novellando></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 16.</num>
+          <rubrica>Colloqui investigativi</rubrica>
+          <comma id="art16-com1">
+            <num>1.</num>
+            <corpo> Nel <mod id="mod21"><rif id="rif180" xlink:href="urn:nir:stato:legge:1975-07-26;354#art67-com2">secondo comma dell'articolo 67 della legge 26 luglio 1975, n. 354</rif></mod>, è eliminato il punto e sono <mod id="mod41"><rif id="rif287" xlink:href="urn:nir:stato:legge:1975-07-26;354#art67-com2">aggiunte</rif> in fine le seguenti parole: <virgolette tipo="parola" id="mod41-vir1">"e per il personale indicato nell'<rif id="rif288" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis">articolo 18-bis</rif>."</virgolette></mod>.</corpo>
+          </comma>
+          <comma id="art16-com2">
+            <num>2.</num>
+            <corpo> Nell'<mod id="mod22"><rif id="rif182" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18-com8">ottavo comma dell'articolo 18 della legge 26 luglio 1975, n. 354</rif>, sono aggiunte all'inizio le seguenti parole: <virgolette tipo="parola" id="mod22-vir1">"Salvo quanto disposto dall'<rif id="rif183" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis">articolo 18-bis</rif>,"</virgolette></mod>.</corpo>
+          </comma>
+          <comma id="art16-com3">
+            <num>3.</num>
+            <corpo> Dopo l'<mod id="mod23"><rif id="rif184" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18">articolo 18 della legge 26 luglio 1975, n. 354</rif>, è inserito il seguente articolo:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod23-vir1">"<articolo id="mod23-vir1-art18bis"><num>Art. 18-bis</num><rubrica>(Colloqui a fini investigativi).</rubrica><comma id="mod23-vir1-art18bis-com1"><num>1.</num><corpo> Il personale della Direzione investigativa antimafia di cui all'<rif id="rif185" xlink:href="urn:nir:stato:decreto.legge:1991-10-29;345#art3">articolo 3 del decreto-legge 29 ottobre 1991, n. 345</rif>, convertito, con modificazioni, nella <rif id="rif186" xlink:href="urn:nir:stato:legge:1991-12-30;410">legge 30 dicembre 1991, n. 410</rif>, e gli ufficiali di polizia giudiziaria dei servizi centrali e interprovinciali di cui all'<rif id="rif187" xlink:href="urn:nir:stato:decreto.legge:1991-05-13;152#art12">articolo 12 del decreto-legge 13 maggio 1991, n. 152</rif>, convertito, con modificazioni, nella <rif id="rif188" xlink:href="urn:nir:stato:legge:1991-07-12;203">legge 12 luglio 1991, n. 203</rif>, hanno facoltà di visitare gli istituti penitenziari e possono essere autorizzati, a norma del <rif id="rif189" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com3">comma 3</rif>, ad avere colloqui personali con detenuti e internati, al fine di acquisire informazioni nell'ambito dei rispettivi compiti istituzionali di investigazione, sicurezza e prevenzione.</corpo></comma><comma id="mod23-vir1-art18bis-com2"><num>2.</num><alinea> Al personale di polizia indicato nel <rif id="rif190" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com1">comma 1</rif>, l'autorizzazione ai colloqui è rilasciata:</alinea><el id="mod23-vir1-art18bis-com2-let1"><num>a)</num><corpo> quando si tratta di internati, di condannati o di imputati, dal Ministro di grazia e giustizia o da un suo delegato;</corpo></el><el id="mod23-vir1-art18bis-com2-let2"><num>b)</num><corpo> quando si tratta di persone sottoposte ad indagini, dal pubblico ministero.</corpo></el></comma><comma id="mod23-vir1-art18bis-com3"><num>3.</num><corpo> Le autorizzazioni ai colloqui indicate nel <rif id="rif191" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com2">comma 2</rif> sono annotate esclusivamente in apposito registro riservato tenuto presso l'autorità competente al rilascio.</corpo></comma><comma id="mod23-vir1-art18bis-com4"><num>4.</num><corpo> In casi di particolare urgenza, attestati con provvedimento del Ministro dell'interno o, per sua delega, dal Capo della Polizia, l'autorizzazione prevista nel <rif id="rif192" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com2-let1">comma 2, lettera a)</rif>, non è richiesta, e del colloquio è data immediata comunicazione all'autorità ivi indicata, che provvede all'annotazione nel registro riservato di cui al <rif id="rif193" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com3">comma 3</rif>.</corpo></comma><comma id="mod23-vir1-art18bis-com5"><num>5.</num><corpo> La facoltà di procedere a colloqui personali con detenuti e internati è attribuita altresì al Procuratore nazionale antimafia ai fini dell'esercizio delle funzioni di impulso e di coordinamento previste dall'<rif id="rif289" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art371bis">articolo 371-bis del codice di procedura penale</rif>; al medesimo Procuratore nazionale antimafia sono comunicati i provvedimenti di cui ai <rif id="rif195" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com2">commi 2 e 4</rif>, qualora concernenti colloqui con persone sottoposte ad indagini, imputate o condannate per taluno dei delitti indicati nell'<rif id="rif196" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art51-com3bis">articolo 51, comma 3-bis del codice di procedura penale</rif>.</corpo></comma></articolo></virgolette></mod></corpo>
+          </comma>
+          <comma id="art16-com4">
+            <num>4.</num>
+            <corpo> Con decreto del Ministro di grazia e giustizia, d'intesa con il Ministro dell'interno, da emanarsi entro 120 giorni dalla data di entrata in vigore della legge di conversione del presente decreto sono adottate disposizioni di attuazione dell'<rif id="rif290" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis">articolo 18-bis della legge 26 luglio 1975, n. 354</rif>, per regolare le modalità delle visite e disciplinare il rilascio delle autorizzazioni, nonchè le relative comunicazioni e annotazioni, in modo da garantirne la riservatezza.</corpo>
+          </comma>
+          <comma id="art16-com5">
+            <num>5.</num>
+            <corpo> Nell'<mod id="mod25"><rif id="rif198" xlink:href="urn:nir:presidente.repubblica:decreto:1976-04-29;431:regolamento#art35-com13">articolo 35 del decreto del Presidente della Repubblica 29 aprile 1976, n. 431</rif>, è aggiunto, in fine, il seguente comma:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod25-vir1">"<comma id="mod25-vir1-com13"><num /><corpo>Le disposizioni dei commi precedenti non si applicano nei casi previsti dall'<rif id="rif199" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis">articolo 18-bis della legge</rif>".</corpo></comma></virgolette></mod></corpo>
+          </comma>
+          <comma id="art16-com6">
+            <num>6.</num>
+            <corpo> Nel <mod id="mod27"><rif id="rif200" xlink:href="urn:nir:stato:decreto.legge:1982-09-06;629#art1quinquies-com6">sesto comma dell'articolo 1-quinquies del decreto-legge 6 settembre 1982, n. 629</rif>, convertito, con modificazioni, nella <rif id="rif201" xlink:href="urn:nir:stato:legge:1982-10-12;726">legge 12 ottobre 1982, n. 726</rif>, le parole: <virgolette tipo="parola" id="mod27-vir1">"può essere autorizzato dagli organi competenti ad avere colloqui personali con detenuti e internati"</virgolette> sono sostituite dalle seguenti: <virgolette tipo="parola" id="mod27-vir2">"può avere colloqui personali, con detenuti e internati, osservando le disposizioni dell'<rif id="rif291" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis">articolo 18-bis della legge 26 luglio 1975, n. 354</rif>; nei casi di particolare urgenza di cui al <rif id="rif203" xlink:href="urn:nir:stato:legge:1975-07-26;354#art18bis-com4">comma 4 del medesimo articolo</rif>, all'attestazione ivi prevista provvede lo stesso Alto Commissario.".</virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art17">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:variazione><dsp:pos xlink:href="#art17-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.a"><dsp:pos xlink:href="#rif292" /></dsp:norma><dsp:dominio>1. L'organico del Corpo di polizia penitenziaria previsto dalle tabelle A, B, parte I e parte II, e C allegate alla legge 15 dicembre 1990, n. 395, e sue successive modificazioni è aumentato di 2.000 unità nel ruolo degli agenti e assistenti.</dsp:dominio></dsp:variazione><dsp:variazione><dsp:pos xlink:href="#art17-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b"><dsp:pos xlink:href="#rif293" /><dsp:sub xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b#prt1" /><dsp:sub xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b#prt2" /></dsp:norma><dsp:dominio>1. L'organico del Corpo di polizia penitenziaria previsto dalle tabelle A, B, parte I e parte II, e C allegate alla legge 15 dicembre 1990, n. 395, e sue successive modificazioni è aumentato di 2.000 unità nel ruolo degli agenti e assistenti.</dsp:dominio></dsp:variazione><dsp:variazione><dsp:pos xlink:href="#art17-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.c"><dsp:pos xlink:href="#rif294" /></dsp:norma><dsp:dominio>1. L'organico del Corpo di polizia penitenziaria previsto dalle tabelle A, B, parte I e parte II, e C allegate alla legge 15 dicembre 1990, n. 395, e sue successive modificazioni è aumentato di 2.000 unità nel ruolo degli agenti e assistenti.</dsp:dominio></dsp:variazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 17.</num>
+          <rubrica>Aumento dell'organico del Corpo di polizia penitenziaria</rubrica>
+          <comma id="art17-com1">
+            <num>1.</num>
+            <corpo> L'organico del Corpo di polizia penitenziaria previsto dalle <mod id="mod42"><rif id="rif292" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.a">tabelle A</rif></mod>, <mod id="mod43"><mrif id="rif293">B, parte <rif id="rif293-1" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b#prt1">I</rif> e parte <rif id="rif293-2" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.b#prt2">II</rif></mrif></mod>, e <mod id="mod44"><rif id="rif294" xlink:href="urn:nir:stato:legge:1990-12-15;395:tabella.c">C</rif></mod> allegate alla <rif id="rif206" xlink:href="urn:nir:stato:legge:1990-12-15;395">legge 15 dicembre 1990, n. 395</rif>, e sue successive modificazioni è aumentato di 2.000 unità nel ruolo degli agenti e assistenti.</corpo>
+          </comma>
+          <comma id="art17-com2">
+            <num>2.</num>
+            <corpo> Alla prima copertura dei posti che si rendono vacanti nell'organico del Corpo di polizia penitenziaria per effetto dell'aumento di organico di cui al <rif id="rif295" xlink:href="#art17-com1">comma 1</rif>, il Ministero di grazia e giustizia può avvalersi degli agenti ausiliari previsti dal <rif id="rif208" xlink:href="urn:nir:stato:legge:1990-12-15;395#art8-com2">comma 2 dell'articolo 8 della legge 15 dicembre 1990, n. 395</rif>, il cui reclutamento avviene dai contingenti di leva all'Esercito, con le procedure stabilite dalla <rif id="rif209" xlink:href="urn:nir:stato:legge:1975-06-07;198">legge 7 giugno 1975, n. 198</rif>, e sue succes sive modificazioni, relative all'incorporamento di unità di leva nel Corpo degli agenti di custodia, quali volontari ausiliari, nonchè secondo quelle previste dal <rif id="rif210" xlink:href="urn:nir:stato:decreto.legge:1992-01-29;36#art1-com3">comma 3 dell'articolo 1 del decreto-legge 29 gennaio 1992, n. 36</rif>, convertito dalla <rif id="rif211" xlink:href="urn:nir:stato:legge:1992-02-29;213">legge 29 febbraio 1992, n. 213</rif>.</corpo>
+          </comma>
+          <comma id="art17-com3">
+            <num>3.</num>
+            <corpo> Gli agenti ausiliari reclutati ai sensi del <rif id="rif212" xlink:href="#art17-com2">comma 2</rif> frequentano un corso di formazione tecnico-professionale della durata di mesi tre. I corsi sono effettuati nelle stesse scuole e strutture dell'Esercito, ad opera del personale del Dipartimento dell'Amministrazione penitenziaria.</corpo>
+          </comma>
+          <comma id="art17-com4">
+            <num>4.</num>
+            <corpo> La spesa per l'attuazione di quanto previsto nel presente articolo è valutata in lire 16.400 milioni per l'anno 1992, in lire 55.900 milioni per l'anno 1993 e in lire 71.900 milioni a decorrere dall'anno 1994.</corpo>
+          </comma>
+        </articolo>
+        <articolo id="art18">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art18-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif214" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art43-com3" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod28-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 18.</num>
+          <rubrica>Comunicazioni all'autorità di pubblica sicurezza</rubrica>
+          <comma id="art18-com1">
+            <num>1.</num>
+            <corpo> Il <mod id="mod28"><rif id="rif214" xlink:href="urn:nir:stato:legge:1975-07-26;354#art43-com3">terzo comma dell'articolo 43 della legge 26 luglio 1975, n. 354</rif>, è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod28-vir1">"<comma id="mod28-vir1-com3"><num /><corpo>Oltre a quanto stabilito da specifiche disposizioni di legge, il direttore informa anticipatamente il magistrato di sorveglianza, il questore e l'ufficio di polizia territorialmente competente di ogni dimissione anche temporanea dall'istituto.".</corpo></comma></virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art19">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art19-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1975-07-26;354"><dsp:pos xlink:href="#rif215" /><dsp:sub xlink:href="urn:nir:stato:legge:1975-07-26;354#art41bis-com1" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod29-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 19.</num>
+          <rubrica>Sospensione delle normali regole<h:br/>
+di trattamento penitenziario</rubrica>
+          <comma id="art19-com1">
+            <num>1.</num>
+            <corpo> All'<mod id="mod29"><rif id="rif215" xlink:href="urn:nir:stato:legge:1975-07-26;354#art41bis-com1">articolo 41-bis della legge 26 luglio 1975, n. 354, dopo il comma 1</rif>, è aggiunto il seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod29-vir1">"<comma id="mod29-vir1-com2"><num>2.</num><corpo> Quando ricorrano gravi motivi di ordine e di sicurezza pubblica, anche a richiesta del Ministro dell'interno, il Ministro di grazia e giustizia ha altresì la facoltà di sospendere, in tutto o in parte, nei confronti dei detenuti per taluno dei delitti di cui al <rif id="rif216" xlink:href="urn:nir:stato:legge:1975-07-26;354#art4bis-com1">comma 1 dell'articolo 4-bis</rif>, l'applicazione delle regole di trattamento e degli istituti previsti dalla presente legge che possano porsi in concreto contrasto con le esigenze di ordine e di sicurezza.</corpo></comma></virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art20">
+          <num>Art. 20.</num>
+          <rubrica>Collegamento tra i centri elaborazione dati dell'Amministrazione<h:br/>
+penitenziaria e del Dipartimento della pubblica sicurezza.</rubrica>
+          <comma id="art20-com1">
+            <num>1.</num>
+            <corpo> Con decreto del Ministro di grazia e giustizia di concerto con quello dell'interno sono stabilite modalità e criteri per il collegamento tra il centro elaborazione dati del Dipartimento dell'Amministrazione penitenziaria e quello del Dipartimento della pubblica sicurezza, al fine di rendere immediatamente disponibili i dati, per il personale autorizzato all'accesso, secondo le modalità e per i fini stabiliti dai rispettivi ordinamenti.</corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit5">
+        <num>TITOLO V</num>
+        <rubrica>MODIFICHE ALLE NORME <h:br/>
+DELL'ORDINAMENTO GIUDIZIARIO</rubrica>
+        <articolo id="art21">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art21-com1" /><dsp:norma xlink:href="urn:nir:stato:regio.decreto:1941-01-30;12:ordinamento.giudiziario"><dsp:pos xlink:href="#rif217" /><dsp:sub xlink:href="urn:nir:stato:regio.decreto:1941-01-30;12:ordinamento.giudiziario#art110-com7" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod30-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 21.</num>
+          <rubrica>Applicazioni</rubrica>
+          <comma id="art21-com1">
+            <num>1.</num>
+            <corpo> Il <mod id="mod30"><rif id="rif217" xlink:href="urn:nir:stato:regio.decreto:1941-01-30;12:ordinamento.giudiziario#art110-com7">comma 7 dell'articolo 110 del regio decreto 30 gennaio 1941, n. 12</rif>, così come modificato dall'<rif id="rif218" xlink:href="urn:nir:stato:legge:1991-10-16;321#art1">articolo 1 della legge 16 ottobre 1991, n. 321</rif>, è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod30-vir1">"<comma id="mod30-vir1-com7"><num>7.</num><corpo> Se le esigenze indicate nel <rif id="rif219" xlink:href="urn:nir:stato:regio.decreto:1941-01-30;12:ordinamento.giudiziario#art110-com1">comma 1</rif> sono determinate dalla pendenza di uno o più procedimenti penali la cui trattazione si prevede di durata particolarmente lunga, il magistrato applicato presso organi giudicanti non può svolgere attività in tali procedimenti.</corpo></comma></virgolette></mod></corpo>
+          </comma>
+          <comma id="art21-com2">
+            <num>2.</num>
+            <corpo> I magistrati del pubblico ministero possono essere impegnati nella trattazione di procedimenti che si prevedono di lunga durata, anche se le applicazioni sono in corso alla data di entrata in vigore del presente decreto.</corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit6">
+        <num>TITOLO VI</num>
+        <rubrica>DISPOSIZIONI CONCERNENTI <h:br/>
+LE MISURE DI PREVENZIONE</rubrica>
+        <articolo id="art22">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art22-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1965-05-31;575"><dsp:pos xlink:href="#rif220" /><dsp:sub xlink:href="urn:nir:stato:legge:1965-05-31;575#art2ter-com2" /><dsp:incompleta /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod32-vir1" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 22.</num>
+          <rubrica>Sequestro dei beni</rubrica>
+          <comma id="art22-com1">
+            <num>1.</num>
+            <corpo> Al <mod id="mod32"><rif id="rif220" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2ter-com2">secondo comma dell'articolo 2-ter della legge 31 maggio 1965, n. 575</rif>, è aggiunto il seguente periodo:<h:br/><h:br/>
+<virgolette tipo="parola" id="mod32-vir1">"A richiesta del procuratore della Repubblica, del questore o degli organi incaricati di svolgere ulteriori indagini a norma del <rif id="rif221" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2ter-com1">primo comma</rif>, nei casi di particolare urgenza il sequestro è disposto dal Presidente del tribunale con decreto motivato e perde efficacia se non è convalidato dal tribunale nei dieci giorni successivi.".</virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art23">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:sostituzione><dsp:pos xlink:href="#art23-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1956-12-27;1423"><dsp:pos xlink:href="#rif222" /><dsp:sub xlink:href="urn:nir:stato:legge:1956-12-27;1423#art9" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod33-vir1" /></dsp:novella></dsp:sostituzione><dsp:sostituzione><dsp:pos xlink:href="#art23-com2" /><dsp:norma xlink:href="urn:nir:stato:legge:1965-05-31;575"><dsp:pos xlink:href="#rif224" /><dsp:sub xlink:href="urn:nir:stato:legge:1965-05-31;575#art5" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod34-vir1" /></dsp:novella></dsp:sostituzione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 23.</num>
+          <rubrica>Violazione di obblighi inerenti<h:br/>
+a misure di prevenzione</rubrica>
+          <comma id="art23-com1">
+            <num>1.</num>
+            <corpo> L'<mod id="mod33"><rif id="rif222" xlink:href="urn:nir:stato:legge:1956-12-27;1423#art9">articolo 9 della legge 27 dicembre 1956, n. 1423</rif>, è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod33-vir1">"<articolo id="mod33-vir1-art9"><num>Art. 9.</num><comma id="mod33-vir1-art9-com1"><num>1.</num><corpo> Il contravventore agli obblighi inerenti alla sorveglianza speciale è punito con l'arresto da tre mesi ad un anno.</corpo></comma><comma id="mod33-vir1-art9-com2"><num>2.</num><corpo> Se l'inosservanza riguarda la sorveglianza speciale con l'obbligo o il divieto di soggiorno, si applica la pena della reclusione da uno a cinque anni.</corpo></comma><comma id="mod33-vir1-art9-com3"><num>3.</num><corpo> Nell'ipotesi indicata nel <rif id="rif223" xlink:href="urn:nir:stato:legge:1956-12-27;1423#art9-com2">comma 2</rif> gli ufficiali ed agenti di polizia giudiziaria possono procedere all'arresto anche fuori dei casi di flagranza.</corpo></comma><comma id="mod33-vir1-art9-com4"><num>4.</num><corpo> Salvo quanto è prescritto da altre disposizioni di legge, il sorvegliato speciale che, per un reato commesso dopo il decreto di sorveglianza speciale, abbia riportato condanna a pena detentiva non inferiore a sei mesi, può essere sottoposto a libertà vigilata per un tempo non inferiore a due anni.".</corpo></comma></articolo></virgolette></mod></corpo>
+          </comma>
+          <comma id="art23-com2">
+            <num>2.</num>
+            <corpo> L'<mod id="mod34"><rif id="rif224" xlink:href="urn:nir:stato:legge:1965-05-31;575#art5">articolo 5 della legge 31 maggio 1965, n. 575</rif>, è sostituito dal seguente:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod34-vir1">"<articolo id="mod34-vir1-art5"><num>Art. 5.</num><comma id="mod34-vir1-art5-com1"><num>1.</num><corpo> L'allontanamento abusivo dal comune o dalla frazione del comune di soggiorno obbligatorio è punito con la reclusione da due a cinque anni; gli ufficiali ed agenti di polizia giudiziaria possono procedere all'arresto anche fuori dei casi di flagranza.</corpo></comma></articolo></virgolette></mod></corpo>
+          </comma>
+        </articolo>
+        <articolo id="art24">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art24-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1965-05-31;575"><dsp:pos xlink:href="#rif296" /><dsp:sub xlink:href="urn:nir:stato:legge:1965-05-31;575#art3ter" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod47-vir1" /></dsp:novella></dsp:integrazione><dsp:integrazione><dsp:pos xlink:href="#art24-com1" /><dsp:norma xlink:href="urn:nir:stato:legge:1965-05-31;575"><dsp:pos xlink:href="#rif313" /><dsp:sub xlink:href="urn:nir:stato:legge:1965-05-31;575#art3ter" /></dsp:norma><dsp:novella><dsp:pos xlink:href="#mod47-vir2" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 24.</num>
+          <rubrica>Misure di prevenzione patrimoniali</rubrica>
+          <comma id="art24-com1">
+            <num>1.</num>
+            <corpo> Dopo l'<mod id="mod45"><rif id="rif296" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3ter">articolo 3-ter della legge 31 maggio 1965, n. 575</rif>, sono inseriti i <rif id="rif313" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3ter">seguenti</rif>:<h:br/><h:br/>
+<virgolette tipo="struttura" id="mod47-vir1">"<articolo id="mod47-vir1-art3quater"><num>Art. 3-quater.</num><comma id="mod47-vir1-art3quater-com1"><num>1.</num><corpo> Quando, a seguito degli accertamenti di cui all'<rif id="rif226" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2bis">articolo 2-bis</rif> o di quelli compiuti per verificare i pericoli di infiltrazione da parte della delinquenza di tipo mafioso, ricorrono sufficienti indizi per ritenere che l'esercizio di determinate attività economiche, comprese quelle imprenditoriali, sia direttamente o indirettamente sottoposto alle condizioni di intimidazione o di assoggettamento previste dall'<rif id="rif227" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416bis">articolo 416-bis del codice penale</rif> o che possa, comunque, agevolare l'attività delle persone nei confronti delle quali è stata proposta o applicata una delle misure di prevenzione di cui all'<rif id="rif228" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2">articolo 2</rif>, ovvero di persone sottoposte a procedimento penale per taluno dei delitti previsti dagli <rif id="rif229" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416bis">articoli 416-bis, 629, 630, 648-bis</rif> e <rif id="rif297" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">648-ter del codice penale</rif>, e non ricorrono i presupposti per l'applicazione delle misure di prevenzione di cui all'<rif id="rif231" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2">articolo 2</rif>, il procuratore della Repubblica o il questore possono richiedere al tribunale competente per l'applicazione delle misure di prevenzione nei confronti delle persone sopraindicate, di disporre ulteriori indagini e verifiche, da compiersi anche a mezzo della Guardia di finanza o della polizia giudiziaria, sulle predette attività, nonchè l'obbligo, nei confronti di chi ha la proprietà o la disponibilità, a qualsiasi titolo, di beni o altre utilità di valore non proporzionato al proprio reddito o alla propria capacità economica, di giustificarne la legittima provenienza.</corpo></comma><comma id="mod47-vir1-art3quater-com2"><num>2.</num><corpo> Quando ricorrono sufficienti elementi per ritenere che il libero esercizio delle attività economiche di cui al <rif id="rif232" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3quater-com1">comma 1</rif> agevoli l'attività delle persone nei confronti delle quali è stata proposta o applicata una delle misure di prevenzione di cui all'<rif id="rif233" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2">articolo 2</rif>, ovvero di persone sottoposte a procedimento penale per taluno dei delitti previsti dagli <rif id="rif298" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art416bis">articoli 416- bis, 629, 630, 648-bis</rif> e <rif id="rif299" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale#art648ter">648-ter del codice penale</rif>, il tribunale dispone la sospensione temporanea dall'amministrazione dei beni utilizzabili, direttamente o indirettamente, per lo svolgimento delle predette attività.</corpo></comma><comma id="mod47-vir1-art3quater-com3"><num>3.</num><corpo> La sospensione temporanea dall'amministrazione dei beni è adottata per un periodo non superiore a sei mesi e può essere rinnovata, per un periodo non superiore complessivamente a dodici mesi, a richiesta dell'autorità proponente, del pubblico ministero o del giudice delegato di cui all'<rif id="rif235" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2sexies">articolo 2-sexies</rif>, se permangono le condizioni in base alle quali è stato applicata.</corpo></comma><comma id="mod47-vir1-art3quater-com4"><num>4.</num><corpo> Con il provvedimento di cui al <rif id="rif236" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3quater-com2">comma 2</rif>, il tribunale nomina l'amministratore ed il giudice delegato, osservate, in quanto applicabili, le disposizioni degli <rif id="rif300" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2ter-com2">articoli 2-ter, secondo, quinto, settimo e ottavo comma</rif>, <rif id="rif301" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2sexies">2-sexies</rif>, <rif id="rif302" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2septies">2-septies</rif> e <rif id="rif303" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2octies">2-octies</rif>.</corpo></comma><comma id="mod47-vir1-art3quater-com5"><num>5.</num><corpo> Quando vi sia concreto pericolo che i beni sottoposti al provvedimento di cui al <rif id="rif239" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3quater-com2">comma 2</rif> vengano dispersi, sottratti o alienati, il procuratore della Repubblica o il questore possono richiedere al tribunale di disporne il sequestro, osservate, in quanto applicabili, le disposizioni degli <rif id="rif304" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2ter-com5">articoli 2-ter, quinto, settimo e ottavo comma</rif>, <rif id="rif305" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2quater">2-quater</rif> , <rif id="rif306" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2quinquies">2-quinquies</rif>, <rif id="rif307" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2sexies">2-sexies</rif> , <rif id="rif308" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2septies">2-septies</rif> e <rif id="rif309" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2octies">2-octies</rif>. Il sequestro è disposto sino alla scadenza del termine stabilito a norma del <rif id="rif242" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3quater-com3">comma 3</rif>.</corpo></comma></articolo></virgolette></mod><h:br/>
+<virgolette tipo="struttura" id="mod47-vir2">"<articolo id="mod47-vir2-art3quinquies"><num>Art. 3-quinquies.</num><comma id="mod47-vir2-art3quinquies-com1"><num>1.</num><corpo> L'amministratore adempie agli obblighi di relazione e segnalazione di cui all'<rif id="rif243" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2septies">articolo 2-septies</rif> anche nei confronti del pubblico ministero.</corpo></comma><comma id="mod47-vir2-art3quinquies-com2"><num>2.</num><corpo> Entro i quindici giorni antecedenti la data di scadenza della sospensione provvisoria dalla amministrazione dei beni o del sequestro, il tribunale, qualora non disponga il rinnovo del provvedimento, delibera in camera di consiglio, alla quale può essere chiamato a partecipare il giudice delegato di cui all'<rif id="rif244" xlink:href="urn:nir:stato:legge:1965-05-31;575#art2sexies">articolo 2-sexies</rif>, la revoca della misura disposta, ovvero la confisca dei beni che si ha motivo di ritenere siano il frutto di attività illecite o ne costituiscano il reimpiego.</corpo></comma><comma id="mod47-vir2-art3quinquies-com3"><num>3.</num><corpo> Con il provvedimento che dispone la revoca della misura, il tribunale può stabilire l'obbligo nei confronti di chi ha la proprietà, l'uso o l'amministrazione dei beni, o di parte di essi, di comunicare, per un periodo non inferiore a tre anni, al questore ed al nucleo di polizia tributaria del luogo di dimora abituale, ovvero del luogo in cui si trovano i beni se si tratta di residenti all'estero, gli atti di disposizione, di acquisto o di pagamento effettuati, gli atti di pagamento ricevuti, gli incarichi professionali, di amministrazione o di gestione fiduciaria ricevuti, e gli altri atti o contratti indicati dal tribunale, di valore non inferiore a cinquanta milioni di lire o del valore superiore stabilito dal tribunale in relazione al patrimonio e al reddito della persona. Detto obbligo va assolto entro dieci giorni dal compimento dell'atto e comunque entro il 31 gennaio di ogni anno per gli atti posti in essere nell'anno precedente.</corpo></comma><comma id="mod47-vir2-art3quinquies-com4"><num>4.</num><corpo> Chi omette di effettuare entro i termini indicati le comunicazioni di cui al <rif id="rif245" xlink:href="urn:nir:stato:legge:1965-05-31;575#art3quinquies-com3">comma 3</rif> è punito con la reclusione da uno a quattro anni. Alla condanna segue la confisca dei beni acquistati e dei pagamenti ricevuti per i quali è stata omessa la comunicazione.</corpo></comma></articolo></virgolette></corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit7">
+        <num>TITOLO VII</num>
+        <rubrica>ATTIVITÀ DI PREVENZIONE</rubrica>
+        <articolo id="art25">
+          <num>Art. 25</num>
+          <rubrica>Controllo di imputati e condannati per gravi delitti<h:br/>
+di criminalità organizzata</rubrica>
+          <comma id="art25-com1">
+            <num>1.</num>
+            <corpo> Nel corso di operazioni di polizia volte alla prevenzione dei delitti di criminalità organizzata, gli ufficiali ed agenti di polizia giudiziaria che nel procedere al controllo di persone sottoposte a misure limitative della libertà personale per taluno dei delitti previsti dall'<rif id="rif246" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art275">articolo 275 del codice di procedura penale</rif>, hanno fondato motivo di ritenere che tali persone, per la condotta tenuta e le circostanze di tempo e di luogo, si accingano a realizzare taluno dei delitti previsti dall'<rif id="rif247" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art380">articolo 380 del codice di procedura penale</rif> o a sottrarsi alla esecuzione della misura alla quale sono sottoposti, possono accompagnare tali persone nei propri uffici, ed ivi trattenerle per il tempo strettamente necessario a verificarne la posizione e comunque non oltre le dodici ore. Si applicano le disposizioni previste dall'<mrif id="rif248">articolo 349 commi <rif id="rif248-1" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art349-com2">2</rif>, <rif id="rif248-2" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art349-com5">5</rif> e <rif id="rif248-3" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;447:codice.procedura.penale#art349-com6">6</rif> del codice di procedura penale</mrif>.</corpo>
+          </comma>
+          <comma id="art25-com2">
+            <num>2.</num>
+            <corpo> Quando sussistano gravi ragioni per ritenere che nei confronti delle persone indicate nel <rif id="rif249" xlink:href="#art25-com1">comma 1</rif> debba essere disposta la custodia cautelare in carcere o debbano essere revocate le misure alternative alla detenzione previste dalla <rif id="rif250" xlink:href="urn:nir:stato:legge:1975-07-26;354">legge 26 luglio 1975, n. 354</rif>, il pubblico ministero può disporre il fermo di tali persone, osservate, in quanto compatibili, le disposizioni sul fermo di indiziato di delitto. Con il provvedimento di convalida , il giudice delle indagini preliminari presso il tribunale del luogo in cui il fermo è stato eseguito , se il pubblico ministero ne fa richiesta , dispone con ordinanza la detenzione o la custodia cautelare in carcere. L'ordinanza cessa di avere effetto se entro venti giorni dalla sua pronuncia l'autorità giudiziaria competente non dispone la custodia cautelare o la revoca delle misure alternativa alla detenzione.</corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit8">
+        <num>TITOLO VIII</num>
+        <rubrica>DISPOSIZIONI PER L'ORGANIZZAZIONE DELL'UFFICIO CENTRALE DELLA <h:br/>
+GIUSTIZIA MINORILE.</rubrica>
+        <articolo id="art26">
+          <inlinemeta><disposizioni xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.0"><modificheattive><dsp:integrazione><dsp:pos xlink:href="#art26-com2" /><dsp:norma xlink:href="urn:nir:presidente.repubblica:decreto:1972-06-30;748:tabella.iv"><dsp:pos xlink:href="#rif310" /></dsp:norma><dsp:novella><dsp:pos xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.b" /></dsp:novella></dsp:integrazione></modificheattive></disposizioni></inlinemeta>
+          <num>Art. 26.</num>
+          <rubrica>Dotazione organica, assunzioni e norme ordinamentali</rubrica>
+          <comma id="art26-com1">
+            <num>1.</num>
+            <corpo> La dotazione organica delle qualifiche funzionali dell'Ufficio centrale per la giustizia minorile nell'ambito del Ministero di grazia e giustizia è stabilita secondo la tabella A allegata al presente decreto-legge. Per l'assunzione in servizio del personale di cui alla tabella B, allegata al presente decreto-legge, il Ministro di grazia e giustizia è autorizzato ad espletare tutte le procedure previste dalle disposizioni del presente articolo fin dalla data di entrata in vigore della legge di conversione. Alla procedura prevista dall'<rif id="rif252" xlink:href="urn:nir:stato:legge:1980-07-11;312#art6">articolo 6 della legge 11 luglio 1980, n. 312</rif>, è demandata la specificazione dei profili professionali all'interno delle qualifiche funzionali nell'ambito della determinazione della complessiva dotazione organica dell'Ufficio centrale per la giustizia minorile, comprendente anche il personale che attualmente presta servizio presso lo stesso Ufficio centrale. Sono ridotti i contingenti dei corrispondenti profili professionali del Dipartimento dell'amministrazione penitenziaria nella misura prevista dall'allegata tabella A.</corpo>
+          </comma>
+          <comma id="art26-com2">
+            <num>2.</num>
+            <corpo> Nella <mod id="mod46"><rif id="rif310" xlink:href="urn:nir:presidente.repubblica:decreto:1972-06-30;748:tabella.iv">tabella IV</rif></mod> allegata al <rif id="rif253" xlink:href="urn:nir:presidente.repubblica:decreto:1972-06-30;748">decreto del Presidente della Repubblica 30 giugno 1972, n. 748</rif>, e successive modificazioni, è inserito il <rif id="rif311" xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.b">quadro H</rif>, allegato al presente decreto-legge.</corpo>
+          </comma>
+          <comma id="art26-com3">
+            <num>3.</num>
+            <corpo> Con decreto del Ministro di grazia e giustizia, di concerto con il Ministro per la funzione pubblica, sentite le organizzazioni sindacali maggiormente rappresentative, sono dettate le disposizioni per l'accesso nei nuovi contingenti del personale di ruolo del Ministero di grazia e giustizia di pari qualifica funzionale, in servizio presso il settore minorile ovvero che abbia acquisito specifica esperienza o preparazione sulle problematiche minorili, il quale conserva il trattamento giuridico ed economico maturato, nonchè, per l'area sociopedagogica, di personale di ruolo di altre pubbliche amministrazioni, osservate le norme vigenti in materia di mobilità. Si applicano le disposizioni di cui agli <mrif id="rif254">articoli <rif id="rif254-1" xlink:href="urn:nir:stato:legge:1991-10-16;321#art5">5</rif> e <rif id="rif254-2" xlink:href="urn:nir:stato:legge:1991-10-16;321#art6">6</rif> della legge 16 ottobre 1991, n. 321</mrif>.</corpo>
+          </comma>
+          <comma id="art26-com4">
+            <num>4.</num>
+            <corpo> Oltre al personale del ruolo amministrativo, il personale con qualifica dirigenziale o proveniente dall'ex carriera direttiva di servizio sociale e dell'area pedagogica può essere preposto alle direzioni rispettivamente dei centri per la giustizia minorile previsti <rif id="rif312" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;448#art7">dall'articolo 7</rif> delle norme di attuazione, di coordinamento e transitorie del <rif id="rif256" xlink:href="urn:nir:presidente.repubblica:decreto:1988-09-22;448#art7">decreto del Presidente della Repubblica 22 settembre 1988, n. 448</rif>, recante disposizioni sul processo penale a carico di imputati minorenni, approvato con <rif id="rif257" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;272">decreto legislativo 28 luglio 1989, n. 272</rif>, e dei servizi dei centri per la giustizia minorile previsti all'<rif id="rif258" xlink:href="#art8">articolo 8</rif> delle norme approvate con il citato <rif id="rif259" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;272">decreto legislativo n. 272 del 1989</rif>, avuto riguardo alla maggiore importanza dei centri per la giustizia minorile e degli uffici di servizio sociale per i minorenni da dichiararsi ai sensi del <rif id="rif260" xlink:href="urn:nir:presidente.repubblica:decreto:1972-06-30;748">decreto del Presidente della Repubblica 30 giugno 1972, n. 748</rif>.</corpo>
+          </comma>
+          <comma id="art26-com5">
+            <num>5.</num>
+            <corpo> Ai direttori dei centri per la giustizia minorile e ai direttori dei servizi minorili di cui all'<rif id="rif261" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;272#art8">articolo 8</rif> delle norme approvate con <rif id="rif262" xlink:href="urn:nir:stato:decreto.legislativo:1989-07-28;272">decreto legislativo 28 luglio 1989, n. 272</rif>, facenti parte degli stessi centri, si applicano le norme sul decentramento amministrativo previste dal <rif id="rif263" xlink:href="urn:nir:presidente.repubblica:decreto:1955-06-28;1538">decreto del Presidente della Repubblica 28 giugno 1955, n. 1538</rif>.</corpo>
+          </comma>
+          <comma id="art26-com6">
+            <num>6.</num>
+            <corpo> Nei confronti del personale dell'Ufficio centrale della giustizia minorile in servizio alla data di entrata in vigore della <rif id="rif264" xlink:href="urn:nir:stato:legge:1990-12-15;395">legge 15 dicembre 1990, n. 395</rif>, continuano ad applicarsi le disposizioni di cui all'<rif id="rif265" xlink:href="urn:nir:stato:decreto.legge:1987-08-28;356#art4">articolo 4 del decreto-legge 28 agosto 1987, n. 356</rif>, convertito, con modificazioni, dalla <rif id="rif266" xlink:href="urn:nir:stato:legge:1987-10-27;436">legge 27 ottobre 1987, n. 436</rif>, nella misura prevista per ciascuna qualifica e profilo professionale dalla tabella allegata al decreto del Ministro di grazia e giustizia in data 21 gennaio 1991, pubblicato nella Gazzetta Ufficiale n. 102 del 3 maggio 1991, ed eventuali successivi adeguamenti.</corpo>
+          </comma>
+          <comma id="art26-com7">
+            <num>7.</num>
+            <corpo> Le assunzioni di cui al presente articolo non potranno avere decorrenza anteriore al 1 ottobre 1993.</corpo>
+          </comma>
+          <comma id="art26-com8">
+            <num>8.</num>
+            <corpo> La spesa per l'attuazione di quanto previsto nel presente articolo è valutata in lire 12.900 milioni per l'anno 1993 e in lire 51.580 milioni a decorrere dall'anno 1994.</corpo>
+          </comma>
+        </articolo>
+        <articolo id="art27">
+          <num>Art. 27</num>
+          <rubrica>Interventi sulle strutture</rubrica>
+          <comma id="art27-com1">
+            <num>1.</num>
+            <corpo> Al fine di consentire l'espletamento delle funzioni in materia di giustizia minorile è autorizzata la spesa di lire 7.000 milioni per l'anno 1992 e di lire 5.420 milioni per ciascuno degli anni 1993 e 1994, per la manutenzione, riparazione, adattamento e ristrutturazione degli immobili e dei relativi impianti in uso agli uffici giudiziari minorili ed ai servizi centrali e periferici dell'Ufficio centrale per la giustizia minorile, per la predisposizione di servizi, interventi e programmi in favore dei minori, per la gestione di attrezzature e di beni, compresi gli impianti, le macchine, gli strumenti, anche telefonici ed informatici, gli arredi di supporto ai locali adibiti a servizi minorili, centrali e periferici, e ad uffici giudiziari minorili, per le missioni del personale, nonchè per l'attività di formazione del personale della giustizia minorile, da svolgersi in raccordo con la Scuola superiore della pubblica amministrazione.</corpo>
+          </comma>
+          <comma id="art27-com2">
+            <num>2.</num>
+            <corpo> Alla realizzazione degli interventi e alla stipula dei contratti necessari per l'attuazione della presente legge si applicano le disposizioni contenute negli <mrif id="rif269">articoli <rif id="rif269-1" xlink:href="urn:nir:stato:decreto.legge:1990-03-26;64#art2">2</rif> e <rif id="rif269-2" xlink:href="urn:nir:stato:decreto.legge:1990-03-26;64#art7">7</rif> del decreto-legge 26 marzo 1990, n. 64</mrif>, convertito, con modificazioni, dalla <rif id="rif270" xlink:href="urn:nir:stato:legge:1990-05-25;124">legge 25 maggio 1990, n. 124</rif>. Si applicano altresì le disposizioni contenute nell'<rif id="rif271" xlink:href="urn:nir:stato:legge:1990-12-15;395#art37">articolo 37 della legge 15 dicembre 1990, n. 395</rif>.</corpo>
+          </comma>
+        </articolo>
+        <articolo id="art28">
+          <num>Art. 28.</num>
+          <rubrica>Copertura finanziaria</rubrica>
+          <comma id="art28-com1">
+            <num>1.</num>
+            <corpo> All'onere derivante dall'attuazione degli <mrif id="rif272">articoli <rif id="rif272-1" xlink:href="#art17">17</rif>, <rif id="rif272-2" xlink:href="#art26">26</rif> e <rif id="rif272-3" xlink:href="#art27">27</rif></mrif> del presente decreto, valutato in lire 23.400 milioni per l'anno 1992, in lire 74.300 milioni pr l'anno 1993 e in lire 128.900 milioni a decorrere dall'anno 1994, si provvede mediante corrispondente riduzione dello stanziamento iscritto, ai fini del bilancio triennale 1992-1994, al capitolo 6856 dello stato di previsione del Ministero del tesoro per l'anno 1992, all'uopo parzialmente utilizzando l'accantonamento "Interventi vari in favore della giustizia".</corpo>
+          </comma>
+          <comma id="art28-com2">
+            <num>2.</num>
+            <corpo> Il Ministro del tesoro è autorizzato ad apportare, con propri decreti, le occorrenti variazioni di bilancio.</corpo>
+          </comma>
+        </articolo>
+      </titolo>
+      <titolo id="tit9">
+        <num>TITOLO IX</num>
+        <rubrica>DISPOSIZIONE FINALE</rubrica>
+        <articolo id="art29">
+          <num>Art. 29</num>
+          <rubrica>Norme temporanee</rubrica>
+          <comma id="art29-com1">
+            <num>1.</num>
+            <corpo> Le disposizioni previste dagli <mrif id="rif274">articoli <rif id="rif274-1" xlink:href="#art19">19</rif> e <rif id="rif274-2" xlink:href="#art25">25</rif></mrif> cessano di avere effetto trascorsi tre anni dalla entrata in vigore della legge di conversione del presente decreto.</corpo>
+          </comma>
+        </articolo>
+        <articolo id="art30">
+          <num>Art. 30.</num>
+          <rubrica>Entrata in vigore</rubrica>
+          <comma id="art30-com1">
+            <num>1.</num>
+            <corpo> Il presente decreto entra in vigore il giorno successivo a quello della sua pubblicazione nella Gazzetta Ufficiale della Repubblica italiana e sarà presentato alle Camere per la conversione in legge.</corpo>
+          </comma>
+        </articolo>
+      </titolo>
+    </articolato>
+    <formulafinale>Il presente decreto, munito del sigillo dello Stato, sarà inserito nella Raccolta ufficiale degli atti normativi della Repubblica italiana. È fatto obbligo a chiunque spetti di osservarlo e di farlo osservare.</formulafinale>
+    <conclusione><dataeluogo norm="19920608" codice="roma">Dato a Roma, addì 8 giugno 1992</dataeluogo><h:br/>
+<sottoscrivente>SCALFARO</sottoscrivente><h:br/>
+<sottoscrivente>ANDREOTTI, Presidente del Consiglio dei Ministri</sottoscrivente><h:br/>
+<sottoscrivente>MARTELLI, Ministro di grazia e giustizia</sottoscrivente><h:br/>
+<sottoscrivente>SCOTTI, Ministro dell'interno</sottoscrivente><h:br/>
+<visto>Visto, il Guardasigilli: MARTELLI</visto></conclusione>
+    <annessi>
+      <elencoAnnessi>
+        <h:div>TABELLA A DOTAZIONE ORGANICA DELL'UFFICIO CENTRALE PER LA GIUSTIZIA MINORILE</h:div>
+        <h:div>TABELLA B  PIANO DI ACQUISIZIONE DEL NUOVO PERSONALE 1993</h:div>
+      </elencoAnnessi>
+      <annesso id="ann1-S9921769">
+        <testata>
+          <denAnnesso>TABELLA A DOTAZIONE ORGANICA DELL'UFFICIO CENTRALE PER LA GIUSTIZIA MINORILE</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.a" />
+      </annesso>
+      <annesso id="ann3-S9921769">
+        <testata>
+          <denAnnesso>TABELLA B  PIANO DI ACQUISIZIONE DEL NUOVO PERSONALE 1993</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:decreto.legge:1992-06-08;306:tabella.b" />
+      </annesso>
+    </annessi>
+  </DecretoLegge>
+</NIR>

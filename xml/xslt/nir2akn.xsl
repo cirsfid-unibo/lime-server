@@ -1170,8 +1170,12 @@
         <!-- <xsl:choose> -->
             <!-- <xsl:when test="@tipo = 'struttura'"> -->
                 <quotedStructure>
+                    <xsl:variable name="children" select="node()[position()!=1]"/>
+                    <xsl:variable name="content">
+                        <nir:virgolette><xsl:copy-of select="$children"/></nir:virgolette>
+                    </xsl:variable>
                     <xsl:apply-templates select="." mode="genera_eId"/>
-                    <xsl:apply-templates select="." mode="aggiusta_pattern"/>
+                    <xsl:apply-templates select="$content" mode="aggiusta_pattern"/>
                 </quotedStructure>
             <!-- </xsl:when> -->
             <!-- <xsl:otherwise> -->

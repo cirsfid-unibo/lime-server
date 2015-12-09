@@ -5,6 +5,7 @@ var nir2akn = require('../../xml/xml/nir').nir2akn,
 
 var cache = {};
 var parser = new xmldom.DOMParser();
+var serializer = new xmldom.XMLSerializer();
 exports.convert = function (file, callback) {
     if (cache[file]) callback(cache[file]);
     var xml = fs.readFileSync('spec/data/' + file, { encoding: 'utf-8' });
@@ -15,7 +16,8 @@ exports.convert = function (file, callback) {
     });
 };
 
-var select = xpath.useNamespaces({ akn: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13' });
-var selectAttr = (xpath, dom) => select(xpath, dom, true).value;
+exports.serialize = serializer.serializeToString.bind(serializer);
+exports.select = xpath.useNamespaces({ akn: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13' });
+var selectAttr = (xpath, dom) => exports.select(xpath, dom, true).value;
 exports.expressionUri = dom => selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
 exports.workUri = dom => selectAttr('//akn:FRBRWork/akn:FRBRuri/@value', dom);

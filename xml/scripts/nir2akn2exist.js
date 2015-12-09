@@ -7,7 +7,7 @@ const path = 'demo cassazione NOV 2015/';
 const existUrl = 'http://sinatra.cirsfid.unibo.it:8080/exist/rest/julyportal_cassazione/'
 const auth = 'Basic ' + new Buffer('admin:exist').toString('base64');
 
-var files = glob.sync(path + '**/!(alle)*.xml')
+var files = glob.sync(path + '**/!(alle)*!(nif).xml')
 // var files = glob.sync(path + '**/155_20110706/S2110095/S2110095.xml');
 console.log(files.length);
 
