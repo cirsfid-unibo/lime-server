@@ -53,17 +53,10 @@
     <!-- Parsing URN -->
     <xsl:variable name="urn_documento" select="substring-after(//nir:urn/@valore, 'urn:nir:')"/>
     <xsl:variable name="urn_emanante" select="substring-before($urn_documento, ':')"/>
-    <!-- <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/> -->
     <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
-    <!-- <xsl:variable name="urn_expression_date"
-        select="replace($urn_documento, '.*?(\d{4}-\d{2}-\d{2})(.*?(\d{4}-\d{2}-\d{2}).*|.*)', '$3')"/> -->
     <xsl:variable name="uri_work" select="u:convertiUrn(//nir:urn/@valore)"/>
     <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
     <xsl:variable name="urn_expression_date" select="$urn_date"/>
-        <!-- <xsl:call-template name="convertiURN">
-            <xsl:with-param name="urn" select="//nir:urn/@valore"/>
-        </xsl:call-template>
-    </xsl:variable> -->
     <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_expression_date)"/>
     <xsl:variable name="uri_manifestation" select="concat($uri_expression, '/main.xml')"/>
 
@@ -1027,7 +1020,7 @@
                          nir:ep[name(./preceding-sibling::node()[1]) != 'ep']">
         <list>
             <xsl:variable name="current" select="."/>
-            <xsl:for-each select="following-sibling::node()[name() = name($current)]">
+            <xsl:for-each select="$current | following-sibling::node()[name() = name($current)]">
                 <point>
                     <xsl:apply-templates select="." mode="genera_eId"/>
                     <xsl:apply-templates select="node()"/>
@@ -1190,15 +1183,13 @@
         <!-- </xsl:choose> -->
     </xsl:template>
 
-    <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5]">
-        <xsl:if test="position() = 1">
-            <xsl:attribute name="startQuote">
-                <xsl:value-of select="."/>
-            </xsl:attribute>
-            <xsl:attribute name="endQuote">
-                <xsl:value-of select="following-sibling::text()[last()]"/>
-            </xsl:attribute>
-        </xsl:if>
+    <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5][position() = 1]">
+        <xsl:attribute name="startQuote">
+            <xsl:value-of select="."/>
+        </xsl:attribute>
+        <xsl:attribute name="endQuote">
+            <xsl:value-of select="following-sibling::text()[last()]"/>
+        </xsl:attribute>
     </xsl:template>
 
     <xsl:template match="nir:def">
