@@ -20,4 +20,6 @@ exports.serialize = serializer.serializeToString.bind(serializer);
 exports.select = xpath.useNamespaces({ akn: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13' });
 var selectAttr = (xpath, dom) => exports.select(xpath, dom, true).value;
 exports.expressionUri = dom => selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
+exports.expressionThis = dom => selectAttr('//akn:FRBRExpression/akn:FRBRthis/@value', dom);
 exports.workUri = dom => selectAttr('//akn:FRBRWork/akn:FRBRuri/@value', dom);
+exports.workThis = dom => selectAttr('//akn:FRBRWork/akn:FRBRthis/@value', dom);

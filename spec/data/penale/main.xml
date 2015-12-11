@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../../DTD2/norma.xsl"?>
+<!DOCTYPE NIR SYSTEM "../../../../DTD2/nirloose.dtd">
+<!--Documento NIR-->
+<NIR tipo="originale" xmlns="http://www.normeinrete.it/nir/2.2/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h="http://www.w3.org/HTML/1998/html4" xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/" xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/">
+  <RegioDecreto id="S9302562">
+    <meta>
+      <descrittori>
+        <pubblicazione tipo="GU" num="251" norm="19301026" />
+        <entratainvigore norm="19310701" />
+        <redazione id="rd1" norm="20151126" nome="Cassazione" url="http://www.italgiure.giustizia.it" contributo="redazione" />
+        <redazione id="rd2" norm="20151126" nome="Norma-Editor v2.7" url="http://www.cirsfid.unibo.it" contributo="editor" />
+        <urn valore="urn:nir:stato:regio.decreto:1930-10-19;1398" />
+      </descrittori>
+      <inquadramento>
+        <infodoc natura="regio decreto" normativa="si" funzione="regolativa" fonte="primario" />
+        <infomancanti>
+          <mTipodoc valore="regio decreto" />
+          <mDatadoc valore="19301019" />
+          <mEmanante valore="stato" />
+        </infomancanti>
+      </inquadramento>
+      <ciclodivita>
+        <eventi>
+          <evento id="e1" data="19310701" fonte="#ro1" tipo="originale" />
+        </eventi>
+        <relazioni>
+          <originale id="ro1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398" />
+          <haallegato id="ran1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" tipo="attoallegato" />
+        </relazioni>
+      </ciclodivita>
+      <proprietario soggetto="TITOLO"><titoloA9>REGIO DECRETO 19 OTTOBRE 1930, n. 1398 - Approvazione del testo definitivo del Codice penale.</titoloA9></proprietario>
+    </meta>
+    <intestazione><tipoDoc>REGIO DECRETO</tipoDoc> <dataDoc norm="19301019">19 OTTOBRE 1930</dataDoc>, N.<numDoc>1398</numDoc> <h:br/><h:br/><titoloDoc id="titolo">Approvazione del testo definitivo del <rif id="rif10" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">Codice penale</rif>.</titoloDoc></intestazione>
+    <formulainiziale>VITTORIO EMANUELE III<h:br/>PER GRAZIA <h:br/>DI DIO E PER VOLONTÀ <h:br/>DELLA NAZIONE RE D'ITALIA<h:br/><h:br/><preambolo id="preambolo"><h:p>Vista la <rif id="rif2" xlink:href="urn:nir:stato:legge:1925-12-24;2260">legge 24 dicembre 1925, n. 2260</rif>, che delega al Governo del Re la facoltà di emendare il codice penale;</h:p><h:p>Sentito il parere della Commissione parlamentare, à termini dell'<rif id="rif4" xlink:href="urn:nir:stato:legge:1925-12-24;2260#art2">art. 2 della legge</rif> predetta;</h:p><h:p>Udito il Consiglio dei Ministri;</h:p><h:p>Sulla proposta del Nostro Guardasigilli, Ministro Segretario di Stato per la giustizia e gli affari di culto;</h:p></preambolo><h:br/>Abbiamo decretato e decretiamo:</formulainiziale>
+    <articolato>
+      <articolo id="art1">
+        <num>Art. 1.</num>
+        <comma id="art1-com1">
+          <num />
+          <corpo>Il testo definitivo del <rif id="rif8" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">codice penale</rif> portante la data di questo giorno è approvato ed avrà esecuzione a cominciare dal 1 luglio 1931.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art2">
+        <num>Art. 2.</num>
+        <comma id="art2-com1">
+          <num />
+          <corpo>Un esemplare del suddetto testo definitivo del <rif id="rif7" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">codice penale</rif>, firmato da noi e contrassegnato dal Nostro Ministro Segretario di Stato per la giustizia e gli affari di culto, servirà di originale e sarà depositato e custodito nell'Archivio del Regno.</corpo>
+        </comma>
+      </articolo>
+      <articolo id="art3">
+        <num>Art. 3.</num>
+        <comma id="art3-com1">
+          <num />
+          <corpo>La pubblicazione del predetto <rif id="rif9" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale">codice</rif> si eseguirà col trasmetterne un esemplare stampato a ciascuno dei Comuni del Regno, per essere depositato nella sala comunale, e tenuto ivi esposto, durante un mese successivo, per sei ore in ciascun giorno, affinché ognuno possa prenderne cognizione.</corpo>
+        </comma>
+        <comma id="art3-com2">
+          <num />
+          <corpo>Ordiniamo che il presente decreto, munito del sigillo dello Stato, sia inserto nella Raccolta ufficiale delle leggi e dei decreti del Regno d'Italia, mandando a chiunque spetti di osservarlo e di farlo osservare.</corpo>
+        </comma>
+      </articolo>
+    </articolato>
+    <formulafinale />
+    <conclusione><dataeluogo norm="19301019" codice="S. Rossore">Dato a S. Rossore, addì 19 ottobre 1930</dataeluogo><h:br/><firma tipo="sottoscrizione">VITTORIO EMANUELE.</firma><h:br/><firma tipo="sottoscrizione">MUSSOLINI</firma> - <firma tipo="sottoscrizione">ROCCO</firma>.<h:br/><firma tipo="visto">Visto, il Guardasigilli: Rocco.</firma><h:br/>Registrato alla Corte dei Conti, addì 22 ottobre 1930<h:br/>Atti del Governo, registro 301, foglio n. 58 - Mancini.<h:br/>N.B. - Il testo del Codice Penale verrà pubblicato nella Raccolta ufficiale.</conclusione>
+    <annessi>
+      <elencoAnnessi>
+        <h:div>CODICE PENALE</h:div>
+      </elencoAnnessi>
+      <annesso id="ann1-S9302562">
+        <testata>
+          <denAnnesso>CODICE PENALE</denAnnesso>
+        </testata>
+        <rifesterno xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" />
+      </annesso>
+    </annessi>
+  </RegioDecreto>
+</NIR>

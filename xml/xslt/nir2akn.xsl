@@ -55,6 +55,7 @@
     <xsl:variable name="urn_emanante" select="substring-before($urn_documento, ':')"/>
     <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
     <xsl:variable name="uri_work" select="u:convertiUrn(//nir:urn/@valore)"/>
+    <xsl:variable name="component" select="u:component(//nir:urn/@valore)"/>
     <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
     <xsl:variable name="urn_expression_date" select="$urn_date"/>
     <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_expression_date)"/>
@@ -156,7 +157,7 @@
     <xsl:template name="generaIdentification">
         <identification source="#{$sorgente}">
             <FRBRWork>
-                <FRBRthis value="{$uri_work}/main"/>
+                <FRBRthis value="{$uri_work}!{$component}"/>
                 <FRBRuri value="{$uri_work}"/>
 
                 <!-- Alias a URN NIR -->
@@ -205,7 +206,7 @@
             </FRBRWork>
 
             <FRBRExpression>
-                <FRBRthis value="{$uri_expression}/main"/>
+                <FRBRthis value="{$uri_expression}!{$component}"/>
                 <FRBRuri value="{$uri_expression}"/>
                 <xsl:if test="$urn_expression_date">
                     <FRBRdate date="{$urn_expression_date}" name=""/>
@@ -352,10 +353,10 @@
 
             <!-- Allegati -->
             <xsl:for-each select="//nir:haallegato">
-                <hasAttachment href="{@xlink:href}" showAs=""/>
+                <hasAttachment href="{u:convertiUrn(@xlink:href)}!{u:component(@xlink:href)}" showAs="{u:component(@xlink:href)}"/>
             </xsl:for-each>
             <xsl:for-each select="//nir:allegatodi">
-                <attachmentOf href="{@xlink:href}" showAs=""/>
+                <attachmentOf href="{u:convertiUrn(@xlink:href)}!{u:component(@xlink:href)}" showAs="Documento principale"/>
             </xsl:for-each>
 
             <!-- Giurisprudenza -->
@@ -1601,14 +1602,33 @@
 
             <xsl:otherwise>
                 <xsl:variable name="type" select="'act'"/>
-                <xsl:variable name="subtype" select="tokenize($principale, ':')[4]"/>
-                <xsl:variable name="author" select="tokenize($principale, ':')[3]"/>
+                <xsl:variable name="subtype" select="u:sanitize(tokenize($principale, ':')[4])"/>
+                <xsl:variable name="author" select="u:sanitize(tokenize($principale, ':')[3])"/>
                 <xsl:variable name="date" select="substring-before(tokenize($principale, ':')[5], ';')"/>
                 <xsl:variable name="num" select="substring-after(tokenize($principale, ':')[5], ';')"/>
 
                 <xsl:value-of select="string-join(('/akn', 'it', $type, $subtype, $author, $date, $num), '/')"/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="u:component">
+        <xsl:param name="urn"/>
+        <xsl:variable name="component" select="tokenize(u:primoMacroblocco($urn), ':')[6]"/>
+        <xsl:choose>
+            <xsl:when test="$component">
+                <xsl:value-of select="u:sanitize($component)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'main'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <!-- Replace . with _ -->
+    <xsl:function name="u:sanitize">
+        <xsl:param name="input"/>
+        <xsl:value-of select="replace($input, '\.', '_')"/>
     </xsl:function>
 
     <!-- Estrai un blocco da un urn (Separatori ammessi: *, @, $, !, ~)
