@@ -376,12 +376,11 @@
 
             <!-- Riferimenti esterni -->
 
-            <xsl:for-each select="//nir:rif">
-                <xsl:variable name="href" select="@xlink:href"/>
-                <xsl:variable name="n" select="count(./preceding::nir:rif)+1"/>
-                <xsl:if test="not(./preceding::nir:rif[@xlink:href = $href])">
-                    <TLCReference eId="rif{$n}" showAs="NIR" name="urn:nir" href="{$href}"/>
-                </xsl:if>
+            <xsl:variable name="rifs" select="distinct-values(//nir:rif/@xlink:href)"/>
+            <xsl:for-each select="$rifs">
+                <xsl:variable name="href" select="."/>
+                <xsl:variable name="n" select="index-of($rifs, $href)"/>
+                <TLCReference eId="rif{$n}" showAs="NIR" name="urn:nir" href="{$href}"/>
             </xsl:for-each>
 
             <!-- Todo: aggiusta anche questo..
@@ -1100,15 +1099,9 @@
     </xsl:template>
 
     <xsl:template match="nir:rif">
-        <xsl:variable name="href" select="@xlink:href"/>
-        <xsl:variable name="firstSimilar" select="//nir:rif[@xlink:href=$href][1]"/>
-        <xsl:variable name="n" select="count($firstSimilar/preceding::nir:rif)+1"/>
-        <ref refersTo="#rif{$n}">
-            <xsl:attribute name="href">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@xlink:href"/>
-                </xsl:call-template>
-            </xsl:attribute>
+        <xsl:variable name="rifs" select="distinct-values(//nir:rif/@xlink:href)"/>
+        <xsl:variable name="n" select="index-of($rifs, @xlink:href)"/>
+        <ref refersTo="#rif{$n}" href="{u:convertiLink(@xlink:href)}">
             <xsl:apply-templates select="node()"/>
         </ref>
     </xsl:template>
@@ -1610,6 +1603,14 @@
                 <xsl:value-of select="string-join(('/akn', 'it', $type, $subtype, $author, $date, $num), '/')"/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="u:convertiLink">
+        <xsl:param name="urn"/>
+        <xsl:value-of select="u:convertiUrn($urn)"/>
+        <xsl:if test="u:component($urn)!='main'">
+            <xsl:value-of select="concat('!', u:component($urn))"/>
+        </xsl:if>
     </xsl:function>
 
     <xsl:function name="u:component">

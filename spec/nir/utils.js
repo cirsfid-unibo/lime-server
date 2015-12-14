@@ -1,6 +1,7 @@
 var nir2akn = require('../../xml/xml/nir').nir2akn,
     xmldom = require('xmldom'),
     xpath = require('xpath'),
+    R = require('ramda'),
     fs = require('fs');
 
 var cache = {};
@@ -18,8 +19,8 @@ exports.convert = function (file, callback) {
 
 exports.serialize = serializer.serializeToString.bind(serializer);
 exports.select = xpath.useNamespaces({ akn: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13' });
-var selectAttr = (xpath, dom) => exports.select(xpath, dom, true).value;
-exports.expressionUri = dom => selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
-exports.expressionThis = dom => selectAttr('//akn:FRBRExpression/akn:FRBRthis/@value', dom);
-exports.workUri = dom => selectAttr('//akn:FRBRWork/akn:FRBRuri/@value', dom);
-exports.workThis = dom => selectAttr('//akn:FRBRWork/akn:FRBRthis/@value', dom);
+exports.selectAttr = (xpath, dom) => R.prop('value', exports.select(xpath, dom, true) || {});
+exports.expressionUri = dom => exports.selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
+exports.expressionThis = dom => exports.selectAttr('//akn:FRBRExpression/akn:FRBRthis/@value', dom);
+exports.workUri = dom => exports.selectAttr('//akn:FRBRWork/akn:FRBRuri/@value', dom);
+exports.workThis = dom => exports.selectAttr('//akn:FRBRWork/akn:FRBRthis/@value', dom);
