@@ -9,16 +9,17 @@
     "filesystem": {
         "documents": "../data/documents/"
     },
-    "users": {        
+    "users": {
         "shared_folders": [
             "/shared/"
         ]
     },
+    "existIsMainBackend": true,
     "existdb": {
         "host": "sinatra.cirsfid.unibo.it",
         "port": 8080,
         "rest": "/exist/rest",
-        "baseCollection": "/documentsdb",
+        "baseCollection": "/lime_test",
         "auth": "admin:exist"
     },
     "abiword": {

@@ -47,19 +47,24 @@
 var http = require('http'),
     VError = require('verror'),
     sax = require('sax'),
-    basename = require('path').basename;
+    basename = require('path').basename,
+    R = require('ramda');
 
 var config = require('../config.json').existdb;
 
+
 // Call callback with err or list of files inside dir.
 exports.getDir = function (path, callback) {
-    var resource = config.rest + config.baseCollection + path;
+    var resource = encode(config.rest + config.baseCollection + path);
+    console.log('Exist getDir', resource);
     http.get({
         host: config.host,
         port: config.port,
         auth: config.auth,
         path: resource
     }, function (res) {
+        if(res.statusCode == 404) return callback(null, []);
+
         // Convert Exist format to an array of file/dir names.
         var saxStream = sax.createStream(false, {}),
             fileList = [];
@@ -78,7 +83,7 @@ exports.getDir = function (path, callback) {
             fileList.shift(); // Remove our collection name
             if (res.statusCode != 200)
                 callback(new Error('Exist GET DIR request has status code ' + res.statusCode));
-            else callback(undefined, fileList);
+            else callback(undefined, fileList.map(decode));
         });
         res.pipe(saxStream);
     });
@@ -87,7 +92,8 @@ exports.getDir = function (path, callback) {
 // Read file from path and write it to output stream.
 // Call callback on success or error (VError object or 404 int).
 exports.getFile = function (output, path, file, callback) {
-    var resource = config.rest + config.baseCollection + path + '/' + file;
+    var resource = encode(config.rest + config.baseCollection + path + '/' + file);
+    console.log('Exist getFile', resource);
     http.get({
         host: config.host,
         port: config.port,
@@ -99,8 +105,9 @@ exports.getFile = function (output, path, file, callback) {
             callback(new VError(err, 'Error getting file'));
         });
         res.on('end', function () {
-            if (res.statusCode != 200)
-                callback(new Error('Exist GET request has status code', res.statusCode));
+            if(res.statusCode == 404) callback(404);
+            else if (res.statusCode != 200)
+                callback(new Error('Exist GET request has status code ' + res.statusCode));
             else callback();
         });
         res.pipe(output);
@@ -111,6 +118,7 @@ exports.getFile = function (output, path, file, callback) {
 // if it does not exist. Call callback on success or error.
 exports.putFile = function (input, path, file, callback) {
     var resource = config.rest + config.baseCollection + path + '/' + file;
+    console.log('Exist putFile', resource);
     var output = http.request({
         method: "PUT",
         host: config.host,
@@ -125,9 +133,77 @@ exports.putFile = function (input, path, file, callback) {
         res.resume();
         res.on('end', function () {
             if (res.statusCode < 200 || res.statusCode >= 300)
-                callback(new Error('Exist PUT request has status code' + res.statusCode));
+                callback(new Error('Exist PUT request has status code ' + res.statusCode));
             else callback();
         });
     });
     input.pipe(output);
 };
+
+// Notes:
+// Exist handling of special charactes is really bad. We have
+// We must do double URI encoding when retrieving files
+// https://github.com/eXist-db/exist/issues/44
+
+
+function encode_write(str) {
+    return encodeURI(str).replace(specialRegex, replaceSpecial);
+}
+
+function decode(str) {
+    return decodeURI(str.replace(encodedRegex, replaceEncoded));
+}
+
+function encode(str) {
+    return encodeURI(str).replace(specialRegex, replaceSpecial);
+}
+
+var specialMap =
+{
+    "!": "%21",
+    // "#": "%23",
+    "$": "%24",
+    "&": "%26",
+    "'": "%27",
+    "(": "%28",
+    ")": "%29",
+    "*": "%2A",
+    "+": "%2B",
+    ",": "%2C",
+    // "/": "%2F",
+    ":": "%3A",
+    ";": "%3B",
+    "=": "%3D",
+    "?": "%3F",
+    "@": "%40",
+    "[": "%5B",
+    "]": "%5D"
+}
+var specialRegex = new RegExp('(['+(Object.keys(specialMap).map(R.concat('\\')).join(''))+'])', 'g')
+var replaceSpecial = function(special) { return specialMap[special]; }
+var encodedMap = R.invertObj(specialMap);
+var encodedRegex = new RegExp('('+(Object.keys(encodedMap).join('|'))+')', 'g')
+var replaceEncoded = function(encoded) { return encodedMap[encoded]; }
+// console.log(specialRegex)
+// console.log(encodedRegex)
+//
+// console.log('!__#__$__&__\'__(__)__*__+__,__/__:__;__=__?__@__[__]__è');
+// console.log(encode('!__#__$__&__\'__(__)__*__+__,__/__:__;__=__?__@__[__]__è'));
+// console.log(decode(encode('!__#__$__&__\'__(__)__*__+__,__/__:__;__=__?__@__[__]__è')));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
