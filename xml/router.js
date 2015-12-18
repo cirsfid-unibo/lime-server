@@ -45,9 +45,16 @@
  */
 
 var express = require('express');
-// var nir2akn = require('./endpoints/nir2akn.js');
+var nir2akn = require('./xml/nir.js').nir2akn;
 
 var router = express.Router();
-// router.post('/nir2akn', nir2akn);
+router.post('/nir2akn', function (req, res, next) {
+    nir2akn(req.body.content, function (err, result) {
+        if (err)
+            next(err);
+        else
+            res.send(result).end();
+    });
+});
 
 module.exports = router;
