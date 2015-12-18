@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
     CC-by 4.0 CIRSFID- University of Bologna
     Author: CIRSFID, University of Bologna
     Developers: Monica Palmirani, Luca Cervone, Matteo Nardi
     Contacts: monica.palmirani@unibo.it
  -->
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
     xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:nir="http://www.normeinrete.it/nir/2.2/"
@@ -13,7 +13,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:h="http://www.w3.org/HTML/1998/html4"
     xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/"
-    exclude-result-prefixes="xsl nir dsp xlink h">
+    xmlns:u="http://www.sinatra.cirsfid.unibo.it/nir2akn/#conversioneUrn"
+    exclude-result-prefixes="xsl nir dsp xlink h u">
     <xsl:output indent="yes"/>
     <xsl:strip-space elements="*"/>
 
@@ -26,7 +27,7 @@
     <!-- Variabili usate in tutto lo script  -->
     <!-- - - - - - - - - - - - - - - - - - - -->
 
-    <!-- Identifica la sorgente del documento --> 
+    <!-- Identifica la sorgente del documento -->
     <!-- Questa euristica non e' completamente corretta: sarebbe meglio avere un parametro allo script -->
     <xsl:variable name="sorgente">
         <xsl:choose>
@@ -36,7 +37,7 @@
             <xsl:otherwise>
                 <xsl:value-of select="'supremaCorteDiCassazione'"/>
             </xsl:otherwise>
-        </xsl:choose>        
+        </xsl:choose>
     </xsl:variable>
     <xsl:variable name="nomeSorgente">
         <xsl:choose>
@@ -52,14 +53,12 @@
     <!-- Parsing URN -->
     <xsl:variable name="urn_documento" select="substring-after(//nir:urn/@valore, 'urn:nir:')"/>
     <xsl:variable name="urn_emanante" select="substring-before($urn_documento, ':')"/>
-    <xsl:variable name="urn_date" select="substring($urn_documento, string-length(substring-before($urn_documento, ';')) - 9, 10)"/>
-    <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/>
-    <xsl:variable name="uri_work">
-        <xsl:call-template name="convertiURN">
-            <xsl:with-param name="urn" select="//nir:urn/@valore"/>
-        </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_date)"/>
+    <!-- <xsl:variable name="urn_expression_date" select="substring-before(substring-after($urn_documento, '@'), ';')"/> -->
+    <xsl:variable name="uri_work" select="u:convertiUrn(//nir:urn/@valore)"/>
+    <xsl:variable name="component" select="u:component(//nir:urn/@valore)"/>
+    <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
+    <xsl:variable name="urn_expression_date" select="$urn_date"/>
+    <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_expression_date)"/>
     <xsl:variable name="uri_manifestation" select="concat($uri_expression, '/main.xml')"/>
 
     <!-- - - - - - - -->
@@ -144,8 +143,8 @@
             <xsl:apply-templates select="//nir:meta/*[namespace-uri()!='http://www.normeinrete.it/nir/2.2/']|
                                          //nir:meta/nir:descrittori/*[namespace-uri()!='http://www.normeinrete.it/nir/2.2/']|
                                          nir:inquadramento |
-                                         nir:lavoripreparatori | 
-                                         nir:altro | 
+                                         nir:lavoripreparatori |
+                                         nir:altro |
                                          nir:proprietario"/>                   <!-- Proprietary -->
             <!-- Presentation -->
         </meta>
@@ -154,11 +153,11 @@
     <xsl:template match="nir:inlinemeta">
         <!-- inlinemeta viene tolto dal body e spostato nel meta -->
     </xsl:template>
-    
+
     <xsl:template name="generaIdentification">
         <identification source="#{$sorgente}">
             <FRBRWork>
-                <FRBRthis value="{$uri_work}/main"/>
+                <FRBRthis value="{$uri_work}!{$component}"/>
                 <FRBRuri value="{$uri_work}"/>
 
                 <!-- Alias a URN NIR -->
@@ -207,7 +206,7 @@
             </FRBRWork>
 
             <FRBRExpression>
-                <FRBRthis value="{$uri_expression}/main"/>
+                <FRBRthis value="{$uri_expression}!{$component}"/>
                 <FRBRuri value="{$uri_expression}"/>
                 <xsl:if test="$urn_expression_date">
                     <FRBRdate date="{$urn_expression_date}" name=""/>
@@ -348,16 +347,16 @@
 
             <!-- Redazione -->
             <xsl:if test="//nir:redazione[@contributo='redazione']">
-                <TLCOrganization eId="redazione" href="{//nir:redazione[@contributo='redazione']/@url}" 
+                <TLCOrganization eId="redazione" href="{//nir:redazione[@contributo='redazione']/@url}"
                     showAs="{//nir:redazione[@contributo='redazione']/@nome}"/>
             </xsl:if>
 
             <!-- Allegati -->
             <xsl:for-each select="//nir:haallegato">
-                <hasAttachment href="{@xlink:href}" showAs=""/>
+                <hasAttachment href="{u:convertiUrn(@xlink:href)}!{u:component(@xlink:href)}" showAs="{u:component(@xlink:href)}"/>
             </xsl:for-each>
             <xsl:for-each select="//nir:allegatodi">
-                <attachmentOf href="{@xlink:href}" showAs=""/>
+                <attachmentOf href="{u:convertiUrn(@xlink:href)}!{u:component(@xlink:href)}" showAs="Documento principale"/>
             </xsl:for-each>
 
             <!-- Giurisprudenza -->
@@ -377,12 +376,11 @@
 
             <!-- Riferimenti esterni -->
 
-            <xsl:for-each select="//nir:rif">
-                <xsl:variable name="href" select="@xlink:href"/>
-                <xsl:variable name="n" select="count(./preceding::nir:rif)+1"/>
-                <xsl:if test="not(./preceding::nir:rif[@xlink:href = $href])">
-                    <TLCReference eId="rif{$n}" showAs="NIR" name="urn:nir" href="{$href}"/>
-                </xsl:if>
+            <xsl:variable name="rifs" select="distinct-values(//nir:rif/@xlink:href)"/>
+            <xsl:for-each select="$rifs">
+                <xsl:variable name="href" select="."/>
+                <xsl:variable name="n" select="index-of($rifs, $href)"/>
+                <TLCReference eId="rif{$n}" showAs="NIR" name="urn:nir" href="{$href}"/>
             </xsl:for-each>
 
             <!-- Todo: aggiusta anche questo..
@@ -511,7 +509,7 @@
         </xsl:if>
     </xsl:template>
 
-    
+
     <xsl:template match="nir:nota">
         <note eId="{@id}">
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
@@ -577,9 +575,9 @@
     </xsl:template>
 
     <xsl:template match="dsp:termine      | dsp:condizione    | dsp:posizione   |
-                         
+
                          dsp:visto        | dsp:sentito       | dsp:considerato |
-                         dsp:suproposta   | dsp:basegiuridica | dsp:proposta    | 
+                         dsp:suproposta   | dsp:basegiuridica | dsp:proposta    |
                          dsp:parere       | dsp:richiesta     | dsp:procedura   |
                          dsp:considerando | dsp:motivazione   | dsp:finalita    |
                          dsp:finanziaria  | dsp:ambito        | dsp:metaregola  |
@@ -591,10 +589,10 @@
                          dsp:riparazione  | dsp:informazione  | dsp:regola      |
 
                          dsp:soggetto     | dsp:effetto       | dsp:partizione  |
-                         dsp:tiporegola   | dsp:fatto         | dsp:organo      | 
-                         dsp:fine         | dsp:destinatario  | dsp:territorio  | 
-                         dsp:attivita     | dsp:definiendum   | dsp:definiens   | 
-                         dsp:qualifica    | dsp:delegante     | dsp:controparte | 
+                         dsp:tiporegola   | dsp:fatto         | dsp:organo      |
+                         dsp:fine         | dsp:destinatario  | dsp:territorio  |
+                         dsp:attivita     | dsp:definiendum   | dsp:definiens   |
+                         dsp:qualifica    | dsp:delegante     | dsp:controparte |
                          dsp:azione       | dsp:pena          |
 
                          nir:regole">
@@ -728,14 +726,6 @@
 
     <xsl:template match="dsp:deroga">
         <scopeMod type="exceptionOfScope" incomplete="true">
-            <xsl:apply-templates select="./dsp:*[not(name() = 'dsp:novella') and not(name() = 'dsp:novellando')]"/>
-            <xsl:apply-templates select="dsp:novellando"/>
-            <xsl:apply-templates select="dsp:novella"/>
-        </scopeMod>
-    </xsl:template>
-
-    <xsl:template match="dsp:estensione">
-        <scopeMod type="extensionOfScope">
             <xsl:apply-templates select="./dsp:*[not(name() = 'dsp:novella') and not(name() = 'dsp:novellando')]"/>
             <xsl:apply-templates select="dsp:novellando"/>
             <xsl:apply-templates select="dsp:novella"/>
@@ -935,13 +925,13 @@
             </conclusions>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="nir:formulafinale" mode="conclusioni">
         <container name="formulafinale" eId="comp1-sgn1" class="right">
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </container>
     </xsl:template>
-    
+
     <xsl:template match="nir:conclusione" mode="conclusioni">
         <xsl:apply-templates select="." mode="aggiusta_pattern"/>
     </xsl:template>
@@ -1030,7 +1020,7 @@
                          nir:ep[name(./preceding-sibling::node()[1]) != 'ep']">
         <list>
             <xsl:variable name="current" select="."/>
-            <xsl:for-each select="following-sibling::node()[name() = name($current)]">
+            <xsl:for-each select="$current | following-sibling::node()[name() = name($current)]">
                 <point>
                     <xsl:apply-templates select="." mode="genera_eId"/>
                     <xsl:apply-templates select="node()"/>
@@ -1089,7 +1079,7 @@
     </xsl:template>
 
     <xsl:template match="nir:annessi">
-        <!-- TODO: qui c'e' molto da fare 
+        <!-- TODO: qui c'e' molto da fare
         <attachments>
             <xsl:apply-templates/>
         </attachments>
@@ -1101,7 +1091,7 @@
     </xsl:template>
 
     <xsl:template match="nir:annesso">
-        <!-- TODO: qui c'e' molto da fare 
+        <!-- TODO: qui c'e' molto da fare
         <attachments>
             <xsl:apply-templates/>
         </attachments>
@@ -1109,15 +1099,9 @@
     </xsl:template>
 
     <xsl:template match="nir:rif">
-        <xsl:variable name="href" select="@xlink:href"/>
-        <xsl:variable name="firstSimilar" select="//nir:rif[@xlink:href=$href][1]"/>
-        <xsl:variable name="n" select="count($firstSimilar/preceding::nir:rif)+1"/>
-        <ref refersTo="#rif{$n}">
-            <xsl:attribute name="href">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@xlink:href"/>
-                </xsl:call-template>
-            </xsl:attribute>
+        <xsl:variable name="rifs" select="distinct-values(//nir:rif/@xlink:href)"/>
+        <xsl:variable name="n" select="index-of($rifs, @xlink:href)"/>
+        <ref refersTo="#rif{$n}" href="{u:convertiLink(@xlink:href)}">
             <xsl:apply-templates select="node()"/>
         </ref>
     </xsl:template>
@@ -1180,8 +1164,20 @@
         <!-- <xsl:choose> -->
             <!-- <xsl:when test="@tipo = 'struttura'"> -->
                 <quotedStructure>
+                    <xsl:variable name="startQuote" select="node()[position()=1 and string-length(normalize-space(.)) &lt; 4]"/>
+                    <xsl:if test="$startQuote">
+                        <xsl:attribute name="startQuote"><xsl:value-of select="normalize-space($startQuote)"/></xsl:attribute>
+                    </xsl:if>
+                    <xsl:variable name="endQuote" select="node()[position()=last() and string-length(normalize-space(.)) &lt; 4]"/>
+                    <xsl:if test="$endQuote">
+                        <xsl:attribute name="endQuote"><xsl:value-of select="normalize-space($endQuote)"/></xsl:attribute>
+                    </xsl:if>
+                    <xsl:variable name="children" select="node()[not(.=$startQuote) and not(.=$endQuote)]"/>
+                    <xsl:variable name="content">
+                        <nir:virgolette><xsl:copy-of select="$children"/></nir:virgolette>
+                    </xsl:variable>
                     <xsl:apply-templates select="." mode="genera_eId"/>
-                    <xsl:apply-templates select="." mode="aggiusta_pattern"/>
+                    <xsl:apply-templates select="$content" mode="aggiusta_pattern"/>
                 </quotedStructure>
             <!-- </xsl:when> -->
             <!-- <xsl:otherwise> -->
@@ -1193,15 +1189,10 @@
         <!-- </xsl:choose> -->
     </xsl:template>
 
-    <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5]">
-        <xsl:if test="position() = 1">
-            <xsl:attribute name="startQuote">
-                <xsl:value-of select="."/>
-            </xsl:attribute>
-            <xsl:attribute name="endQuote">
-                <xsl:value-of select="following-sibling::text()[last()]"/>
-            </xsl:attribute>
-        </xsl:if>
+    <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5][position() = 1]">
+        <xsl:attribute name="endQuote">
+            <xsl:value-of select="following-sibling::text()[last()]"/>
+        </xsl:attribute>
     </xsl:template>
 
     <xsl:template match="nir:def">
@@ -1284,7 +1275,7 @@
             <xsl:apply-templates/>
         </container>
     </xsl:template>
-    
+
     <xsl:template match="nir:DocumentoNIR/nir:contenitore">
         <mainBody>
             <container name="{@nome}">
@@ -1354,7 +1345,7 @@
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </td>
     </xsl:template>
-    
+
     <xsl:template match="h:p[text() = 'omissis']">
         <p>
             <omissis>
@@ -1374,7 +1365,7 @@
                 <xsl:when test="contains($blocks, concat('|', local-name(), '|'))">
                     <xsl:apply-templates select="."/>
                 </xsl:when>
-                <xsl:when test="not($prev) or 
+                <xsl:when test="not($prev) or
                                 $prev[contains($blocks, concat('|', local-name(), '|'))]">
                     <xsl:variable name="nextBreak" select="following-sibling::node()
                         [contains($blocks, concat('|', local-name(), '|'))]
@@ -1533,7 +1524,7 @@
         <!-- Eg. provvedimento -->
         <xsl:variable name="i3" select="substring-after($i2, ':')"/>
         <!-- Eg. estremi[:annesso..][@versione][*comunicato..][$manifestazione][#id] -->
-        <xsl:variable name="n1" select="substring-before($i3, ':')"/> 
+        <xsl:variable name="n1" select="substring-before($i3, ':')"/>
         <xsl:variable name="n2" select="substring-before($i3, '@')"/>
         <xsl:variable name="n3" select="substring-before($i3, '*')"/>
         <xsl:variable name="n4" select="substring-before($i3, '#')"/>
@@ -1549,7 +1540,7 @@
         <!-- Eg. 2010-03-08;nir-s2102504 -->
         <xsl:variable name="data" select="substring-before($estremi, ';')"/>
         <xsl:variable name="num" select="substring-after($estremi, ';')"/>
-        
+
         <xsl:variable name="id" select="substring-after($urn, '#')"/>
 
         <!-- Output -->
@@ -1568,8 +1559,8 @@
             <xsl:value-of select="$data"/>
             <xsl:text>/</xsl:text>
             <xsl:value-of select="$num"/>
-            
-            <!-- Questo serve solo in caso di manifestation 
+
+            <!-- Questo serve solo in caso di manifestation
                 <xsl:value-of select="'/ita'"/> -->
         </xsl:if>
         <xsl:if test="$id">
@@ -1588,11 +1579,93 @@
         </xsl:if>
     </xsl:template>
 
+    <xsl:function name="u:convertiUrn">
+        <xsl:param name="urn"/>
+        <!-- urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07 -->
+        <!-- /akn/it/doc/entrata_vigore/stato/2001-08-07/legge_2000-09-29_300 -->
+
+        <!-- Macroparti -->
+        <xsl:variable name="principale" select="u:primoMacroblocco($urn)"/>
+        <xsl:variable name="comunicato" select="u:cercaMacroblocco($urn, '*')"/>
+
+        <xsl:choose>
+            <xsl:when test="$comunicato!=''">
+                <xsl:value-of select="u:convertiComunicato($urn)"/>
+            </xsl:when>
+
+            <xsl:otherwise>
+                <xsl:variable name="type" select="'act'"/>
+                <xsl:variable name="subtype" select="u:sanitize(tokenize($principale, ':')[4])"/>
+                <xsl:variable name="author" select="u:sanitize(tokenize($principale, ':')[3])"/>
+                <xsl:variable name="date" select="substring-before(tokenize($principale, ':')[5], ';')"/>
+                <xsl:variable name="num" select="substring-after(tokenize($principale, ':')[5], ';')"/>
+
+                <xsl:value-of select="string-join(('/akn', 'it', $type, $subtype, $author, $date, $num), '/')"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="u:convertiLink">
+        <xsl:param name="urn"/>
+        <xsl:value-of select="u:convertiUrn($urn)"/>
+        <xsl:if test="u:component($urn)!='main'">
+            <xsl:value-of select="concat('!', u:component($urn))"/>
+        </xsl:if>
+    </xsl:function>
+
+    <xsl:function name="u:component">
+        <xsl:param name="urn"/>
+        <xsl:variable name="component" select="tokenize(u:primoMacroblocco($urn), ':')[6]"/>
+        <xsl:choose>
+            <xsl:when test="$component">
+                <xsl:value-of select="u:sanitize($component)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'main'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <!-- Replace . with _ -->
+    <xsl:function name="u:sanitize">
+        <xsl:param name="input"/>
+        <xsl:value-of select="replace($input, '\.', '_')"/>
+    </xsl:function>
+
+    <!-- Estrai un blocco da un urn (Separatori ammessi: *, @, $, !, ~)
+         cercaMacroblocco("<...>*<comunicato>@<versione>", "*") -> "<comunicato>" -->
+    <xsl:function name="u:cercaMacroblocco">
+        <xsl:param name="input"/>
+        <xsl:param name="separatore"/>
+        <xsl:variable name="dopoSeparatore" select="substring-after($input, $separatore)"/>
+        <xsl:value-of select="u:primoMacroblocco($dopoSeparatore)"/>
+    </xsl:function>
+
+    <xsl:function name="u:primoMacroblocco">
+        <xsl:param name="input"/>
+        <xsl:variable name="macroSeparatori" select="'[\*@!~]'"/>
+        <xsl:value-of select="tokenize($input, $macroSeparatori)[1]"/>
+    </xsl:function>
+
+    <xsl:function name="u:convertiComunicato">
+        <!-- urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07 -->
+        <!-- /akn/it/doc/entrata_vigore/stato/2001-08-07/legge_2000-09-29_300 -->
+        <xsl:param name="urn"/>
+        <xsl:variable name="principale" select="u:primoMacroblocco($urn)"/>
+        <xsl:variable name="comunicato" select="u:cercaMacroblocco($urn, '*')"/>
+        <xsl:variable name="subtype" select="replace(substring-before($comunicato, ';'), '\.', '_')"/>
+        <xsl:variable name="author" select="tokenize($principale, ':')[3]"/>
+        <xsl:variable name="date" select="substring-after($comunicato, ';')"/>
+        <xsl:variable name="referencedSubtype" select="tokenize($principale, ':')[4]"/>
+        <xsl:variable name="referencedDate" select="substring-before(tokenize($principale, ':')[5], ';')"/>
+        <xsl:variable name="referencedNum" select="substring-after(tokenize($principale, ':')[5], ';')"/>
+        <xsl:variable name="num" select="string-join(($referencedSubtype, $referencedDate, $referencedNum), '_')"/>
+        <xsl:value-of select="string-join(('/akn', 'it', 'doc', $subtype, $author, $date, $num), '/')"/>
+    </xsl:function>
+
     <xsl:template match="node()|@*" mode="copyEverything">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="copyEverything"/>
         </xsl:copy>
-    </xsl:template> 
+    </xsl:template>
 </xsl:stylesheet>
-
-<!-- TODO: sottoscrizioni/sottoscrivente -->

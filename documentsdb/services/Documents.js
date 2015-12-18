@@ -45,6 +45,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// Documents endpoint.
+// - Get file
+// - Put file
+// - Get dir
+// - Multiple possible backends: we read from the main one, but we write to both
+// - Permissions check si done here
+
 var express = require('express'),
     path = require('path'),
     PassThrough = require('stream').PassThrough,
@@ -52,9 +59,14 @@ var express = require('express'),
     Boom = require('boom');
 
 var db = require('../utils/mongodb.js'),
-    backend_exist = require('../utils/backend_exist'),
-    backend_fs = require('../utils/backend_fs'),
+    secondary_backend = require('../utils/backend_exist'),
+    main_backend = require('../utils/backend_fs'),
     DocToXml = require('../converters/DocToXml');
+
+// Swap backends
+if (require('../config.json').existIsMainBackend) {
+    main_backend = [secondary_backend, secondary_backend = main_backend][0]
+}
 
 var router = express.Router();
 
@@ -63,8 +75,10 @@ router.use(passport.authenticate('basic', { session: false }));
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {
-    var reqPath = req.path.replace(/%20/g, ' ')
-                          .replace(/:/g, '%3A');
+    var reqPath = req.path;
+    // TODO: to this inside fs backend
+    // var reqPath = req.path.replace(/%20/g, ' ')
+    //                       .replace(/:/g, '%3A');
     if (reqPath[reqPath.length-1] == ('/')) {
         req.dir = reqPath;
         console.log('DIR', req.method, req.dir);
@@ -99,13 +113,13 @@ router.get('*', function (req, res, next) {
 
     if (req.file.match(/.docx?$/) && req.headers.accept == 'text/html') {
         var doc2xml = new DocToXml();
-        backend_fs.getFile(doc2xml, req.dir, req.file, function (err) {
+        main_backend.getFile(doc2xml, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();
             else if (err) next(err);
         });
         doc2xml.pipe(res);
     } else {
-        backend_fs.getFile(res, req.dir, req.file, function (err) {
+        main_backend.getFile(res, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();
             else if (err) next(err);
         });
@@ -115,9 +129,10 @@ router.get('*', function (req, res, next) {
 // List directory
 // Es. GET /Documents/pippo@gmail.com/examples/it/doc/
 router.get('*', function (req, res, next) {
-    backend_fs.getDir(req.dir, function (err, files) {
+    main_backend.getDir(req.dir, function (err, files) {
         if (err) return next(err);
-        files = files.map(function (file) { return file.replace(/%3A/g, ':')});
+        // TODO: to this inside fs backend
+        // files = files.map(function (file) { return file.replace(/%3A/g, ':')});
         res.json(files).end();
     });
 });
@@ -130,12 +145,12 @@ router.put('*', function (req, res, next) {
     var stream1 = new PassThrough(),
         stream2 = new PassThrough();
 
-    backend_fs.putFile(stream1, req.dir, req.file, function (err) {
+    main_backend.putFile(stream1, req.dir, req.file, function (err) {
         if (err) next(err);
         res.end();
     });
 
-    backend_exist.putFile(stream2, req.dir, req.file, function (err) {
+    secondary_backend.putFile(stream2, req.dir, req.file, function (err) {
         // Ehm.. Who cares about Exist?
         if (err) console.warn(err);
     });

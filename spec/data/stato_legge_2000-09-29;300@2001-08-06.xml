@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../../DTD2/norma.xsl"?>
+<!DOCTYPE NIR SYSTEM "../../../../DTD2/nirloose.dtd">
+<!--Documento NIR-->
+<NIR tipo="originale" xmlns="http://www.normeinrete.it/nir/2.2/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h="http://www.w3.org/HTML/1998/html4" xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/" xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/">
+  <DocumentoNIR id="S2006746" nome="Comunicato">
+    <meta>
+      <descrittori>
+        <pubblicazione tipo="GU" num="182" norm="20010807" />
+        <entratainvigore norm="20010807" />
+        <redazione id="rd1" norm="20151118" nome="Cassazione" url="http://www.italgiure.giustizia.it" contributo="redazione" />
+        <redazione id="rd2" norm="20151118" nome="Norma-Editor v2.7" url="http://www.cirsfid.unibo.it" contributo="editor" />
+        <urn valore="urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07" />
+        <materie vocabolario="mat">
+          <materia valore="COMUNITA' EUROPEE" />
+          <materia valore="TRATTATI" />
+          <materia valore="CONVENZIONI" />
+          <materia valore="ATTI INTERNAZIONALI" />
+        </materie>
+      </descrittori>
+      <inquadramento>
+        <infodoc natura="entrata in vigore" normativa="si" funzione="regolativa" fonte="primario" />
+        <infomancanti>
+          <mTipodoc valore="entrata in vigore" />
+          <mDatadoc valore="20010807" />
+          <mEmanante valore="stato" />
+        </infomancanti>
+      </inquadramento>
+      <ciclodivita>
+        <eventi>
+          <evento id="e1" data="20010807" fonte="#ro1" tipo="originale" />
+          <evento id="e2" data="20010215" fonte="#ro1" />
+        </eventi>
+        <relazioni>
+          <originale id="ro1" xlink:href="urn:nir:stato:legge:2000-09-29;300*entrata.vigore;2001-08-07" />
+          <attiva id="ra1" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lutte.contre.corruption.agents.publics.etrangers.transactions.commerciales.internationales" />
+        </relazioni>
+      </ciclodivita>
+      <proprietario soggetto="TITOLO"><titoloA9>ENTRATA IN VIGORE - Entrata in vigore della Convenzione OCSE sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, con annesso, fatto a Parigi il 17 dicembre 1997.</titoloA9></proprietario>
+    </meta>
+    <intestazione>MINISTERO DEGLI AFFARI ESTERI <h:br/><h:br/><titoloDoc id="titolo">Entrata in vigore della <rif id="rif2" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lutte.contre.corruption.agents.publics.etrangers.transactions.commerciales.internationales">Convenzione OCSE sulla lotta alla corruzione di pubblici ufficiali stranieri nelle operazioni economiche internazionali, con annesso, fatto a Parigi il 17 dicembre 1997</rif>.</titoloDoc></intestazione>
+    <contenitore id="cnt-dispositivo" nome="dispositivo">
+      <contenitore id="cnt-1" nome="cirsfid:dispositivo">
+        <inlinemeta><disposizioni><modificheattive><dsp:vigenza><dsp:pos xlink:href="#cnt-dispositivo" /><dsp:termine da="#e2" /><dsp:norma xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lutte.contre.corruption.agents.publics.etrangers.transactions.commerciales.internationales"><dsp:pos xlink:href="#rif3" /><dsp:subarg><cirsfid:sub xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lutte.contre.corruption.agents.publics.etrangers.transactions.commerciales.internationales#art15" /></dsp:subarg></dsp:norma></dsp:vigenza></modificheattive></disposizioni></inlinemeta><h:p>A seguito dell'emanazione della <rif id="rif1" xlink:href="urn:nir:stato:legge:2000-09-29;300">legge 29 settembre 2000, n. 300</rif>,<h:br/>pubblicata nella Gazzetta Ufficiale - supplemento ordinario - n. 250 del 25 ottobre 2000 che ha autorizzato la ratifica italiana, si è provveduto a depositare lo strumento di ratifica, in data 15 dicembre 2000.<h:br/>"L'Italie precise que la Loi n. 300 du 19 septembre 2000 qui a autorisè la ratificazion de la Convention et qui a introduit les mesures necessaires à sa mise en oeuvre dans le systeme italien, inclut, à l'article 11, une delegation legislative au Gouvernement italien puor quil emane d'ici huit mois, à compter de l'entree en vigueur en Italie de la Convention susmentionee (le 26 octobre 2000), des sanctions mon penales contre les personnes morales pour actes de corruption, afin d'executer pleinement les obligations visees aux articles 2 et 3 de la Convention, vu quà l'heure actuelle, le systeme italien ne prevoit pas de sanctions penales ou non penales contre les personnes morales en la matiere. L'article 11 indique de façon detaillee, le criteres formules à titre de l'execution rigoureuse de la discipline conventionnelle, que le Gouvernement devra obligatoirement respecter l'orsq'il executera legislative".<h:br/>La Delegation Permanente de l'Italie precise aussi le Ministere de la Justice italien est designè comme autoritè responsable pour les fins specifiees à l'article 11 de la Convention.<h:br/>Ai sensi <mod id="mod1"><rif id="rif3" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lutte.contre.corruption.agents.publics.etrangers.transactions.commerciales.internationales#art15">dell'art. 15, l'atto summenzionato</rif></mod> è entrato in vigore il 15 febbraio 2001.</h:p></contenitore>
+    </contenitore>
+  </DocumentoNIR>
+</NIR>

@@ -22,12 +22,21 @@
     "mongodb": "^2.0.14",
     "passport": "^0.2.2",
     "passport-http": "^0.2.2",
+    "ramda": "^0.18.0",
     "sax": "^1.1.0",
     "tmp": "0.0.26",
     "verror": "^1.6.0",
-    "xmldom": "^0.1.19"
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  },
+  "devDependencies": {
+    "glob": "^6.0.1",
+    "jasmine": "^2.3.2",
+    "jasmine-es6": "0.0.18",
+    "sync-request": "^2.1.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development node server"
+    "start": "NODE_ENV=development node server",
+    "test": "jasmine"
   }
 }
