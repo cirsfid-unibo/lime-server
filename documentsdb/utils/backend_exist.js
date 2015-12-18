@@ -93,7 +93,7 @@ exports.getDir = function (path, callback) {
 // Read file from path and write it to output stream.
 // Call callback on success or error (VError object or 404 int).
 exports.getFile = function (output, path, file, callback) {
-    var resource = encode(config.rest + config.baseCollection + path + '/' + file + '?_xsl=no');
+    var resource = encode(config.rest + config.baseCollection + path + '/' + file) + '?_xsl=no';
     console.log('GET FILE', resource);
     http.get({
         host: config.host,
