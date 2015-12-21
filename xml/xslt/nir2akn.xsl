@@ -26,6 +26,7 @@
     <!-- - - - - - - - - - - - - - - - - - - -->
     <!-- Variabili usate in tutto lo script  -->
     <!-- - - - - - - - - - - - - - - - - - - -->
+    <xsl:variable name="documento" select="//nir:NIR"/>
 
     <!-- Identifica la sorgente del documento -->
     <!-- Questa euristica non e' completamente corretta: sarebbe meglio avere un parametro allo script -->
@@ -1606,10 +1607,24 @@
     </xsl:function>
 
     <xsl:function name="u:convertiLink">
-        <xsl:param name="urn"/>
-        <xsl:value-of select="u:convertiUrn($urn)"/>
-        <xsl:if test="u:component($urn)!='main'">
-            <xsl:value-of select="concat('!', u:component($urn))"/>
+        <xsl:param name="link"/>
+        <xsl:variable name="urn" select="tokenize($link, '#')[1]"/>
+        <xsl:variable name="id" select="tokenize($link, '#')[2]"/>
+        <xsl:if test="$urn != ''">
+            <xsl:value-of select="u:convertiUrn($urn)"/>
+            <xsl:if test="u:component($urn)!='main'">
+                <xsl:value-of select="concat('!', u:component($urn))"/>
+            </xsl:if>
+        </xsl:if>
+        <xsl:if test="$id">
+            <xsl:text>#</xsl:text>
+            <xsl:variable name="referenced" select="$documento//node()[@id = $id]"/>
+            <xsl:if test="$referenced">
+                <xsl:apply-templates mode="genera_id" select="$referenced"/>
+            </xsl:if>
+            <xsl:if test="not($referenced)">
+                <xsl:value-of select="$id"/>
+            </xsl:if>
         </xsl:if>
     </xsl:function>
 
