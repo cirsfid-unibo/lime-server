@@ -101,15 +101,16 @@ exports.getFile = function (output, path, file, callback) {
         auth: config.auth,
         path: resource
     }, function (res) {
+        if(res.statusCode == 404)
+            return callback(404);
+        else if (res.statusCode != 200)
+            return callback(new Error('Exist GET request has status code ' + res.statusCode));
         res.on('error', function (err) {
             res.unpipe(output);
             callback(new VError(err, 'Error getting file'));
         });
         res.on('end', function () {
-            if(res.statusCode == 404) callback(404);
-            else if (res.statusCode != 200)
-                callback(new Error('Exist GET request has status code ' + res.statusCode));
-            else callback();
+            callback();
         });
         res.pipe(output);
     });
