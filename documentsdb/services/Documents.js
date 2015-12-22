@@ -75,7 +75,7 @@ router.use(passport.authenticate('basic', { session: false }));
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {
-    var reqPath = req.path;
+    var reqPath = req.path.split('/').map(decodeURIComponent).join('/');
     // TODO: to this inside fs backend
     // var reqPath = req.path.replace(/%20/g, ' ')
     //                       .replace(/:/g, '%3A');
