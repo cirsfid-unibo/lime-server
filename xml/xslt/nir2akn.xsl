@@ -216,7 +216,7 @@
                     <FRBRdate date="{$urn_date}" name=""/>
                 </xsl:if>
                 <FRBRauthor href="#emanante" as="#author"/>
-                <FRBRlanguage language="it"/>
+                <FRBRlanguage language="ita"/>
             </FRBRExpression>
 
             <FRBRManifestation>
