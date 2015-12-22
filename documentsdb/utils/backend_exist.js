@@ -174,7 +174,7 @@ function encode(str) {
     // .replace('#', '%23')
     // .replace(':', '%3A')
     // .replace(/%(?!27|28|29|2A)/g, '%25')
-    .replace(/%/g, '%25')
+    .replace(/%(?!20)/g, '%25')
     ;
 }
 
