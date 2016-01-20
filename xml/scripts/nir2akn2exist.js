@@ -3,7 +3,7 @@ var glob = require('glob'),
     fs = require('fs'),
     nir2akn = require('../xml/nir.js').nir2akn;
 
-const path = 'Norma_20151125/';
+const path = 'Norma_20160114/';
 const existUrl = 'http://sinatra.cirsfid.unibo.it:8080/exist/rest/julyportal_cassazione/'
 const auth = 'Basic ' + new Buffer('admin:exist').toString('base64');
 

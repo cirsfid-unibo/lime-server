@@ -167,14 +167,7 @@
                 </xsl:if>
                 <!-- Aggiungi gli altri alias se presenti -->
                 <xsl:for-each select="//nir:descrittori/nir:alias">
-                    <!-- TODO: elimina name="nir" una volta che avremo la conversione -->
-                    <FRBRalias name="nir">
-                        <xsl:attribute name="value">
-                            <xsl:call-template name="convertiURN">
-                                <xsl:with-param name="urn" select="@valore"/>
-                            </xsl:call-template>
-                        </xsl:attribute>
-                    </FRBRalias>
+                    <FRBRalias value="{u:convertiLink(@valore)}"/>
                 </xsl:for-each>
 
                 <!-- Indica la data -->
@@ -306,24 +299,12 @@
 
             <!-- Reference a modifiche attive -->
             <xsl:for-each select="//nir:ciclodivita//nir:attiva">
-                <activeRef eId="{@id}" showAs="">
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                </activeRef>
+                <activeRef eId="{@id}" showAs="" href="{u:convertiLink(@xlink:href)}"/>
             </xsl:for-each>
 
             <!-- Reference a modifiche passive -->
             <xsl:for-each select="//nir:ciclodivita//nir:passiva">
-                <passiveRef eId="{@id}" showAs="">
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                </passiveRef>
+                <passiveRef eId="{@id}" showAs=""  href="{u:convertiLink(@xlink:href)}"/>
             </xsl:for-each>
 
             <!-- Reference a sorgente documento -->
