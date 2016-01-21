@@ -3,17 +3,19 @@ var glob = require('glob'),
     fs = require('fs'),
     nir2akn = require('../xml/nir.js').nir2akn;
 
-const path = 'Norma_20160114/';
+const path = 'Norma_*/';
 const existUrl = 'http://sinatra.cirsfid.unibo.it:8080/exist/rest/julyportal_cassazione/'
 const auth = 'Basic ' + new Buffer('admin:exist').toString('base64');
 
-var files = glob.sync(path + '**/*!(nif).xml')
+var files = glob.sync(path + '**/*!(nif).xml', {
+  ignore: '**/*nif.xml'
+});
 // var files = glob.sync(path + '**/155_20110706/S2110095/S2110095.xml');
 console.log(files.length);
 
 var documents = files.map(file => ({
     path: file,
-    filename: file.substring(path.length),
+    filename: file.substring(file.indexOf('/') + 1),
     nir: fs.readFileSync(file, { encoding: 'utf8' })
 }));
 
