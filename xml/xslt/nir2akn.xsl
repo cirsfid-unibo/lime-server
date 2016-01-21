@@ -59,7 +59,8 @@
     <xsl:variable name="component" select="u:component(//nir:urn/@valore)"/>
     <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
     <xsl:variable name="urn_expression_date" select="$urn_date"/>
-    <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@', $urn_expression_date)"/>
+    <!-- Todo: tieni data expression (serve solo in doc consolidati) --> 
+    <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@')"/>
     <xsl:variable name="uri_manifestation" select="concat($uri_expression, '/main.xml')"/>
 
     <!-- - - - - - - -->
