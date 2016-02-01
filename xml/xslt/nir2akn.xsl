@@ -59,7 +59,7 @@
     <xsl:variable name="component" select="u:component(//nir:urn/@valore)"/>
     <xsl:variable name="urn_date" select="replace($uri_work, '.*?(\d{4}-\d{2}-\d{2}).*', '$1')"/>
     <xsl:variable name="urn_expression_date" select="$urn_date"/>
-    <!-- Todo: tieni data expression (serve solo in doc consolidati) --> 
+    <!-- Todo: tieni data expression (serve solo in doc consolidati) -->
     <xsl:variable name="uri_expression" select="concat($uri_work, '/ita@')"/>
     <xsl:variable name="uri_manifestation" select="concat($uri_expression, '/main.xml')"/>
 
@@ -284,13 +284,7 @@
         <references source="#{$sorgente}">
             <!-- Reference a documento originale -->
             <xsl:for-each select="//nir:ciclodivita//nir:originale">
-                <original eId="{@id}" showAs="">
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                </original>
+                <original eId="{@id}" showAs="" href="{u:convertiLink(@xlink:href)}"/>
             </xsl:for-each>
 
             <!-- Nel caso manchi nir:ciclodivita, inseriamo noi l'evento crazione -->

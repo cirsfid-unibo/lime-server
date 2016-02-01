@@ -28,7 +28,7 @@
           <evento id="e1" data="20001026" fonte="#ro1" tipo="originale" />
         </eventi>
         <relazioni>
-          <originale id="ro1" xlink:href="urn:nir:stato:legge:2000-09-29;300" />
+          <originale id="ro1" xlink:href="urn:nir:stato:decreto.legislativo:2000-09-29;300" />
           <passiva id="asd" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico" />
           <attiva id="ra1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" />
           <attiva id="ra2" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico" />
