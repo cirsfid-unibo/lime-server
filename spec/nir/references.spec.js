@@ -27,7 +27,7 @@ describe('NIR metadata references', function () {
         });
     });
 
-    fit('original: urn:nir:stato:legge:2000-09-29;299', done => {
+    it('original: urn:nir:stato:legge:2000-09-29;299', done => {
         utils.convert('example.xml', akn => {
             // console.log(utils.serialize(akn))
             // utils.serialize(utils.select(akn, '//akn:meta'));

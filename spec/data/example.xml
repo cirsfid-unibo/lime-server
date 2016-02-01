@@ -39,6 +39,21 @@
           <haallegato id="ran4" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso" tipo="allegatointegrante" />
         </relazioni>
       </ciclodivita>
+      <disposizioni>
+
+        <modifichepassive>
+          <dsp:sostituzione>
+            <dsp:pos xlink:href="urn:nir:senato.repubblica:regolamento:1971-02-17;nir-19710217"/>
+            <dsp:norma xlink:href="urn:nir:senato.repubblica:delibera:1989-06-07;nir-19890607">
+              <dsp:subarg>
+                <cirsfid:sub xlink:href="urn:nir:senato.repubblica:delibera:1989-06-07;nir-19890607#rif7"/>
+                <dsp:altradata rif="#e14" nome="decorrenza"/>
+                <cirsfid:totale/>
+              </dsp:subarg>
+            </dsp:norma>
+          </dsp:sostituzione>
+        </modifichepassive>
+      </disposizioni>
     </meta>
     <articolato>
     </articolato>

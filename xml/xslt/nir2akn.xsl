@@ -360,31 +360,7 @@
                 <TLCReference eId="rif{$n}" showAs="NIR" name="urn:nir" href="{$href}"/>
             </xsl:for-each>
 
-            <!-- Todo: aggiusta anche questo..
-            <xsl:for-each select="//nir:irif">
-                <xsl:variable name="href" select="@xlink:href"/>
-                <xsl:variable name="start" select="count(./preceding::nir:irif[@xlink:href != $href])+1"/>
-                <xsl:variable name="finoa" select="@finoa"/>
-                <xsl:variable name="end" select="count(./preceding::nir:irif[@finoa != $finoa])+1"/>
-                <xsl:if test="not(./preceding::nir:irif[@xlink:href = $href])">
-                    <TLCReference eId="irif_s{$start}" showAs="">
-                        <xsl:attribute name="href">
-                            <xsl:call-template name="convertiURN">
-                                <xsl:with-param name="urn" select="@xlink:href"/>
-                            </xsl:call-template>
-                        </xsl:attribute>
-                    </TLCReference>
-                </xsl:if>
-                <xsl:if test="not(./preceding::nir:irif[@finoa = $finoa])">
-                    <TLCReference eId="irif_e{$end}" showAs="">
-                        <xsl:attribute name="href">
-                            <xsl:call-template name="convertiURN">
-                                <xsl:with-param name="urn" select="@finoa"/>
-                            </xsl:call-template>
-                        </xsl:attribute>
-                    </TLCReference>
-                </xsl:if>
-            </xsl:for-each> -->
+            <!-- Todo: aggiusta anche nir:irif@xlink:href@finoa..-->
         </references>
     </xsl:template>
 
@@ -521,34 +497,12 @@
     </xsl:template>
 
     <xsl:template match="dsp:norma">
-        <destination>
-            <xsl:choose>
-                <xsl:when test="dsp:subarg/cirsfid:sub">
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="dsp:subarg/cirsfid:sub[1]/@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                </xsl:when>
-                <xsl:when test="dsp:pos">
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="dsp:pos/@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                    <xsl:attribute name="pos">
-                        <xsl:text>unspecified</xsl:text>
-                    </xsl:attribute>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:attribute name="href">
-                        <xsl:call-template name="convertiURN">
-                            <xsl:with-param name="urn" select="@xlink:href"/>
-                        </xsl:call-template>
-                    </xsl:attribute>
-                </xsl:otherwise>
-            </xsl:choose>
-        </destination>
+        <xsl:variable name="dest" select="(
+          dsp:subarg/cirsfid:sub/@xlink:href,
+          dsp:pos/@xlink:href,
+          @xlink:href
+        )"/>
+        <destination href="{u:convertiLink($dest[1])}"/>
     </xsl:template>
 
     <xsl:template match="dsp:termine      | dsp:condizione    | dsp:posizione   |
@@ -1090,17 +1044,10 @@
     </xsl:template>
 
     <xsl:template match="nir:irif">
-        <rref>
-            <xsl:attribute name="from">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@xlink:href"/>
-                </xsl:call-template>
-            </xsl:attribute>
-            <xsl:attribute name="upTo">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@finoa"/>
-                </xsl:call-template>
-            </xsl:attribute>
+        <rref
+          from="{u:convertiLink(@xlink:href)}"
+          upTo="{u:convertiLink(@finoa)}"
+        >
             <xsl:apply-templates/>
         </rref>
     </xsl:template>
@@ -1120,18 +1067,10 @@
     </xsl:template>
 
     <xsl:template match="nir:imod">
-        <rmod>
+        <rmod
+          from="{u:convertiLink(@xlink:href)}"
+          upTo="{u:convertiLink(@finoa)}">
             <xsl:apply-templates select="." mode="genera_eId"/>
-            <xsl:attribute name="from">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@xlink:href"/>
-                </xsl:call-template>
-            </xsl:attribute>
-            <xsl:attribute name="upTo">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@finoa"/>
-                </xsl:call-template>
-            </xsl:attribute>
             <xsl:apply-templates/>
         </rmod>
     </xsl:template>
@@ -1481,79 +1420,6 @@
         <xsl:variable name="month" select="substring($date, 5, 2)"/>
         <xsl:variable name="day" select="substring($date, 7, 2)"/>
         <xsl:value-of select="concat($year, '-', $month, '-', $day)"/>
-    </xsl:template>
-
-    <xsl:template name="convertiURN">
-        <!--
-            nir       urn:nir:autorita:provvedimento:estremi[:annesso..][@versione][*comunicato..][$manifestazione][#id]
-                      urn:nir:presidenza.consiglio.ministri:decreto:2009-12-18;206
-            akn       /akn/it/act/provvedimento/autorita/data/num_title/ita@
-            example   urn:nir:stato:decreto.legislativo:1992-04-30;285#art118-com6
-        -->
-        <xsl:param name="urn"/>
-        <xsl:variable name="i1" select="substring-after($urn, 'urn:nir:')"/>
-        <!-- Eg. autorita:provvedimento:estremi[:annesso..][@versione][*comunicato..][$manifestazione][#id] -->
-        <xsl:variable name="autorita" select="substring-before($i1, ':')"/>
-        <!-- Eg. autorita -->
-        <xsl:variable name="i2" select="substring-after($i1, ':')"/>
-        <!-- Eg. provvedimento:estremi[:annesso..][@versione][*comunicato..][$manifestazione][#id] -->
-        <xsl:variable name="provvedimento" select="substring-before($i2, ':')"/>
-        <!-- Eg. provvedimento -->
-        <xsl:variable name="i3" select="substring-after($i2, ':')"/>
-        <!-- Eg. estremi[:annesso..][@versione][*comunicato..][$manifestazione][#id] -->
-        <xsl:variable name="n1" select="substring-before($i3, ':')"/>
-        <xsl:variable name="n2" select="substring-before($i3, '@')"/>
-        <xsl:variable name="n3" select="substring-before($i3, '*')"/>
-        <xsl:variable name="n4" select="substring-before($i3, '#')"/>
-        <xsl:variable name="estremi">
-            <xsl:choose>
-                <xsl:when test='$n1'><xsl:value-of select="$n1"/></xsl:when>
-                <xsl:when test='$n2'><xsl:value-of select="$n2"/></xsl:when>
-                <xsl:when test='$n3'><xsl:value-of select="$n3"/></xsl:when>
-                <xsl:when test='$n4'><xsl:value-of select="$n4"/></xsl:when>
-                <xsl:otherwise><xsl:value-of select="$i3"/></xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <!-- Eg. 2010-03-08;nir-s2102504 -->
-        <xsl:variable name="data" select="substring-before($estremi, ';')"/>
-        <xsl:variable name="num" select="substring-after($estremi, ';')"/>
-
-        <xsl:variable name="id" select="substring-after($urn, '#')"/>
-
-        <!-- Output -->
-        <xsl:if test="starts-with($urn, 'urn:nir')">
-            <xsl:text>/akn/it/</xsl:text>
-            <xsl:choose>
-                <xsl:when test="$provvedimento = 'decreto.legislativo'"><xsl:text>act</xsl:text></xsl:when>
-                <xsl:when test="$provvedimento = 'decreto'"><xsl:text>act</xsl:text></xsl:when>
-                <xsl:otherwise><xsl:text>act</xsl:text></xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="$provvedimento"/>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="$autorita"/>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="$data"/>
-            <xsl:text>/</xsl:text>
-            <xsl:value-of select="$num"/>
-
-            <!-- Questo serve solo in caso di manifestation
-                <xsl:value-of select="'/ita'"/> -->
-        </xsl:if>
-        <xsl:if test="$id">
-            <!-- Se siamo in fondo ad un uri dobbiamo mettere la manifestation -->
-            <xsl:if test="starts-with($urn, 'urn:nir')">
-                <xsl:text>/ita/</xsl:text>
-                <xsl:value-of select="$data"/>
-            </xsl:if>
-            <xsl:text>#</xsl:text>
-            <xsl:if test="//node()[@id = $id]">
-                <xsl:apply-templates mode="genera_id" select="//node()[@id = $id]"/>
-            </xsl:if>
-            <xsl:if test="not(//node()[@id = $id])">
-                <xsl:value-of select="$id"/>
-            </xsl:if>
-        </xsl:if>
     </xsl:template>
 
     <xsl:function name="u:convertiUrn">
