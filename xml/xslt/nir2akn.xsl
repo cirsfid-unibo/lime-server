@@ -14,7 +14,8 @@
     xmlns:h="http://www.w3.org/HTML/1998/html4"
     xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/"
     xmlns:u="http://www.sinatra.cirsfid.unibo.it/nir2akn/#conversioneUrn"
-    exclude-result-prefixes="xsl nir dsp xlink h u">
+    xmlns:id="http://www.sinatra.cirsfid.unibo.it/nir2akn/#conversioneId"
+    exclude-result-prefixes="xsl nir dsp xlink h u id">
     <xsl:output indent="yes"/>
     <xsl:strip-space elements="*"/>
 
@@ -534,8 +535,7 @@
 
     <xsl:template match="nir:modificheattive/*/dsp:pos | nir:modifichepassive/*/dsp:pos">
         <xsl:variable name="oId" select="substring-after(@xlink:href, '#')"/>
-        <source>
-            <xsl:attribute name="href">#<xsl:apply-templates mode="genera_id" select="//node()[@id = $oId]"/></xsl:attribute>
+        <source href="#{id:generaId(//node()[@id = $oId])}">
             <xsl:apply-templates />
         </source>
     </xsl:template>
@@ -738,20 +738,14 @@
 
     <xsl:template match="dsp:novella">
         <xsl:variable name="oId" select="substring-after(dsp:pos/@xlink:href, '#')"/>
-        <new>
-            <xsl:attribute name="href">
-                <xsl:apply-templates mode="genera_id" select="//node()[@id = $oId]"/>
-            </xsl:attribute>
+        <new href="{id:generaId(//node()[@id = $oId])}">
             <xsl:apply-templates />
         </new>
     </xsl:template>
 
     <xsl:template match="dsp:novellando">
         <xsl:variable name="oId" select="substring-after(dsp:pos/@xlink:href, '#')"/>
-        <old>
-            <xsl:attribute name="href">
-                <xsl:apply-templates mode="genera_id" select="//node()[@id = $oId]"/>
-            </xsl:attribute>
+        <old href="{id:generaId(//node()[@id = $oId])}">
             <xsl:apply-templates />
         </old>
     </xsl:template>
@@ -760,8 +754,7 @@
     <!--  Contenuto  -->
     <!-- - - - - - - -->
     <xsl:template match="nir:intestazione">
-        <preface>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <preface eId="{id:generaId(.)}">
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </preface>
     </xsl:template>
@@ -779,8 +772,7 @@
     </xsl:template>
 
     <xsl:template match="nir:intestazione//nir:titoloDoc">
-        <docTitle>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <docTitle eId="{id:generaId(.)}">
             <xsl:apply-templates/>
             <xsl:if test=". = //nir:titoloDoc[1]">
                 <xsl:for-each select="//nir:avvertenza">
@@ -814,15 +806,13 @@
 
     <!-- Preambolo -->
     <xsl:template match="nir:formulainiziale">
-        <preamble>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <preamble eId="{id:generaId(.)}">
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </preamble>
     </xsl:template>
 
     <xsl:template match="nir:preambolo">
-        <container name="preambolo_nir">
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <container name="preambolo_nir" eId="{id:generaId(.)}">
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </container>
     </xsl:template>
@@ -875,58 +865,50 @@
     </xsl:template>
 
     <xsl:template match="nir:libro">
-        <book>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <book eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </book>
     </xsl:template>
 
     <xsl:template match="nir:parte">
-        <part>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <part eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </part>
     </xsl:template>
 
     <xsl:template match="nir:titolo">
-        <title>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <title eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </title>
     </xsl:template>
 
     <xsl:template match="nir:capo">
-        <chapter>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <chapter eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </chapter>
     </xsl:template>
 
     <xsl:template match="nir:sezione">
-        <section>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <section eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </section>
     </xsl:template>
 
     <xsl:template match="nir:paragrafo">
-        <paragraph>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <paragraph eId='{id:generaId(.)}'>
             <xsl:apply-templates select="node()"/>
         </paragraph>
     </xsl:template>
 
     <xsl:template match="nir:articolo">
-        <article>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <article eId='{id:generaId(.)}'>
             <xsl:apply-templates select="node()"/>
         </article>
     </xsl:template>
 
     <xsl:template match="nir:rubrica">
         <!-- Come scelgo se mettere subheading? -->
-        <heading>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <heading eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </heading>
     </xsl:template>
@@ -940,8 +922,7 @@
     </xsl:template>
 
     <xsl:template match="nir:comma">
-        <paragraph>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <paragraph eId='{id:generaId(.)}'>
             <xsl:apply-templates select="node()"/>
         </paragraph>
     </xsl:template>
@@ -952,8 +933,7 @@
         <list>
             <xsl:variable name="current" select="."/>
             <xsl:for-each select="$current | following-sibling::node()[name() = name($current)]">
-                <point>
-                    <xsl:apply-templates select="." mode="genera_eId"/>
+                <point eId='{id:generaId(.)}'>
                     <xsl:apply-templates select="node()"/>
                 </point>
             </xsl:for-each>
@@ -964,8 +944,7 @@
     </xsl:template>
 
     <xsl:template match="nir:corpo">
-        <content>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <content eId='{id:generaId(.)}'>
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </content>
     </xsl:template>
@@ -973,15 +952,13 @@
     <!-- Workaround per bug in file Piemonte, dove si ha un nir:corpo invece che
     nir:alinea in alcune liste -->
     <xsl:template match="nir:corpo[following-sibling::*[1][self::nir:en or self::nir:el or self::nir:ep]]">
-        <intro>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <intro eId='{id:generaId(.)}'>
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </intro>
     </xsl:template>
 
     <xsl:template match="nir:alinea">
-        <intro>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <intro eId='{id:generaId(.)}'>
             <xsl:apply-templates select="." mode="aggiusta_pattern"/>
         </intro>
     </xsl:template>
@@ -1053,15 +1030,13 @@
     </xsl:template>
 
     <xsl:template match="nir:mod">
-        <mod>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <mod eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </mod>
     </xsl:template>
 
     <xsl:template match="nir:mmod">
-        <mmod>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <mmod eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </mmod>
     </xsl:template>
@@ -1069,17 +1044,14 @@
     <xsl:template match="nir:imod">
         <rmod
           from="{u:convertiLink(@xlink:href)}"
-          upTo="{u:convertiLink(@finoa)}">
-            <xsl:apply-templates select="." mode="genera_eId"/>
+          upTo="{u:convertiLink(@finoa)}" eId='{id:generaId(.)}'>
             <xsl:apply-templates/>
         </rmod>
     </xsl:template>
 
     <xsl:template match="nir:virgolette">
         <!-- Todo: pensa e riabilita quotedText -->
-        <!-- <xsl:choose> -->
-            <!-- <xsl:when test="@tipo = 'struttura'"> -->
-                <quotedStructure>
+                <quotedStructure eId="{id:generaId(.)}">
                     <xsl:variable name="startQuote" select="node()[position()=1 and string-length(normalize-space(.)) &lt; 4]"/>
                     <xsl:if test="$startQuote">
                         <xsl:attribute name="startQuote"><xsl:value-of select="normalize-space($startQuote)"/></xsl:attribute>
@@ -1092,17 +1064,8 @@
                     <xsl:variable name="content">
                         <nir:virgolette><xsl:copy-of select="$children"/></nir:virgolette>
                     </xsl:variable>
-                    <xsl:apply-templates select="." mode="genera_eId"/>
                     <xsl:apply-templates select="$content" mode="aggiusta_pattern"/>
                 </quotedStructure>
-            <!-- </xsl:when> -->
-            <!-- <xsl:otherwise> -->
-                <!-- <quotedText> -->
-                    <!-- <xsl:apply-templates select="." mode="genera_eId"/> -->
-                    <!-- <xsl:apply-templates select="node()"/> -->
-                <!-- </quotedText> -->
-            <!-- </xsl:otherwise> -->
-        <!-- </xsl:choose> -->
     </xsl:template>
 
     <xsl:template match="nir:virgolette[@tipo = 'struttura']/text()[string-length(.) &lt; 5][position() = 1]">
@@ -1204,8 +1167,7 @@
     </xsl:template>
 
     <xsl:template match="nir:lista">
-        <blockList>
-            <xsl:apply-templates select="." mode="genera_eId"/>
+        <blockList eId="{id:generaId(.)}">
             <xsl:apply-templates/>
         </blockList>
     </xsl:template>
@@ -1303,116 +1265,47 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="*" mode="genera_eId">
-        <xsl:attribute name="eId">
-            <xsl:apply-templates select="." mode="genera_id"/>
-        </xsl:attribute>
-    </xsl:template>
+    <xsl:function name="id:generaId">
+        <xsl:param name="node"/>
 
-    <xsl:template match="*" mode="genera_id">
-        <xsl:for-each select="./ancestor-or-self::node()
-            [(name() = 'virgolette') or
-             (name() = 'articolo') or
-             (name() = 'capo') or
-             (name() = 'alinea') or
-             (name() = 'list') or
-             (name() = 'paragrafo' or name() = 'comma') or
-             (name() = 'sezione') or
-             (name() = 'rubrica') or
-             (name() = 'intestazione') or
-             (name() = 'preambolo') or
-             (name() = 'formulainiziale') or
-             (name() = 'libro') or
-             (name() = 'parte') or
-             (name() = 'titolo') or
-             (name() = 'corpo') or
-             (name() = 'mod') or
-             (name() = 'mmod') or
-             (name() = 'preambolo') or
-             (name() = 'titoloDoc') or
-             (name() = 'el' or name() = 'en' or name() = 'ep') or
-             (name() = 'imod')]">
+        <xsl:variable name="blocks">
+            <id:mapping from="articolo" to="art"/>
+            <id:mapping from="capo" to="chp"/>
+            <id:mapping from="alinea" to="intro"/>
+            <id:mapping from="list" to="list"/>
+            <id:mapping from="paragrafo" to="para"/>
+            <id:mapping from="comma" to="para"/>
+            <id:mapping from="sezione" to="Sec"/>
+            <id:mapping from="virgolette" to=""/>
+            <id:mapping from="rubrica" to="hdg"/>
+            <id:mapping from="intestazione" to="preface"/>
+            <id:mapping from="formulainiziale" to="preamble"/>
+            <id:mapping from="libro" to="book"/>
+            <id:mapping from="parte" to="part"/>
+            <id:mapping from="preambolo" to=""/>
+            <id:mapping from="titolo" to="title"/>
+            <id:mapping from="corpo" to="content"/>
+            <id:mapping from="mod" to="mod"/>
+            <id:mapping from="mmod" to="mmod"/>
+            <id:mapping from="imod" to="rmod"/>
+            <id:mapping from="titoloDoc" to="docTitle"/>
+            <id:mapping from="preambolo" to="preambolonir"/>
+            <id:mapping from="el" to="point"/>
+            <id:mapping from="en" to="point"/>
+            <id:mapping from="ep" to="point"/>
+        </xsl:variable>
 
-            <xsl:choose>
-                <xsl:when test="name() = 'virgolette'">
-                    <xsl:text>qstr</xsl:text>
-                </xsl:when>
-                <!-- Todo: riabilita quotedText -->
-                <!-- <xsl:when test="name() = 'virgolette' and @tipo = 'struttura'"> -->
-                    <!-- <xsl:text>qstr</xsl:text> -->
-                <!-- </xsl:when> -->
-                <!-- <xsl:when test="name() = 'virgolette' and not(@tipo = 'struttura')"> -->
-                    <!-- <xsl:text>qtext</xsl:text> -->
-                <!-- </xsl:when> -->
-                <xsl:when test="name() = 'articolo'">
-                    <xsl:text>art</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'capo'">
-                    <xsl:text>chp</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'alinea'">
-                    <xsl:text>intro</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'list'">
-                    <xsl:text>list</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'paragrafo' or name() = 'comma'">
-                    <xsl:text>para</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'sezione'">
-                    <xsl:text>Sec</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'rubrica'">
-                    <xsl:text>hdg</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'intestazione'">
-                    <xsl:text>preface</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'formulainiziale'">
-                    <xsl:text>preamble</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'libro'">
-                    <xsl:text>book</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'parte'">
-                    <xsl:text>part</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'titolo'">
-                    <xsl:text>title</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'corpo'">
-                    <xsl:text>content</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'mod'">
-                    <xsl:text>mod</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'mmod'">
-                    <xsl:text>mmod</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'imod'">
-                    <xsl:text>rmod</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'titoloDoc'">
-                    <xsl:text>docTitle</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'preambolo'">
-                    <xsl:text>preambolonir</xsl:text>
-                </xsl:when>
-                <xsl:when test="name() = 'el' or name() = 'en' or name() = 'ep'">
-                    <xsl:text>point</xsl:text>
-                </xsl:when>
-                <xsl:otherwise><xsl:text>error</xsl:text></xsl:otherwise>
-            </xsl:choose>
-
+        <xsl:for-each select="$node/ancestor-or-self::node()[name()=$blocks/id:mapping/@from]">
+            <xsl:variable name="name" select="./name()"/>
+            <xsl:value-of select="$blocks/id:mapping[@from=$name]/@to"/>
             <xsl:text>_</xsl:text>
-            <xsl:variable name="name" select="name()"/>
             <xsl:value-of select="count(. | ./preceding-sibling::node()[name() = $name])"/>
 
             <xsl:if test="position() != last()">
                 <xsl:text>__</xsl:text>
             </xsl:if>
         </xsl:for-each>
-    </xsl:template>
+    </xsl:function>
 
     <xsl:template name="convertiData">
         <xsl:param name="date"/>
@@ -1462,7 +1355,7 @@
             <xsl:text>#</xsl:text>
             <xsl:variable name="referenced" select="$documento//node()[@id = $id]"/>
             <xsl:if test="$referenced">
-                <xsl:apply-templates mode="genera_id" select="$referenced"/>
+                <xsl:value-of select="id:generaId($referenced)"/>
             </xsl:if>
             <xsl:if test="not($referenced)">
                 <xsl:value-of select="$id"/>
