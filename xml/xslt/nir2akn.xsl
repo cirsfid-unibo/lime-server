@@ -1311,7 +1311,7 @@
     <xsl:function name="id:getNumber">
         <xsl:param name="node"/>
         <xsl:variable name="name" select="$node/name()"/>
-        <xsl:variable name="num" select="normalize-space($node/nir:num//text())"/>
+        <xsl:variable name="num" select="normalize-space(string-join($node/nir:num//text(), ''))"/>
         <xsl:choose>
             <!-- f-bis) -->
             <xsl:when test="matches($num, '^([a-z](-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?)\).{0,5}?$')">
@@ -1338,8 +1338,8 @@
                 </xsl:analyze-string>
             </xsl:when>
             <!-- Art. 321-bis. -->
-            <xsl:when test="matches($num, '^(Art.|ARTICOLO) (\d{1,4}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{0,5}?$')">
-                <xsl:analyze-string select="$num" regex="^(Art.|ARTICOLO) (\d{{1,4}}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{{0,5}}?$">
+            <xsl:when test="matches($num, '^(Art.|ARTICOLO) (\d{1,4}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?)')">
+                <xsl:analyze-string select="$num" regex="^(Art.|ARTICOLO) (\d{{1,4}}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?)">
                     <xsl:matching-substring>
                         <xsl:value-of select="replace(regex-group(2), '-', '')"/>
                     </xsl:matching-substring>
