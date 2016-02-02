@@ -13,17 +13,17 @@ fdescribe('NIR Urn -> ID conversion', function () {
           'art_321sexies',
           'art_321septies',
           'art_321octies',
-          'art_1321nonies',
+          'art_321nonies',
           'book_IV',
-          'book_IV-bis',
+          'book_IVbis',
           'chp_IV',
           'title_IV',
           'chp_1',
           'chp_11',
-          'point_2-bis',
-          'point_2',
-          'point_f',
-          'point_fbis'
+          'chp_11__point_2bis',
+          'chp_11__point_2',
+          'chp_11__point_f',
+          'chp_11__point_fbis'
         ];
         utils.convert('example.xml', akn => {
             var blocks = utils.select('//akn:body//*[@eId]', akn);

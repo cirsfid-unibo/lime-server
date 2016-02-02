@@ -1299,13 +1299,58 @@
             <xsl:variable name="name" select="./name()"/>
             <xsl:value-of select="$blocks/id:mapping[@from=$name]/@to"/>
             <xsl:text>_</xsl:text>
-            <xsl:value-of select="count(. | ./preceding-sibling::node()[name() = $name])"/>
+            <xsl:value-of select="id:getNumber(.)"/>
 
             <xsl:if test="position() != last()">
                 <xsl:text>__</xsl:text>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+
+    <!-- Fa il parsing del tag num contenuto all'interno e genera un id -->
+    <xsl:function name="id:getNumber">
+        <xsl:param name="node"/>
+        <xsl:variable name="name" select="$node/name()"/>
+        <xsl:variable name="num" select="normalize-space($node/nir:num//text())"/>
+        <xsl:choose>
+            <!-- f-bis) -->
+            <xsl:when test="matches($num, '^([a-z](-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?)\).{0,5}?$')">
+                <xsl:value-of select="replace(substring-before($num, ')'), '-', '')"/>
+            </xsl:when>
+            <!-- 11° -->
+            <xsl:when test="matches($num, '^\d{1,2}°$')">
+                <xsl:value-of select="substring-before($num, '°')"/>
+            </xsl:when>
+            <!-- 2-bis. -->
+            <xsl:when test="matches($num, '^(\d{1,4}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{0,5}?$')">
+                <xsl:analyze-string select="$num" regex="^(\d{{1,4}}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{{0,5}}?$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="replace(regex-group(1), '-', '')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <!-- LIBRO IV-bis. -->
+            <xsl:when test="matches($num, '^(LIBRO|CAPO|TITOLO) ([IVX]{1,4}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{0,5}?$')">
+                <xsl:analyze-string select="$num" regex="^(LIBRO|CAPO|TITOLO) ([IVX]{{1,4}}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{{0,5}}?$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="replace(regex-group(2), '-', '')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <!-- Art. 321-bis. -->
+            <xsl:when test="matches($num, '^(Art.|ARTICOLO) (\d{1,4}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{0,5}?$')">
+                <xsl:analyze-string select="$num" regex="^(Art.|ARTICOLO) (\d{{1,4}}(-(bis|ter|quater|quinquies|sexies|septies|octies|nonies))?).{{0,5}}?$">
+                    <xsl:matching-substring>
+                        <xsl:value-of select="replace(regex-group(2), '-', '')"/>
+                    </xsl:matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="count($node | $node/preceding-sibling::node()[name() = $name])"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
 
     <xsl:template name="convertiData">
         <xsl:param name="date"/>
