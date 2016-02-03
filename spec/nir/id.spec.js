@@ -1,5 +1,5 @@
 
-fdescribe('NIR Urn -> ID conversion', function () {
+describe('NIR Urn -> ID conversion', function () {
     var utils = require('./utils.js');
 
     it('should convert ids', done => {
@@ -23,17 +23,19 @@ fdescribe('NIR Urn -> ID conversion', function () {
           'chp_11__point_2bis',
           'chp_11__point_2',
           'chp_11__point_f',
-          'chp_11__point_fbis'
+          'chp_11__point_fbis',
+          'art_11',
+          'chp_11__title_1'
         ];
         utils.convert('example.xml', akn => {
             var blocks = utils.select('//akn:body//*[@eId]', akn);
+            // console.log(utils.serialize(akn));
             blocks.forEach((el, i) => {
               var num = utils.serialize(utils.select('akn:num/text()', el, true));
               var eid = utils.selectAttr('@eId', el);
-              console.log(i, num, eid);
+            //   console.log(i, num, eid);
               expect(eid).toEqual(expected[i]);
             });
-            // console.log(utils.serialize(akn));
             done();
         });
     });

@@ -79,6 +79,8 @@
         <el> <num>2)</num>Prova</el>
         <el> <num>f)</num>Prova</el>
         <el> <num>f-bis)</num>Prova</el>
+        <articolo><num>...</num></articolo>
+        <titolo><num>...</num></titolo>
       </capo>
     </articolato>
   </Legge>

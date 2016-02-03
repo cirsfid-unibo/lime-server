@@ -535,7 +535,7 @@
 
     <xsl:template match="nir:modificheattive/*/dsp:pos | nir:modifichepassive/*/dsp:pos">
         <xsl:variable name="oId" select="substring-after(@xlink:href, '#')"/>
-        <source href="#{id:generaId(//node()[@id = $oId])}">
+        <source href="~{id:generaId(//node()[@id = $oId])}">
             <xsl:apply-templates />
         </source>
     </xsl:template>
@@ -1269,47 +1269,50 @@
         <xsl:param name="node"/>
 
         <xsl:variable name="blocks">
-            <id:mapping from="articolo" to="art"/>
-            <id:mapping from="capo" to="chp"/>
-            <id:mapping from="alinea" to="intro"/>
-            <id:mapping from="list" to="list"/>
+            <id:mapping from="articolo"  to="art"  type="global"/>
+            <id:mapping from="libro"     to="book" type="global"/>
+            <id:mapping from="capo"      to="chp"/>
+            <id:mapping from="alinea"    to="intro"/>
+            <id:mapping from="list"      to="list"/>
             <id:mapping from="paragrafo" to="para"/>
-            <id:mapping from="comma" to="para"/>
-            <id:mapping from="sezione" to="Sec"/>
-            <id:mapping from="virgolette" to=""/>
-            <id:mapping from="rubrica" to="hdg"/>
+            <id:mapping from="comma"     to="para"/>
+            <id:mapping from="sezione"   to="Sec"/>
+            <id:mapping from="virgolette" to="qstr"/>
+            <id:mapping from="rubrica"   to="hdg"/>
             <id:mapping from="intestazione" to="preface"/>
             <id:mapping from="formulainiziale" to="preamble"/>
-            <id:mapping from="libro" to="book"/>
-            <id:mapping from="parte" to="part"/>
-            <id:mapping from="preambolo" to=""/>
-            <id:mapping from="titolo" to="title"/>
-            <id:mapping from="corpo" to="content"/>
-            <id:mapping from="mod" to="mod"/>
-            <id:mapping from="mmod" to="mmod"/>
-            <id:mapping from="imod" to="rmod"/>
+            <id:mapping from="parte"     to="part"/>
+            <id:mapping from="titolo"    to="title"/>
+            <id:mapping from="corpo"     to="content"/>
+            <id:mapping from="mod"       to="mod"/>
+            <id:mapping from="mmod"      to="mmod"/>
+            <id:mapping from="imod"      to="rmod"/>
             <id:mapping from="titoloDoc" to="docTitle"/>
             <id:mapping from="preambolo" to="preambolonir"/>
-            <id:mapping from="el" to="point"/>
-            <id:mapping from="en" to="point"/>
-            <id:mapping from="ep" to="point"/>
+            <id:mapping from="el"        to="point"/>
+            <id:mapping from="en"        to="point"/>
+            <id:mapping from="ep"        to="point"/>
         </xsl:variable>
 
-        <xsl:for-each select="$node/ancestor-or-self::node()[name()=$blocks/id:mapping/@from]">
-            <xsl:variable name="name" select="./name()"/>
-            <xsl:value-of select="$blocks/id:mapping[@from=$name]/@to"/>
-            <xsl:text>_</xsl:text>
-            <xsl:value-of select="id:getNumber(.)"/>
-
-            <xsl:if test="position() != last()">
-                <xsl:text>__</xsl:text>
-            </xsl:if>
-        </xsl:for-each>
+        <xsl:variable name="block" select="$blocks/id:mapping[@from=$node/name()]"/>
+        <xsl:variable name="context"
+            select="$node/ancestor::node()[name()=$blocks/id:mapping/@from][1]"/>
+        <xsl:variable name="prefix" select="if ($context and not($block/@type='global'))
+            then concat(id:generaId($context), '__')
+            else ''"/>
+        <xsl:value-of select="concat(
+            $prefix,
+            $block/@to,
+            '_',
+            id:getNumber($node, $block/@type='global'))"/>
     </xsl:function>
 
-    <!-- Fa il parsing del tag num contenuto all'interno e genera un id -->
+    <!-- Fa il parsing del tag num contenuto all'interno del nodo.
+         Se il parsing fallisce la funzione conta quanti nodi con quel nome
+         vi erano (globalmente o a quel livello in base al parametro global) -->
     <xsl:function name="id:getNumber">
         <xsl:param name="node"/>
+        <xsl:param name="global"/>
         <xsl:variable name="name" select="$node/name()"/>
         <xsl:variable name="num" select="normalize-space(string-join($node/nir:num//text(), ''))"/>
         <xsl:choose>
@@ -1346,7 +1349,10 @@
                 </xsl:analyze-string>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="count($node | $node/preceding-sibling::node()[name() = $name])"/>
+                <xsl:variable name="preceding" select="if ($global)
+                    then $node/preceding::node()
+                    else $node/preceding-sibling::node()"/>
+                <xsl:value-of select="1 + count($preceding[name() = $name])"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
@@ -1397,7 +1403,7 @@
             </xsl:if>
         </xsl:if>
         <xsl:if test="$id">
-            <xsl:text>#</xsl:text>
+            <xsl:text>~</xsl:text>
             <xsl:variable name="referenced" select="$documento//node()[@id = $id]"/>
             <xsl:if test="$referenced">
                 <xsl:value-of select="id:generaId($referenced)"/>
