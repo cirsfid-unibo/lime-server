@@ -1,5 +1,4 @@
 {
-    "port": "9006",
     "mongodb": {
         "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb",
         "collections": {

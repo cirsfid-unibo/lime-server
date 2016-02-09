@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://dev@sinatra.cirsfid.unibo.it/home/git/aknservices.git"
+    "url": "git@github.com:cirsfid-unibo/lime-server.git"
   },
   "dependencies": {
     "basic-auth": "^1.0.0",
