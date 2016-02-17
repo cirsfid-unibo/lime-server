@@ -4,6 +4,9 @@ var nir2akn = require('../../xml/xml/nir').nir2akn,
     R = require('ramda'),
     fs = require('fs');
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
+jasmine.getEnv().defaultTimeoutInterval = 15000;
+
 var cache = {};
 var parser = new xmldom.DOMParser();
 var serializer = new xmldom.XMLSerializer();
