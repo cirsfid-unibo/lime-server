@@ -77,9 +77,9 @@ var exportedDocuments = {},
 setInterval(function () {
     var currentTime = getTime();
     Object.keys(exportedDocuments).forEach(function (key) {
-        if (exportedDocuments[key].time + maxMemorizationTime > currentTime ) {
-            console.log('Export: deleting ' + key + ' after ' +
-              (exportedDocuments[key].time - currentTime)/1000/60 + ' minutes');
+        var elapsedTime = currentTime - exportedDocuments[key].time;
+        if (elapsedTime > maxMemorizationTime) {
+            console.log('Export: deleting ' + key + ' after ' + (elapsedTime)/1000/60 + ' minutes');
             delete exportedDocuments[key];
         }
     });
