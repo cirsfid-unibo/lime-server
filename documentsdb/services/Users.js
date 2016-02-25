@@ -61,6 +61,16 @@ var router = express.Router();
 // This is an hack to disable that header.
 BasicStrategy.prototype._challenge = function() { return '...'; }
 
+// Make sure the demo user exists.
+setTimeout(function () {
+    createUser ('demo@lime.com', 'demo', {}, function (err, r) {
+        if (err)
+            console.warn('Creating default user failed');
+        if (!err && r.upsertedCount > 0)
+            console.log('Created default user demo@lime.com');
+    })
+}, 5000);
+
 // User object:
 // {
 //     username: string,            Username/Email
@@ -90,6 +100,17 @@ router.post('/', function (req, res, next) {
     if (!username) return next(Boom.badRequest('Missing username parameter'));
     if (!password) return next(Boom.badRequest('Missing password parameter'));
 
+    createUser(username, password, preferences, function (err, r) {
+        if (err)
+            next(new VError(err, 'Error registering user'));
+        else if (r.upsertedCount == 0)
+            next(Boom.badRequest('User already exists'));
+        else
+            res.send('User created').end();
+    });
+});
+
+function createUser (username, password, preferences, cb) {
     db.users.updateOne({
         username: username
     }, {
@@ -100,15 +121,8 @@ router.post('/', function (req, res, next) {
         }
     }, {
         upsert: true
-    }, function (err, r) {
-        if (err)
-            next(new VError(err, 'Error registering user'));
-        else if (r.upsertedCount == 0)
-            next(Boom.badRequest('User already exists'));
-        else
-            res.send('User created').end();
-    });
-});
+    }, cb);
+}
 
 // Passport middleware authentication strategy
 passport.use(new BasicStrategy(function (username, password, next) {
@@ -127,8 +141,6 @@ passport.use(new BasicStrategy(function (username, password, next) {
         }
     });
 }));
-
-
 
 
 router.use(passport.initialize());
