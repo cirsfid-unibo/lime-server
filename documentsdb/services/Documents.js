@@ -61,7 +61,8 @@ var express = require('express'),
 var db = require('../utils/mongodb.js'),
     secondary_backend = require('../utils/backend_exist'),
     main_backend = require('../utils/backend_fs'),
-    DocToXml = require('../converters/DocToXml');
+    DocToXml = require('../converters/DocToXml'),
+    AknToEpub = require('../converters/AknToEpub');
 
 // Swap backends
 if (require('../config.json').existIsMainBackend) {
@@ -75,7 +76,8 @@ router.use(passport.authenticate('basic', { session: false }));
 
 // Parse path and file parameters.
 router.use(function (req, res, next) {
-    var reqPath = path.normalize(req.path).split('/').map(decodeURIComponent).join('/');
+    var reqPath = path.normalize(req.path).replace(/\\/g, '/')
+                        .split('/').map(decodeURIComponent).join('/');
     // TODO: to this inside fs backend
     // var reqPath = req.path.replace(/%20/g, ' ')
     //                       .replace(/:/g, '%3A');
@@ -89,6 +91,8 @@ router.use(function (req, res, next) {
     }
     next();
 });
+
+router.use(require('../utils/extensionMiddleware.js'));
 
 // Check permissions
 router.use(function (req, res, next) {
@@ -110,14 +114,20 @@ function isAllowed(user, path) {
 // Es. GET /Documents/pippo@gmail.com/examples/it/doc/file.akn
 router.get('*', function (req, res, next) {
     if (!req.file) return next();
-
-    if (req.file.match(/.docx?$/) && req.headers.accept == 'text/html') {
+    if (req.extension == 'doc' && req.headers.accept == 'text/html') {
         var doc2xml = new DocToXml();
         main_backend.getFile(doc2xml, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();
             else if (err) next(err);
         });
         doc2xml.pipe(res);
+    } else if (req.extension == 'epub' && req.headers.accept == 'application/epub+zip') {
+        var akn2epub = new AknToEpub();
+        main_backend.getFile(akn2epub, req.dir, req.fileNoExtension, function (err) {
+            if (err == 404) res.status(404).end();
+            else if (err) next(err);
+        });
+        akn2epub.pipe(res);
     } else {
         main_backend.getFile(res, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();

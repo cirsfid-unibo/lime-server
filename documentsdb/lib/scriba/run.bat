@@ -1,0 +1,1 @@
+java -Xmx1024m -jar ScribaEBookMaker.jar -cr "gray" -c ".\test-ebook-scf.xml" -t ALL -o ".\output\finalbook"

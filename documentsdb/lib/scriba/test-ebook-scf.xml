@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This is a SCF to Test Scriba and its plugins -->
+
+<book version="1.0">
+
+	<metadata>
+		<metaitem eletype="dc" elename="title">Test 1.5</metaitem>
+		<metaitem eletype="dc" elename="title1">XVII Legislatura</metaitem>
+		<metaitem eletype="dc" elename="creator" role="aut" >Servizio dell'Informatica</metaitem>
+		<metaitem eletype="dc" elename="creator" role="aut" >Roberto Battistoni</metaitem>
+		<metaitem eletype="dc" elename="creator" role="edt" >Senato della Repubblica</metaitem>
+		<metaitem eletype="dc" elename="language">it</metaitem>
+		<metaitem eletype="dc" elename="identifier" id="senabookid">testId</metaitem>
+		<metaitem eletype="dc" elename="subject">Test</metaitem>
+		<metaitem eletype="dc" elename="date">%date%</metaitem>
+		<metaitem eletype="meta" elename="meta" name="copyright" content="Senato della Repubblica 2014" destination="opf"/>
+		
+		<metaitem eletype="meta" elename="meta" name="dtb:uid" content="testId" destination="ncx"/>
+		<metaitem eletype="meta" elename="meta" name="dtb:depth" content="1" destination="ncx"/>
+        <metaitem eletype="meta" elename="meta" name="dtb:totalPageCount" content="0" destination="ncx"/>
+        <metaitem eletype="meta" elename="meta" name="dtb:maxPageNumber" content="0" destination="ncx"/>
+
+   		<!-- META per il logo da mettere in prima pagina -->
+		<metaitem eletype="meta" elename="meta" name="pdfcoverlogo" content="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/logo_senato.png" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfarrowimage" content="SmallSeparator.png" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfDisclaimer" content="The disclaimer text" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfDptlogo" content="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/logo_scriba.png" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfDocName" content="Book" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfTocName" content="Summary" destination="pdfebook"/>
+		<metaitem eletype="meta" elename="meta" name="pdfDocLinkText" content="document link" destination="pdfebook"/>
+
+	</metadata>
+
+	<contents tocId="toc">
+
+		<!-- Intestazioni -->
+
+		<content packageId="toc" packagePath="/" packageFile="toc.ncx"
+			contentMediaType="application/x-dtbncx+xml" ebookTypes="epub,zip" />
+		
+		<content packageId="copertina" packagePath="/" packageFile="copertina.html"
+			contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/copertina.html"
+			contentMediaType="application/xhtml+xml" cover="true" isInSpine="true" tocName="Copertina"
+			plugin="it.senato.areatesti.ebook.scriba.plugin.defaultplugin.CoverPlugin" ebookTypes="epub,zip"/>
+		
+		<content packageId="logo_senato_png" packagePath="/IMG"
+			contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/logo_senato.png"
+			packageFile="logo_senato.png" contentMediaType="image/png" ebookTypes="epub,zip"/>
+			
+		<content packageId="logo_senato_small_png" packagePath="/IMG"
+			contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/logo_senato_small.png"
+			packageFile="logo_senato_small.png" contentMediaType="image/png" ebookTypes="epub,zip"/>			
+
+		<content packageId="logo_scriba_png" packagePath="/IMG"
+			contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/logo_scriba.png"
+			packageFile="logo_scriba.png" contentMediaType="image/png" ebookTypes="epub,zip"/>
+			
+		
+		<content packageId="style" packagePath="/" packageFile="stile.css"
+			contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/stile_new.css"
+			contentMediaType="text/css" ebookTypes="epub,zip"/>
+		
+
+		<!-- Classic content -->
+		
+		<content packagePath="Aula" packageId="calendario_lavori_aula"
+			packageFile="Calendario dei lavori.xhtml" tocName="Calendario dei lavori"
+			contentUrl="http://www.senato.it/versionestampa/stampa.jsp?url=/lavori/21415/38479/genpagina.htm"
+			contentMediaType="application/xhtml+xml" isNeededTidy="true" isNeededXsl="true"
+			isInSpine="true" /> 
+
+		<content packagePath="Aula" packageId="odg_aula"
+			packageFile="Ordine del giorno.xhtml" tocName="Ordine del giorno"
+			contentUrl="http://www.senato.it/versionestampa/stampa.jsp?url=/lavori/21415/106652/genpagina.htm"
+			contentMediaType="application/xhtml+xml" isNeededTidy="true" isNeededXsl="true"
+			isInSpine="true" />
+
+		<content packagePath="Commissioni/Convocazioni/1a Commissione"
+			packageId="convoc_01_aula" packageFile="convocazioni01.pdf" tocName="Convocazioni"
+			contentUrl="http://www.senato.it/documenti/repository/commissioni/comm01/calendario/convocazioni.pdf"
+			contentMediaType="application/pdf" isNeededTidy="false"
+			isInSpine="true" />
+
+		<!-- BoilerPipe experimental plugin -->
+
+        <content packageId="testoBPSenatoDef" packagePath="Docs/Boilerpipe"
+        		 packageFile="testoSenatoDef.html"
+                 contentUrl="http://www.senato.it"
+                 contentMediaType="application/xhtml+xml"
+                 plugin="it.senato.areatesti.ebook.scriba.plugin.defaultplugin.boilerpipe.DefaultExtractorBPPlugin" 
+                 isInSpine="true" 
+                 tocName="Home Page Senato Default" 
+                 isNeededTidy="true"                
+				 isNeededXsl="false"
+				 ebookTypes="epub,zip"/>
+
+        <content packageId="testoBPSenatoArt" packagePath="Docs/Boilerpipe"
+        		 packageFile="testoSenatoArt.html"
+                 contentUrl="http://www.senato.it"
+                 contentMediaType="application/xhtml+xml"
+                 plugin="it.senato.areatesti.ebook.scriba.plugin.defaultplugin.boilerpipe.ArticleExtractorBPPlugin" 
+                 isInSpine="true" 
+                 tocName="Home Page Senato Article" 
+                 isNeededTidy="true"                
+				 isNeededXsl="false"
+				 ebookTypes="epub,zip"/>	
+
+									 
+		<!-- Pdf to Html plugin -->
+
+		<content packageId="testo_pdf" packagePath="Docs/PdfToHtml"
+        		 packageFile="Proof.pdf"
+                 contentUrl="file:///C:/Lavoro/Lavoro/BGT/EBookMaker/Software/DeployOnSF/scriba_deploy_test/1.5/ebookstaticcontent/proof.pdf"
+                 contentMediaType="application/pdf"
+                 plugin="it.senato.areatesti.ebook.scriba.plugin.defaultplugin.PdfToHtmlPlugin" 
+                 pdfToHtml="true"
+                 isInSpine="true" 
+                 tocName="Plugin Proof" 
+                 isNeededTidy="true"                
+				 isNeededXsl="false"
+				 ebookTypes="epub,zip"/>				
+				 
+	</contents>		
+   
+
+</book>
