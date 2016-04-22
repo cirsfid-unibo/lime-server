@@ -62,7 +62,8 @@ var db = require('../utils/mongodb.js'),
     secondary_backend = require('../utils/backend_exist'),
     main_backend = require('../utils/backend_fs'),
     DocToXml = require('../converters/DocToXml'),
-    AknToEpub = require('../converters/AknToEpub');
+    AknToEpub = require('../converters/AknToEpub'),
+    AknToPdf = require('../converters/AknToPdf');
 
 // Swap backends
 if (require('../config.json').existIsMainBackend) {
@@ -114,20 +115,21 @@ function isAllowed(user, path) {
 // Es. GET /Documents/pippo@gmail.com/examples/it/doc/file.akn
 router.get('*', function (req, res, next) {
     if (!req.file) return next();
+
+    var getConvertedFile = function(converter, file) {
+        main_backend.getFile(converter, req.dir, file, function (err) {
+            if (err == 404) res.status(404).end();
+            else if (err) next(err);
+        });
+        converter.pipe(res);
+    }
+
     if (req.extension == 'doc' && req.headers.accept == 'text/html') {
-        var doc2xml = new DocToXml();
-        main_backend.getFile(doc2xml, req.dir, req.file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
-        doc2xml.pipe(res);
+        getConvertedFile(new DocToXml(), req.file);
     } else if (req.extension == 'epub' && req.headers.accept == 'application/epub+zip') {
-        var akn2epub = new AknToEpub();
-        main_backend.getFile(akn2epub, req.dir, req.fileNoExtension, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
-        akn2epub.pipe(res);
+        getConvertedFile(new AknToEpub(), req.fileNoExtension);
+    } else if (req.extension == 'pdf' && req.headers.accept == 'application/pdf') {
+        getConvertedFile(new AknToPdf(), req.fileNoExtension);
     } else {
         main_backend.getFile(res, req.dir, req.file, function (err) {
             if (err == 404) res.status(404).end();
