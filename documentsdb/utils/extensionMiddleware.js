@@ -56,7 +56,7 @@ var suffixes = {
 module.exports = function (req, res, next) {
     req.extension = '';
     for (var suffix in suffixes)
-        if (req.file.endsWith(suffix)) {
+        if (req.file && req.file.endsWith(suffix)) {
             req.extension = suffixes[suffix];
             req.fileNoExtension = req.file.slice(0, -suffix.length);
             break;
