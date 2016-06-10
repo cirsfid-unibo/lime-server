@@ -1382,7 +1382,7 @@
 
             <xsl:otherwise>
                 <xsl:variable name="type" select="'act'"/>
-                <xsl:variable name="subtype" select="u:sanitize(tokenize($principale, ':')[4])"/>
+                <xsl:variable name="subtype" select="replace(u:sanitize(tokenize($principale, ':')[4]), '_', '')"/>
                 <xsl:variable name="author" select="u:sanitize(tokenize($principale, ':')[3])"/>
                 <xsl:variable name="date" select="substring-before(tokenize($principale, ':')[5], ';')"/>
                 <xsl:variable name="num" select="substring-after(tokenize($principale, ':')[5], ';')"/>
