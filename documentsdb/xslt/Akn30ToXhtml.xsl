@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-   xmlns:akn="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13" exclude-result-prefixes="akn"
+   xmlns:akn="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" exclude-result-prefixes="akn"
    version="2.0">
    <xsl:output method="xml" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
       doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes"/>

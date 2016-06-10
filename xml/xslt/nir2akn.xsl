@@ -6,7 +6,7 @@
     Contacts: monica.palmirani@unibo.it
  -->
 <xsl:stylesheet version="2.0"
-    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13"
+    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:nir="http://www.normeinrete.it/nir/2.2/"
     xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/"
