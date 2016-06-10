@@ -16,8 +16,8 @@ describe('NIR REF conversion', function () {
     it('should convert anchors to same document', done => {
         utils.convert('penale/allegato1.xml', akn => {
             var urnNir = '#art7-com1-let1';
-            var uriAkn = '#book_1__title_1__art_7__para_1__point_1';
-            var article = utils.select('//akn:article[@eId="book_1__title_1__art_8"]', akn)[0]
+            var uriAkn = '~art_7__para_1__point_1';
+            var article = utils.select('//akn:article[@eId="art_8"]', akn)[0]
             expect(utils.selectAttr('.//akn:ref/@refersTo', article)).toEqual('#rif1');
             expect(utils.selectAttr('//akn:TLCReference[@eId="rif1"]/@href', akn)).toEqual(urnNir);
             expect(utils.selectAttr('.//akn:ref/@href', article)).toEqual(uriAkn);

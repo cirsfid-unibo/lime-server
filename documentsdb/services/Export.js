@@ -75,17 +75,23 @@ var exportedDocuments = {},
     maxMemorizationTime = minutes(30);
 // Regularly check for documents to delete
 setInterval(function () {
+    var currentTime = getTime();
     Object.keys(exportedDocuments).forEach(function (key) {
-        if (exportedDocuments[key].time + maxMemorizationTime > getTime() )
+        var elapsedTime = currentTime - exportedDocuments[key].time;
+        if (elapsedTime > maxMemorizationTime) {
+            console.log('Export: deleting ' + key + ' after ' + (elapsedTime)/1000/60 + ' minutes');
             delete exportedDocuments[key];
+        }
     });
 }, minutes(10));
 
 function addDocument(url, text) {
+    var time = getTime();
     exportedDocuments[url] = {
-        time: getTime(),
+        time: time,
         text: text
     };
+    console.log('Export: adding ' + url + ' at ' + time);
 }
 
 function getDocument(url) {

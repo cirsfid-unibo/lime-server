@@ -1,0 +1,87 @@
+<!--Documento NIR di test-->
+<NIR tipo="originale" xmlns="http://www.normeinrete.it/nir/2.2/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h="http://www.w3.org/HTML/1998/html4" xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/" xmlns:cirsfid="http://www.cirsfid.unibo.it/norma/proprietario/">
+  <Legge id="S2006746">
+    <meta>
+      <descrittori>
+        <pubblicazione tipo="GU" num="250 Suppl.Ord." norm="20001025" />
+        <entratainvigore norm="20001026" />
+        <redazione id="rd1" norm="20151125" nome="Cassazione" url="http://www.italgiure.giustizia.it" contributo="redazione" />
+        <redazione id="rd2" norm="20151125" nome="Norma-Editor v2.7" url="http://www.cirsfid.unibo.it" contributo="editor" />
+        <urn valore="urn:nir:stato:legge:2000-09-29;300" />
+        <alias valore="urn:nir:stato:decreto.legge:2000-09-29;299"/>
+        <materie vocabolario="mat">
+          <materia valore="COMUNITA' EUROPEE" />
+          <materia valore="TRATTATI" />
+          <materia valore="CONVENZIONI" />
+          <materia valore="ATTI INTERNAZIONALI" />
+        </materie>
+      </descrittori>
+      <inquadramento>
+        <infodoc natura="legge" normativa="si" funzione="regolativa" fonte="primario" />
+        <infomancanti>
+          <mTipodoc valore="legge" />
+          <mEmanante valore="stato" />
+        </infomancanti>
+      </inquadramento>
+      <ciclodivita>
+        <eventi>
+          <evento id="e1" data="20001026" fonte="#ro1" tipo="originale" />
+        </eventi>
+        <relazioni>
+          <originale id="ro1" xlink:href="urn:nir:stato:decreto.legislativo:2000-09-29;300" />
+          <passiva id="asd" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico" />
+          <attiva id="ra1" xlink:href="urn:nir:stato:regio.decreto:1930-10-19;1398:codice.penale" />
+          <attiva id="ra2" xlink:href="urn:nir:presidente.repubblica:decreto:1973-01-23;43:testo.unico" />
+          <attiva id="ra3" xlink:href="urn:nir:stato:legge:1986-12-23;898" />
+          <haallegato id="ran1" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.interessi.finanziari.comunita.europee" tipo="attoallegato" />
+          <haallegato id="ran2" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.lotta.corruzione" tipo="attoallegato" />
+          <haallegato id="ran3" xlink:href="urn:nir:stato:legge:2000-09-29;300:convenzione.francese" tipo="attoallegato" />
+          <haallegato id="ran4" xlink:href="urn:nir:stato:legge:2000-09-29;300:annesso" tipo="allegatointegrante" />
+        </relazioni>
+      </ciclodivita>
+      <disposizioni>
+
+        <modifichepassive>
+          <dsp:sostituzione>
+            <dsp:pos xlink:href="urn:nir:senato.repubblica:regolamento:1971-02-17;nir-19710217"/>
+            <dsp:norma xlink:href="urn:nir:senato.repubblica:delibera:1989-06-07;nir-19890607">
+              <dsp:subarg>
+                <cirsfid:sub xlink:href="urn:nir:senato.repubblica:delibera:1989-06-07;nir-19890607#rif7"/>
+                <dsp:altradata rif="#e14" nome="decorrenza"/>
+                <cirsfid:totale/>
+              </dsp:subarg>
+            </dsp:norma>
+          </dsp:sostituzione>
+        </modifichepassive>
+      </disposizioni>
+    </meta>
+    <articolato>
+      <articolo><num>Art. 3.<h:br/>Trattamento e rieducazione</num></articolo>
+      <articolo><num>ARTICOLO 321</num></articolo>
+      <articolo><num>Art. 321-bis.</num></articolo>
+      <articolo><num>Art. 321-ter.</num></articolo>
+      <articolo><num>Art. 321-quater.</num></articolo>
+      <articolo><num>Art. 321-quinquies.</num></articolo>
+      <articolo><num>Art. 321-sexies.</num></articolo>
+      <articolo><num>Art. 321-septies.</num></articolo>
+      <articolo><num>Art. 321-octies.</num></articolo>
+      <articolo><num>Art. 321-nonies.</num></articolo>
+
+      <libro><num>LIBRO IV.</num></libro>
+      <libro><num>LIBRO IV-bis.</num></libro>
+      <capo><num>CAPO IV.</num></capo>
+      <titolo><num>TITOLO IV.</num></titolo>
+
+      <capo><num>1°</num></capo>
+      <capo>
+        <num>11°</num>
+        <el> <num>2-bis.</num>Prova</el>
+        <el> <num>2)</num>Prova</el>
+        <el> <num>f)</num>Prova</el>
+        <el> <num>f-bis)</num>Prova</el>
+        <articolo><num>...</num></articolo>
+        <titolo><num>...</num></titolo>
+      </capo>
+    </articolato>
+  </Legge>
+</NIR>

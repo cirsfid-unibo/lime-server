@@ -143,7 +143,7 @@ exports.putFile = function (input, path, file, callback) {
 };
 
 // Notes:
-// Exist handling of special charactes is really bad. We have
+// Exist handling of special charactes is really bad.
 // We must do double URI encoding when retrieving files
 // https://github.com/eXist-db/exist/issues/44
 
