@@ -48,7 +48,8 @@ var http = require('http'),
     VError = require('verror'),
     sax = require('sax'),
     basename = require('path').basename,
-    R = require('ramda');
+    R = require('ramda'),
+    deleteEmptyCollections = require('../exist/existdb/delete_empty_collections');
 
 var config = require('../config.json').existdb;
 
@@ -140,6 +141,29 @@ exports.putFile = function (input, path, file, callback) {
         });
     });
     input.pipe(output);
+};
+
+// Delete the passed file
+// Call callback on success or error
+// TODO: remove empty directories
+exports.deleteFile = function (path, file, callback) {
+    var resource = encode_write(config.rest + config.baseCollection + path + '/' + file);
+    console.log('DELETE FILE', resource);
+    http.request({
+        method: "DELETE",
+        host: config.host,
+        port: config.port,
+        auth: config.auth,
+        path: resource
+    }, function (res) {
+        if(res.statusCode == 404) return callback(404);
+        else if (res.statusCode != 200)
+            return callback(new Error('Exist DELETE request has status code ' + res.statusCode));
+
+        callback();
+        // Delete empty collections, don't care about the output
+        deleteEmptyCollections(config.baseCollection, function() {});
+    }).end();
 };
 
 // Notes:

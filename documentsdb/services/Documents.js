@@ -171,5 +171,20 @@ router.put('*', function (req, res, next) {
     req.pipe(stream2);
 });
 
+// Delete a file
+// Es. DELETE /Documents/pippo@gmail.com/examples/it/doc/file.akn
+router.delete('*', function(req, res, next) {
+    if (!req.file) return next();
+    main_backend.deleteFile(req.dir, req.file, function(err) {
+        if (err == 404) res.status(404).end();
+        else if (err) next(err);
+        res.end();
+    });
+    secondary_backend.deleteFile(req.dir, req.file, function(err) {
+        // Log the error of the second backend
+        if (err) console.warn(err);
+    });
+});
+
 exports.router = router;
 exports.isAllowed = isAllowed;

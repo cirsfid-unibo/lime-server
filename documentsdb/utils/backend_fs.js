@@ -49,7 +49,8 @@ var VError = require('verror'),
     fs = require('fs'),
     joinUrl = require('url').resolve,
     joinPath = require('path').join,
-    mkdirp = require('mkdirp');
+    mkdirp = require('mkdirp'),
+    deleteEmpty = require('delete-empty');
 
 var documentsPath = require('../config.json').filesystem.documents;
 
@@ -114,5 +115,25 @@ exports.putFile = function (input, path, file, callback) {
         fileStream.on('error', function(err) {
             callback(new VError(err, 'Error saving file'));
         });
+    });
+};
+
+// Delete the passed file
+// Delete also eventual empty folders
+// Call callback on success or error
+exports.deleteFile = function (path, file, callback) {
+    var dirPath = joinPath(documentsPath, path),
+        filePath = joinPath(dirPath, file);
+
+    fs.unlink(filePath, function(err) {
+        if (err) {
+            if (err.code == 'ENOENT') return callback(404);
+            return callback(new VError(err, 'Error deleting file'));
+        }
+        // After the removing of the file there may be empty folders so
+        // delete all empty folders in the document path
+        // don't care about the output
+        deleteEmpty(documentsPath, {force: true}, function() {});
+        callback();
     });
 };
