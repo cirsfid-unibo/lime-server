@@ -128,7 +128,10 @@ exports.putFile = function (input, path, file, callback, existConfig) {
         host: existConfig.host,
         port: existConfig.port,
         auth: existConfig.auth,
-        path: resource
+        path: resource,
+        headers: {
+            'Content-Type': 'application/xml'
+        }
     }, function (res) {
         res.on('error', function (err) {
             callback(new VError(err, 'Error putting file'));
