@@ -119,14 +119,15 @@ exports.getFile = function (output, path, file, callback) {
 
 // Save input stream to file in path, creating directory
 // if it does not exist. Call callback on success or error.
-exports.putFile = function (input, path, file, callback) {
-    var resource = encode_write(config.rest + config.baseCollection + path + '/' + file);
+exports.putFile = function (input, path, file, callback, existConfig) {
+    existConfig = R.merge(config, existConfig);
+    var resource = encode_write(existConfig.rest + existConfig.baseCollection + path + '/' + file);
     console.log('PUT FILE', resource);
     var output = http.request({
         method: "PUT",
-        host: config.host,
-        port: config.port,
-        auth: config.auth,
+        host: existConfig.host,
+        port: existConfig.port,
+        auth: existConfig.auth,
         path: resource
     }, function (res) {
         res.on('error', function (err) {
@@ -146,14 +147,15 @@ exports.putFile = function (input, path, file, callback) {
 // Delete the passed file
 // Call callback on success or error
 // TODO: remove empty directories
-exports.deleteFile = function (path, file, callback) {
-    var resource = encode_write(config.rest + config.baseCollection + path + '/' + file);
+exports.deleteFile = function (path, file, callback, existConfig) {
+    existConfig = R.merge(config, existConfig);
+    var resource = encode_write(existConfig.rest + existConfig.baseCollection + path + '/' + file);
     console.log('DELETE FILE', resource);
     http.request({
         method: "DELETE",
-        host: config.host,
-        port: config.port,
-        auth: config.auth,
+        host: existConfig.host,
+        port: existConfig.port,
+        auth: existConfig.auth,
         path: resource
     }, function (res) {
         if(res.statusCode == 404) return callback(404);
