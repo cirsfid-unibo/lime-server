@@ -48,6 +48,7 @@
 // Documents endpoint.
 // - Get file
 // - Put file
+// - Delete file
 // - Get dir
 // - Multiple possible backends: we read from the main one, but we write to both
 // - Permissions check si done here
