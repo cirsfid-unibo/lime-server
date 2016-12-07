@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2014 - Copyright holders CIRSFID and Department of
  * Computer Science and Engineering of the University of Bologna
@@ -44,18 +45,68 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var express = require('express');
+// Portal integration endpoint.
+// - Put file
+// - Delete file
 
-var Users = require('./services/Users.js'),
-    Documents = require('./services/Documents.js'),
-    Portal = require('./services/Portal.js'),
-    Export = require('./services/Export.js');
+var express = require('express'),
+    path = require('path'),
+    PassThrough = require('stream').PassThrough,
+    passport = require('passport'),
+    Boom = require('boom');
+
+var db = require('../utils/mongodb.js'),
+    exist = require('../utils/backend_exist');
 
 var router = express.Router();
+var config = require('../config.json').existdbPortal;
 
-router.use('/Users', Users.router);
-router.use('/Documents', Documents.router);
-router.use('/Export', Export.router);
-router.use('/Portal', Portal.router);
+router.use(passport.initialize());
+router.use(passport.authenticate('basic', { session: false }));
 
-module.exports = router;
+// Parse path and file parameters.
+router.use(function (req, res, next) {
+    var reqPath = path.normalize(req.path).replace(/\\/g, '/')
+                        .split('/').map(decodeURIComponent).join('/');
+    // TODO: to this inside fs backend
+    // var reqPath = req.path.replace(/%20/g, ' ')
+    //                       .replace(/:/g, '%3A');
+    if (reqPath[reqPath.length-1] == ('/')) {
+        req.dir = reqPath;
+        console.log('DIR', req.method, req.dir);
+    } else {
+        req.dir = path.dirname(reqPath);
+        req.file = path.basename(reqPath);
+        console.log('FILE', req.method, req.dir, req.file);
+    }
+    next();
+});
+
+// Update/create a file
+// Es. PUT /Portal/pippo@gmail.com/examples/it/doc/file.akn
+router.put('*', function (req, res, next) {
+    // Thank you Node for your streams, and sorry for killing your performance
+    // with our requirements.
+    var stream1 = new PassThrough();
+
+    exist.putFile(stream1, req.dir, req.file, function (err) {
+        if (err) next(err);
+        res.end();
+    }, config);
+
+    req.pipe(stream1);
+});
+
+// Delete a file
+// Es. DELETE /Portal/pippo@gmail.com/examples/it/doc/file.akn
+router.delete('*', function(req, res, next) {
+    if (!req.file) return next();
+    exist.deleteFile(req.dir, req.file, function(err) {
+      console.log(err);
+        if (err == 404) res.status(404).end();
+        else if (err) next(err);
+        res.end();
+    }, config);
+});
+
+exports.router = router;
