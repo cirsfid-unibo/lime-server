@@ -64,7 +64,8 @@ var db = require('../utils/mongodb.js'),
     main_backend = require('../utils/backend_fs'),
     DocToXml = require('../converters/DocToXml'),
     AknToEpub = require('../converters/AknToEpub'),
-    AknToPdf = require('../converters/AknToPdf');
+    AknToPdf = require('../converters/AknToPdf'),
+    AknToHtml = require('../converters/AknToHtml');
 
 // Swap backends
 if (require('../config.json').existIsMainBackend) {
@@ -127,6 +128,8 @@ router.get('*', function (req, res, next) {
 
     if (req.extension == 'doc' && req.headers.accept == 'text/html') {
         getConvertedFile(new DocToXml(), req.file);
+    } else if (req.extension == 'html' && req.headers.accept == 'text/html') {
+        getConvertedFile(new AknToHtml(), req.fileNoExtension);
     } else if (req.extension == 'epub' && req.headers.accept == 'application/epub+zip') {
         getConvertedFile(new AknToEpub(), req.fileNoExtension);
     } else if (req.extension == 'pdf' && req.headers.accept == 'application/pdf') {

@@ -50,7 +50,8 @@ var suffixes = {
     '.docx': 'doc',
     '.doc': 'doc',
     '.pdf': 'pdf',
-    '.epub': 'epub'
+    '.epub': 'epub',
+    '.html': 'html'
 };
 
 module.exports = function (req, res, next) {
