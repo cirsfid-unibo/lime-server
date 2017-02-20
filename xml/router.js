@@ -46,8 +46,12 @@
 
 var express = require('express');
 var nir2akn = require('./xml/nir.js').nir2akn;
+var Validate = require('./services/Validate.js');
 
 var router = express.Router();
+
+router.use('/Validate', Validate.router);
+
 router.post('/nir2akn', function (req, res, next) {
     nir2akn(req.body.content, function (err, result) {
         if (err)
