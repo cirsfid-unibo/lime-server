@@ -53,16 +53,13 @@ var express = require('express'),
     path = require('path'),
     lngDetector = new (require('languagedetect')),
     striptags = require('striptags'),
-    langs = require('langs'),
-    request = require('request'),
-    tmp = require('tmp'),
-    fs = require('fs');
+    langs = require('langs');
 
 var FileToHtml = require('../converters/FileToHtml.js'),
-    XsltTransform = require('../../xml/xml/XsltTransform.js');
+    XsltTransform = require('../../xml/xml/XsltTransform.js'),
+    FileCache = require('../../utils/FileCache.js');
 
 var clearHtmlPath = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
-var xlsFilePathsCache = {};
 
 var allowedUploads = [
     'text/html',
@@ -90,7 +87,7 @@ router.post('/', function (req, res, next) {
         next(Boom.badRequest(file.mimetype+' files are not supported!'));
     }
     if (isXml(file.mimetype)) {
-        getXslFilePath(req.body.transformFile, function(xslt) {
+        FileCache.getFilePath(req.body.transformFile, function(xslt) {
             handleXmlFile(file, res, xslt);
         })
     } else {
@@ -104,32 +101,6 @@ function isAllowed(mime) {
 
 function isXml(mime) {
     return mime === 'text/xml' || mime === 'application/xml';
-}
-
-function getXslFilePath(transformFileUrl, cb) {
-    var path = xlsFilePathsCache[transformFileUrl];
-    if (path && fs.existsSync(path)) {
-        return cb(path);
-    }
-    request(transformFileUrl, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            saveToTmpFile(body, function(path) {
-                xlsFilePathsCache[transformFileUrl] = path;
-                cb(path);
-            })
-        } else {
-            throw error;
-        }
-    });
-}
-
-function saveToTmpFile(data, cb) {
-    tmp.file(function (err, path, fd) {
-        if (err) throw err;
-        var fileStream = fs.createWriteStream(undefined, { fd: fd });
-        fileStream.end(data);
-        cb(path);
-    });
 }
 
 function handleXmlFile(file, res, xslt) {

@@ -58,7 +58,6 @@ exports.validate = function (content, schemaPath, cb) {
         try {
             var cwd = process.cwd();
             process.chdir(path.dirname(schemaPath));
-            var xsdDoc
             var xsdDoc = libxml.parseXml(xsd);
             var xmlDoc = libxml.parseXml(content);
             var isValid = xmlDoc.validate(xsdDoc);
