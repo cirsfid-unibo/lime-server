@@ -57,11 +57,11 @@ var filePathsCache = {};
 exports.getFilePath = function(url, cb) {
     var path = filePathsCache[url];
     if (path && fs.existsSync(path)) {
-        return cb(path);
+        return cb(null, path);
     }
     download(url, function(path) {
         filePathsCache[url] = path;
-        cb(path);
+        cb(null, path);
     });
 }
 
@@ -72,7 +72,7 @@ function download(url, cb) {
                 cb(path);
             })
         } else {
-            throw error;
+            cb(error);
         }
     });
 }
@@ -85,3 +85,5 @@ function saveToTmpFile(data, cb) {
         cb(path);
     });
 }
+
+exports.saveToTmpFile = saveToTmpFile;

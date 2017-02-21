@@ -87,7 +87,8 @@ router.post('/', function (req, res, next) {
         next(Boom.badRequest(file.mimetype+' files are not supported!'));
     }
     if (isXml(file.mimetype)) {
-        FileCache.getFilePath(req.body.transformFile, function(xslt) {
+        FileCache.getFilePath(req.body.transformFile, function(err, xslt) {
+            if (err) next(Boom.badRequest(err));
             handleXmlFile(file, res, xslt);
         })
     } else {

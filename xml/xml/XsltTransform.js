@@ -47,7 +47,7 @@
 var util = require('util'),
     Transform = require('stream').Transform,
     saxon = require('../xml/saxon.js'),
-    entities = require("entities");
+    entities = require('entities');
 
 // XsltTransform is a Transform stream which converts
 // an xml stream into another xml stream transformed by xslt stylesheet.
@@ -75,7 +75,9 @@ XsltTransform.prototype._transform = function(chunk, encoding, done) {
 
 XsltTransform.prototype._applyXslt = function() {
     var me = this;
-    saxon.transform(cleanXmlString(this.xmlString), this.xsltPath, {}, function (err, result) {
+    var str = cleanXmlString(this.xmlString);
+    //require('fs').writeFileSync('tmpString.xml', str);
+    saxon.transform(str, this.xsltPath, {}, function (err, result) {
         if (err) throw err;
         me.push(result);
         me.endConversion();
