@@ -54,7 +54,7 @@ var util = require('util'),
     Buffer = require('buffer').Buffer;
 
 
-var ABIWORD_PATH = require('../config.json').abiword.pathWin;
+var ABIWORD_PATH = require('../config.json').abiword.path;
 
 // FileToHtml is a Transform stream which converts
 // a binary stream into a .html utf8 stream.

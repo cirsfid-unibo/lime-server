@@ -65,7 +65,10 @@ var db = require('../utils/mongodb.js'),
     FileToHtml = require('../converters/FileToHtml'),
     AknToEpub = require('../converters/AknToEpub'),
     AknToPdf = require('../converters/AknToPdf'),
-    AknToHtml = require('../converters/AknToHtml');
+    AknToHtml = require('../converters/AknToHtml'),
+    XsltTransform = require('../../xml/xml/XsltTransform.js');
+
+var clearHtmlPath = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
 
 // Swap backends
 if (require('../config.json').existIsMainBackend) {
@@ -119,17 +122,28 @@ router.get('*', function (req, res, next) {
     if (!req.file) return next();
 
     var getConvertedFile = function(converter, file) {
-        main_backend.getFile(converter, req.dir, file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
+        getFile(converter, file);
         converter.pipe(res);
     }
 
+    var getFile = function(output, file) {
+        main_backend.getFile(output, req.dir, file, function (err) {
+            if (err == 404) res.status(404).end();
+            else if (err) next(err);
+        });
+    }
+
+    var getConvertedFileToHtml = function(converter, file) {
+        var xsltTransformer = new XsltTransform({ xslt: clearHtmlPath });
+        getFile(converter, file);
+        converter.pipe(xsltTransformer);
+        xsltTransformer.pipe(res);
+    }
+
     if (req.extension == 'doc' && req.headers.accept == 'text/html') {
-        getConvertedFile(new FileToHtml(), req.file);
+        getConvertedFileToHtml(new FileToHtml(), req.file);
     } else if (req.extension == 'html' && req.headers.accept == 'text/html') {
-        getConvertedFile(new AknToHtml(), req.fileNoExtension);
+        getConvertedFileToHtml(new AknToHtml(), req.fileNoExtension);
     } else if (req.extension == 'epub' && req.headers.accept == 'application/epub+zip') {
         getConvertedFile(new AknToEpub(), req.fileNoExtension);
     } else if (req.extension == 'pdf' && req.headers.accept == 'application/pdf') {
