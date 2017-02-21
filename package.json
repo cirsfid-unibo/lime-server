@@ -8,6 +8,7 @@
     "url": "git@github.com:cirsfid-unibo/lime-server.git"
   },
   "dependencies": {
+    "async": "^2.1.5",
     "basic-auth": "^1.0.0",
     "bcryptjs": "^2.1.0",
     "body-parser": "^1.9.2",
