@@ -46,7 +46,7 @@
 
 var util = require('util'),
     Transform = require('stream').Transform,
-    saxon = require('../xml/saxon.js'),
+    xml = require('../xml/xml.js'),
     entities = require('entities');
 
 // XsltTransform is a Transform stream which converts
@@ -77,7 +77,7 @@ XsltTransform.prototype._applyXslt = function() {
     var me = this;
     var str = cleanXmlString(this.xmlString);
     //require('fs').writeFileSync('tmpString.xml', str);
-    saxon.transform(str, this.xsltPath, {}, function (err, result) {
+    xml.transform(str, this.xsltPath, {}, function (err, result) {
         if (err) throw err;
         me.push(result);
         me.endConversion();

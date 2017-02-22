@@ -65,11 +65,11 @@ exports.transform = function (content, xsltPath, params, cb) {
         cb = params;
         params = {};
     }
-    if (saxon.canTransform)
-        saxon.transform(content, xsltPath, params, cb);
-    else if (libxml.canTransform)
+    if (libxml.canTransform)
         // TODO: add params!!
         libxml.transform(content, xsltPath, cb);
+    else if (saxon.canTransform)
+        saxon.transform(content, xsltPath, params, cb);
     else
         cb(new Error('Transformation failed: no suitable engine found.'));
 };   
