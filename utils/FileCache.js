@@ -50,19 +50,26 @@
 
 var request = require('request'),
     tmp = require('tmp'),
-    fs = require('fs');
+    fs = require('fs'),
+    validUrl = require('valid-url');
 
 var filePathsCache = {};
 
-exports.getFilePath = function(url, cb) {
-    var path = filePathsCache[url];
+exports.getFilePath = function(data, cb) {
+    var path = filePathsCache[data];
     if (path && fs.existsSync(path)) {
         return cb(null, path);
     }
-    download(url, function(path) {
-        filePathsCache[url] = path;
-        cb(null, path);
-    });
+    if (validUrl.isUri(data)) {
+        download(data, function(path) {
+            filePathsCache[data] = path;
+            cb(null, path);
+        });
+    } else { // Save data to tmp and return path
+        saveToTmpFile(data, function(path) {
+            cb(null, path);
+        })
+    }
 }
 
 function download(url, cb) {
