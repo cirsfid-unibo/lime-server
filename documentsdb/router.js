@@ -48,12 +48,16 @@ var express = require('express');
 
 var Users = require('./services/Users.js'),
     Documents = require('./services/Documents.js'),
-    Export = require('./services/Export.js');
+    Portal = require('./services/Portal.js'),
+    Export = require('./services/Export.js'),
+    FileToHtml = require('./services/FileToHtml.js');
 
 var router = express.Router();
 
 router.use('/Users', Users.router);
 router.use('/Documents', Documents.router);
 router.use('/Export', Export.router);
+router.use('/Portal', Portal.router);
+router.use('/FileToHtml', FileToHtml.router);
 
 module.exports = router;

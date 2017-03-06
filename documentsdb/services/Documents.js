@@ -48,6 +48,7 @@
 // Documents endpoint.
 // - Get file
 // - Put file
+// - Delete file
 // - Get dir
 // - Multiple possible backends: we read from the main one, but we write to both
 // - Permissions check si done here
@@ -61,9 +62,13 @@ var express = require('express'),
 var db = require('../utils/mongodb.js'),
     secondary_backend = require('../utils/backend_exist'),
     main_backend = require('../utils/backend_fs'),
-    DocToXml = require('../converters/DocToXml'),
+    FileToHtml = require('../converters/FileToHtml'),
     AknToEpub = require('../converters/AknToEpub'),
-    AknToPdf = require('../converters/AknToPdf');
+    AknToPdf = require('../converters/AknToPdf'),
+    AknToHtml = require('../converters/AknToHtml'),
+    XsltTransform = require('../../xml/xml/XsltTransform.js');
+
+var clearHtmlPath = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
 
 // Swap backends
 if (require('../config.json').existIsMainBackend) {
@@ -117,15 +122,28 @@ router.get('*', function (req, res, next) {
     if (!req.file) return next();
 
     var getConvertedFile = function(converter, file) {
-        main_backend.getFile(converter, req.dir, file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
+        getFile(converter, file);
         converter.pipe(res);
     }
 
+    var getFile = function(output, file) {
+        main_backend.getFile(output, req.dir, file, function (err) {
+            if (err == 404) res.status(404).end();
+            else if (err) next(err);
+        });
+    }
+
+    var getConvertedFileToHtml = function(converter, file) {
+        var xsltTransformer = new XsltTransform({ xslt: clearHtmlPath });
+        getFile(converter, file);
+        converter.pipe(xsltTransformer);
+        xsltTransformer.pipe(res);
+    }
+
     if (req.extension == 'doc' && req.headers.accept == 'text/html') {
-        getConvertedFile(new DocToXml(), req.file);
+        getConvertedFileToHtml(new FileToHtml(), req.file);
+    } else if (req.extension == 'html' && req.headers.accept == 'text/html') {
+        getConvertedFileToHtml(new AknToHtml(), req.fileNoExtension);
     } else if (req.extension == 'epub' && req.headers.accept == 'application/epub+zip') {
         getConvertedFile(new AknToEpub(), req.fileNoExtension);
     } else if (req.extension == 'pdf' && req.headers.accept == 'application/pdf') {
@@ -169,6 +187,21 @@ router.put('*', function (req, res, next) {
 
     req.pipe(stream1);
     req.pipe(stream2);
+});
+
+// Delete a file
+// Es. DELETE /Documents/pippo@gmail.com/examples/it/doc/file.akn
+router.delete('*', function(req, res, next) {
+    if (!req.file) return next();
+    main_backend.deleteFile(req.dir, req.file, function(err) {
+        if (err == 404) res.status(404).end();
+        else if (err) next(err);
+        res.end();
+    });
+    secondary_backend.deleteFile(req.dir, req.file, function(err) {
+        // Log the error of the second backend
+        if (err) console.warn(err);
+    });
 });
 
 exports.router = router;

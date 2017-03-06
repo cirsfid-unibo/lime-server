@@ -22,6 +22,7 @@
         "baseCollection": "/lime_test",
         "auth": "admin:exist"
     },
+    "existdbPortal": {},
     "abiword": {
         "path": "/usr/bin/abiword"
     }

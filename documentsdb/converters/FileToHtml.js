@@ -54,31 +54,35 @@ var util = require('util'),
     Buffer = require('buffer').Buffer;
 
 
-var ABIWORD_PATH = require('../config.json').abiword.path;
+var  abiConfig = require('../config.json').abiword;
+var ABIWORD_PATH = require('os').platform() === 'win32' ?
+                                                abiConfig.pathWin :
+                                                abiConfig.path;
 
-// DocToXml is a Transform stream which converts
-// a .doc binary stream into a .xml utf8 stream.
+// FileToHtml is a Transform stream which converts
+// a binary stream into a .html utf8 stream.
 
-// Since we use Abiword for doc to xml conversion, we need
+// Since we use Abiword for file to html conversion, we need
 // to write input stream to a tmp file, convert it using
-// Abiword, than pipe that output file to the DocToXml "output stream"
+// Abiword, than pipe that output file to the FileToHtml "output stream"
 
-util.inherits(DocToXml, Transform);
+util.inherits(FileToHtml, Transform);
 
-function DocToXml(options) {
+function FileToHtml(options) {
     var me = this;
     Transform.call(this, options);
-
-    // Create temporary .doc file
-    tmp.file({ postfix: '.doc' }, function (err, path, fd, cleanupCallback) {
+    // Create temporary file
+    tmp.file(function (err, path, fd, cleanupCallback) {
         if (err) throw err;
-
         me.tmpDocFile = path;
         me.tmpFileStream = fs.createWriteStream(undefined, { fd: fd });
         me.cleanUpDoc = cleanupCallback;
 
         if (me.unwrittenBuff){
-            me.tmpFileStream.write(Buffer.concat(me.unwrittenBuff))
+            me.tmpFileStream.write(Buffer.concat(me.unwrittenBuff));
+            if (me.inputFinished) {
+                me.tmpFileStream.end();
+            }
         }
 
         // When tmp file copy is completed, execute Abiword file conversion 
@@ -95,11 +99,12 @@ function DocToXml(options) {
     });
 }
 
-DocToXml.prototype._flush = function(callback) {
+FileToHtml.prototype._flush = function(callback) {
     this.endConversion = callback;
+    this.inputFinished = true;
 }
 
-DocToXml.prototype._transform = function(chunk, encoding, done) {
+FileToHtml.prototype._transform = function(chunk, encoding, done) {
     // Just call callback, since we'll process result only when the stream is done
     if (this.tmpFileStream) {
         this.tmpFileStream.write(chunk);
@@ -110,28 +115,28 @@ DocToXml.prototype._transform = function(chunk, encoding, done) {
     done();
 }
 
-DocToXml.prototype._abiwordConversion = function() {
+FileToHtml.prototype._abiwordConversion = function() {
     // Create temporary destination file
     var me = this;
-    tmp.tmpName(function (err, tmpXmlFile) {
+    tmp.tmpName(function (err, tmpHtmlFile) {
         if (err) throw err;
-        var cmd = ABIWORD_PATH + ' --to=html ' + me.tmpDocFile + ' -o '+ tmpXmlFile;
+        var cmd = ABIWORD_PATH + ' --to=html ' + me.tmpDocFile + ' -o '+ tmpHtmlFile;
         var child = exec(cmd, function (error, stdout, stderr) {
             if (error !== null) {
                 console.log('exec error: ' + error);
             }
 
             fs.unlink(me.tmpDocFile);
-            var stream = fs.createReadStream(tmpXmlFile);
+            var stream = fs.createReadStream(tmpHtmlFile);
             stream.on('data', function (chunk) {
                 me.push(chunk);
             });
             stream.on('end', function () {
                 me.endConversion();
-                fs.unlink(tmpXmlFile);
+                fs.unlink(tmpHtmlFile);
             });
         });
     });
 }
 
-module.exports = DocToXml;
+module.exports = FileToHtml;

@@ -1,0 +1,223 @@
+
+@unit: 16px;
+@header-padding: 20px;
+@brand1: #01678d;
+
+.mainDocument() {
+    max-width: 1240px;
+    margin: auto;
+    font: 1.25rem 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.71);
+    text-align: justify;
+}
+
+.label(@color, @label) {
+}
+
+.mainPart(@color, @label) {
+    .hcontainer(@color);
+    .label(@color, @label);
+    padding-top: 35px;
+    border-color: hsl(@color, 60%, 40%);
+}
+
+.hcontainer(@color) {
+    position: relative;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-left: 4px solid hsl(@color, 40%, 65%);
+
+    >.num {
+        position: relative;
+        color: hsl(@color, 60%, 40%);
+        padding-top: @header-padding;
+        margin: (8 - @header-padding) 0 15px;
+        pointer-events: none;
+        font-size: 19px;
+        line-height: 22px;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    >.heading, >.rubrica {
+        position: relative;
+        color: hsl(@color, 60%, 40%);
+        margin-left: 15px;
+        // vertical-align: bottom;
+        // margin-bottom: 15px;
+        font-size: 13px;
+        font-style: italic;
+        display: inline-block;
+    }
+}
+
+.inline (@color, @label) {
+    display: inline-block;
+    position: relative;
+    margin: 5px 0 3px;
+    padding-right: 80px;
+}
+
+.akomaNtoso {
+    .mainDocument();
+
+.meta { display: none; }
+
+.preamble { .mainPart(206, 'preamble'); }
+.preface { .mainPart(206, 'preface'); }
+.conclusions { .mainPart(206, 'conclusions'); }
+.body, .mainBody { .mainPart(50, 'body'); }
+
+.book { .hcontainer(60); }
+.title { .hcontainer(70); }
+.chapter { .hcontainer(90); }
+.section { .hcontainer(90); }
+.subsection { .hcontainer(110); }
+.article { .hcontainer(110); }
+.paragraph { .hcontainer(120); }
+.subparagraph { .hcontainer(120); }
+.clause { .hcontainer(120); }
+.subclause { .hcontainer(120); }
+.list { .hcontainer(120); }
+.sublist { .hcontainer(120); }
+
+.formula {
+    .inline(206, 'formula');
+    font-style: italic;
+}
+.docAuthority { .inline(206, 'authority'); }
+.docTitle {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: @unit 0;
+}
+.docType, .docDate, .docNumber {
+    font-weight: bold;
+    display: inline;
+}
+.signature {
+    text-align: right;
+    margin: 0 5px;
+    .person {
+        font-style: italic;
+    }
+    margin-top: 5px;
+}
+
+.ref {
+    color: #07a3d4;
+    display: inline;
+    text-decoration: underline;
+    position: relative;
+
+    &::after {
+        color: fade(black, 40%);
+        text-decoration: none;
+        font-family: FontAwesome;
+    }
+    &:hover::after {
+        color: fade(black, 80%);
+    }
+
+    &.external::after {
+        content: " \f08e";
+    }
+    &.notFound::after {
+        content: " \f071";
+    }
+    &.internal::after {
+        content: " \f103";
+    }
+
+    // &:hover:after{
+    //     white-space: nowrap;
+    //     padding: 3px 6px;
+    //     background: #f1f1f1;
+    //     content: attr(data-href);
+    //     position: absolute;
+    //     right: -80px;
+    //     top: -28px;
+    // }
+}
+
+// Ignored elements
+.quantity, .location, .date, .ins, .del, .mref {
+    display: inline;
+}
+
+
+.list>.point, .blockList>.item {
+    margin-top: 15px;
+    position: relative;
+    min-height: 30px;
+    clear: both;
+    &:after {
+        content: ' ';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+    >.num {
+        &:before, &:after {
+            content: "";
+            display: table;
+        }
+        &:after {
+            clear: both;
+            width: 20px;
+        }
+        margin-right: 10px;
+        float: left;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    >.content, >.list, >.blockList, >.p {
+        margin-left: 60px;
+        display: inline-block;
+        float: right;
+    }
+}
+
+
+.list>.intro {
+    font-style: italic;
+}
+
+.table {
+    margin: 20px;
+    display: table;
+    border-collapse: collapse;
+
+    .tr:first-child {
+        background-color: @brand1;
+        color: white;
+    }
+    .tr {
+        display: table-row;
+    }
+    .td {
+        display: table-cell;
+        border: 1px solid #999;
+        padding: 5px 15px;
+    }
+}
+
+.quotedStructure, .quotedText {
+    background-color: #F8EBC3;
+}
+
+.mod, .quotedText {
+    display: inline;
+}
+
+.quotedStructure {
+    padding: 3px @unit;
+    margin: 3px 0;
+}
+
+.heading .eol {
+    display: none;
+}
+
+}

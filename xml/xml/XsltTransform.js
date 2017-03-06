@@ -44,23 +44,51 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var express = require('express');
-var nir2akn = require('./xml/nir.js').nir2akn;
-var Validate = require('./services/Validate.js');
-var XsltTransform = require('./services/XsltTransform.js');
+var util = require('util'),
+    Transform = require('stream').Transform,
+    xml = require('../xml/xml.js'),
+    entities = require('entities');
 
-var router = express.Router();
+// XsltTransform is a Transform stream which converts
+// an xml stream into another xml stream transformed by xslt stylesheet.
 
-router.use('/Validate', Validate.router);
-router.use('/XsltTransform', XsltTransform.router);
+util.inherits(XsltTransform, Transform);
 
-router.post('/nir2akn', function (req, res, next) {
-    nir2akn(req.body.content, function (err, result) {
-        if (err)
-            next(err);
-        else
-            res.send(result).end();
+function XsltTransform(options) {
+    var me = this;
+    this.xmlString = '';
+    this.xsltPath = options.xslt;
+    Transform.call(this, options);
+    me.on('finish', function () {
+        me._applyXslt();
     });
-});
+}
 
-module.exports = router;
+XsltTransform.prototype._flush = function(callback) {
+    this.endConversion = callback;
+}
+
+XsltTransform.prototype._transform = function(chunk, encoding, done) {
+    this.xmlString += chunk.toString('utf8');
+    done();
+}
+
+XsltTransform.prototype._applyXslt = function() {
+    var me = this;
+    var str = cleanXmlString(this.xmlString);
+    //require('fs').writeFileSync('tmpString.xml', str);
+    xml.transform(str, this.xsltPath, {}, function (err, result) {
+        if (err) throw err;
+        me.push(result);
+        me.endConversion();
+    });
+}
+
+function cleanXmlString(xml) {
+    return entities.decodeHTML(
+            xml
+                .replace(/<!DOCTYPE[^>]+>/, '') // Saxon complains about bad writte DOCTYPE
+        );
+}
+
+module.exports = XsltTransform;

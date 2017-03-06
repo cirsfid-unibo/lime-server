@@ -44,23 +44,39 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var express = require('express');
-var nir2akn = require('./xml/nir.js').nir2akn;
-var Validate = require('./services/Validate.js');
-var XsltTransform = require('./services/XsltTransform.js');
+var Connection = require('./index');
+var fs = require('fs');
+var path = require('path');
 
-var router = express.Router();
+var config = require('../../config.json').existdb;
 
-router.use('/Validate', Validate.router);
-router.use('/XsltTransform', XsltTransform.router);
+var options = {
+    host: config.host,
+    port: config.port,
+    auth: config.auth,
+    rest: config.rest
+};
 
-router.post('/nir2akn', function (req, res, next) {
-    nir2akn(req.body.content, function (err, result) {
-        if (err)
-            next(err);
-        else
-            res.send(result).end();
+var connection = new Connection(options);
+var xquery = '';
+
+function getQuery() {
+    xquery = xquery ||
+                fs.readFileSync(path.join(__dirname, '../xql/delete_empty_collections.xql'), 'UTF-8');
+    return connection.query(xquery, { chunkSize: 100 });
+}
+
+module.exports = function(collection, callback) {
+    var query = getQuery();
+
+    query.bind('collection', collection);
+
+    query.on("error", function(err) {
+        console.log("An error occurred: " + err);
+        callback(err);
     });
-});
 
-module.exports = router;
+    query.each(function(response) {
+        callback(null, response);
+    });
+}
