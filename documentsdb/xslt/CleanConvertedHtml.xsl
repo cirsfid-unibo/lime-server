@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" 
+<xsl:stylesheet version="1.0" 
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
  <xsl:output omit-xml-declaration="yes"/>
  <xsl:strip-space elements="*"/>
@@ -37,7 +37,7 @@
   <xsl:apply-templates />
   <!-- Normalization for truncated lines at 69 characters -->
   <xsl:choose>
-   <xsl:when test="string-length(string(.)) = 69">
+   <xsl:when test="string-length(.//text()) = 69">
       <xsl:text> </xsl:text>
    </xsl:when>
    <xsl:otherwise>
