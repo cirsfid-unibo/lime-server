@@ -98,14 +98,14 @@ function setup () {
     exports.canValidate = false;
     exports.canTransform = false;
     try {
-        libxml = require('libxmljs');
-        exports.canValidate = true;
         libxslt = require('libxslt');
         libxslt.parse('<?xml version="1.0" encoding="UTF-8"?>\
                        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">\
                          <xsl:template match="/"></xsl:template>\
                        </xsl:stylesheet>');
         exports.canTransform = true;
+        libxml = libxslt.libxmljs;
+        exports.canValidate = true;
     } catch (e) {
         // console.log(e);
     };

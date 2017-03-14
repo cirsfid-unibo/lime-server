@@ -23,7 +23,7 @@
     "express-fileupload": "0.0.7",
     "langs": "^1.1.0",
     "languagedetect": "^1.1.1",
-    "libxmljs": "^0.18.0",
+    "libxslt": "^0.6.5",
     "mkdirp": "^0.5.0",
     "mongodb": "^2.0.14",
     "passport": "^0.2.2",
