@@ -1,16 +1,17 @@
 {
     "mongodb": {
-        "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb",
+        "url": "mongodb://localhost:42000/documentsdb",
         "collections": {
-            "users": "dev_users"
+            "users": "cassazione_users"
         }
     },
     "filesystem": {
-        "documents": "../data/documents/"
+        "documents": "/home/node/data/documents/cassazione/"
     },
     "users": {
         "shared_folders": [
-            "/shared/"
+            "/acquisizione/",
+            "/spedizione/"
         ]
     },
     "existIsMainBackend": true,
@@ -23,7 +24,6 @@
     },
     "existdbPortal": {},
     "abiword": {
-        "path": "/usr/bin/abiword",
-        "pathWin": "C:\\Users\\matteo.nardi7\\Applicazioni\\AbiWord\\bin\\AbiWord.exe"
+        "path": "/usr/bin/abiword"
     }
 }
