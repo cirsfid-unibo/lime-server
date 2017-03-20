@@ -46,6 +46,7 @@
 
 var express = require('express');
 var nir2akn = require('./xml/nir.js').nir2akn;
+var akn2nir = require('./xml/nir.js').akn2nir;
 var Validate = require('./services/Validate.js');
 var XsltTransform = require('./services/XsltTransform.js');
 
@@ -63,4 +64,12 @@ router.post('/nir2akn', function (req, res, next) {
     });
 });
 
+router.post('/akn2nir', function (req, res, next) {
+    akn2nir(req.body.content, function (err, result) {
+        if (err)
+            next(err);
+        else
+            res.send(result).end();
+    });
+});
 module.exports = router;
