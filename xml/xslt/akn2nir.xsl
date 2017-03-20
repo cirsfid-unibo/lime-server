@@ -415,7 +415,16 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
     <xsl:template match="akn:intro">
         <alinea><xsl:apply-templates select="node()|@*"/></alinea>
     </xsl:template>
+
+    <!-- Quoted elements -->
+    <xsl:template match="akn:quotedStructure">
+        <virgolette tipo="struttura"><xsl:apply-templates select="node()|@*"/></virgolette>
+    </xsl:template>
     
+    <xsl:template match="akn:quotedText">
+        <virgolette tipo="parola"><xsl:apply-templates select="node()|@*"/></virgolette>
+    </xsl:template>
+
     <!-- Utility -->
   
     <xsl:template match="@eId">
