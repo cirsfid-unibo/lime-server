@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso
+    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <act name="act">
+        <meta>
+            <identification source="#source">
+                <FRBRWork>
+                    <FRBRthis value="/akn/it/act/legge/2015-05-22/68/!main"/>
+                    <FRBRuri value="/akn/it/act/legge/2015-05-22/68"/>
+                    <FRBRalias value="urn:nir:legge:2015-05-22;68" name="urn:uri"/>
+                    <FRBRdate date="2015-05-22" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                    <FRBRcountry value="it"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/it/act/legge/2015-05-22/68/ita@/!main"/>
+                    <FRBRuri value="/akn/it/act/legge/2015-05-22/68/ita@"/>
+                    <FRBRdate date="2015-05-22" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                    <FRBRlanguage language="ita"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/it/act/legge/2015-05-22/68/ita@/main.xml/!main"/>
+                    <FRBRuri value="/akn/it/act/legge/2015-05-22/68/ita@.xml"/>
+                    <FRBRdate date="2017-03-20" name=""/>
+                    <FRBRauthor href="#" as="#"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2015-05-28" name="GU" showAs="Gazzetta Ufficiale" number="122"/>
+            <lifecycle source="#source">
+                <eventRef source="#generationSource" type="generation" eId="generation0" date="2015-05-29"/>
+            </lifecycle>
+            <references source="#source">
+                <TLCPerson eId="source" href="/akn/ontology/person/somebody" showAs="Somebody"/>
+                <original eId="generationSource" href="/generation/" showAs="Generation"/>
+                <TLCLocation eId="roma" href="/akn/ontology/location/it/roma" showAs="Roma"/>
+                <TLCConcept eId="visto" href="/ontology/concept/visto" showAs="Visto"/>
+                <TLCRole eId="presidenteDelConsiglioDeiMinistri" href="/akn/ontology/role/it/presidenteDelConsiglioDeiMinistri" showAs="Presidente del Consiglio dei ministri"/>
+                <TLCRole eId="guardasigilli" href="/akn/ontology/role/it/guardasigilli" showAs="Guardasigilli"/>
+                <TLCPerson eId="renzi" href="/akn/ontology/person/it/renzi" showAs="Renzi"/>
+                <TLCPerson eId="orlando" href="/akn/ontology/person/it/orlando" showAs="Orlando"/>
+                <TLCPerson eId="mattarella" href="/akn/ontology/person/it/mattarella" showAs="MATTARELLA"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docType>LEGGE</docType>
+                <docDate date="2015-05-22">22 maggio 2015</docDate>, 
+                <docNumber>n. 68</docNumber>
+                <docTitle>
+                    <eol/>Disposizioni in materia di delitti contro l'ambiente. (15G00082) 
+                </docTitle>
+                <eol/>(GU n.122 del 
+                <date date="2015-05-28">28-5-2015</date>) 
+                <eol/> Vigente al: 
+                <date date="2015-05-29">29-5-2015</date>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="formulaIniziale" eId="formula_1">
+                <p>
+                    <docAuthority>La Camera dei deputati ed il Senato della Repubblica</docAuthority> hanno approvato; 
+                    <eol/> IL 
+                    <docAuthority>PRESIDENTE DELLA REPUBBLICA</docAuthority>
+                </p>
+            </formula>
+            <p>
+                <eol/> Promulga 
+                <eol/>la seguente legge:
+            </p>
+        </preamble>
+        <body>
+            <article eId="art_1">
+                <num>Art. 1 </num>
+                <heading eId="art_1__heading"> 1. Dopo il titolo VI del libro secondo del codice penale e' inserito il seguente: «</heading>
+                <mod>
+                    <quotedStructure eId="art_1__qstr_1">
+                        <title eId="art_1__qstr_1__title_VI-bis">
+                            <num>Titolo VI-bis</num>
+                            <heading eId="art_1__qstr_1__title_VI-bis__heading"> - Dei delitti contro l'ambiente. </heading>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_2">
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_2__para_1">
+                                    <article eId="art_1__qstr_1__title_VI-bis__art_2__para_1__art_3">
+                                        <article eId="art_1__qstr_1__title_VI-bis__art_2__para_1__art_3__art_452-bis">
+                                            <num>Art. 452-bis</num>
+                                            <paragraph eId="art_1__qstr_1__title_VI-bis__art_2__para_1__art_3__art_452-bis__para_1">
+                                                <content eId="art_1__qstr_1__title_VI-bis__art_2__para_1__art_3__art_452-bis__para_1__content">
+                                                    <p>. (Inquinamento ambientale). - E' punito con la reclusione da due a sei anni e con la multa da euro 10.000 a euro 100.000 chiunque abusivamente cagiona una compromissione o un deterioramento significativi e misurabili:</p>
+                                                </content>
+                                            </paragraph>
+                                        </article>
+                                    </article>
+ 1) delle acque o dell'aria, o di porzioni estese o significative del suolo o del sottosuolo;  2) di un ecosistema, della biodiversita', anche agraria, della flora o della fauna.
+                                </paragraph>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_2__para_3">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_2__para_3__content">
+                                        <p> Quando l'inquinamento e' prodotto in un'area naturale protetta o sottoposta a vincolo paesaggistico, ambientale, storico, artistico, architettonico o archeologico, ovvero in danno di specie animali o vegetali protette, la pena e' aumentata.</p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_5">
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_5__para_1">
+                                    <article eId="art_1__qstr_1__title_VI-bis__art_5__para_1__art_452-ter">
+                                        <num>Art. 452-ter</num>
+                                        <paragraph eId="art_1__qstr_1__title_VI-bis__art_5__para_1__art_452-ter__para_1">
+                                            <content eId="art_1__qstr_1__title_VI-bis__art_5__para_1__art_452-ter__para_1__content">
+                                                <p>. (Morte o lesioni come conseguenza del delitto di inquinamento ambientale). - Se da uno dei fatti di cui all'
+                                                    <ref href="#art_452bis" eId="content__ref_1">articolo 452-bis</ref> deriva, quale conseguenza non voluta dal reo, una lesione personale, ad eccezione delle ipotesi in cui la malattia ha una durata non superiore ai venti giorni, si applica la pena della reclusione da due anni e sei mesi a sette anni; se ne deriva una lesione grave, la pena della reclusione da tre a otto anni; se ne deriva una lesione gravissima, la pena della reclusione da quattro a nove anni; se ne deriva la morte, la pena della reclusione da cinque a dieci anni.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+ Nel caso di morte di piu' persone, di lesioni di piu' persone, ovvero di morte di una o piu' persone e lesioni di una o piu' persone, si applica la pena che dovrebbe infliggersi per l'ipotesi piu' grave, aumentata fino al triplo, ma la pena della reclusione non puo' superare gli anni venti.
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-quater">
+                                <num>Art. 452-quater</num>
+                                <content eId="art_1__qstr_1__title_VI-bis__art_452-quater__content">
+                                    <blockList eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1">
+                                        <listIntroduction>. (Disastro ambientale). - Fuori dai casi previsti dall'
+                                            <ref href="#art_434" eId="ref_2">articolo 434</ref>, chiunque abusivamente cagiona un disastro ambientale e' punito con la reclusione da cinque a quindici anni. Costituiscono disastro ambientale alternativamente: 
+                                        </listIntroduction>
+                                        <item eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1__item_1">
+                                            <num>1)</num>
+                                            <p>l'alterazione irreversibile dell'equilibrio di un ecosistema;</p>
+                                        </item>
+                                        <item eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1__item_2">
+                                            <num>2)</num>
+                                            <p>l'alterazione dell'equilibrio di un ecosistema la cui eliminazione risulti particolarmente onerosa e conseguibile solo con provvedimenti eccezionali;</p>
+                                        </item>
+                                        <item eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1__item_3">
+                                            <num>3)</num>
+                                            <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1__item_3__para_1">
+                                                <content eId="art_1__qstr_1__title_VI-bis__art_452-quater__content__list_1__item_3__para_1__content">
+                                                    <p>l'offesa alla pubblica incolumita' in ragione della rilevanza del fatto per l'estensione della compromissione o dei suoi effetti lesivi ovvero per il numero delle persone offese o esposte a pericolo.  Quando il disastro e' prodotto in un'area naturale protetta o sottoposta a vincolo paesaggistico, ambientale, storico, artistico, architettonico o archeologico, ovvero in danno di specie animali o vegetali protette, la pena e' aumentata.</p>
+                                                </content>
+                                            </paragraph>
+                                        </item>
+                                    </blockList>
+                                    <p/>
+                                </content>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-quinquies">
+                                <num>Art. 452-quinquies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-quinquies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-quinquies__para_1__content">
+                                        <p>. (Delitti colposi contro l'ambiente). - Se taluno dei fatti di cui agli 
+                                            <mref>articoli 
+                                                <ref href="#art_452bis" eId="ref_3">452-bis</ref> e 
+                                                <ref href="#art_452quater" eId="ref_4">452-quater</ref>
+                                            </mref> e' commesso per colpa, le pene previste dai medesimi articoli sono diminuite da un terzo a due terzi.  Se dalla commissione dei fatti di cui al comma precedente deriva il pericolo di inquinamento ambientale o di disastro ambientale le pene sono ulteriormente diminuite di un terzo.
+                                        </p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-sexies">
+                                <num>Art. 452-sexies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content">
+                                        <p>. (Traffico e abbandono di materiale ad alta radioattivita'). - Salvo che il fatto costituisca piu' grave reato, e' punito con la reclusione da due a sei anni e con la multa da euro 10.000 a euro 50.000 chiunque abusivamente cede, acquista, riceve, trasporta, importa, esporta, procura ad altri, detiene, trasferisce, abbandona o si disfa illegittimamente di materiale ad alta radioattivita'. 
+</p>
+                                        <blockList eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content__list_1">
+                                            <listIntroduction> La pena di cui al primo comma e' aumentata se dal fatto deriva il pericolo di compromissione o deterioramento: </listIntroduction>
+                                            <item eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content__list_1__item_1">
+                                                <num>1)</num>
+                                                <p>delle acque o dell'aria, o di porzioni estese o significative del suolo o del sottosuolo;</p>
+                                            </item>
+                                            <item eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content__list_1__item_2">
+                                                <num>2)</num>
+                                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content__list_1__item_2__para_1">
+                                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-sexies__para_1__content__list_1__item_2__para_1__content">
+                                                        <p>di un ecosistema, della biodiversita', anche agraria, della flora o della fauna.  Se dal fatto deriva pericolo per la vita o per l'incolumita' delle persone, la pena e' aumentata fino alla meta'.</p>
+                                                    </content>
+                                                </paragraph>
+                                            </item>
+                                        </blockList>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-septies">
+                                <num>Art. 452-septies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-septies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-septies__para_1__content">
+                                        <p>. (Impedimento del controllo). - Salvo che il fatto costituisca piu' grave reato, chiunque, negando l'accesso, predisponendo ostacoli o mutando artificiosamente lo stato dei luoghi, impedisce, intralcia o elude l'attivita' di vigilanza e controllo ambientali e di sicurezza e igiene del lavoro, ovvero ne compromette gli esiti, e' punito con la reclusione da sei mesi a tre anni.</p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-octies">
+                                <num>Art. 452-octies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-octies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-octies__para_1__content">
+                                        <p>. (Circostanze aggravanti). - Quando l'associazione di cui all'
+                                            <ref href="#art_416" eId="content__ref_5">articolo 416</ref> e' diretta, in via esclusiva o concorrente, allo scopo di commettere taluno dei delitti previsti dal presente titolo, le pene previste dal medesimo 
+                                            <ref href="#art_416" eId="content__ref_6">articolo 416</ref> sono aumentate.  Quando l'associazione di cui all'
+                                            <ref href="#art_416bis" eId="content__ref_7">articolo 416-bis</ref> e' finalizzata a commettere taluno dei delitti previsti dal presente titolo ovvero all'acquisizione della gestione o comunque del controllo di attivita' economiche, di concessioni, di autorizzazioni, di appalti o di servizi pubblici in materia ambientale, le pene previste dal medesimo 
+                                            <ref href="#art_416bis" eId="content__ref_8">articolo 416-bis</ref> sono aumentate.  Le pene di cui ai commi primo e secondo sono aumentate da un terzo alla meta' se dell'associazione fanno parte pubblici ufficiali o incaricati di un pubblico servizio che esercitano funzioni o svolgono servizi in materia ambientale.
+                                        </p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-novies">
+                                <num>Art. 452-novies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-novies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-novies__para_1__content">
+                                        <p>. (Aggravante ambientale). - Quando un fatto gia' previsto come reato e' commesso allo scopo di eseguire uno o piu' tra i delitti previsti dal presente titolo, dal 
+                                            <ref href="/akn/it/act/2006-04-03/152/!main" eId="content__ref_9">decreto legislativo 3 aprile 2006, n. 152</ref>, o da altra disposizione di legge posta a tutela dell'ambiente, ovvero se dalla commissione del fatto deriva la violazione di una o piu' norme previste dal citato decreto legislativo n. 152 del 2006 o da altra legge che tutela l'ambiente, la pena nel primo caso e' aumentata da un terzo alla meta' e nel secondo caso e' aumentata di un terzo. In ogni caso il reato e' procedibile d'ufficio.
+                                        </p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                            <article eId="art_1__qstr_1__title_VI-bis__art_452-decies">
+                                <num>Art. 452-decies</num>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_1">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_1__content">
+                                        <p>. (Ravvedimento operoso). - Le pene previste per i delitti di cui al presente titolo, per il delitto di associazione per delinquere di cui all'
+                                            <ref href="#art_416" eId="content__ref_10">articolo 416</ref> aggravato ai sensi dell'
+                                            <ref href="#art_452" eId="content__ref_11">articolo 452-</ref>octies, nonche' per il delitto di cui all'
+                                            <ref href="/akn/it/act/2006-04-03/152/!main/#art_260" eId="content__ref_12">articolo 260 del decreto legislativo 3 aprile 2006, n. 152</ref>, e successive modificazioni, sono diminuite dalla meta' a due terzi nei confronti di colui che si adopera per evitare che l'attivita' delittuosa venga portata a conseguenze ulteriori, ovvero, prima della dichiarazione di apertura del dibattimento di primo grado, provvede concretamente alla messa in sicurezza, alla bonifica e, ove possibile, al ripristino dello stato dei luoghi, e diminuite da un terzo alla meta' nei confronti di colui che aiuta concretamente l'autorita' di polizia o l'autorita' giudiziaria nella ricostruzione del fatto, nell'individuazione degli autori o nella sottrazione di risorse rilevanti per la commissione dei delitti.  Ove il giudice, su richiesta dell'imputato, prima della dichiarazione di apertura del dibattimento di primo grado disponga la sospensione del procedimento per un tempo congruo, comunque non superiore a due anni e prorogabile per un periodo massimo di un ulteriore anno, al fine di consentire le attivita' di cui al comma precedente in corso di esecuzione, il corso della prescrizione e' sospeso.
+                                        </p>
+                                    </content>
+                                </paragraph>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_2">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_2__content">
+                                        <p> Art. 452-undecies. (Confisca). - Nel caso di condanna o di applicazione della pena su richiesta delle parti, a norma dell'
+                                            <ref href="/akn/it/act/1930-10-19/!main/#art_444" eId="content__ref_13">articolo 444 del codice di procedura penale</ref>, per i delitti previsti dagli 
+                                            <mref>articoli 
+                                                <ref href="#art_452bis" eId="ref_14">452-bis</ref>, 
+                                                <ref href="#art_452quater" eId="ref_15">452-quater</ref>, 
+                                                <ref href="#art_452" eId="ref_16">452-</ref>
+                                            </mref>sexies, 452-septies e 452-octies del presente codice, e' sempre ordinata la confisca delle cose che costituiscono il prodotto o il profitto del reato o che servirono a commettere il reato, salvo che appartengano a persone estranee al reato.  Quando, a seguito di condanna per uno dei delitti previsti dal presente titolo, sia stata disposta la confisca di beni ed essa non sia possibile, il giudice individua beni di valore equivalente di cui il condannato abbia anche indirettamente o per interposta persona la disponibilita' e ne ordina la confisca.
+                                        </p>
+                                    </content>
+                                </paragraph>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_3">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_3__content">
+                                        <p> I beni confiscati ai sensi dei commi precedenti o i loro eventuali proventi sono messi nella disponibilita' della pubblica amministrazione competente e vincolati all'uso per la bonifica dei luoghi.</p>
+                                    </content>
+                                </paragraph>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_4">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_4__content">
+                                        <p> L'istituto della confisca non trova applicazione nell'ipotesi in cui l'imputato abbia efficacemente provveduto alla messa in sicurezza e, ove necessario, alle attivita' di bonifica e di ripristino dello stato dei luoghi.</p>
+                                    </content>
+                                </paragraph>
+                                <paragraph eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_5">
+                                    <content eId="art_1__qstr_1__title_VI-bis__art_452-decies__para_5__content">
+                                        <p> Art. 452-duodecies. (Ripristino dello stato dei luoghi). - Quando pronuncia sentenza di condanna ovvero di applicazione della pena su richiesta delle parti a norma dell'
+                                            <ref href="/akn/it/act/1930-10-19/!main/#art_444" eId="content__ref_17">articolo 444 del codice di procedura penale</ref> per taluno dei delitti previsti dal presente titolo, il giudice ordina il recupero e, ove tecnicamente possibile, il ripristino dello stato dei luoghi, ponendone l'esecuzione a carico del condannato e dei soggetti di cui all'
+                                            <ref href="#art_197" eId="content__ref_18">articolo 197</ref> del presente codice.  Al ripristino dello stato dei luoghi di cui al comma precedente si applicano le disposizioni di cui al titolo II della parte sesta del 
+                                            <ref href="/akn/it/act/2006-04-03/152/!main" eId="content__ref_19">decreto legislativo 3 aprile 2006, n. 152</ref>, in materia di ripristino ambientale.  Art. 452-terdecies. (Omessa bonifica). - Salvo che il fatto costituisca piu' grave reato, chiunque, essendovi obbligato per legge, per ordine del giudice ovvero di un'autorita' pubblica, non provvede alla bonifica, al ripristino o al recupero dello stato dei luoghi e' punito con la pena della reclusione da uno a quattro anni e con la multa da euro 20.000 a euro 80.000
+                                        </p>
+                                    </content>
+                                </paragraph>
+                            </article>
+                        </title>
+                    </quotedStructure>
+                </mod>
+». 
+
+                <paragraph eId="art_1__para_2">
+                    <num>2.</num>
+                    <content eId="art_1__para_2__content">
+                        <blockList eId="art_1__para_2__content__list_1">
+                            <listIntroduction> All'
+                                <ref href="/akn/it/act/2006-04-03/152/!main/#art_257" eId="ref_20">articolo 257 del decreto legislativo 3 aprile 2006, n. 152</ref>,sono apportate le seguenti modificazioni: 
+                            </listIntroduction>
+                            <item eId="art_1__para_2__content__list_1__item_a">
+                                <num>a)</num>
+                                <p>al 
+                                    <ref href="#para_1" eId="ref_21">comma 1</ref> sono premesse le seguenti parole: «
+                                    <mod>
+                                        <quotedText eId="art_1__para_2__content__list_1__item_a__qtext_1">Salvo che il fatto costituisca piu' grave reato,</quotedText>
+                                    </mod>»; 
+                                    <eol/> b) il 
+                                    <ref href="#para_4" eId="ref_22">comma 4</ref> e' sostituito dal seguente: 
+                                    <eol/> «
+                                    <mod>
+                                        <quotedText eId="art_1__para_2__content__list_1__item_a__qtext_2">4. L'osservanza dei progetti approvati ai sensi degli 
+                                            <ref href="#art_242" eId="ref_23">articoli 242</ref> e seguenti costituisce condizione di non punibilita' per le contravvenzioni ambientali contemplate da altre leggi per il medesimo evento e per la stessa condotta di inquinamento di cui al 
+                                            <ref href="#para_1" eId="ref_24">comma 1</ref>
+                                        </quotedText>
+                                    </mod>».
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_3">
+                    <num>3.</num>
+                    <content eId="art_1__para_3__content">
+                        <p>All'
+                            <ref href="/akn/it/act/2006-04-03/152/!main/#art_260" eId="content__ref_25">articolo 260 del decreto legislativo 3 aprile 2006, n. 152</ref>, e' aggiunto, in fine, il seguente comma:  «
+                            <mod>
+                                <quotedText eId="art_1__para_3__content__qtext_1">4-bis. E' sempre ordinata la confisca delle cose che servirono a commettere il reato o che costituiscono il prodotto o il profitto del reato, salvo che appartengano a persone estranee al reato. Quando essa non sia possibile, il giudice individua beni di valore equivalente di cui il condannato abbia anche indirettamente o per interposta persona la disponibilita' e ne ordina la confisca</quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_4">
+                    <num>4.</num>
+                    <content eId="art_1__para_4__content">
+                        <p>All'
+                            <ref href="#art_12" eId="content__ref_26">articolo 12-</ref>sexies, 
+                            <ref href="/akn/it/act/1992-06-08/306/!main/#para_1" eId="content__ref_27">comma 1, del decreto-legge 8 giugno 1992, n. 306</ref>, convertito, con modificazioni, dalla 
+                            <ref href="/akn/it/act/1992-08-07/356/!main" eId="content__ref_28">legge 7 agosto 1992, n. 356</ref>, e successive modificazioni, dopo la parola: «
+                            <mod>
+                                <quotedText eId="art_1__para_4__content__qtext_1">416-bis,</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_4__content__qtext_2">452-quater, 452-octies, primo comma,</quotedText>
+                            </mod>» e dopo le parole: «
+                            <mod>
+                                <quotedText eId="art_1__para_4__content__qtext_3">dalla 
+                                    <ref href="/akn/it/act/1992-08-07/356/!main" eId="ref_29">legge 7 agosto 1992, n. 356</ref>,
+                                </quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_4__content__qtext_4">o dall'
+                                    <ref href="/akn/it/act/2006-04-03/152/!main/#art_260" eId="ref_30">articolo 260 del decreto legislativo 3 aprile 2006, n. 152</ref>, e successive modificazioni,
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_5">
+                    <num>5.</num>
+                    <content eId="art_1__para_5__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1930-10-19/!main/#art_32quater" eId="content__ref_31">articolo 32-quater del codice penale</ref>, dopo la parola: «
+                            <mod>
+                                <quotedText eId="art_1__para_5__content__qtext_1">437,</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_5__content__qtext_2">452-bis, 452-quater, 452-sexies, 452-septies,</quotedText>
+                            </mod>» e dopo la parola: «
+                            <mod>
+                                <quotedText eId="art_1__para_5__content__qtext_3">644</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_5__content__qtext_4">, nonche' dall'
+                                    <ref href="/akn/it/act/2006-04-03/152/!main/#art_260" eId="ref_32">articolo 260 del decreto legislativo 3 aprile 2006, n. 152</ref>, e successive modificazioni
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_6">
+                    <num>6.</num>
+                    <content eId="art_1__para_6__content">
+                        <p>All'
+                            <ref href="#art_157" eId="content__ref_33">articolo 157</ref>, sesto comma, secondo periodo, del codice penale, dopo le parole: «
+                            <mod>
+                                <quotedText eId="art_1__para_6__content__qtext_1">sono altresi' raddoppiati</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_6__content__qtext_2">per i delitti di cui al titolo VI-bis del libro secondo,</quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_7">
+                    <num>7.</num>
+                    <content eId="art_1__para_7__content">
+                        <p>All'
+                            <ref href="#art_118bis__para_1" eId="content__ref_34">articolo 118-bis, comma 1</ref>, delle norme di attuazione, di coordinamento e transitorie del codice di procedura penale, di cui al 
+                            <ref href="/akn/it/act/1989-07-28/271/!main" eId="content__ref_35">decreto legislativo 28 luglio 1989, n. 271</ref>, dopo le parole: «
+                            <mod>
+                                <quotedText eId="art_1__para_7__content__qtext_1">del codice</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_7__content__qtext_2">, nonche' per i delitti di cui agli 
+                                    <mref>articoli 
+                                        <ref href="#art_452bis" eId="ref_36">452-bis</ref>, 
+                                        <ref href="#art_452quater" eId="ref_37">452-quater</ref>, 
+                                        <ref href="#art_452" eId="ref_38">452-</ref>
+                                    </mref>sexies e 452-octies del codice penale,
+                                </quotedText>
+                            </mod>», dopo le parole: «
+                            <mod>
+                                <quotedText eId="art_1__para_7__content__qtext_3">presso la Corte di appello</quotedText>
+                            </mod>» sono inserite le seguenti: «
+                            <mod>
+                                <quotedText eId="art_1__para_7__content__qtext_4">nonche' all'Agenzia delle entrate ai fini dei necessari accertamenti</quotedText>
+                            </mod>» ed e' aggiunto, in fine, il seguente periodo: «
+                            <mod>
+                                <quotedText eId="art_1__para_7__content__qtext_5">Il procuratore della Repubblica, quando procede a indagini per i delitti di cui agli 
+                                    <mref>articoli 
+                                        <ref href="#art_452bis" eId="ref_39">452-bis</ref>, 
+                                        <ref href="#art_452quater" eId="ref_40">452-quater</ref>, 
+                                        <ref href="#art_452" eId="ref_41">452-</ref>
+                                    </mref>sexies e 452-octies del codice penale e all'
+                                    <ref href="/akn/it/act/2006-04-03/152/!main/#art_260" eId="ref_42">articolo 260 del decreto legislativo 3 aprile 2006, n. 152</ref>, e successive modificazioni, ne da' altresi' notizia al Procuratore nazionale antimafia
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_8">
+                    <num>8.</num>
+                    <content eId="art_1__para_8__content">
+                        <p>All'
+                            <ref href="#art_25" eId="content__ref_43">articolo 25-</ref>undecies del 
+                            <ref href="/akn/it/act/2001-06-08/231/!main" eId="content__ref_44">decreto legislativo 8 giugno 2001, n. 231</ref>, sono apportate le seguenti modificazioni:  a) al 
+                            <ref href="#para_1" eId="content__ref_45">comma 1</ref>, le 
+                            <mref>lettere 
+                                <ref href="#item_a" eId="ref_46">a)</ref> e 
+                                <ref href="#item_b" eId="ref_47">b)</ref>
+                            </mref> sono sostituite dalle seguenti:  «
+
+                            <mod>
+                                <quotedStructure eId="art_1__para_8__content__qstr_1">
+                                    <blockList eId="art_1__para_8__content__qstr_1__list_1">
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_a">
+                                            <num>a)</num>
+                                            <p>per la violazione dell'
+                                                <ref href="#art_452bis" eId="ref_48">articolo 452-bis</ref>, la sanzione pecuniaria da duecentocinquanta a seicento quote;
+                                            </p>
+                                        </item>
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_b">
+                                            <num>b)</num>
+                                            <p>per la violazione dell'
+                                                <ref href="#art_452quater" eId="ref_49">articolo 452-quater</ref>, la sanzione pecuniaria da quattrocento a ottocento quote;
+                                            </p>
+                                        </item>
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_c">
+                                            <num>c)</num>
+                                            <p>per la violazione dell'
+                                                <ref href="#art_452quinquies" eId="ref_50">articolo 452-quinquies</ref>, la sanzione pecuniaria da duecento a cinquecento quote;
+                                            </p>
+                                        </item>
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_d">
+                                            <num>d)</num>
+                                            <p>per i delitti associativi aggravati ai sensi dell'
+                                                <ref href="#art_452" eId="ref_51">articolo 452-</ref>octies, la sanzione pecuniaria da trecento a mille quote;
+                                            </p>
+                                        </item>
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_e">
+                                            <num>e)</num>
+                                            <p>per il delitto di traffico e abbandono di materiale ad alta radioattivita' ai sensi dell'
+                                                <ref href="#art_452" eId="ref_52">articolo 452-</ref>sexies, la sanzione pecuniaria da duecentocinquanta a seicento quote;
+                                            </p>
+                                        </item>
+                                        <item eId="art_1__para_8__content__qstr_1__list_1__item_f">
+                                            <num>f)</num>
+                                            <p>per la violazione dell'
+                                                <ref href="#art_727bis" eId="ref_53">articolo 727-bis</ref>, la sanzione pecuniaria fino a duecentocinquanta quote; 
+                                                <eol/> g) per la violazione dell'
+                                                <ref href="#art_733bis" eId="ref_54">articolo 733-bis</ref>, la sanzione pecuniaria da centocinquanta a duecentocinquanta quote
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </quotedStructure>
+                            </mod>
+»;  b) dopo il 
+                            <ref href="#para_1" eId="content__ref_55">comma 1</ref> e' inserito il seguente:  «
+                            <mod>
+                                <quotedText eId="art_1__para_8__content__qtext_1">1-bis. Nei casi di condanna per i delitti indicati al 
+                                    <ref href="#para_1__item_a" eId="ref_56">comma 1, lettere a) e b)</ref>, del presente articolo, si applicano, oltre alle sanzioni pecuniarie ivi previste, le sanzioni interdittive previste dall'
+                                    <ref href="#art_9" eId="ref_57">articolo 9</ref>, per un periodo non superiore a un anno per il delitto di cui alla citata 
+                                    <ref href="#item_a" eId="ref_58">lettera a)</ref>
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_1__para_9">
+                    <num>9.</num>
+                    <content eId="art_1__para_9__content">
+                        <p>Dopo la parte sesta del 
+                            <ref href="/akn/it/act/2006-04-03/152/!main" eId="content__ref_59">decreto legislativo 3 aprile 2006, n. 152</ref>, e successive modificazioni, e' aggiunta la seguente:  “
+
+                            <mod>
+                                <quotedStructure eId="art_1__para_9__content__qstr_1">Parte sesta-bis. - Disciplina sanzionatoria degli illeciti amministrativi e penali in materia di tutela ambientale. 
+
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-bis">
+                                        <num>Art. 318-bis</num>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-bis__para_1">
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-bis__para_1__content">
+                                                <p>. (Ambito di applicazione). - 1. Le disposizionidella presente parte si applicano alle ipotesi contravvenzionali in materia ambientale previste dal presente decreto che non hanno cagionato danno o pericolo concreto e attuale di danno alle risorse ambientali, urbanistiche o paesaggistiche protette.</p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-ter">
+                                        <num>Art. 318-ter</num>
+                                        <heading eId="art_1__para_9__content__qstr_1__art_318-ter__heading">. (Prescrizioni). – </heading>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-ter__para_1">
+                                            <num>1.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-ter__para_1__content">
+                                                <p>Allo scopo di eliminare la contravvenzione accertata, l'organo di vigilanza, nell'esercizio delle funzioni di polizia giudiziaria di cui all'
+                                                    <ref href="/akn/it/act/1930-10-19/!main/#art_55" eId="content__ref_60">articolo 55 del codice di procedura penale</ref>, ovvero la polizia giudiziaria impartisce al contravventore un'apposita prescrizione asseverata tecnicamente dall'ente specializzato competente nella materia trattata, fissando per la regolarizzazione un termine non superiore al periodo di tempotecnicamente necessario. In presenza di specifiche e documentate circostanze non imputabili al contravventore che determinino unritardo nella regolarizzazione, il termine puo' essere prorogato per una sola volta, a richiesta del contravventore, per un periodo non superiore a sei mesi, con provvedimento motivato che e' comunicato immediatamente al pubblico ministero.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-ter__para_2">
+                                            <num>2.</num> Copia della prescrizione e' notificata o comunicata anche al rappresentante legale dell'ente nell'ambito o al servizio del quale opera il contravventore.
+
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-ter__para_2__content">
+                                                <p/>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-ter__para_3">
+                                            <num>3.</num> Con la prescrizione l'organo accertatore puo' imporre specifiche misure atte a far cessare situazioni di pericolo ovvero la prosecuzione di attivita' potenzialmente pericolose.
+
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-ter__para_3__content">
+                                                <p/>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-ter__para_4">
+                                            <num>4.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-ter__para_4__content">
+                                                <p>Resta fermo l'obbligo dell'organo accertatore di riferire al pubblico ministero la notizia di reato relativa alla contravvenzione, ai sensi dell'
+                                                    <ref href="/akn/it/act/1930-10-19/!main/#art_347" eId="content__ref_61">articolo 347 del codice di procedura penale</ref>.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-quater">
+                                        <num>Art. 318-quater</num>
+                                        <heading eId="art_1__para_9__content__qstr_1__art_318-quater__heading">. (Verifica dell'adempimento). - 1. Entro sessanta giorni dalla scadenza del termine fissato nella prescrizione ai sensi dell'
+                                            <ref href="#art_318ter" eId="ref_62">articolo 318-ter</ref>, l'organo accertatore verifica se la violazione e' stata eliminata secondo le modalita' e nel termine indicati dalla prescrizione. 
+                                        </heading>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-quater__para_2">
+                                            <num>2.</num> Quando risulta l'adempimento della prescrizione, l'organo accertatore ammette il contravventore a pagare in sede amministrativa, nel termine di trenta giorni, una somma pari a un quarto del massimo dell'ammenda stabilita per la contravvenzione commessa. Entro centoventi giorni dalla scadenza del termine fissato nella prescrizione, l'organo accertatore comunica al pubblico ministero l'adempimento della prescrizione nonche' l'eventuale pagamento della predetta somma.
+
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-quater__para_2__content">
+                                                <p/>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-quater__para_3">
+                                            <num>3.</num> Quando risulta l'inadempimento della prescrizione, l'organo accertatore ne da' comunicazione al pubblico ministero e al contravventore entro novanta giorni dalla scadenza del termine fissato nella stessa prescrizione.
+
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-quater__para_3__content">
+                                                <p/>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-quinquies">
+                                        <num>Art. 318-quinquies</num>
+                                        <heading eId="art_1__para_9__content__qstr_1__art_318-quinquies__heading">. (Notizie di reato non pervenute dall'organo accertatore). - 1. Se il pubblico ministero prende notizia di una contravvenzione di propria iniziativa ovvero la riceve da privati o da pubblici ufficiali o incaricati di un pubblico servizio diversi dall'organo di vigilanza e dalla polizia giudiziaria, ne da' comunicazione all'organo di vigilanza o alla polizia giudiziaria affinche' provveda agli adempimenti di cui agli 
+                                            <mref>articoli 
+                                                <ref href="#art_318ter" eId="ref_63">318-ter</ref> e 
+                                                <ref href="#art_318quater" eId="ref_64">318-quater</ref>
+                                            </mref>. 
+                                        </heading>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-quinquies__para_2">
+                                            <num>2.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-quinquies__para_2__content">
+                                                <p>Nel caso previsto dal 
+                                                    <ref href="#para_1" eId="content__ref_65">comma 1</ref>, l'organo di vigilanza o la polizia giudiziaria informano il pubblico ministero della propria attivita' senza ritardo.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-sexies">
+                                        <num>Art. 318-sexies</num>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-sexies__para_1">. (Sospensione del procedimento penale). - 
+                                            <num>1.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-sexies__para_1__content">
+                                                <p>Il procedimento per la contravvenzione e' sospeso dal momento dell'iscrizione della notizia di reato nel registro di cui all'
+                                                    <ref href="/akn/it/act/1930-10-19/!main/#art_335" eId="content__ref_66">articolo 335 del codice di procedura penale</ref> fino al momento in cui il pubblico ministero riceve una delle comunicazioni di cui all'
+                                                    <ref href="#art_318quater__para_2" eId="content__ref_67">articolo 318-quater, commi 2 e 3</ref>, del presente decreto.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-sexies__para_2">
+                                            <num>2.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-sexies__para_2__content">
+                                                <p>Nel caso previsto dall'
+                                                    <ref href="#art_318quinquies__para_1" eId="content__ref_68">articolo 318-quinquies, comma 1</ref>, il procedimento rimane sospeso fino al termine indicato al 
+                                                    <ref href="#para_1" eId="content__ref_69">comma 1</ref> del presente articolo.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-sexies__para_3">
+                                            <num>3.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-sexies__para_3__content">
+                                                <p>La sospensione del procedimento non preclude la richiesta di archiviazione. Non impedisce, inoltre, l'assunzione delle prove con incidente probatorio, ne' gli atti urgenti di indagine preliminare, ne' il sequestro preventivo ai sensi degli 
+                                                    <ref href="#art_321" eId="content__ref_70">articoli 321</ref> e seguenti del codice di procedura penale.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-septies">
+                                        <num>Art. 318-septies</num>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-septies__para_1">. (Estinzione del reato). - 
+                                            <num>1.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-septies__para_1__content">
+                                                <p>La contravvenzione si estingue se il contravventore adempie alla prescrizione impartita dall'organo di vigilanza nel termine ivi fissato e provvede al pagamento previsto dall'
+                                                    <ref href="#art_318quater__para_2" eId="content__ref_71">articolo 318-quater, comma 2</ref>.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-septies__para_2">
+                                            <num>2.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-septies__para_2__content">
+                                                <p>Il pubblico ministero richiede l'archiviazione se la contravvenzione e' estinta ai sensi del 
+                                                    <ref href="#para_1" eId="content__ref_72">comma 1</ref>.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-septies__para_3">
+                                            <num>3.</num>
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-septies__para_3__content">
+                                                <p>L'adempimento in un tempo superiore a quello indicato dalla prescrizione, ma che comunque risulta congruo a norma dell'
+                                                    <ref href="#art_318quater__para_1" eId="content__ref_73">articolo 318-quater, comma 1</ref>, ovvero l'eliminazione delle conseguenze dannose o pericolose della contravvenzione con modalita' diverse da quelle indicate dall'organo di vigilanza sono valutati ai fini dell'applicazione dell'
+                                                    <ref href="/akn/it/act/1930-10-19/!main/#art_162bis" eId="content__ref_74">articolo 162-bis del codice penale</ref>. In tal caso, la somma da versare e' ridotta alla meta' del massimo dell'ammenda stabilita per la contravvenzione commessa.
+                                                </p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                    <article eId="art_1__para_9__content__qstr_1__art_318-octies">
+                                        <num>Art. 318-octies</num>
+                                        <paragraph eId="art_1__para_9__content__qstr_1__art_318-octies__para_1">
+                                            <content eId="art_1__para_9__content__qstr_1__art_318-octies__para_1__content">
+                                                <p>. (Norme di coordinamento e transitorie). - 1. Le norme della presente parte non si applicano ai procedimenti in corso alla data di entrata in vigore della medesima parte</p>
+                                            </content>
+                                        </paragraph>
+                                    </article>
+                                </quotedStructure>
+                            </mod>
+”.
+                        </p>
+                    </content>
+                </paragraph>
+            </article>
+            <article eId="art_2">
+                <num>Art. 2 </num>
+                <paragraph eId="art_2__para_1">
+                    <num>1.</num>
+                    <content eId="art_2__para_1__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1992-02-07/150/!main/#art_1" eId="content__ref_75">articolo 1 della legge 7 febbraio 1992, n. 150</ref>, sono apportate le seguenti 
+
+                        </p>
+                        <blockList eId="art_2__para_1__content__list_1">
+                            <listIntroduction>modificazioni:</listIntroduction>
+                            <item eId="art_2__para_1__content__list_1__item_a">
+                                <num>a)</num>
+                                <p>al 
+                                    <ref href="#para_1" eId="ref_76">comma 1</ref>, alinea, le parole: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_1__content__list_1__item_a__qtext_1">con l'arresto da tre mesi ad un anno e con l'ammenda da lire quindici milioni a lire centocinquanta milioni</quotedText>
+                                    </mod>» sono sostituite dalle seguenti: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_1__content__list_1__item_a__qtext_2">con l'arresto da sei mesi a due anni e con l'ammenda da euro quindicimila a euro centocinquantamila</quotedText>
+                                    </mod>»; 
+                                    <eol/> b) il 
+                                    <ref href="#para_2" eId="ref_77">comma 2</ref> e' sostituito dal seguente: 
+                                    <eol/> «
+
+                                    <mod>
+                                        <quotedStructure eId="art_2__para_1__content__list_1__item_a__qstr_1">
+                                            <paragraph eId="art_2__para_1__content__list_1__item_a__qstr_1__para_2">
+                                                <num>2.</num> In caso di recidiva, si applica la pena dell'arresto da uno a tre anni e dell'ammenda da euro trentamila a euro trecentomila. Qualora il reato suddetto sia commesso nell'esercizio di attivita' di impresa, alla condanna consegue la sospensione della licenza da un minimo di sei mesi ad un massimo di due anni
+
+                                                <content eId="art_2__para_1__content__list_1__item_a__qstr_1__para_2__content">
+                                                    <p/>
+                                                </content>
+                                            </paragraph>
+                                        </quotedStructure>
+                                    </mod>
+»;
+                                </p>
+                            </item>
+                            <item eId="art_2__para_1__content__list_1__item_c">
+                                <num>c)</num>
+                                <p>al 
+                                    <ref href="#para_3" eId="ref_78">comma 3</ref>, le parole: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_1__content__list_1__item_c__qtext_1">e' punita con la sanzione amministrativa da lire tre milioni a lire diciotto milioni</quotedText>
+                                    </mod>» sono sostituite dalle seguenti: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_1__content__list_1__item_c__qtext_2">e' punita con la sanzione amministrativa da euro seimila a euro trentamila</quotedText>
+                                    </mod>».
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_2__para_2">
+                    <num>2.</num>
+                    <content eId="art_2__para_2__content">
+                        <blockList eId="art_2__para_2__content__list_1">
+                            <listIntroduction> All'
+                                <ref href="/akn/it/act/1992-02-07/150/!main/#art_2" eId="ref_79">articolo 2 della legge 7 febbraio 1992, n. 150</ref>, sono apportate le seguenti modificazioni: 
+                            </listIntroduction>
+                            <item eId="art_2__para_2__content__list_1__item_a">
+                                <num>a)</num>
+                                <p>al 
+                                    <ref href="#para_1" eId="ref_80">comma 1</ref>, alinea, le parole: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_a__qtext_1">con l'ammenda da lire venti milioni a lire duecento milioni o con l'arresto da tre mesi ad un anno</quotedText>
+                                    </mod>» sono sostituite dalle seguenti: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_a__qtext_2">con l'ammenda da euro ventimila a euro duecentomila o con l'arresto da sei mesi ad un anno</quotedText>
+                                    </mod>»; 
+                                    <eol/> b) il 
+                                    <ref href="#para_2" eId="ref_81">comma 2</ref> e' sostituito dal seguente: 
+                                    <eol/> «
+
+                                    <mod>
+                                        <quotedStructure eId="art_2__para_2__content__list_1__item_a__qstr_1">
+                                            <paragraph eId="art_2__para_2__content__list_1__item_a__qstr_1__para_2">
+                                                <num>2.</num> In caso di recidiva, si applica la pena dell'arresto da sei mesi a diciotto mesi e dell'ammenda da euro ventimila a euro duecentomila. Qualora il reato suddetto sia commesso nell'esercizio di attivita' di impresa, alla condanna consegue la sospensione della licenza da un minimo di sei mesi ad un massimo di diciotto mesi
+
+                                                <content eId="art_2__para_2__content__list_1__item_a__qstr_1__para_2__content">
+                                                    <p/>
+                                                </content>
+                                            </paragraph>
+                                        </quotedStructure>
+                                    </mod>
+»;
+                                </p>
+                            </item>
+                            <item eId="art_2__para_2__content__list_1__item_c">
+                                <num>c)</num>
+                                <p>al 
+                                    <ref href="#para_3" eId="ref_82">comma 3</ref>, le parole: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_c__qtext_1">e' punita con la sanzione amministrativa da lire due milioni a lire dodici milioni</quotedText>
+                                    </mod>» sono sostituite dalle seguenti: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_c__qtext_2">e' punita con la sanzione amministrativa da euro tremila a euro quindicimila</quotedText>
+                                    </mod>»;
+                                </p>
+                            </item>
+                            <item eId="art_2__para_2__content__list_1__item_d">
+                                <num>d)</num>
+                                <p>al 
+                                    <ref href="#para_4" eId="ref_83">comma 4</ref>, le parole: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_d__qtext_1">e' punito con la sanzione amministrativa da lire due milioni a lire dodici milioni</quotedText>
+                                    </mod>» sono sostituite dalle seguenti: «
+                                    <mod>
+                                        <quotedText eId="art_2__para_2__content__list_1__item_d__qtext_2">e' punito con la sanzione amministrativa da euro tremila a euro quindicimila</quotedText>
+                                    </mod>».
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_2__para_3">
+                    <num>3.</num>
+                    <content eId="art_2__para_3__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1992-02-07/150/!main/#art_5" eId="content__ref_84">articolo 5 della legge 7 febbraio 1992, n. 150</ref>, il 
+                            <ref href="#para_6" eId="content__ref_85">comma 6</ref> e' sostituito dal seguente:  «
+                            <mod>
+                                <quotedText eId="art_2__para_3__content__qtext_1">6. Chiunque contravviene alle disposizioni di cui ai 
+                                    <mref>commi 
+                                        <ref href="#para_1" eId="ref_86">1</ref>, 
+                                        <ref href="#para_2" eId="ref_87">2</ref>, 
+                                        <ref href="#para_3" eId="ref_88">3</ref> e 
+                                        <ref href="#para_5bis" eId="ref_89">5-bis</ref>
+                                    </mref> e' punito, salvo che il fatto costituisca reato, con la sanzione amministrativa da euro seimila a euro trentamila
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_2__para_4">
+                    <num>4.</num>
+                    <content eId="art_2__para_4__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1992-02-07/150/!main/#art_6" eId="content__ref_90">articolo 6 della legge 7 febbraio 1992, n. 150</ref>, sono apportate le seguenti modificazioni:  a) il 
+                            <ref href="#para_4" eId="content__ref_91">comma 4</ref> e' sostituito dal seguente:  «
+                            <mod>
+                                <quotedText eId="art_2__para_4__content__qtext_1">4. Chiunque contravviene alle disposizioni di cui al 
+                                    <ref href="#para_1" eId="ref_92">comma 1</ref> e' punito con l'arresto fino a sei mesi o con l'ammenda da euro quindicimila a euro trecentomila
+                                </quotedText>
+                            </mod>»;  b) il 
+                            <ref href="#para_5" eId="content__ref_93">comma 5</ref> e' sostituito dal seguente:  «
+                            <mod>
+                                <quotedText eId="art_2__para_4__content__qtext_2">5. Chiunque contravviene alle disposizioni di cui al 
+                                    <ref href="#para_3" eId="ref_94">comma 3</ref> e' punito con la sanzione amministrativa da euro diecimila a euro sessantamila
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_2__para_5">
+                    <num>5.</num>
+                    <content eId="art_2__para_5__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1992-02-07/150/!main/#art_8bis" eId="content__ref_95">articolo 8-bis della legge 7 febbraio 1992, n. 150</ref>, il 
+                            <ref href="#para_1bis" eId="content__ref_96">comma 1-bis</ref> e' sostituito dal seguente:  «
+                            <mod>
+                                <quotedText eId="art_2__para_5__content__qtext_1">1-bis. Chiunque contravviene alle disposizioni di cui al 
+                                    <ref href="#para_1" eId="ref_97">comma 1</ref> e' punito, salvo che il fatto costituisca reato, con la sanzione amministrativa del pagamento di una somma da euro cinquecento a euro duemila
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+                <paragraph eId="art_2__para_6">
+                    <num>6.</num>
+                    <content eId="art_2__para_6__content">
+                        <p>All'
+                            <ref href="/akn/it/act/1992-02-07/150/!main/#art_8ter" eId="content__ref_98">articolo 8-ter della legge 7 febbraio 1992, n. 150</ref>, il 
+                            <ref href="#para_5" eId="content__ref_99">comma 5</ref> e' sostituito dal seguente:  «
+                            <mod>
+                                <quotedText eId="art_2__para_6__content__qtext_1">5. Chiunque contravviene alle disposizioni previste al 
+                                    <ref href="#para_2" eId="ref_100">comma 2</ref> e' punito, se il fatto non costituisce reato, con la sanzione amministrativa da euro cinquemila a euro trentamila
+                                </quotedText>
+                            </mod>».
+                        </p>
+                    </content>
+                </paragraph>
+            </article>
+            <article eId="art_3">
+                <num>Art. 3 </num>
+                <paragraph eId="art_3__para_1">
+                    <num>1.</num> Le disposizioni di cui alla presente legge entrano in vigore il giorno successivo a quello della pubblicazione della medesima legge nella Gazzetta Ufficiale.
+
+                    <content eId="art_3__para_1__content">
+                        <p/>
+                    </content>
+                </paragraph>
+            </article>
+        </body>
+        <conclusions eId="conclusions">
+            <p>La presente legge, munita del sigillo dello Stato, sara' inserita nella Raccolta ufficiale degli atti normativi della Repubblica italiana. E' fatto obbligo a chiunque spetti di osservarla e di farla osservare come legge dello Stato. 
+                <eol/> Data a 
+                <location refersTo="#roma" eId="location_1">Roma</location>, addi' 
+                <date date="2015-05-22">22 maggio 2015</date>
+                <eol/>
+                <signature>
+                    <person refersTo="#mattarella" eId="person_1">MATTARELLA</person>
+                </signature>
+                <eol/>
+                <signature>
+                    <person as="#presidenteDelConsiglioDeiMinistri" refersTo="#renzi" eId="person_2">Renzi</person>, 
+                    <role refersTo="#presidenteDelConsiglioDeiMinistri" eId="role_1">Presidente del Consiglio dei ministri</role>
+                </signature>
+                <eol/>
+                <signature refersTo="#visto">Visto, il 
+                    <role refersTo="#guardasigilli" eId="role_2">Guardasigilli</role>: 
+                    <person as="#guardasigilli" refersTo="#orlando" eId="person_3">Orlando</person>
+                </signature>
+            </p>
+        </conclusions>
+    </act>
+</akomaNtoso>
