@@ -56,11 +56,13 @@ var saxon = require('../xml/saxon.js');
 
 var NIR10_NAMESPACE = 'http://www.normeinrete.it/nir/1.0',
     NIR20_NAMESPACE = 'http://www.normeinrete.it/nir/2.0',
-    NIR22_NAMESPACE = 'http://www.normeinrete.it/nir/2.2/';
+    NIR22_NAMESPACE = 'http://www.normeinrete.it/nir/2.2/',
+    AKN_NAMESPACE = 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17';
 
 var pathNir10ToNir20 = path.resolve(__dirname, '..', 'xslt/Nir1XToNir20.xsl'),
     pathNir20ToNir22 = path.resolve(__dirname, '..', 'xslt/Nir20ToNir22.xsl'),
-    pathNir22ToAkn = path.resolve(__dirname, '..', 'xslt/nir2akn.xsl');
+    pathNir22ToAkn = path.resolve(__dirname, '..', 'xslt/nir2akn.xsl'),
+    pathAkn2Nir = path.resolve(__dirname, '..', 'xslt/akn2nir.xsl');
 
 exports.nir2akn = function (nirXml, callback) {
     try {
@@ -130,3 +132,11 @@ function convert (content, xsltPath, namespace, callback) {
         saxon.transform(content, xsltPath, {}, callback);
     else setTimeout(callback.bind(undefined, undefined, content), 0);
 }
+
+exports.akn2nir = function (aknXml, callback) {
+    // AKN -> NIR 2.2
+    convert(aknXml, pathAkn2Nir, AKN_NAMESPACE, function (err, result) {
+        if (err) return callback(err);
+        callback(undefined, result);
+    });
+};
