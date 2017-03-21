@@ -23,7 +23,8 @@ exports.parse = parser.parseFromString.bind(parser);
 exports.serialize = serializer.serializeToString.bind(serializer);
 exports.select = xpath.useNamespaces({
   akn: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17',
-  nir: 'http://www.normeinrete.it/nir/2.2/'
+  nir: 'http://www.normeinrete.it/nir/2.2/',
+  xlink: 'http://www.w3.org/1999/xlink'
 });
 exports.selectAttr = (xpath, dom) => R.prop('value', exports.select(xpath, dom, true) || {});
 exports.expressionUri = dom => exports.selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
