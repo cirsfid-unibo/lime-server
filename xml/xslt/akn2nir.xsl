@@ -446,18 +446,35 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
              /akn/it/act/decreto/ministero.sviluppo.economico/2009-12-09/nir-n2100396
               p0  p1 p2  p3      p4                           p5         p6
         -->
-        <xsl:variable name="p0" select="substring-after($safeurn, '/')"/>
-        <xsl:variable name="p1" select="substring-after($p0, '/')"/>
-        <xsl:variable name="p2" select="substring-after($p1, '/')"/>
-        <xsl:variable name="p3" select="substring-after($p2, '/')"/>
-        <xsl:variable name="p4" select="substring-after($p3, '/')"/>
-        <xsl:variable name="p5" select="substring-after($p4, '/')"/>
-        <xsl:variable name="p6" select="substring-after($p5, '/')"/>
-        <xsl:variable name="p7" select="substring-after($p6, '/')"/><!--
-        emanante: -->urn:nir:<xsl:value-of select="substring-before($p4, '/')"/><!--
-        docType:  -->:<xsl:value-of select="substring-before($p3, '/')"/><!--
-        data:     -->:<xsl:value-of select="substring-before($p5, '/')"/><!--
-        docNum:   -->;<xsl:value-of select="substring-before($p6, '/')"/>
+        <xsl:choose>
+            <xsl:when test="substring($urn, 1, 1) = '#'">
+            <xsl:call-template name="convertiInternalURN">
+                <xsl:with-param name="urn" select="$urn"/>
+            </xsl:call-template>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:variable name="p0" select="substring-after($safeurn, '/')"/>
+            <xsl:variable name="p1" select="substring-after($p0, '/')"/>
+            <xsl:variable name="p2" select="substring-after($p1, '/')"/>
+            <xsl:variable name="p3" select="substring-after($p2, '/')"/>
+            <xsl:variable name="p4" select="substring-after($p3, '/')"/>
+            <xsl:variable name="p5" select="substring-after($p4, '/')"/>
+            <xsl:variable name="p6" select="substring-after($p5, '/')"/>
+            <xsl:variable name="p7" select="substring-after($p6, '/')"/><!--
+            emanante: -->urn:nir:<xsl:value-of select="substring-before($p4, '/')"/><!--
+            docType:  -->:<xsl:value-of select="substring-before($p3, '/')"/><!--
+            data:     -->:<xsl:value-of select="substring-before($p5, '/')"/><!--
+            docNum:   -->;<xsl:value-of select="substring-before($p6, '/')"/>
+         </xsl:otherwise>
+       </xsl:choose>
+    </xsl:template>
+
+    <xsl:template name="convertiInternalURN">
+        <xsl:param name="urn"/>
+        <xsl:variable name="urn0" select="replace($urn, '__', '-')"/>
+        <xsl:variable name="urn1" select="replace($urn0, '_', '')"/>
+        <xsl:variable name="urn2" select="replace($urn1, 'para', 'com')"/>
+        <xsl:value-of select="$urn2"/>
     </xsl:template>
   
 </xsl:stylesheet>
