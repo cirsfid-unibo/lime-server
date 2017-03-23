@@ -5,7 +5,7 @@
     Developers: Monica Palmirani, Luca Cervone, Matteo Nardi
     Contacts: monica.palmirani@unibo.it
  -->
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
     xmlns="http://www.normeinrete.it/nir/2.2/"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:dsp="http://www.normeinrete.it/nir/disposizioni/2.2/"
@@ -26,9 +26,7 @@
                 <xsl:value-of select="//akn:FRBRalias[@name='urn:nir']/@value"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="//akn:FRBRWork/akn:FRBRuri/@value"/>
-                </xsl:call-template>
+                <xsl:value-of select="cirsfid:convertiUri(//akn:FRBRWork/akn:FRBRuri/@value)"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
@@ -124,9 +122,7 @@
                 <xsl:for-each select="//akn:references/akn:original">
                     <originale id="{@eId}" xlink:href="urn:nir:ministero.sviluppo.economico:decreto:2009-12-09;nir-n2100396">
                         <xsl:attribute name="xlink:href">
-                            <xsl:call-template name="convertiURN">
-                                <xsl:with-param name="urn" select="@href"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="cirsfid:convertiUri(@href)"/>
                         </xsl:attribute>
                     </originale>
                 </xsl:for-each>
@@ -134,9 +130,7 @@
                 <xsl:for-each select="//akn:references/akn:activeRef">
                     <attiva id="{@eId}">
                         <xsl:attribute name="xlink:href">
-                            <xsl:call-template name="convertiURN">
-                                <xsl:with-param name="urn" select="@href"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="cirsfid:convertiUri(@href)"/>
                         </xsl:attribute>
                     </attiva>
                 </xsl:for-each>
@@ -180,9 +174,7 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
     -->
     <xsl:template match="akn:destination">
         <xsl:variable name="urn">
-            <xsl:call-template name="convertiURN">
-                <xsl:with-param name="urn" select="@href"/>
-            </xsl:call-template>
+            <xsl:value-of select="cirsfid:convertiUri(@href)"/>
         </xsl:variable>
         <xsl:variable name="id" select="substring-after(@href, '#')"/>
         <dsp:norma xlink:href="{$urn}">
@@ -396,9 +388,7 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
     <xsl:template match="akn:ref">
         <rif>
             <xsl:attribute name="xlink:href">
-                <xsl:call-template name="convertiURN">
-                    <xsl:with-param name="urn" select="@href"/>
-                </xsl:call-template>
+                <xsl:value-of select="cirsfid:convertiUri(@href)"/>
             </xsl:attribute>
             <xsl:apply-templates select="node()|@*"/>
         </rif>
@@ -437,44 +427,111 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
     </xsl:template>
     
     <xsl:template match="@*"></xsl:template>
-  
-    <xsl:template name="convertiURN">
-        <xsl:param name="urn"/>
-        <xsl:param name="safeurn" select="concat($urn, '////')"/>
-        <!-- Es. urn:nir:ministero.sviluppo.economico:decreto:2009-12-09;nir-n2100396 -->
-        <!-- Split FRBRuri by / 
-             /akn/it/act/decreto/ministero.sviluppo.economico/2009-12-09/nir-n2100396
-              p0  p1 p2  p3      p4                           p5         p6
-        -->
-        <xsl:choose>
-            <xsl:when test="substring($urn, 1, 1) = '#'">
-            <xsl:call-template name="convertiInternalURN">
-                <xsl:with-param name="urn" select="$urn"/>
-            </xsl:call-template>
-         </xsl:when>
-         <xsl:otherwise>
-            <xsl:variable name="p0" select="substring-after($safeurn, '/')"/>
-            <xsl:variable name="p1" select="substring-after($p0, '/')"/>
-            <xsl:variable name="p2" select="substring-after($p1, '/')"/>
-            <xsl:variable name="p3" select="substring-after($p2, '/')"/>
-            <xsl:variable name="p4" select="substring-after($p3, '/')"/>
-            <xsl:variable name="p5" select="substring-after($p4, '/')"/>
-            <xsl:variable name="p6" select="substring-after($p5, '/')"/>
-            <xsl:variable name="p7" select="substring-after($p6, '/')"/><!--
-            emanante: -->urn:nir:<xsl:value-of select="substring-before($p4, '/')"/><!--
-            docType:  -->:<xsl:value-of select="substring-before($p3, '/')"/><!--
-            data:     -->:<xsl:value-of select="substring-before($p5, '/')"/><!--
-            docNum:   -->;<xsl:value-of select="substring-before($p6, '/')"/>
-         </xsl:otherwise>
-       </xsl:choose>
-    </xsl:template>
 
-    <xsl:template name="convertiInternalURN">
-        <xsl:param name="urn"/>
-        <xsl:variable name="urn0" select="replace($urn, '__', '-')"/>
-        <xsl:variable name="urn1" select="replace($urn0, '_', '')"/>
-        <xsl:variable name="urn2" select="replace($urn1, 'para', 'com')"/>
-        <xsl:value-of select="$urn2"/>
-    </xsl:template>
-  
+    <xsl:function name="cirsfid:convertiUri">
+        <xsl:param name="uri"/>
+        <xsl:variable name="main" select="tokenize($uri, '#')[1]"/>
+        <xsl:variable name="id" select="tokenize($uri, '#')[2]"/>
+        <xsl:if test="$main">
+            <xsl:value-of select="cirsfid:convertiUriMain(cirsfid:removeLastSlash($main))"/>
+        </xsl:if>
+        <xsl:if test="$id">
+            <xsl:text>#</xsl:text>
+            <xsl:value-of select="cirsfid:convertiId($id)"/>
+        </xsl:if>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:removeLastSlash">
+        <xsl:param name="str"/>
+        <xsl:choose>
+            <xsl:when test="ends-with($str, '/')">
+                <xsl:value-of select="substring($str, 1, string-length($str)-1)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$str"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
+    <xsl:function name="cirsfid:convertiUriMain">
+        <xsl:param name="uri"/>
+        <xsl:variable name="dateRegex" select="'\d{4}-\d{2}-\d{2}'"/>
+        <xsl:variable name="beforeAfterDate" select="tokenize($uri, $dateRegex)"/>
+        <xsl:variable name="beforeDateParts" select="tokenize(cirsfid:removeLastSlash(substring-after($beforeAfterDate[1], '/')), '/')"/>
+        <xsl:variable name="afterDateParts" select="tokenize(substring-after($beforeAfterDate[2], '/'), '/')"/>
+
+        <xsl:variable name="docDate" select="substring-before(substring-after($uri, $beforeAfterDate[1]), $beforeAfterDate[2])"/>
+        <xsl:variable name="docType" select="cirsfid:getDocType($beforeDateParts)"/>
+        <xsl:variable name="authority" select="cirsfid:getAuthority($beforeDateParts)"/>
+        <xsl:variable name="docNum" select="cirsfid:getDocNum($afterDateParts[1])"/>
+
+        <xsl:variable name="estremiAtto" select="cirsfid:getEstremiAtto($docDate, $docNum)"/>
+        <xsl:value-of select="string-join( ('urn:nir', $authority, $docType, $estremiAtto), ':' )"/>
+        <xsl:variable name="component" select="cirsfid:getComponent($afterDateParts[last()])"/>
+        <xsl:if test="$component">
+            <xsl:value-of select="concat(':', $component)"/>
+        </xsl:if>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:convertiId">
+        <xsl:param name="eId"/>
+        <xsl:variable name="eId0" select="replace($eId, '__', '-')"/>
+        <xsl:variable name="eId1" select="replace($eId0, '_', '')"/>
+        <xsl:variable name="eId2" select="replace($eId1, 'para', 'com')"/>
+        <xsl:variable name="eId3" select="replace($eId2, 'part', 'prt')"/>
+        <xsl:variable name="eId3" select="replace($eId2, 'qstr', 'vir')"/>
+        <xsl:value-of select="$eId3"/>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getDocType">
+        <xsl:param name="beforeDateUriParts"/>
+        <xsl:choose>
+            <xsl:when test="count($beforeDateUriParts) ge 4 ">
+                <xsl:value-of select="$beforeDateUriParts[4]"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'legge'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getAuthority">
+        <xsl:param name="beforeDateUriParts"/>
+        <xsl:choose>
+            <xsl:when test="count($beforeDateUriParts) = 5 ">
+                <xsl:value-of select="$beforeDateUriParts[5]"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'stato'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getDocNum">
+        <xsl:param name="afterDateUriPart"/>
+        <xsl:choose>
+            <xsl:when test="not(matches($afterDateUriPart, '^((\w\w\w@) | (\d{4}-\d{2}-\d{2}))')) and
+                        not(starts-with($afterDateUriPart, '!')) and
+                        not(ends-with($afterDateUriPart, '.xml')) and
+                        not(ends-with($afterDateUriPart, '.akn'))">
+                <xsl:value-of select="$afterDateUriPart"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'nir-1'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getEstremiAtto">
+        <xsl:param name="docDate"/>
+        <xsl:param name="docNum"/>
+        <xsl:value-of select="concat($docDate, ';', $docNum)"/>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getComponent">
+        <xsl:param name="potentialComponent"/>
+        <xsl:if test="starts-with($potentialComponent, '!') and $potentialComponent != '!main'">
+            <xsl:value-of select="substring($potentialComponent, 2)"/>
+        </xsl:if>
+    </xsl:function>
 </xsl:stylesheet>
