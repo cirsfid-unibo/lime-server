@@ -11,4 +11,14 @@ describe('AKN -> NIR ref conversion', function () {
             done();
         });
     });
+
+    it('should convert external ref uri to urn', done => {
+        utils.convert('LEGGE_22-maggio-2015.akn.xml', nir => {
+            let ref = utils.select('//nir:rif[text() = "articolo 1 della legge 7 febbraio 1992, n. 150"]', nir)[0];
+            expect(ref.getAttribute('xlink:href')).toEqual('urn:nir:stato:legge:1992-02-07;150#art1');
+            ref = utils.select('//nir:rif[text() = "articolo 6 della legge 7 febbraio 1992, n. 150"]', nir)[0];
+            expect(ref.getAttribute('xlink:href')).toEqual('urn:nir:stato:legge:1992-02-07;150#art6');
+            done();
+        });
+    });
 });
