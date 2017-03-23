@@ -27,7 +27,12 @@ exports.select = xpath.useNamespaces({
   xlink: 'http://www.w3.org/1999/xlink'
 });
 exports.selectAttr = (xpath, dom) => R.prop('value', exports.select(xpath, dom, true) || {});
-exports.expressionUri = dom => exports.selectAttr('//akn:FRBRExpression/akn:FRBRuri/@value', dom);
-exports.expressionThis = dom => exports.selectAttr('//akn:FRBRExpression/akn:FRBRthis/@value', dom);
-exports.workUri = dom => exports.selectAttr('//akn:FRBRWork/akn:FRBRuri/@value', dom);
-exports.workThis = dom => exports.selectAttr('//akn:FRBRWork/akn:FRBRthis/@value', dom);
+
+exports.convertUri = function (uri, callback) {
+    var xml = `<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17"><ref href="${uri}"></ref></akomaNtoso>`;
+    akn2nir(xml, function (err, nir) {
+        if (err) return console.log(err);
+        const ref = exports.selectAttr('//nir:rif/@xlink:href', parser.parseFromString(nir));
+        callback(ref);
+    });
+};
