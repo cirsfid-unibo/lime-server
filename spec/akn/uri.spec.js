@@ -29,4 +29,11 @@ describe('AKN uri -> NIR urn conversion', function () {
             done();
         });
     });
+
+    it('should convert uri with version to urn', done => {
+        utils.convertUri('/akn/it/act/legge/2015-05-22/68/ita@2015-05-29/!main', urn => {
+            expect(urn).toEqual('urn:nir:stato:legge:2015-05-22;68@2015-05-29');
+            done();
+        });
+    });
 });

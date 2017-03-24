@@ -455,12 +455,12 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
     
     <xsl:function name="cirsfid:convertiUriMain">
         <xsl:param name="uri"/>
-        <xsl:variable name="dateRegex" select="'\d{4}-\d{2}-\d{2}'"/>
+        <xsl:variable name="dateRegex" select="'/\d{4}-\d{2}-\d{2}'"/>
         <xsl:variable name="beforeAfterDate" select="tokenize($uri, $dateRegex)"/>
         <xsl:variable name="beforeDateParts" select="tokenize(cirsfid:removeLastSlash(substring-after($beforeAfterDate[1], '/')), '/')"/>
         <xsl:variable name="afterDateParts" select="tokenize(substring-after($beforeAfterDate[2], '/'), '/')"/>
 
-        <xsl:variable name="docDate" select="substring-before(substring-after($uri, $beforeAfterDate[1]), $beforeAfterDate[2])"/>
+        <xsl:variable name="docDate" select="substring-before(substring-after($uri, concat($beforeAfterDate[1], '/')), $beforeAfterDate[2])"/>
         <xsl:variable name="docType" select="cirsfid:getDocType($beforeDateParts)"/>
         <xsl:variable name="authority" select="cirsfid:getAuthority($beforeDateParts)"/>
         <xsl:variable name="docNum" select="cirsfid:getDocNum($afterDateParts[1])"/>
@@ -470,6 +470,10 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
         <xsl:variable name="component" select="cirsfid:getComponent($afterDateParts[last()])"/>
         <xsl:if test="$component">
             <xsl:value-of select="concat(':', $component)"/>
+        </xsl:if>
+        <xsl:variable name="versionDate" select="cirsfid:getVersionDate($beforeAfterDate[2])"/>
+        <xsl:if test="$versionDate">
+            <xsl:value-of select="concat('@', $versionDate)"/>
         </xsl:if>
     </xsl:function>
 
@@ -532,6 +536,18 @@ xlink:href="urn:nir:stato:decreto.legislativo:1999-07-30;300">
         <xsl:param name="potentialComponent"/>
         <xsl:if test="starts-with($potentialComponent, '!') and $potentialComponent != '!main'">
             <xsl:value-of select="substring($potentialComponent, 2)"/>
+        </xsl:if>
+    </xsl:function>
+
+    <xsl:function name="cirsfid:getVersionDate">
+        <xsl:param name="afterDatePart"/>
+        <xsl:if test="matches($afterDatePart, '/\w\w\w@(\d{4}-\d{2}-\d{2})')">
+            <xsl:analyze-string select="$afterDatePart"
+                    regex="/\w\w\w@(\d{{4}}-\d{{2}}-\d{{2}})">
+                <xsl:matching-substring>
+                    <xsl:value-of select="regex-group(1)"/>
+                </xsl:matching-substring>
+            </xsl:analyze-string>
         </xsl:if>
     </xsl:function>
 </xsl:stylesheet>
