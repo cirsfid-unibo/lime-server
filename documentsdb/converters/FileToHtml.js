@@ -129,7 +129,7 @@ FileToHtml.prototype._abiwordConversion = function() {
             fs.unlink(me.tmpDocFile);
             var stream = fs.createReadStream(tmpHtmlFile);
             stream.on('data', function (chunk) {
-                me.push(chunk);
+                me.push(removeInvalidCharacters(chunk.toString()));
             });
             stream.on('end', function () {
                 me.endConversion();
@@ -137,6 +137,17 @@ FileToHtml.prototype._abiwordConversion = function() {
             });
         });
     });
+}
+
+function removeInvalidCharacters (data) {
+    var NOT_SAFE_IN_XML_1_0 = /[^\x09\x0A\x0D\x20-\xFF\x85\xA0-\uD7FF\uE000-\uFDCF\uFDE0-\uFFFD]/gm;
+    return data
+                // Removeing not safe xml characters
+                .replace(NOT_SAFE_IN_XML_1_0, '')
+                 // Replace the END OF GUARDED AREA with -
+                .replace(new RegExp('&#151;', 'g'), '-')
+                // Remove DOCTYPE
+                .replace(/<!DOCTYPE [^>]+>/gi, '');
 }
 
 module.exports = FileToHtml;
