@@ -53,7 +53,8 @@ var express = require('express'),
     path = require('path'),
     lngDetector = new (require('languagedetect')),
     striptags = require('striptags'),
-    langs = require('langs');
+    langs = require('langs'),
+    fs = require('fs');
 
 var FileToHtml = require('../converters/FileToHtml.js'),
     XsltTransform = require('../../xml/xml/XsltTransform.js'),
@@ -86,6 +87,15 @@ router.post('/', function (req, res, next) {
     if (!isAllowed(file.mimetype)) {
         next(Boom.badRequest(file.mimetype+' files are not supported!'));
     }
+
+    var cleanXsl = req.body.cleanXsl;
+    if (cleanXsl && cleanXsl.length > 0) {
+        cleanXsl = path.resolve(__dirname, '..', 'xslt/'+cleanXsl);
+        if (fs.existsSync(cleanXsl)) {
+            clearHtmlPath = cleanXsl;
+        }
+    }
+
     if (isXml(file.mimetype)) {
         FileCache.getFilePath(req.body.transformFile, function(err, xslt) {
             if (err) next(Boom.badRequest(err));
