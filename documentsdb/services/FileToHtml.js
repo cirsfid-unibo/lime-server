@@ -60,7 +60,8 @@ var FileToHtml = require('../converters/FileToHtml.js'),
     XsltTransform = require('../../xml/xml/XsltTransform.js'),
     FileCache = require('../../utils/FileCache.js');
 
-var clearHtmlPath = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
+var clearHtmlPathDefault = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
+var clearHtmlPath = clearHtmlPathDefault;
 
 var allowedUploads = [
     'text/html',
@@ -87,7 +88,7 @@ router.post('/', function (req, res, next) {
     if (!isAllowed(file.mimetype)) {
         next(Boom.badRequest(file.mimetype+' files are not supported!'));
     }
-
+    clearHtmlPath = clearHtmlPathDefault;
     var cleanXsl = req.body.cleanXsl;
     if (cleanXsl && cleanXsl.length > 0) {
         cleanXsl = path.resolve(__dirname, '..', 'xslt/'+cleanXsl);
