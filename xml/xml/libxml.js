@@ -82,9 +82,17 @@ exports.validate = function (content, schemaPath, cb) {
 // Note: doesn't work on Windows
 exports.transform = function (content, xsltPath, cb) {
     console.log('transforming using libxslt');
+    // File inclusions are relative to working directory:
+    // http://stackoverflow.com/questions/26294385/invalid-xsd-schema-using-libxmljs-with-nodejs
+    var cwd = process.cwd();
+    process.chdir(path.dirname(xsltPath));
     libxslt.parseFile(xsltPath, function (err, xslt) {
-        if (err) cb(err);
+        if (err) {
+            process.chdir(cwd);
+            return cb(err);
+        }
         xslt.apply(content, function(err, result) {
+            process.chdir(cwd);
             if (err) cb(err);
             else cb(undefined, result);
         });
