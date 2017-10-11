@@ -16,7 +16,7 @@ var file = '!#$&\'()*+,:;=?@[]è';
 var path = '/!#$&\'()*+,:;=?@[]€';
 
 var file = 'ciao.xml';
-var path = '/126 Suppl.Ord.';
+var path = '/126@Suppl.Ord.';
 var content = '<hello>World</hello>';
 
 console.log(file.yellow);

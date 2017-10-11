@@ -198,14 +198,14 @@ function decode_ls(str) {
 }
 
 function encode(str) {
-    return encodeURI(str
-    )
-    .replace(specialRegex, replaceSpecial)
-    // .replace('#', '%23')
-    // .replace(':', '%3A')
-    // .replace(/%(?!27|28|29|2A)/g, '%25')
-    .replace(/%(?!20)/g, '%25')
-    ;
+    return encodeURI(str);
+    // Uncomment for eXist 2.2
+    // .replace(specialRegex, replaceSpecial)
+    // // .replace('#', '%23')
+    // // .replace(':', '%3A')
+    // // .replace(/%(?!27|28|29|2A)/g, '%25')
+    // .replace(/%(?!20)/g, '%25')
+    // ;
 }
 
 var specialMap =
