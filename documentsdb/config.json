@@ -1,6 +1,6 @@
 {
     "mongodb": {
-        "url": "mongodb://localhost:27017/documentsdb",
+        "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb",
         "collections": {
             "users": "dev_users"
         }
@@ -15,11 +15,11 @@
     },
     "existIsMainBackend": true,
     "existdb": {
-        "host": "localhost",
+        "host": "sinatra.cirsfid.unibo.it",
         "port": 8080,
         "rest": "/exist/rest",
         "baseCollection": "/lime_test",
-        "auth": "admin:frbr-db"
+        "auth": "admin:exist"
     },
     "existdbPortal": {},
     "abiword": {
