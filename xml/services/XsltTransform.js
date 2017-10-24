@@ -70,19 +70,23 @@ router.post('/', function (req, res, next) {
         next(Boom.badRequest('No xslt files to apply was passed!'));
     }
     var includeFiles = req.body.includeFiles;
+    var onError= function (err){
+        next(Boom.badRequest(err.message));
+    };
     if (includeFiles && includeFiles.length) {
-        getXsltPaths(includeFiles, function(includePaths) {
-            initTransform(xmlSource, xsltFiles, res, includePaths);
+        getXsltPaths(includeFiles, function (includePaths) {
+            initTransform(xmlSource, xsltFiles, res, includePaths, onError);
         });
     } else
-        initTransform(xmlSource, xsltFiles, res);
+        initTransform(xmlSource, xsltFiles, res, [], onError);
+
 });
 
-function initTransform(xmlSource, xsltFiles, res, includePaths) {
+function initTransform(xmlSource, xsltFiles, res, includePaths, onError) {
 
-    var iteratePaths = function(xsltPaths) {
+    var iteratePaths = function (xsltPaths) {
         var input, output;
-        xsltPaths.forEach(function(xsltPath, index, arr) {
+        xsltPaths.forEach(function (xsltPath, index, arr) {
             if (index === 0) {
                 input = new stream.PassThrough();
                 input.end(xmlSource);
@@ -94,13 +98,13 @@ function initTransform(xmlSource, xsltFiles, res, includePaths) {
             } else {
                 output = new stream.PassThrough();
             }
-            tranform(input, output, xsltPath);
+            tranform(input, output, xsltPath, onError);
         });
     }
 
-    getXsltPaths(xsltFiles, function(xsltPaths) {
+    getXsltPaths(xsltFiles, function (xsltPaths) {
         if (includePaths && includePaths.length > 0) {
-            getXsltIncludingPath(xsltPaths, includePaths, function(xsltPaths) {
+            getXsltIncludingPath(xsltPaths, includePaths, function (xsltPaths) {
                 iteratePaths(xsltPaths);
             });
         } else {
@@ -110,8 +114,8 @@ function initTransform(xmlSource, xsltFiles, res, includePaths) {
 }
 
 function getXsltPaths(xsltFiles, cb) {
-    async.mapSeries(xsltFiles, FileCache.getFilePath, function(err, xsltPaths) {
-        xsltPaths = xsltPaths.filter(function(url) {
+    async.mapSeries(xsltFiles, FileCache.getFilePath, function (err, xsltPaths) {
+        xsltPaths = xsltPaths.filter(function (url) {
             return url && url.length > 0;
         });
         cb(xsltPaths);
@@ -119,35 +123,37 @@ function getXsltPaths(xsltFiles, cb) {
 }
 
 function getXsltIncludingPath(xsltPaths, includePaths, cb) {
-    async.mapSeries(xsltPaths, includeXslt.bind(this, includePaths), function(err, xsltPaths) {
-        xsltPaths = xsltPaths.filter(function(url) {
+    async.mapSeries(xsltPaths, includeXslt.bind(this, includePaths), function (err, xsltPaths) {
+        xsltPaths = xsltPaths.filter(function (url) {
             return url && url.length > 0;
         });
         cb(xsltPaths);
     });
 }
 
-function tranform(input, output, xslt) {
+function tranform(input, output, xslt, onError) {
     var xsltTransformer = new XsltTransform({ xslt: xslt });
-    input.pipe(xsltTransformer);
-    xsltTransformer.pipe(output);
+    xsltTransformer.on('error', onError);
+    input.pipe(xsltTransformer)
+    xsltTransformer.pipe(output)
+
 }
 
 // Includes xslt files inside another xslt
 function includeXslt(includePaths, xsltPath, cb) {
-    var includePath = function(dom, xsltPath) {
+    var includePath = function (dom, xsltPath) {
         var include = dom.createElementNS('http://www.w3.org/1999/XSL/Transform', 'xsl:include');
         include.setAttribute('href', path.basename(xsltPath));
         dom.documentElement.appendChild(include);
     }
     fs.readFile(xsltPath, 'utf8', function (err, xslString) {
         if (err) return cb(err);
-        var dom = new xmldom.DOMParser().parseFromString(xslString,'text/xml');
+        var dom = new xmldom.DOMParser().parseFromString(xslString, 'text/xml');
         includePaths.forEach(includePath.bind(this, dom));
         xslString = new xmldom.XMLSerializer().serializeToString(dom);
         // It's important to write the result to a new file because
         // the initial xslt can be used without the included xslt paths
-        FileCache.saveToTmpFile(xslString, function(newPath) {
+        FileCache.saveToTmpFile(xslString, function (newPath) {
             cb(null, newPath);
         });
     });

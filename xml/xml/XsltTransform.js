@@ -78,9 +78,9 @@ XsltTransform.prototype._applyXslt = function() {
     var str = cleanXmlString(this.xmlString);
     //require('fs').writeFileSync('tmpString.xml', str);
     xml.transform(str, this.xsltPath, {}, function (err, result) {
-        if (err) throw err;
+        //if (err) me.emit('error',err);
         me.push(result);
-        me.endConversion();
+        me.endConversion(err);
     });
 }
 
