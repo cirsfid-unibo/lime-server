@@ -67,7 +67,8 @@ function startParentProcess () {
 
 function startChildProcess () {
     var app = require('express')();
-
+    var config = require('./config.json');
+    
     // Middleware
     app.use(require('express-domain-middleware'));
     app.use(require('cors')());
@@ -81,10 +82,29 @@ function startChildProcess () {
     // Error Handling
     app.use(errorHandler);
 
+    // Start https server
+    if (config.https.enabled){
+        var https = require('https');
+        const fs = require('fs');
+
+        console.log("https: enabled");
+        const options = {
+            key: fs.readFileSync(config.https.key),
+            cert: fs.readFileSync(config.https.certificate),
+            passphrase: config.https.passPhrase
+        };
+        module.server = https.createServer(options, app).listen(config.port, function() {
+            console.log('Listening on port %d', module.server.address().port)            
+        });
+
+    }
+    else{
     // Start server
-    module.server = app.listen(require('./config.json').port, function() {
-        console.log('Listening on port %d', module.server.address().port);
-    });
+        module.server = app.listen(config.port, function() {
+            console.log('Listening on port %d', module.server.address().port)
+        });
+    }
+    
 }
 
 function errorHandler (err, req, res, next) {
