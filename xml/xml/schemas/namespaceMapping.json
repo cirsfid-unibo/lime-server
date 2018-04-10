@@ -1,3 +1,4 @@
 {
-    "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17": "schema_WD17.xsd"
+    "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17": "schema_WD17.xsd",
+    "http://docs.oasis-open.org/legaldocml/ns/akn/3.0": "akomantoso30.xsd"
 }
