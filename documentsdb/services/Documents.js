@@ -56,11 +56,9 @@
 var express = require('express'),
     path = require('path'),
     PassThrough = require('stream').PassThrough,
-    passport = require('passport'),
-    Boom = require('boom');
+    passport = require('passport');
 
-var db = require('../utils/mongodb.js'),
-    secondary_backend = require('../utils/backend_exist'),
+var secondary_backend = require('../utils/backend_exist'),
     main_backend = require('../utils/backend_fs'),
     FileToHtml = require('../converters/FileToHtml'),
     AknToEpub = require('../converters/AknToEpub'),
@@ -149,10 +147,7 @@ router.get('*', function (req, res, next) {
     } else if (req.extension == 'pdf' && req.headers.accept == 'application/pdf') {
         getConvertedFile(new AknToPdf(), req.fileNoExtension);
     } else {
-        main_backend.getFile(res, req.dir, req.file, function (err) {
-            if (err == 404) res.status(404).end();
-            else if (err) next(err);
-        });
+        getFile(res, req.file);
     }
 });
 

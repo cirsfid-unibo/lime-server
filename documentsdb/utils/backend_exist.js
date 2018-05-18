@@ -82,7 +82,6 @@ exports.getDir = function (path, callback) {
         });
         saxStream.on('end', function () {
             fileList.shift(); // Remove our collection name
-            console.log('filelist', fileList);
             if (res.statusCode != 200)
                 callback(new Error('Eist GET DIR request has status code ' + res.statusCode));
             else callback(undefined, fileList.map(decode_ls));
@@ -188,7 +187,6 @@ function encode_write(str) {
 }
 
 function decode_ls(str) {
-    console.log('str', str);
     return decodeURI(
         str.replace(encodedRegex, replaceEncoded)
     );
