@@ -177,7 +177,9 @@ exports.deleteFile = function (path, file, callback, existConfig) {
 
 
 function encode_write(str) {
-    return str.split('/').map(encodeURIComponent).join('/');
+    return str.split('/')
+            .map(R.compose(encodeURIComponent, encodeIllegalCharacters))
+            .join('/');
     // return (
     //     str
     //         .replace('%', '%25')
@@ -186,9 +188,25 @@ function encode_write(str) {
     // );
 }
 
+// Encode illegal characters in eXist's scheme name
+// This will avoid the following exeption:
+// Caused by: java.lang.IllegalArgumentException:
+// Invalid URI: Illegal character in scheme name: ita@2018-06-11:00:01
+// The problem is ':', the idea is to encode it twice, the first time
+// in this function and the second time in encode_write using encodeURIComponent
+function encodeIllegalCharacters(str) {
+    return str.replace(/:/g, '%3A');
+}
+
+// Same as above, repeat the decode in order to fix the double encoding of ':'
+// Here we can decode all characters unlike encode it's safe
+function decodeIllegalCharacters(str) {
+    return str.replace(encodedRegex, replaceEncoded)
+}
+
 function decode_ls(str) {
     return decodeURI(
-        str.replace(encodedRegex, replaceEncoded)
+        decodeIllegalCharacters(str.replace(encodedRegex, replaceEncoded))
     );
     // .replace('%23', '#')
     // .replace('%3A', ':')
@@ -196,7 +214,7 @@ function decode_ls(str) {
 }
 
 function encode(str) {
-    return encodeURI(str);
+    return encode_write(str);
     // Uncomment for eXist 2.2
     // .replace(specialRegex, replaceSpecial)
     // // .replace('#', '%23')
@@ -232,6 +250,7 @@ var encodedMap =  R.invertObj({
     "!": "%21",
     "#": "%23",
     "$": "%24",
+    "%": "%25",
     "&": "%26",
     "'": "%27",
     "(": "%28",
