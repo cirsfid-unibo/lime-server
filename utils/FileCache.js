@@ -53,30 +53,52 @@ var request = require('request'),
     fs = require('fs'),
     validUrl = require('valid-url');
 
-var filePathsCache = {};
 
 exports.getFilePath = function(data, cb) {
-    var path = filePathsCache[data];
-    if (path && fs.existsSync(path)) {
-        return cb(null, path);
-    }
     if (validUrl.isUri(data)) {
-        download(data, function(path) {
-            filePathsCache[data] = path;
-            cb(null, path);
-        });
+        return getResource(data, cb);
     } else { // Save data to tmp and return path
+        // used in development
         saveToTmpFile(data, function(path) {
             cb(null, path);
         })
     }
 }
 
+var filePathsCache = {};
+function getResource(uri, cb) {
+    var goDownload = function() {
+        download(uri, function(err, path) {
+            if (err) return cb(err);
+            filePathsCache[uri] = {
+                time: new Date().getTime(),
+                path: path
+            };
+            cb(null, path);
+        });
+    }
+    request({
+        method: 'HEAD',
+        uri: uri
+    }, function(err, res) {
+        if (err) return goDownload();
+        var lastModifiedTime = res.headers['last-modified'] &&
+                                new Date(res.headers['last-modified']).getTime();
+        var cached = filePathsCache[uri];
+        if (lastModifiedTime && !isNaN(lastModifiedTime) && cached &&
+                cached.time >= lastModifiedTime && fs.existsSync(cached.path)) {
+            return cb(null, cached.path);
+        } else {
+            return goDownload();
+        }
+    });
+}
+
 function download(url, cb) {
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             saveToTmpFile(body, function(path) {
-                cb(path);
+                cb(null, path);
             })
         } else {
             cb(error);
