@@ -1,13 +1,13 @@
 
 # Installation guide
 
-In this guide you'll find instructions on installing aknservices, which is the server-side component of the [LIME editor](https://github.com/cirsfid-unibo/lime).
+In this guide you'll find instructions on installing [LIME-server](https://github.com/cirsfid-unibo/lime-server), which is the server-side component of the [LIME editor](https://github.com/cirsfid-unibo/lime).
 
 ## Prerequisites
 
-- Node.js v0.10 (it it should work on newer versions but has not been tested yet)
-- Java (needed by Saxon XSLT processor)
+- Node.js >= v8.0
 - A running MongoDb instance
+- Java (Optional, needed by Saxon XSLT processor and Epub generation)
 - Abiword (Optional, .doc conversion)
 - A running ExistDb instance (Optional)
 
@@ -21,7 +21,7 @@ In this guide you'll find instructions on installing aknservices, which is the s
 
 ### config.json
 
-    port: the port you want to run aknservices on
+    port: the port you want to run LIME-server on
 
 ### documentsdb/config.json
 
@@ -63,8 +63,8 @@ In this guide you'll find instructions on installing aknservices, which is the s
 
 ## Lime configuration
 
-Follow instructions [here](https://github.com/cirsfid-unibo/lime/blob/lime2/docs/Installation.md).
+Follow instructions [here](https://github.com/cirsfid-unibo/lime/blob/master/docs/Installation.md).
 
-Short version: serve Lime on Apache and modify the *server.node* config in */config.json*.
+Short version: serve LIME on a web server and modify the *server.node* config in */config.json*.
 
     "node": "http://<your-domain>:<your-port>/",

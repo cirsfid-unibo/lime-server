@@ -1,7 +1,7 @@
 
-# Aknservices architecture
+# LIME-server architecture
 
-Aknservices is an Express application divided in submodules.
+LIME-server is an Express application divided in submodules.
 
 ## documentsdb
 
