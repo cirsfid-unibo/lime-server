@@ -1,12 +1,12 @@
 {
     "mongodb": {
-        "url": "mongodb://sinatra.cirsfid.unibo.it:9006/documentsdb",
+        "url": "mongodb://localhost:27017/documentsdb",
         "collections": {
             "users": "dev_users"
         }
     },
     "filesystem": {
-        "documents": "../data/documents/"
+        "documents": "./data/documents/"
     },
     "users": {
         "shared_folders": [
@@ -15,11 +15,11 @@
     },
     "existIsMainBackend": true,
     "existdb": {
-        "host": "sinatra.cirsfid.unibo.it",
+        "host": "localhost",
         "port": 8080,
         "rest": "/exist/rest",
-        "baseCollection": "/lime_test",
-        "auth": "admin:exist"
+        "baseCollection": "/lime",
+        "auth": "admin:admin"
     },
     "existdbPortal": {},
     "abiword": {
