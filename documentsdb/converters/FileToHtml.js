@@ -49,6 +49,7 @@
 var util = require('util'),
     fs = require('fs'),
     exec = require('child_process').exec,
+    execSync = require('child_process').execSync,
     Transform = require('stream').Transform,
     tmp = require('tmp'),
     Buffer = require('buffer').Buffer;
@@ -148,6 +149,11 @@ function removeInvalidCharacters (data) {
                 .replace(new RegExp('&#151;', 'g'), '-')
                 // Remove DOCTYPE
                 .replace(/<!DOCTYPE [^>]+>/gi, '');
+}
+
+FileToHtml.getAbiWordVersion = function() {
+    var cmd = ABIWORD_PATH + ' --version';
+    return execSync(cmd).toString().trim();
 }
 
 module.exports = FileToHtml;

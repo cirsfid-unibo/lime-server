@@ -60,7 +60,10 @@ var FileToHtml = require('../converters/FileToHtml.js'),
     XsltTransform = require('../../xml/xml/XsltTransform.js'),
     FileCache = require('../../utils/FileCache.js');
 
-var clearHtmlPathDefault = path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
+var clearHtmlPathDefault = FileToHtml.getAbiWordVersion().startsWith('3.') ?
+                            path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml_abiword_3.xsl') :
+                            path.resolve(__dirname, '..', 'xslt/CleanConvertedHtml.xsl');
+
 var clearHtmlPath = clearHtmlPathDefault;
 
 var allowedUploads = [
